@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>复习</title>
+    <link rel="stylesheet" href="css/css导入.css">
+    <style>
+        /*div{*/
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*background-color: blue;*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+    <!--符合标题语义的才使用标题标签-->
+    <h1>一级标题</h1>    <!--一般以及标题只出现一次 一般搜索只搜索一级标签-->
+    <h2>二级标题</h2>
+    <h3>三级标题</h3>    <!--h2、h3也不可滥用-->
+    <h4>四级标题</h4>
+    <h5>五级标题</h5>
+    <h6>六级标题</h6>
+    <!--标题标签只有h1~h6-->
+
+    <p>段落标签</p>
+    <b>加粗标签</b>
+    <em>强调标签-斜体</em>
+    <strong>强调标签-加粗</strong>
+    <del>删除标签</del>
+    <sup>上标签</sup>
+    <sub>下标签</sub>
+    <ins>插入标签</ins><!--下划线效果-->
+
+    超链接标签
+    <a href="https://www.baidu.com">默认原窗口打开</a>
+    锚链接
+    <a href="#top">返回顶部</a>
+    <a id="top"></a>
+    <a href="https://www.baidu.com" target="_blank">新窗口打开</a>
+
+    引入图片标签
+    <img src="../img" alt="在图片加载失败时的提示信息" title="提示信息">
+
+    <span></span>
+
+    列表标签
+    有序
+    <ol type="A">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    无序
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    自定义
+    <dl>
+        <dt>标题</dt>
+        <dd>列表项</dd>
+        <dd></dd>
+        <dd></dd>
+    </dl>
+
+
+    表格
+    caption表格标题
+    th表头
+    tr行
+    td列 单元格
+    thead  tbody           tfoot  行分组
+    页眉   内容（不写默认）  页脚
+    <table border="1" cellspacing="0" width="500px" height="500px">
+        <caption>我是表格标题</caption>
+        <thead>
+        <tr>
+            <th>第一列</th>
+            <th>第一列</th>
+            <th>第一列</th>
+            <th>第一列</th>
+            <th>第一列</th>
+        </tr>
+        <tr>
+            <td>第一列</td>
+            <td>第一列</td>
+            <td>第一列</td>
+            <td>第一列</td>
+            <td>第一列</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        </tfoot>
+    </table>
+
+    表单
+    <form action="xxx.php" method="get">
+        用户名 <input type="text" value="提示信息">
+        用户名 <input type="text" placeholder="请输入搜索内容">
+        密码 <input type="password">
+        提交按钮 <input type="submit">
+        自定义按钮 <input type="button" value="提交">
+        <button>提交</button>
+        重置按钮 <input type="reset">
+        上传文件按钮 <input type="file"><br />
+
+        多行文本域
+        <textarea name="" id="" cols="30" rows="10"></textarea><br />
+
+        单选
+        <input type="radio" checked="checked" name="sex">男
+        <input type="radio" name="sex">女<br />
+
+        多选
+        <input type="checkbox" >吃饭
+        <input type="checkbox" >睡觉
+        <input type="checkbox" checked="checked">玩
+        <input type="checkbox" >打豆豆<br />
+
+        下拉菜单
+        <select multiple="multiple">
+            <option>北京</option>
+            <option selected="selected">深圳</option>
+            <option>上海</option>
+        </select>
+    </form>
+
+    常用的行元素:
+        (特点:可以和其他行元素共处一行;宽高不可;margin、padding只可设置左右)
+        span a em strong i del ...
+    常用的块元素:
+        (特点:独占一行;宽高可;margin、padding上下左右都可设置)
+        div p h1~h6 ul ol li dl dt dd table form
+    常用的行块元素:
+        (特点:可以和其他行元素共处一行；宽高可控;margin、padding上下左右都可设置)
+        img input button
+        (表单里的大多数元素都属于行块元素)
+
+    <!--<div style="width: 100px;height: 100px;background-color: rebeccapurple"></div>-->
+    <div></div>
+</body>
+</html>

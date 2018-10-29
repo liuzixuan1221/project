@@ -1,0 +1,224 @@
+css学习知识点：
+1、css引入（4方式）
+    行内/内联样式
+    内嵌样式
+    外链样式
+    导入样式
+2、基本常用的属性
+    文本属性
+    背景属性
+    透明属性等
+3、盒模型：标准盒模型 低级ie（诡异）盒模型
+    margin塌陷    margin外边距重叠
+4、浮动    清除浮动
+5、定位    子绝父相
+6、精灵图/雪碧图   背景
+7、css3  结合css选择器
+
+代码面试题：
+    圣杯模型
+    双飞翼模型等等
+
+
+1、css样式表    cascading style sheets(层叠样式表)
+语法:
+    选择器{
+        //样式的声明
+        属性1:值;
+        属性2:值;
+        属性3:值;
+    }
+2、基本选择器
+    标签选择器:一旦给一个标签设置样式之后
+                页面中所有相同标签 都有一样的样式
+    类选择器:同一个标签可以设置多个类名
+            同一个类名也可以对应多个标签
+    id选择器:具有唯一性
+    important权重值    background: #000 !important;
+    优先级关系:!important 优先级最高=10000> 内联样式=1000> id=100> 类=10> 标签=1
+
+3、组合选择器
+    分组(群组)选择器:div,p{}   表示div和p
+    后代选择器:div p{}   表示div下面的p
+    子代选择器:div>p{}   表示div的儿子p
+
+4、a伪类选择器(:)
+    顺序要求：love - hate
+    link 和visited是a标签所特有的伪类
+    hover是所有标签都有的伪类
+    a:link{}    未访问
+    a:visited{} 访问之后
+    a:hover{}   鼠标悬停
+    a:active{}  鼠标点击
+
+
+
+
+
+
+            /*字体*/
+            font-size: 30px;
+            color: blueviolet;
+            font-weight: bold;
+            font-style: italic;
+            letter-spacing: 10px;
+            font-family: "微软雅黑";
+            width: 300px;
+            height: 300px;
+
+
+            /*透明度*/
+            color: rgba(0,0,0,.5);        /*背景透明色*/
+            background: transparent;    /*透明色*/
+
+            opacity: .1;            /*在低级版本ie不兼容*/
+            filter: alpha(opacity=10);
+
+
+            /*文本*/
+            text-align: center;     /*水平居中*/
+            /*line-height: 300px;*/
+            text-indent: 2em;       /*首行缩进两字  em相对单位*/
+            white-space: nowrap;    /*强制不换行*/
+            overflow: hidden;       /*溢出隐藏*/
+            text-overflow: ellipsis;    /*文本超出，用省略号表示*/
+
+
+            /*背景*/
+            /*属性的合写：为了节省代码量，减少所占内存 优化性能*/
+            /*background: red url("images/xhr.jpg") no-repeat -100px 0px fixed; height:264px;*/
+            height: 264px;
+            background-color: red;        /*背景颜色*/
+            background-image: url("images/xhr.jpg");        /*背景图片*/
+            background-repeat: no-repeat;       /*背景是否重复*/
+            background-position: -100px 0px;     /*背景图片的位移*/
+            background-attachment: fixed;   /*背景图片固定与否*/
+
+5、盒模型：
+    盒模型属性：盒子本身content margin外边距  padding内边距  border边框   content
+    标准盒模型：
+        盒子本身宽度 = 盒子width + padding(left/right) + border(left/right)
+        盒子本身高度 = 盒子height + padding(top/bottom) + border(top/bottom)
+
+    低级ie盒模型、css3盒模型:
+        box-sizing:border-box;
+        盒子本身宽度 = 盒子width(包含padding/border)
+        盒子本身高度 = 盒子height(包含padding/border)
+
+    margin外边距：  兄弟盒子设置边距    利用margin
+    padding内边距： 父子盒子设置边距    利用padding   给父盒子设置
+
+
+    块级元素    和   行内元素    的转换：
+    display:block   none    inline-block    inline
+    行元素 块元素 行块元素之间  可以相互转换
+    (注意：行块元素只能转换为块元素)
+
+
+    现实显示隐藏
+    方法一：
+            display:none           隐藏    不占位
+            display:block          显示      占位
+    方法二：
+            : 0;            隐藏      占位
+            opacity: 1;            显示      占位
+    方法二：
+            visibility:hidden;     隐藏      占位
+            visibility:visible;    显示      占位
+
+
+浮动：
+float:  left左浮动     right右浮动     none不浮动
+相当于把元素强制设为行块元素  可以共处一行  也可以设置宽高
+浮动的元素不占位：由于浮动不占位    引起浮动塌陷
+                解决浮动塌陷  通过清除浮动的方式：
+                    1、给父盒子设置定高  不推荐
+                    2、给浮动元素的结束处添加一个空盒子  给空盒子设置样式clear:both  =>小型项目/平时练习
+                    3、通过属性：overflow:hidden; overflow:auto;  float:left;     =>平时练习/调试BUG时
+                    4、通过伪类进行清除  伪元素 xxx::after{}    xxx::before{}   =>真正项目开发中使用
+浮动元素脱离了普通文档流：
+                       不占位(高度显示为0)
+                       margin:auto 不起作用(不能居中了)
+
+
+                       /*只支持CSS3*/
+
+                       li:first-child{      /*父级中的第一个元素*/
+                               background-color:red;
+                       }
+
+                       li:nth-child(n){      /*父级中的第n个元素*/
+                               background-color: blue;
+                       }
+                       li:last-child{       /*父级中的最后一个元素*/
+                               background-color: green;
+                       }
+
+                       clear:both;  清除浮动
+
+
+文件(html/css/图片等)/类名/id名/js命名
+命名规范：
+命名时可以包含数字   字母 _ $但必须以字母开头
+
+
+制作网页规则：
+1、新建项目名称 => kugou
+2、css文件夹    js文件夹   images文件夹   index.html(首页)
+3、css文件夹    新建一个对应首页的  css文件   称为:main.css
+        为了去掉部分标签默认样式 我们还需要引入一个css 称为：reset.css
+        结构如下：
+        css
+            main.css
+            reset.css
+
+逢图片必包盒子
+
+
+定位：
+子绝父相(儿子绝对定位，父亲用相对定位)
+position:relative;  (父亲 相对定位)
+position:absolute;  (儿子 绝对定位)
+
+
+position:static；    静态定位/默认不定位
+
+
+position:relative；  相对定位:相对于自身原来的位置 定位
+                     没有脱离文档流
+
+position:absolute；  绝对定位
+                     脱离文档流
+                     就近原则
+                     紧挨着的上级元素   谁有定位    那么他的相对元素就是谁
+                     如果上级元素找不到任何定位  那么相对于body定位
+
+position:fixed；     固定定位:相对于浏览器窗口进行定位
+                     脱离文档流
+                     width/height可以为100%
+
+结合  left/right/top/bottom使用
+
+
+脱离文档流的表现：
+    1、不占位
+    2、margin:auto   不起作用
+
+
+    定位元素的层级关系：z-index属性调整
+    z-index值越大  层级越高(越在上面显示)
+
+    *注意：绝对定位    相对定位    固定定位    其中只有相对定位没有脱离文档流(不会影响盒子正常效果)
+          所以在网页中    经常给大盒子(上级盒子)设置相对定位
+
+
+
+
+精灵图/雪碧图     背景      css sprites(合成图)
+    目的：减少http请求次数   节约带宽    提高性能
+
+
+
+    background-size:    auto 100%;
+    background-size:    contain;    将背景图像等比缩放到宽度或高度与容器的宽度或高度相等，背景图像始终被包含在容器内。
+    background-size:    cover;   将背景图像等比缩放到完全覆盖容器，背景图像有可能超出容器。

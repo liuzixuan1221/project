@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>常用语义标签</title>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+			background-color: #F7F7F7;
+		}
+
+		figure {
+			overflow: hidden;
+		}
+
+		.pic {
+			float: left;
+			width: 200px;
+			height: 200px;
+		}
+
+		img {
+			max-width: 100%;
+			display: block;
+		}
+
+		p {
+			padding-left: 240px;
+		}
+
+		mark {
+			background-color: blue;
+		}
+
+		progress {
+			width: 400px;
+			height: 50px;
+			background-color: pink;
+			border: 0 none;
+		}
+
+		
+		meter {
+			width: 400px;
+			height: 40px;
+			background-color: red;
+			border: 4px solid red;
+		}
+	</style>
+</head>
+<body>
+<!--区块-->
+<hgroup>
+	<h1>这是一篇介绍HTML 5结构标签的文章</h1>
+	<h2>HTML 5的革新</h2>
+</hgroup>
+    <!--状态标签  max 最大的取值范围  value 当前的值-->
+	<progress value="60" max="100"></progress>
+    <!--状态标签  一个范围取值有-->
+	<meter min="0" max="100" low="30" high="80" value="40"></meter>
+    <!--单纯的语义标签-->
+	<time datatime="2016-10-11">2016-1-11</time>
+    <!--媒体区块-->
+	<figure>
+        <!--标题-->
+		<figcaption>没有<mark>前端框</mark>架的无聊世界</figcaption>
+		<div class="pic">
+			<img src="images/1.jpg" alt="">
+		</div>
+		<p>从 Angular 看到 React，然后又出现了 Vue 等框架。我觉得前端框架一直都在「逻辑清晰」和「高效开发」这两件事上徘徊。然后还有一件很可笑的事，一个东西的逻辑完备性达到一定程度的话人类就很难驾驭，也就是会变得很难用；而一个非常好用的东西，可能本身的逻辑通常是混乱的。></p>
+	</figure>
+	<figure>
+		<figcaption>没有前端框架的无聊世界</figcaption>
+		<div class="pic">
+			<img src="images/1.jpg" alt="">
+		</div>
+		<p>从 Angular 看到 React，然后又出现了 Vue 等框架。我觉得前端框架一直都在「逻辑清晰」和「高效开发」这两件事上徘徊。然后还有一件很可笑的事，一个东西的逻辑完备性达到一定程度的话人类就很难驾驭，也就是会变得很难用；而一个非常好用的东西，可能本身的逻辑通常是混乱的。></p>
+	</figure>
+	<figure>
+		<figcaption>没有前端框架的无聊世界</figcaption>
+		<div class="pic">
+			<img src="images/1.jpg" alt="">
+		</div>
+		<p>从 Angular 看到 React，然后又出现了 Vue 等框架。我觉得前端框架一直都在「逻辑清晰」和「高效开发」这两件事上徘徊。然后还有一件很可笑的事，一个东西的逻辑完备性达到一定程度的话人类就很难驾驭，也就是会变得很难用；而一个非常好用的东西，可能本身的逻辑通常是混乱的。></p>
+	</figure>
+	<figure>
+		<figcaption>没有前端框架的无聊世界</figcaption>
+		<div class="pic">
+			<img src="images/1.jpg" alt="">
+		</div>
+		<p>从 Angular 看到 React，然后又出现了 Vue 等框架。我觉得前端框架一直都在「逻辑清晰」和「高效开发」这两件事上徘徊。然后还有一件很可笑的事，一个东西的逻辑完备性达到一定程度的话人类就很难驾驭，也就是会变得很难用；而一个非常好用的东西，可能本身的逻辑通常是混乱的。></p>
+	</figure>
+
+	<mark>mark标签的用法</mark>
+</body>
+</html>

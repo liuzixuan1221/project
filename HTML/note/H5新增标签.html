@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <!--html5标签 作用：增加标签语义化-->
+    <header>头部</header>
+    <nav>导航</nav>
+    <footer>尾部</footer>
+    <section>区分大模块</section>
+    <aside>侧边栏</aside>
+    <article>文章</article>
+    <figure><!--配图-->
+        <img src="../3.30/images/dong.jpg" alt="">
+        <figcaption>配图说明</figcaption>
+    </figure>
+    <video src="images/dongbei.mp4" autoplay  controls>视频</video>
+    <audio src="images/horse.ogg" autoplay  controls>音频</audio>
+
+    <!--H5新增的标签和css3 不支持ie9以下的浏览器-->
+    让低版本浏览器(IE7~8)兼容HTML5新增标签
+    <!--
+        [if lt IE 9]>
+        <script src="html5.js"></script>
+        [endif]
+    -->
+
+
+    <!--区块-->
+    <hgroup>
+        <h1>这是一篇介绍HTML 5结构标签的文章</h1>
+        <h2>HTML 5的革新</h2>
+    </hgroup>
+    <!--状态标签 max 最大的取值范围 value 当前的值-->
+    <progress value="60" max="100"></progress>
+    <!--状态标签  一个取值范围有-->
+    <meter min="0" max="100" low="30" high="80" value="40"></meter>
+    <!--单纯的语义标签-->
+    <time datatime="2016-10-11">2016-1-11</time>
+    <mark></mark>
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小米商场 - 小米MIX 2S</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .wrap{
+            width: 1920px;
+            height: 3000px;
+        }
+        .inner{
+            width: 1226px;
+            height: 3000px;
+            margin: auto;
+        }
+        .top{
+            width: 100%;
+            height: 40px;
+            background-color: #333333;
+        }
+        .top .left{
+            line-height: 40px;
+        }
+        .top ul{
+            float: left;
+            list-style: none;
+        }
+        .top li{
+            float: left;
+            font-size: 11px;
+            color: #b0b0b0;
+            font-family: "微软雅黑";
+        }
+        .top .shu{
+            margin: 0 8px 0 9px;
+            color: #424242;
+        }
+        .top .right-info{
+            float: right;
+            line-height: 40px;
+        }
+        .top .box{
+            width: 120px;
+            height: 40px;
+            background-color: #424242;
+            float: right;
+            margin-left: 25px;
+            font-family: "微软雅黑";
+            font-size: 11px;
+            color: #b0b0b0;
+            text-align: center;
+            line-height: 40px;
+        }
+        .top .box img{
+            width: 16px;
+            height: 16px;
+        }
+        .header{
+            width: 100%;
+            height: 100px;
+            background-color: white;
+        }
+        .header .logo{
+            float: left;
+            margin-top: 22px;
+        }
+        .header .nav{
+            width: 850px;
+            float: left;
+        }
+        .header .nav ul{
+        float: left;
+        padding: 12px 0 0 30px;
+        list-style: none;
+        font-size: 16px;
+        }
+        .header .nav li{
+            float: left;
+            
+        }
+        .header .nav .text{
+            line-height: 70px;
+            margin-left:20px;
+            font-family: "微软雅黑";
+        }
+        .header .search{
+        float: right;
+        width: 296px;
+        height: 48px;
+        margin-top: 25px;
+        border: 1px solid #e0e0e0;
+        }
+        .header .search .left{
+            float: left;
+        }
+        .header .search .left ul{
+            list-style: none;
+            font-size: 10px;
+            font-family: "微软雅黑";
+            color: #757575;
+            margin:  15px 3px 15px 90px;
+        }
+        .header .search .left li{
+            background-color: #eeeeee;
+            width: 70px;
+            height: 18px;
+            text-align: center;
+            float: left;
+            margin-right: 5px;
+        }
+        .header .search .right{
+            float: right;
+            width: 50px;
+            height: 48px;
+            border-left: 1px solid #e0e0e0;
+        }
+        .main{
+            height: 1272px;
+        }
+        .main .top{
+            height: 644px;
+            margin-bottom: 26px;
+            background-color: white;
+        }
+        /* .main .top ul{
+            width: 1240px;
+        } */
+        .main .top li{
+            float: left;
+        }
+        .main .top .one{
+            width: 1226px;
+            height: 460px;
+            margin-bottom: 14px;
+            background-color: #525455;
+        }
+        .main .top .one .left{
+            width: 236px;
+            height: 460px;
+            float: left;
+        }
+        .main .top .one .left ul{
+            width: 236px;
+            height: 420px;
+            padding: 20px 0;
+
+        }
+        .main .top .one .left li{
+            width: 234px;
+            height: 42px;
+            font-size: 12px;
+            font-family: "微软雅黑";
+            color: white;
+            padding-left: 30px;
+        }
+        .main .top .one .left img{
+            width: 16px;
+            height: 20px;
+            margin-right: 45px;
+            margin-top: 10px;
+        }
+        .main .top .one img{
+            width: 990px;
+            height: 460px;
+            float: right;
+        }
+        .main .top .two{
+            height: 170px;
+            width: 236px;
+        } 
+        .main .top .two img{
+            width: 100%;
+            height: 100%;
+        }
+        .main .top .three{
+            width: 316px;
+            height: 170px;
+            margin-left: 14px;
+        }
+        .main .center{
+            width: 1226px;
+            height: 438px;
+        }
+        .main .center .center_top{
+            height: 58px;
+        }
+        .main .center .center_top h2{
+        margin: 0;
+        font-size: 22px;
+        font-weight: 200;
+        line-height: 58px;
+        color: #333;
+        font-family: "微软雅黑";
+        float: left;
+        }
+        .main .center .center_top .more{
+            float: right;
+            width: 68px;
+            height: 22px;
+            border: 1px solid #e0e0e0;
+            margin-top: 24px;
+        }
+        .main .center .center_top .more .left{
+            height: 22px;
+            width: 34px;
+            border-right: 1px solid #e0e0e0;
+            float: left;
+        }
+        .main .center .center_top .more .left img{
+            width: 20px;
+            height: 20px;
+            margin-left: 8px;
+        }
+        .main .center .center_top .more .right img{
+            width: 20px;
+            height: 20px;
+            margin-left: 7px;
+        }
+        .main .center .center_main{
+        height: 380px;
+        }
+        .main .center .center_main ul{
+            list-style: none;
+            width: 1240px;
+        }
+        .main .center .center_main li{
+            height: 340px;
+            width: 234px;
+            background-color: #f1eded;
+            float: left;
+            margin-right: 14px;
+        }
+        .main .center .center_main .one{
+            text-align: center;
+            font-family: "微软雅黑";
+            border-top: 1px solid red ;
+        }        
+        .main .center .center_main .one .text_one{
+            color: red;
+            margin-top: 62px;
+            font-size: 20px;
+            display: block;
+        }
+        .main .center .center_main .one .text_two{
+            color: #706f6f;
+            margin-top: 30px;
+            font-size: 13px;
+            display: block;
+        }
+        .main .center .center_main .one img{
+            margin-top: 30px;
+        }
+        .main .center .center_main .two{
+
+            border-top: 1px solid orange; 
+        }        
+        .main .center .center_main .three{
+
+            border-top: 1px solid green; 
+        }        
+        .main .center .center_main .four{
+
+            border-top: 1px solid blue; 
+        }        
+        .main .center .center_main .five{
+
+            border-top: 1px solid red; 
+        }        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="top">
+            <div class="inner">
+                <div class="left">
+                    <ul>
+                        <li>小米</li>
+                        <li class="shu">|</li>
+                        <li>MIUI</li>
+                        <li class="shu">|</li>
+                        <li>loT</li>
+                        <li class="shu">|</li>
+                        <li>云服务</li>
+                        <li class="shu">|</li>
+                        <li>水滴</li>
+                        <li class="shu">|</li>
+                        <li>金融</li>
+                        <li class="shu">|</li>
+                        <li>有品</li>
+                        <li class="shu">|</li>
+                        <li>Select Region</li>
+                    </ul>
+                </div>
+                <div class="box">
+                    <img src="images/gwc1.png">
+                    <span>购物车(0)</span>
+                </div>
+                <div class="right-info">
+                        <ul>
+                            <li>登录</li>
+                            <li class="shu">|</li>
+                            <li>注册</li>
+                            <li class="shu">|</li>
+                            <li>消息通知</li>
+                        </ul>   
+                </div>
+            </div>
+        </div>  
+        <div class="header">
+            <div class="inner">
+                <div class="logo">
+                    <img src="images/logo-footer.png">
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><img src="images/pclogoGIF164mifen.gif"></li>
+                        <li class="text">小米手机</li>
+                        <li class="text">红米</li>
+                        <li class="text">电视</li>
+                        <li class="text">笔记本</li>
+                        <li class="text">盒子</li>
+                        <li class="text">新品</li>
+                        <li class="text">路由器</li>
+                        <li class="text">智能硬件</li>
+                        <li class="text">服务</li>
+                        <li class="text">社区</li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <div class="left">
+                        <ul>
+                            <li>红米Note 5</li>
+                            <li>小米MIX 2</li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <img src="images/fdj.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="inner">
+                <div class="top">
+                    <ul>
+                        <li class="one">
+                            <div class="left">
+                                <ul>
+                                    <li>手机 电话卡<img src="images/icon-right_02.png"></li>
+                                    <li>电视 盒子<img src="images/icon-right_02.png"></li>
+                                    <li>笔记本<img src="images/icon-right_02.png"></li>
+                                    <li>智能 家电<img src="images/icon-right_02.png"></li>
+                                    <li>健康 家具<img src="images/icon-right_02.png"></li>
+                                    <li>出行 儿童<img src="images/icon-right_02.png"></li>
+                                    <li>路由器 手机配件<img src="images/icon-right_02.png"></li>
+                                    <li>移动电源 插线板<img src="images/icon-right_02.png"></li>
+                                    <li>耳机 音箱<img src="images/icon-right_02.png"></li>
+                                    <li>生活 米兔<img src="images/icon-right_02.png"></li>
+                                </ul>
+                            </div>
+                            <img src="images/T1a5JjBbVT1RXrhCrK.jpg" alt="">
+                        </li>
+                        <li class="two"><img src="images/111.jpg" alt=""></li>
+                        <li class="three"><img src="images/1111_03.png" alt=""></li>
+                        <li class="three"><img src="images/1111_05.png" alt=""></li>
+                        <li class="three"><img src="images/1111_07.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <div class="center">
+                    <div class="center_top">
+                        <h2>小米闪购</h2>
+                        <div class="more">
+                            <div class="left">
+                                <img src="images/icon-left_02.png" alt="">
+                            </div>
+                            <div class="right">
+                                <img src="images/icon-right_02.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="center_main">
+                        <ul>
+                            <li class="one">
+                                <span class="text_one">
+                                    18:00 场
+                                </span>
+                                <img src="images/flashpurchase.png" alt="">
+                                <span class="text_two">
+                                    距离开始还有
+                                </span>
+                                <img src="images/js_03.jpg" alt="">
+                            </li>
+                            <li class="two"><img src="images/111111_03.jpg" alt=""></li>
+                            <li class="three"><img src="images/111111_05.jpg" alt=""></li>
+                            <li class="four"><img src="images/111111_07.jpg" alt=""></li>
+                            <li class="five"><img src="images/111111_09.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                    <div class="center_bottom">
+                        <img src="images/21212_03.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+</body>
+</html>

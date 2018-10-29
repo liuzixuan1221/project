@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人网页.</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .wrap{
+            width: 1920px;
+            height: 1200px;
+            background-color: blueviolet;
+        }
+        .inner{
+            width: 1000px;
+            height: 100%;
+            margin: auto;
+            /*background-color: #0266a3;*/
+        }
+        .header {
+            width: 100%;
+            height: 800px;
+            background-size: 100% auto;
+            background-image: url("images/bg.jpg");
+        }
+        .header .img{
+            background-color: rgba(0,0,0,0.4);
+        }
+        .header .box{
+            width: 100%;
+            height: 300px;
+            padding-top: 200px;
+            text-align: center;
+        }
+        .header .hello{
+            color: #cc005f;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+        .header .name{
+            color: white;
+            font-size: 80px;
+            font-weight: bold;
+            font-family: "微软雅黑";
+            margin: 5px 0;
+        }
+        .header .present{
+            color: white;
+            font-size: 16px;
+            font-family: "微软雅黑";
+            word-spacing: 20px;
+        }
+        .header .aboutMe{
+            width: 170px;
+            height: 70px;
+            border: 5px solid #999999;
+            margin: auto;
+            margin-top: 57px;
+        }
+        .aboutMe p{
+            line-height: 70px;
+            color: white;
+            font-size: 14px;
+            word-spacing: 6px;
+        }
+        .header .contact{
+            margin-top: 180px;
+        }
+        .contact img{
+            float: right;
+            width: 30px;
+            height: 26px;
+            margin-left: 50px;
+        }
+        hr{
+            border: 5px solid #999999;
+        }
+        .main{
+            width: 100%;
+            height: 1200px;
+            background-color: white;
+        }
+        .main .info1{
+            width: 700px;
+            height: 300px;
+            margin: auto;
+        }
+        .main .aboutme{
+            text-align: center;
+            color: #cc005f;
+            font-family: "微软雅黑";
+            font-size: 18px;
+        }
+        .main .selfinfo{
+            width: 100%;
+            height: 276px;
+
+        }
+        .main .selfinfo .pic{
+            width: 120px;
+            height: 120px;
+            background-image: url("images/xhr.jpg");
+            background-size: 100% auto;
+            border: 2px solid #555555;
+            border-radius: 50%;
+            margin-top: 70px;
+            float: left;
+        }
+
+        .main .selfinfo .introduction{
+            width: 556px;
+            height: 262px;
+            float: right;
+            background-color: white;
+            border: 2px solid #999999;
+            margin-top: 10px;
+        }
+        .main p{
+            font-family: "微软雅黑";
+            color: #333333;
+        }
+        .main .info2{
+            width: 700px;
+            height: 600px;
+            margin: auto;
+            margin-top: 60px;
+        }
+        .main .info2 .information{
+            width: 50%;
+            height: 100%;
+            float: left;
+        }
+        .main .info2 h1{
+            font-family: "微软雅黑";
+            font-size: 20px;
+            margin-bottom: 60px;
+        }
+        .main .info2 .information .title{
+            font-size: 20px;
+            font-family: "微软雅黑";
+            color: #313131;
+            letter-spacing: 2px;
+        }
+        .main .info2 .information .answer{
+            font-size: 20px;
+            font-family: "微软雅黑";
+            color: #999999;
+            letter-spacing: 2px;
+            margin: 10px 0 50px 0;
+        }
+        .main .info2 .skill{
+            width: 50%;
+            height: 100%;
+            float: right;
+        }
+        .main .info2 .skill img{
+            width: 100%;
+            margin-top: 80px;
+        }
+        .main .button{
+            width: 600px;
+            height: 60px;
+            margin: auto;
+            margin-top: 100px;
+        }
+        .main .button .button1{
+            width: 242px;
+            height: 52px;
+            border: 4px solid #555555;
+            float: left;
+        }
+        .main .button1 p{
+            text-align: center;
+            line-height: 52px;
+            color: #555555;
+        }
+        .main .button .button2{
+            width: 250px;
+            height: 60px;
+            background-color: #555555;
+            float: right;
+        }
+        .main .button2 p{
+            text-align: center;
+            line-height: 60px;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="img">
+            </div>
+
+            <div class="inner">
+                <div class="box">
+                    <p class="hello">
+                        HELLO,WORLD.
+                    </p>
+                    <p class="name">
+                        I'm Liu Zi Xuan.
+                    </p>
+                    <p class="present">
+                        | 前端设计开发工程师 |
+                    </p>
+                    <div class="aboutMe">
+                        <p>MORE ABOUT ME</p>
+                    </div>
+                    <div class="contact">
+                        <img src="images/weixin.png">
+                        <img src="images/qq.png">
+                        <img src="images/weibo.png">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="main">
+            <hr>
+            <div class="inner">
+                <div class="info1">
+                    <p class="aboutme">关于我</p>
+                    <div class="selfinfo">
+                        <div class="pic">
+
+                        </div>
+                        <div class="introduction">
+                            <p>&emsp;&emsp;本人诚信开朗，热情真诚，团队意识强，时间观念强，易于接受新事物，乐于与人沟通，较强的适应能力和协调能力，能恪守以大局为重的原则。在校园生活期间，曾担任校园广播站站长，让我的组织协调能力、管理能力、应变能力、团队合作精神大大提升，使我具备良好的心理素质。进入社会工作之后，已慢慢学会耐心、用良好的感知为客户解答问题，已磨练出较强的忍耐力和意志力。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="info2">
+                    <div class="information">
+                        <h1>
+                            基本信息
+                        </h1>
+                        <ul>
+                            <li class="title">姓名：</li>
+                            <li class="answer">刘子萱</li>
+                            <li class="title">出生日期：</li>
+                            <li class="answer">1996年10月13日</li>
+                            <li class="title">职业：</li>
+                            <li class="answer">自由职业者，前端开发人员</li>
+                            <li class="title">联系电话：</li>
+                            <li class="answer">15210999500</li>
+                            <li class="title">邮箱：</li>
+                            <li class="answer">liuzixuan1013@126.com</li>
+                        </ul>
+                    </div>
+                    <div class="skill">
+                        <h1>
+                            掌握技能
+                        </h1>
+                        <img src="images/jineng.png">
+                    </div>
+                </div>
+                <div class="button">
+                    <div class="button1">
+                        <p>雇用我</p>
+                    </div>
+                    <div class="button2">
+                        <p>下载简历</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="inner">
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

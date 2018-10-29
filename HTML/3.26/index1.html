@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--告诉浏览器使用哪种方式方式 解析文档-->
+<!--标签-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我们的第一个网页</title>
+    <style>
+        *{
+            margin: 0;   /*盒子外边距*/
+            padding: 0;   /*盒子内边距*/
+        }
+        ul{
+            list-style: none;
+        }
+        .inner{
+            width: 940px;
+            height: 100%;
+            /*盒子居中*/
+            margin: auto;
+        }
+        .header{
+            line-height: 100px;     /*行高*/
+            height: 100px;
+            background-color: #ccc;     /*背景颜色*/
+            color: white;                   /*字体颜色*/
+        }
+        /*header 开始*/
+        .header h1{
+            float: left;
+        }
+        .header ul{
+            float: right;
+        }
+        /*代表  头部的Li标签*/
+        .header li{
+            float: left;    /*左浮动*/
+            margin-left: 35px;
+        }
+        /*header 结束*/
+
+        /*main 开始*/
+        .main{
+            height: 1760px;
+            background-color: black;
+            padding-top: 30px;      /*内边距*/
+        }
+        .main ul{
+            width: 960px;
+        }
+        .main li{
+            width: 300px;
+            height: 400px;
+            background-color: white;
+            margin: 0 20px 20px 0;  /*上右下左*/
+            float: left;
+        }
+        .main .first{
+            width: 640px;
+            margin-right: 0;
+        }
+        .main .last{
+            width: 620px;
+        }
+        /*main 结束*/
+        .footer{
+            height: 140px;
+            background-color: #ccc;
+            text-align: center;     /*文本图片水平居中*/
+        }
+        .footer img{
+            margin-right: 16px;
+            margin-top: 37px;
+
+        }
+
+    </style>
+</head>
+<body>
+<!--划分块-->
+
+<!--头部 header-->
+<div class="header">
+    <div class="inner">
+        <h1>MY/FOLIO</h1>
+        <ul>
+            <li>HOME</li>
+            <li>SERVICES</li>
+            <li>Portfolio</li>
+            <li>About</li>
+            <li>Blog</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+</div>
+<!--头部 header-->
+
+<!--主体 main-->
+<div class="main">
+    <div class="inner">
+        <ul>
+            <li class="first" ><img src="images/pic_big.jpg"> </li>
+
+
+            <li>
+                <img src="" alt="">
+            </li>
+            <li><img src="images/bg_03.jpg" alt=""></li>
+            <li><img src="images/4.jpg" alt=""></li>
+            <li><img src="images/bg_05.jpg" alt=""></li>
+            <li><img src="images/bg_03.jpg" alt=""></li>
+            <li><img src="images/bg_05.jpg" alt=""></li>
+            <li><img src="images/4.jpg" alt=""></li>
+            <li><img src="images/4.jpg" alt=""></li>
+            <li class="last"><img src="images/3.jpg" alt=""></li>
+        </ul>
+    </div>
+</div>
+<!--主体 main-->
+
+<!--底部 footer-->
+<div class="footer">
+    <div class="inner">
+        <!--相对路径-->
+        <img src="images/333.png">
+        <img src="images/444.png">
+        <img src="images/555.png">
+        <img src="images/666.png">
+        <img src="images/777.png">
+    </div>
+</div>
+<!--底部 footer-->
+
+</body>
+</html>

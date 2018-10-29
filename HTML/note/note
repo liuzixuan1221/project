@@ -1,0 +1,85 @@
+笔记
+1、ctrl + d 复制
+2、ctrl + x 剪切
+3、alt + 鼠标左键 连选
+4、shift + enter 新建下一行
+5、ctrl + / 注释一行
+6、ctrl + shift + / 注释多行
+7、width：100% 浏览器默认宽度
+8、float浮动的目的：为了使块元素 强制在一行显示
+
+html  毛坯房
+css   装修
+
+html 
+lang="en"(en是英文,中文是zh-cmn-HANs)   告诉搜索引擎爬虫，我们的网站是简体中文
+utf-8   它是一个编码字符集又叫万国码
+
+CSS引入：就近原则
+    内联  <div style:""></div>
+    内嵌  <head>中
+    外链  外部新建css样式表  <link>
+    导入  外部新建css样式表
+
+选择器
+权重值(优先级)    !important(10000)>行内(1000)>ID(100)>类(10)>标签(1)>*(0.1)>继承>默认样式
+组合选择器   权重累加的
+#div    ul>li a{}
+
+
+基本选择器 标签 类 Id * !important
+组合选择器 分组/群组 ,   后代  子代> 相邻兄弟+   兄弟~
+伪类选择器   a:link  a:visited{} a:hover{}   a:active{}
+伪元素     div::after{content:"";}     div::before{}
+
+css3新增选择器
+同一个父级元素下的相同元素
+    div:first-of-type{}     第一个
+    div:last-of-type{}      最后一个
+    div:nth-of-type(4tn){}      4的倍数/第N个
+
+    div:first-of-child{}
+    div:last-of-child{}
+    div:nth-of-child(4tn){}
+
+
+盒模型
+盒模型属性：盒子本身(width/height)    margin  padding border
+标准盒模型
+低级ie盒模型/css3新增盒模型：box-sizing:border-box;
+
+行元素与块元素的区别？
+    1、  行元素：可以和其他行元素    共处一行    宽高不可控   margin/padding左右可控
+                背景颜色padding上下可控(但是不占位)
+         块元素：独占一行    宽高可控    margin/padding可控
+    2、  margin塌陷
+            方法一：直接在父盒子上     使用padding-top
+            方法二：在父盒子上         使用overflow:hidden;
+                    在子盒子上        使用margin-top:20px;
+            方法三：直接在父盒子上     使用border-top:1px solid transparent
+                    在子盒子上        使用margin-top:20px;
+    3、margin外边距重叠 怎么计算？
+    同正同负    取绝对值大的显示
+    一正一负    取和
+    两个兄弟盒子  都设置 margin  会出现外边距重叠
+    4、margin和padding可以设置负值吗?
+        margin  有负值
+        padding 没有负值
+    5、 margin:10px;                     上下左右
+        margin:10px 20px;                上下 左右
+        margin:10px 20px 30px 40px;      上 右 下 左
+
+        border:1px solid red;
+        border-width:1px;
+        border-style:solid;
+        border-color:red;
+
+        制作三角形：transparent透明色
+
+
+    6、常用属性
+        inline-block元素  自带右3px的bug
+        行块元素    外层包裹一个块盒子   可以解决3px bug
+        逢图片必包盒子
+
+图文对齐(垂直方向中心)    可以使用vertical:middle;

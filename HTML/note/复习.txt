@@ -1,0 +1,236 @@
+网页构成三层：
+html - 结构层
+css - 样式层
+JavaScript - 交互层/行为层
+
+html?
+超文本标记语言
+HTML的语法：
+<标签名 ></标签名>
+<div class="div1" id="div1"></div>
+
+常用的HTML标签:
+<div>区块容器标签</div>
+<p>段落标签</p>
+<img>图片标签</img>
+<span>文本标签</span>
+<a>超链接标签</a>
+<h1>一级标题</h1>...<h6>六级标题</h6>
+<i>斜体标签</i>
+<em>强调标签-斜体强调</em>
+<strong>强调标签-粗体强调</strong>
+<b>加粗标签</b>
+<sub>下标标签</sub>
+<sup>上标标签</sup>
+<del>删除标签</del>
+
+<hr />水平分割线
+<br />换行标签
+
+<ul>    无序列表
+    <li></li>
+</ul>
+<ol>    有序列表
+    <li></li>
+</ol>
+<dl>    自定义列表
+    <dt>标题</dt>
+    <dd>列表项</dd>
+</dl>
+
+<table>     表格
+    <caption>标题</caption>
+    <tr>    行
+        <th>表头</th>
+        <td>列</td>
+    </tr>
+</table>
+表格的行分组 thead    tbody   tfoot
+
+<form action="" method="get">表单
+    <input type="text" value="提示文字">单行文本域
+    <input type="text" placeholder="提示文字">文本
+    <input type="password">密码
+    <input type="submit">自动提交按钮
+    <input type="button">自定义按钮
+    <button>提示文字</button>
+    <input type="reset">重置按钮
+    <textarea>多行文本域</textarea>
+
+    单选  //checked="checked"默认选中
+    <input checked="checked" type="radio" name="sex">男
+    <input type="radio" name="sex">女
+    多选  //checked="checked"默认选中
+    <input checked="checked" type="checkbox">
+    下拉菜单
+    <select multiple="multiple">   //multiple="multiple"
+        <optgroup>组
+            <option>北京</option>
+            <option selected="selected">上海</option>
+            <option>天津</option>
+        </optgroup>
+    </select>
+</form>
+
+
+CSS
+1、CSS引入方式
+内联 <div style="width:200px; height:200px;"></div>
+内嵌 嵌套在head标签内,<style></style>
+外链 <link href="css/1.css">
+导入 在style标签内    @import
+
+基本选择器：
+通配符选择器       *{}         0.1
+标签选择器       div{}         1
+类选择器         .div1{}       10
+id选择器         #div1{}       100
+!important                     10000
+
+组合选择器：
+后代选择器   div1 p{}
+子代选择器   div1>p{}
+群组选择器   div1, p{}
+直接选择器   div.div1{}
+邻弟选择器   div1+p{}
+
+伪类选择器：
+未点击   a:link{}
+点击后   a:visited{}
+鼠标悬浮 a:hover{}
+鼠标点击 a:active{}
+第一个div      div:first-of-type{}
+最后一个div    div:nth-of-type(2n){}
+2的倍数的div   div:last-of-type{}
+
+伪元素：
+div之后   div::after{content:""}
+div之前   div::before{content:""}
+
+
+3、常用的属性
+字体大小       font-size
+字体粗细       font-weight
+字体样式       font-style
+字体颜色       color
+行高           line-height
+水平居中       text-align:center
+首行缩进       text-indent：2em;
+
+
+font:italic(样式) lighter(粗细) 50px(字体大小)/100px(行高)  "微软雅黑";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+css
+1、css是什么？
+样式表 cascading style sheets  层叠样式表
+2、css基本语法
+选择器{
+    属性1:值;
+    属性2:值;
+}
+3、css引入：就近原则  内联>外链/内嵌
+    内联   <div style=""></div>
+    内嵌  <head>中
+    外链  外部新建css样式表  <link>
+    导入  外部新建css样式表  <style>  @import url()
+    面试题:外链与导入的区别？
+4、选择器
+    权重值（优先级）：
+    !important(1000)>行内(1000)>id(100)  >class(10) >标签(1)  >*(0.1)>继承样式>默认样式
+    组合选择器 权重累加的
+    #div ul>li a{}   100+1+1+1 =103
+    #div ul li a.a1{}   100+1+1+1+10 =113
+
+
+
+    基本选择器  id class 标签  *  !important
+    组合选择器  分组/群组 ,   后代   子代>  相邻兄弟+  兄弟~
+    伪类选择器   a:link{}  a:visited{}  a:hover{}  a:active{}
+    伪元素  div::after{content:'';}   div::before{}
+    css3新增选择器
+        同一个父级元素下的相同元素
+        div:first-of-type{}   选取第一个
+        div:last-of-type{}    选取最后一个
+        div:nth-of-type(4n){}  选取4的倍数/选择第n个
+
+        div:first-child{}
+        div:last-child{}
+        div:nth-child(4n){}
+
+        ul>li*10
+        ul>li*3
+        ul>li*3
+        div>ul >li>12345
+5、盒模型
+盒模型属性：盒子本身(width/height)   margin  padding border
+标准盒模型
+    实际宽度 = width+padding(left/right)+border(left/right)
+    实际高度 = height+padding(top/bottom)+border(top/bottom)
+低级ie盒模型/css3新增盒模型
+    实际宽度 = width(width/padding/border)
+    实际高度 = height(height/padding/border)
+
+标准盒模型 转换为 css3新增盒模型:box-sizing:border-box;
+
+【注意点】
+1、行元素与块元素的区别？
+    行元素：可以和其他行元素 共处一行 宽高不可控  margin/padding左右可控
+            背景颜色padding上下可控（但是不占位）
+    块元素：独占一行 宽高可控  margin/padding可控
+2、margin塌陷
+  方式一：直接在把父盒子上 使用padding-top: 20px;
+  方式二：在把父盒子上  使用overflow: hidden
+         在子父盒子上  使用 margin-top: 20px;
+  方式二：在把父盒子上  使用border-top:1px solid transparent
+         在子父盒子上  使用 margin-top: 20px;
+3、margin外边距重叠 怎么计算？
+  同正同负  取绝对值大的显示
+  一正一负  取她们之和
+  俩个兄弟盒子 都设置 margin 会出现外边距重叠
+4、margin和padding可以设置负值吗？
+    margin  有负值
+    padding 没有负值
+5、 margin:10px;   上下左右都是10px
+    margin:10px 20px;  上下为10px  左右20px
+    margin:10px 20px 30px 40px;上  右  下  左
+
+    padding:10px;   上下左右都是10px
+    padding:10px 20px;  上下为10px  左右20px
+    padding:10px 20px 30px 40px;上  右  下  左
+
+    border:1px solid red;
+    border-width:1px;
+    border-style:solid;
+    border-color:red;
+
+    制作三角形：transparent透明色
+6、常用属性
+ inline-block元素 自带有3px的bug
+ 行块元素 外层包裹一个块盒子 可以解决3px bug
+ 逢图片必包盒子
+
+ 图文对齐(垂直方向中心) 可以使用vertical-align:middle;
+

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        form{
+            width: 800px;
+            margin: auto;
+        }
+        input{
+            width: 750px;
+            display: block;
+            margin: auto;
+        }
+        meter{
+            width: 760px;
+
+        }
+        progress{
+            width: 760px;
+        }
+
+        .header{
+            margin-top: 50px;
+            width: 200px;
+            height:100px;
+            background-color: greenyellow;
+            border-radius: 100px 100px 0 0;
+            position: relative;
+        }
+        .yan1{
+                     width: 15px;
+                     height: 15px;
+                     background-color: #fff;
+                     border-radius: 50%;
+                     position: absolute;
+                     top:45px;
+                     left: 50px;
+                 }
+        .yan2{
+            width: 15px;
+            height: 15px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top:45px;
+            left: 130px;
+        }
+        .body{
+            width: 200px;
+            height: 180px;
+            background-color: greenyellow;
+            border-radius: 0 0 20px 20px;
+            border-top: 10px solid white;
+            position: relative;
+        }
+        .shou1{
+            width: 40px;
+            height: 120px;
+            background-color: greenyellow;
+            border-radius: 20px 20px 20px 20px;
+            float: left;
+            margin-left: 25px;
+            position: absolute;
+            left: -80px;
+            top: 30px;
+        }
+        .shou2{
+            width: 40px;
+            height: 120px;
+            background-color: greenyellow;
+            border-radius: 20px 20px 20px 20px;
+            float: left;
+            margin-left: 25px;
+            position: absolute;
+            left: 190px;
+            top: 30px;
+        }
+        .footer{
+            width: 40px;
+            height: 60px;
+            background-color: greenyellow;
+            border-radius: 0 0 10px 10px;
+            float: left;
+            margin-left: 25px;
+        }
+        .duo{
+            margin-top: 50px;
+            width: 623px;
+            height: 417px;
+            background: url("images/bg1.png") top left no-repeat,
+                        url("images/bg2.png") top right no-repeat,
+                        url("images/bg3.png") bottom right no-repeat,
+                        url("images/bg4.png") bottom left no-repeat,
+                        url("images/bg5.png") center no-repeat;
+        }
+        .box{
+            width: 1000px;
+            height: 500px;
+            border: 1px solid #000;
+            background: url("images/2.jpg") no-repeat;
+            /*background-size: 100% 100%;*/
+            /*background-size: contain;*/
+            background-size: cover;
+        }
+
+        .bg{
+            width: 200px;
+            height: 200px;
+            border: 2px solid #ccc;
+            position: relative;
+        }
+        .bg .tm{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: rgba(0,0,0,.7);
+            display: none;
+        }
+        .bg:hover .tm{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<form action="">
+    <fieldset>
+        <legend>学生档案</legend>
+        <p>姓名：</p>
+        <input type="text" value="">
+        <p>手机号码</p>
+        <input type="text" value="">
+        <p>邮箱地址</p>
+        <input type="text" value="">
+        <p>所属学院</p>
+            <input type="search" list="course">
+        <dataList id="course">
+            <option value="前端与移动开发" ></option>
+            <option value="PHP"></option>
+            <option value="JAVA"></option>
+            <option value="Android"></option>
+            <option value="IOS"></option>
+            <option value="UI设计"></option>
+            <option value="C++"></option>
+        </dataList>
+        <p>入学成绩</p>
+        <input type="number">
+        <p>基础水平</p>
+        <meter min="0" max="100" value="60"></meter>
+        <p>入学时间</p>
+        <input type="date">
+        <p>毕业时间</p>
+        <input type="date">
+        <p>课程进度</p>
+        <progress value="30" max="100"></progress>
+    </fieldset>
+
+    <div>
+        <div class="header">
+            <div class="yan1"></div>
+            <div class="yan2"></div>
+        </div>
+        <div class="body">
+            <div class="shou1"></div>
+            <div class="shou2"></div>
+        </div>
+
+        <div class="footer"></div>
+        <div style="margin-left: 70px" class="footer"></div>
+        <div class="duo"></div>
+        
+        <div class="box">
+            
+        </div>
+
+        <div class="bg">
+            <div class="tm">
+                <p>啊啊 我哦哦哦哦  啊幅度萨芬阿塞法 啊房贷首付阿尔</p>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>
