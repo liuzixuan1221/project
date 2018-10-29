@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.min.js"></script>
+    <style>
+        ul,li{
+            list-style: none
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="app">
+        <zujian1 :parent="arr"></zujian1>
+    </div>
+
+    <script>
+        Vue.component("zujian1",{
+            props:["parent"],
+            template:`
+                <div>
+                    <input type="text" :value="value"/>
+                    <input type="button" value="提交" @click="show"/>
+                    <zujian2 v-show="flag" @revece="get" :son="parent"></zujian2>
+                </div>
+            `,
+            data(){
+                return{
+                    flag:false,
+                    value:""
+                }
+            },
+            methods:{
+                show(){
+                    this.flag=!this.flag
+                },
+                get(val){
+                    console.log(val);
+                    
+                    this.value = val;
+                }
+            }
+        }),
+        Vue.component("zujian2",{
+            props:["son"],
+            template:`
+                <div>
+                    <ul>
+                        <li v-for="item in son" @click="send(item)">{{item}}</li>
+                    </ul>
+                </div>
+            `,
+            data(){
+                return{
+
+                }
+            },
+            methods:{
+                send(item){
+                    this.$emit("revece",item)
+                }
+            }
+        })
+        new Vue({
+            el:"#app",
+            data(){
+                return{
+                    arr:["北京","上海","广州"]
+                }
+            }
+        })
+    </script>
+</body>
+</html>

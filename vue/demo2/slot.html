@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <custom>
+            <div>aaa</div>
+            <div slot="header">
+                <ul>
+                    <li>qwer</li>
+                </ul>
+            </div>
+        </custom>
+    </div>
+
+    <script>
+        //slot 插槽   模板  单个slot  具名slot  slot作用域     slot-scope
+        Vue.component("custom",{
+            template:`
+                <div>
+                    <p>aaaaa</p>
+                    <slot></slot>
+                    <slot name="header"></slot>
+                </div>
+            `
+        })
+        new Vue({
+            el:"#app",
+            data(){
+                return{
+
+                }
+            }
+        })
+    </script>
+</body>
+</html>

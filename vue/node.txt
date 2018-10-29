@@ -1,0 +1,113 @@
+vue
+作者：尤雨溪  开始：google   团队：angular
+火：中文文档  上手快 学习成本低
+vue简介：
+前端渐进式框架
+框架 库 插件 的区别
+框架：完整的体系，既有功能同时具备ui
+库：功能的统一性
+插件：仅负责某一功能
+
+vue的特点
+mvvm
+    m:model 模型
+    v:view  视图
+    vm: 数据和视图交互
+双向数据绑定  v-model
+组件化
+
+安装vue2.0脚手架
+npm install -vue-cli -g
+
+应用场景：
+单页面应用
+缺点：不利于seo优化 不便于大型项目的编写
+
+创建项目
+vue init <template> <template-name>         //template模板    template-name模板名称
+template 六种：
+    webpack
+    webpack-simple  
+    simple  
+    pwa  
+    browerify  
+    browerify-simple
+
+cd template-name
+npm run dev 运行项目
+指令：
+v-model     双向数据绑定      {{}}    插值表达式   解析
+双向数据绑定的原理
+通过  object.definePropety()  实现
+getter()设置      setter()取值
+
+map array
+
+v-for       循环
+v-text      解析文本
+v-html      解析网页标签
+v-on        事件(事件绑定)
+v-bind      绑定(属性绑定)
+v-cloak     防止页面闪烁
+
+
+
+
+new Vue({
+    data(){
+
+    }
+}).$mount("#app")       另一种挂载方式
+
+
+
+
+
+
+
+
+
+vue-resource    淘汰了 淘汰的原因：现在该库停止更新了
+
+常见的 Mock 方式：
+
+将模拟数据直接写在代码里
+利用 JavaScript 拦截请求
+利用 Charles、 Fiddler 等代理工具拦截请求       Charles、Fiddler 抓包
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//知识广度和深度
+//在面试的时候可以表达出优势
+说话的目的是为了让对方听明白
+表明自己的优点
+面试的时候会的往大了说，全了说，表现自己的知识广度
+不会的，虽然接触的少，接触过类似的，但是我平时比较喜欢自学，可以自己学
+

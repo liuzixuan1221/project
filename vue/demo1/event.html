@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @click="show1">点击</button>
+        <button @mouseover="show2">移入</button>
+        <button @mouseout="show3">移出</button>
+        <button @mouseenter="show4">移入</button>
+        <button @mouseleave="show5">移出</button>
+        <button @mousedown="show6">按下</button>
+        <button @mouseup="show7">抬起</button>
+        <button @mousemove="show8">移动</button>
+        <button @dblclick="show9">双击</button>
+        
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            methods:{
+                show1(){
+                    console.log("点击")
+                },
+                show2(){
+                    console.log("移入")
+                },
+                show3(){
+                    console.log("移出")
+                },
+                show4(){
+                    console.log("移入")
+                },
+                show5(){
+                    console.log("移出")
+                },
+                show6(){
+                    console.log("按下")
+                },
+                show7(){
+                    console.log("抬起")
+                },
+                show8(){
+                    console.log("移动")
+                },
+                show9(){
+                    console.log("双击")
+                }
+            }
+        })
+    </script>
+</body>
+</html>

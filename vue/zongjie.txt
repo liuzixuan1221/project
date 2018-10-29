@@ -1,0 +1,90 @@
+vue
+vue是什么？
+前端渐进式框架 vm的相互作用
+vue的优点？
+模块化、组件化、mvvm、速度快、跨平台、双向数据绑定
+vue的特点？
+单页面应用   mvvm
+单页面应用的缺点？
+不利于seo的优化
+如何对单页面应用进行优化？
+1、针对路由组件进行懒加载
+2、针对第三方插件进行cdn加载    animate.css
+3、<template></template><script></script><style></style>     不变换顺序
+
+指令
+v-model     object.defineprety()    
+v-for       循环数组或json (item,index)     报错  :key="index"
+v-show      display:none和block转换    dom节点存在
+v-if        visibility:hidden         dom节点不存在
+v-else-if   
+v-else      
+v-on        事件绑定    简写:  @
+v-bind      动态绑定    简写:  :
+:class      绑定方式    字符串、数组、对象
+:style      绑定方式    对象          动态计算
+v-html      解析html标签
+v-text      解析文本
+v-cloak     防止页面闪烁
+:href       动态绑定路径
+:src    
+
+事件:
+普通事件    click   mouseover   mouseout    mousemove   mouseenter  mouseleave  dbclick mousedown   mouseup 
+事件修饰符  .stop阻止事件冒泡  .prevent阻止默认事件  .sync异步
+按键修饰符  .enter  .space  .left   .top    .right  .down    .tab    .esc    .13
+
+自定义指令：
+directive("指令名称",function(){})   directive("red"{})
+自定义指令钩子函数:
+bind    inserted   update    upbind    componentUpdate
+自定义过滤器
+filter("",function(el){})
+
+组件:     避免：防止出现关键字
+全局组件
+component("组件名称",{})
+局部组件
+components:{
+    "组件名称":{
+
+    }
+}
+组件通信：
+父子  props
+子父  $emit
+兄弟  bus
+vuex
+
+生命周期
+beforeCreate(){}
+created(){}
+beforeMount(){}
+mounted(){}
+beforeUpdate(){}
+updated(){}
+beforeDestroy(){}
+destoryed(){}
+
+交互:
+vue-resouce  axios(axios出来之后,resouce就停止更新了)  post(data) get(params)         拦截器 vue.prototype.名称=axios
+
+路由:
+配置: index.js    
+1、引入vue-router  使用vue-router    Vue.use(vue-router)
+2、new VueRouter({})     mode : hash history base:__dirname(绝对路径) routes
+3、显示路由  路由容器    <router-view></router-view>
+4、路径跳转  path===<router-link to=""></router-link>
+5、动态路由  path:"/home/:id"    $route.params.id    $route.query.key
+6、导航守卫
+    1.全局导航守卫        beforeEach  afterEach   
+    2.路由导航内部守卫    beforeRouteEnter  beforeRouteUpdate  beforeRouteLeave
+    3.独享守卫           beforeEnter
+
+vuex
+vuex是什么?
+状态管理模式
+    state   mutation  getter   action   moudel
+
+动画:
+transition

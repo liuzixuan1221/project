@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="../vue.min.js"></script>
+</head>
+<body>
+    <div class="app">
+        <ul>
+            <li v-for="item in arr">{{msg}}</li>
+        </ul>
+    </div>
+</body>
+<script>
+    new Vue({
+        el:".app",
+        data(){
+            return{
+                arr:[1,2,3,4,5,6,],
+                msg:"123"
+            }
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div style="border:2px solid #000;width:100px;height:100px" v-red></div>
+    </div>
+    <script>
+        //指令 v-
+        //钩子函数  inserted bind componentupdated update unbind
+
+        // Vue.directive("red",function(el){
+        //     console.log(arguments)
+        //     el.style.background = "red"
+        // })
+
+        Vue.directive("red",{
+            //bind  只调用一次，指令第一次绑定到元素
+            bind:function(){
+                console.log(arguments)
+            },
+            //inserted  被绑元素插入到父节点时被调用
+            inserted(){
+
+            },
+            //componentUpdated  指令所在组组件Vnode全部更新完成后被调用
+            componentUpdated(){
+
+            },
+            //update    所在元素更新时被调用
+            update(){
+
+            },
+            //unbind    元素解绑时被调用
+            unbind(){
+
+            }
+        })
+
+        var app = new Vue({
+            el:"#app",
+            data:{
+
+            },
+            methods:{
+
+            }
+        })
+        console.log(app);
+    </script>
+</body>
+</html>

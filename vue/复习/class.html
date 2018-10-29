@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+    <style>
+        .class1{
+            color: red;
+        }
+        .class2{
+            color: blue;
+        }
+        .class3{
+            color: green;
+        }
+        .now{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div :class="{class1}">{{msg}}</div>
+        <p :class="{class2:class2}">{{msg}}</p>
+        <span :class="[class3,now]">{{msg}}</span>
+        <div :style="{ color:color1,fontSize:size1 }">{{msg}}</div>
+
+
+        <input type="text" v-model="msg" v-fouce>
+    </div>
+
+    <script>
+        Vue.directive("fouce",{
+            inserted(el){
+                el.setAttribute("checked","checked")
+            },
+        })
+        new Vue({
+            el:"#app",
+            data(){
+                return{
+                    msg:"hehe",
+                    class1:true,
+                    class2:true,
+                    class3:"class3",
+                    now:"now",
+                    color1:"#f0f",
+                    size1:"30px"
+                }
+            },
+            
+        })
+    </script>
+</body>
+</html>

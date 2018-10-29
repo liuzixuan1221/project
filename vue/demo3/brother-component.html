@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <brother-one></brother-one>
+        <brother-two></brother-two>
+    </div>
+
+    <script>
+        //建立bus (同级)
+        var bus = new Vue();
+        Vue.component("brother-one",{
+            template:`
+                <div>
+                大哥
+                <button @click="send">显示</button>
+                </div>
+            `,
+            data(){
+                return{
+                    a:"我是大哥"
+                }
+            },
+            methods:{
+                send(){
+                    bus.$emit("revece",this.a);
+                }
+            }
+            //async es7             promise
+        }),
+        Vue.component("brother-two",{
+            template:`
+                <div>
+                小弟
+                {{info}}
+                </div>
+            `,
+            data(){
+                return{
+                    b:"我是小弟",
+                    info:""
+                }
+            },
+            methods:{
+                get(){
+                    bus.$on("revece",(val)=>{
+                        this.info = val
+                    })
+                }
+            },
+            mounted(){
+                this.get();
+            }
+        })
+        new Vue({
+            el:"#app",
+            data(){
+                return{
+
+                }
+            }
+        })
+    </script>
+</body>
+</html>

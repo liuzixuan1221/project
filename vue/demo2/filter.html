@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+        <div id="app">
+            <div>{{msg | uppercase}}</div>
+            {{msg | reverse}}
+        </div>
+            <script>
+                Vue.filter("uppercase",function(el){
+                    return el.toUpperCase()
+                })
+                Vue.filter("reverse",function(el){
+                    return el.split("").reverse().join("");
+                })
+                
+                var app = new Vue({
+                    el:"#app",
+                    data:{
+                        msg:"hello word"
+                    },
+                    methods:{
+                    }
+                })
+            </script>
+</body>
+</html>

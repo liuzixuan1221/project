@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="hide">显示</button>
+        <div style="background:#f00;width:100px;height:100px" v-show="show"></div>
+        <button v-on:click="hide1">显示</button>
+        <div style="background:#f00;width:100px;height:100px" v-if="show1"></div>
+    </div>
+
+    <script>
+        new Vue({
+            el:"#app",
+            data(){
+                return{
+                    show:true,
+                    show1:false
+                }
+            },
+            methods:{
+                hide(){
+                    this.show = !this.show;
+                   
+                },
+                hide1(){
+                    this.show1 = !this.show1;
+                }
+            }    
+        })
+    </script>
+</body>
+</html>

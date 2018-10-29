@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{parent}}{{childmsg}}
+        <custom :hehe="parent" @receve="get"></custom>          
+        <!-- :hehe 动态绑定    hehe随便起 -->
+        <ab></ab>
+    </div>
+    <script>
+        Vue.component("custom", {
+            props:["hehe"],
+            template: `
+                <p>我是全局组件{{msg}}{{hehe}}
+                    <button @click="send">发送</button>
+                </p>
+            `,
+            data() {
+                return {
+                    msg: "hello world"
+                }
+            },
+            methods: {
+                send(){
+                    this.$emit("receve",this.msg)    //子组件可以使用 $emit 触发父组件的自定义事件。
+                }
+            },
+            // mounted(){
+            //     this.$emit("receve",this.msg)
+            // }
+        })
+        new Vue({
+            // el: "#app",
+            data() {
+                return {
+                    parent:"我是大爹",
+                    childmsg:""
+                }
+            },
+            methods:{
+                get(val){
+                    this.childmsg = val;
+                }
+            },
+            components: {
+                "ab": {
+                    template: `
+                        <div>我是局部组件{{msg}}</div>
+                    `,
+                    data() {
+                        return {
+                            msg: "hehe"
+                        }
+                    },
+                },
+            }
+        }).$mount("#app")       //另一种挂载方式
+    </script>
+</body>
+
+</html>

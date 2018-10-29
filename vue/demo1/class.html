@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.min.js"></script>
+    <style>
+        .red{
+            width: 100px;
+            height: 100px;
+            background: #f00;
+        }
+        .green{
+            width: 100px;
+            height: 100px;
+            background: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div v-bind:class='{title1}'>{{msg}}</div>      <!-- 字符串 -->
+        <div v-bind:class='[activeClass, errorClass]'>{{msg}}</div>      <!-- 数组 -->
+        <div v-bind:class='{title3: isActive}'>{{msg}}</div>      <!-- 对象 -->
+        <div v-bind:style='{ color: activeColor, fontSize: fontSize}'>{{msg}}</div>
+        <div v-bind:class='flag?red:green'></div>
+        <div :style="win"></div>
+    </div>
+
+    <script>
+        new Vue({
+            el:"#app",
+            data(){
+                return{
+                    msg:"hello",
+                    title1:true,                //字符串型
+
+                    activeClass: 'title2',      //数组形式
+                    errorClass: 'now',          //数组形式
+
+                    isActive: true,             //对象形式
+                    
+                    activeColor:"red",
+                    fontSize:"20px",
+
+                    red:"red",
+                    green:"green",
+                    flag:true,
+
+                    win:{
+                        height:document.documentElement.clientHeight + "px",
+                        width:document.documentElement.clientWidth + "px",
+                        background:"#f0f"
+                    }
+
+                    //  v-bind:class      简写      :class
+                }
+            }
+        })
+    </script>
+</body>
+</html>

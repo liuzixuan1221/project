@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button @keydown.enter="enter">enter</button>
+        <button @keydown.13="enter">enter</button>          
+        <button @keydown.left="left">left</button>
+        <button @keydown.up="up">up</button>
+        <button @keydown.down="down">down</button>
+        <button @keydown.tab="tab">tab</button>
+        <button @keydown.space="space">space</button>
+        
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            methods:{
+                // 13是回车按键对应的code码
+                enter(){
+                    console.log("enter")
+                },
+                left(){
+                    console.log("left")
+                },
+                up(){
+                    console.log("up")
+                },
+                down(){
+                    console.log("down")
+                },
+                tab(){
+                    console.log("tab")
+                },
+                space(){
+                    console.log("space")
+                }
+            }
+        })
+    </script>
+</body>
+</html>

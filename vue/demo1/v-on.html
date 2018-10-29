@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="show">按钮</button>
+        {{title}}
+    </div>
+
+    <script>
+        new Vue({
+            el:"#app",
+            data(){
+                return{
+                    title:"123"
+                }
+            },
+            methods:{               //存放方法的地方
+                show(){
+                    this.title="321"
+                }
+            }
+        })
+    </script>
+</body>
+</html>

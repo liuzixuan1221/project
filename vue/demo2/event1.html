@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <div style="background:red;width:300px;height:300px" @click="grandpa">
+            <div style="background:green;width:200px;height:200px" @click="father">
+                <div style="background:blue;width:100px;height:100px" @click.stop="son"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            el:"#app",
+            data(){
+                return{
+
+                }
+            },
+            methods:{
+                grandpa(){
+                    console.log("grandpa");
+                },
+                father(){
+                    console.log("father");
+                },
+                son(e){
+                    var ev = e || event;
+                    console.log("son");
+                    // ev.stopPropagation();     //jq、js共用
+                    // ev.cancelBubble = true;     //js用
+
+
+                    //vue中 直接v-on:click.stop
+                }
+            }
+        })
+    </script>
+</body>
+</html>

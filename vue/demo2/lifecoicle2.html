@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+        <div id="app">
+            {{msg}}
+            <input type="text" v-model="msg">
+        </div>
+            <script>
+                var app = new Vue({
+                    el:"#app",
+                    data:{
+                        msg:"hello word"
+                    },
+                    methods:{
+                    },
+                    beforeCreate(){
+                        console.group("------beforeCreate------")
+                        console.log("%c%s","color:red","this:" + this.$el);
+                        console.log("%c%s","color:red","data:" + this.$data);
+                        console.log("%c%s","color:red","msg:" + this.msg);
+                    },
+                    created(){
+                        console.group("------created------")
+                        console.log("%c%s","color:red","this:" + this.$el);
+                        console.log("%c%s","color:red","data:" + this.$data);
+                        console.log("%c%s","color:red","msg:" + this.msg);
+                    },
+                    beforeMount(){
+                        console.group("------beforeMount------")
+                        console.log("%c%s","color:red","this:" + this.$el);
+                        console.log("%c%s","color:red","data:" + this.$data);
+                        console.log("%c%s","color:red","msg:" + this.msg);
+                    },
+                    mounted(){
+                        console.group("------mounted------")
+                        console.log("%c%s","color:red","this:" + this.$el);
+                        console.log("%c%s","color:red","data:" + this.$data);
+                        console.log("%c%s","color:red","msg:" + this.msg);
+                    },
+                    beforeUpdate(){
+                        console.group("------beforeUpdate------")
+                        console.log("%c%s","color:red","this:" + this.$el);
+                        console.log("%c%s","color:red","data:" + this.$data);
+                        console.log("%c%s","color:red","msg:" + this.msg);
+                    },
+                    updated(){
+                        console.group("------updated------")
+                        console.log("%c%s","color:red","this:" + this.$el);
+                        console.log("%c%s","color:red","data:" + this.$data);
+                        console.log("%c%s","color:red","msg:" + this.msg);
+                    },
+                    beforeDestroy(){
+                        console.group("------beforeDestroy------")
+                        console.log("%c%s","color:red","this:" + this.$el);
+                        console.log("%c%s","color:red","data:" + this.$data);
+                        console.log("%c%s","color:red","msg:" + this.msg);
+                    },
+                    destroyed(){
+                        console.group("------destroyed------")
+                        console.log("%c%s","color:red","this:" + this.$el);
+                        console.log("%c%s","color:red","data:" + this.$data);
+                        console.log("%c%s","color:red","msg:" + this.msg);
+                    }
+                })
+                // app.$destroy();
+            </script>
+</body>
+</html>

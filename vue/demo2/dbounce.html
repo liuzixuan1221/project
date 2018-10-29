@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+        <div id="app">
+            <input type="text" v-debounce="search">{{count}}
+        </div>
+            <script>
+                Vue.directive("debounce",{
+                    //函数节流
+                    //inserted  被绑元素插入到父节点时被调用
+                    
+                    inserted(el,binding){
+                        //el => input   binding.value
+                        let timer;
+                        el.addEventListener("keyup",()=>{
+                            if(timer){
+                                clearInterval(timer);
+                            }
+                            timer = setTimeout(()=>{
+                                console.log(binding)
+                                console.log(binding.value)
+                                binding.value()
+                            },500)
+                        })
+                    },
+                })
+        
+                var app = new Vue({
+                    el:"#app",
+                    data:{
+                        count:1
+                    },
+                    methods:{
+                        search(){
+                            this.count+=1;
+                        }
+                    }
+                })
+            </script>
+</body>
+</html>

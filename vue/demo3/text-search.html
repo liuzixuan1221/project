@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+    
+    <div id="app">
+        <custom :parent="Data" search="查询"></custom>
+        <custom :parent="Data" search="提交"></custom>
+    </div>
+
+    <script>
+        Vue.component("custom", {
+            template: `
+                <div>
+                    <input type="text" :style="input1" :value="value" />
+                    <input type="button" :value="search" :style="input2" @click="show"/>
+                    <custom-list v-show="flag" @revece="get" :son="parent"></custom-list>
+                </div>
+            `,
+            props:["parent","search"],
+            data() {
+                return {
+                    input1:{
+                        "width": 300 + "px",
+                        "height": 30 + "px",
+                        "border-radius": 30 + "px",
+                        "border":"3px solid sandybrown",
+                        "padding-left":"20px"
+                    },
+                    input2:{
+                        "width":"60px",
+                        "height":"30px",
+                        "background":"sandybrown",
+                        "color":"#fff",
+                        "border":"none",
+                        "border-radius":"20px"
+                    },
+                    value:"",
+                    flag:false,
+                }
+            },
+            methods:{
+                show(){
+                    this.flag=!this.flag
+                },
+                get(value){
+                    this.value = value;
+                }
+            }
+        });
+        Vue.component("custom-list",{
+            props:["son"],
+            template:`
+                <ul :style="ulStyle"">
+                    <li v-for="item in son" :style="liStyle" @click="show(item)">{{item}}</li>
+                </ul>
+            `,
+            data(){
+                return{
+                    ulStyle:{
+                        "margin-top":"50px",
+                        "list-style":"none",
+                        "width":"320px",
+                        "height":"auto",
+                        "border-radius":"20px",
+                        "border":"3px solid sandybrown"
+                    },
+                    liStyle:{
+                        "height":"40px",
+                        "line-height":"40px",
+                        "padding-left":"20px",
+                        "cursor": "pointer"
+                    },
+                }
+            },
+            methods:{
+                show(item){
+                    console.log(item)
+                    this.$emit("revece",item);
+                }
+            }
+        })
+        new Vue({
+            el:"#app",
+            data(){
+                return{
+                    Data:[
+                        "vue",
+                        "react",
+                        "angular"
+                    ]
+                }
+            }
+        })
+    </script>
+</body>
+</html>

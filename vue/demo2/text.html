@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        {{father_msg}}{{son_msg}}
+        <quanju v-bind:haha="father_msg" @get="send"></quanju>
+    </div>
+
+    <script>
+        Vue.component("quanju",{
+            template:`
+                <div>{{quanju_msg}}{{haha}}</div>
+            `,
+            data(){
+                return{
+                    quanju_msg:"我是全局"
+                }
+            },
+            props:["haha"],
+            mounted(){
+                this.$emit("get",this.quanju_msg);
+            }
+            
+        })
+        new Vue({
+            el:"#app",
+            data(){
+                return{
+                    father_msg:"我是大爹",
+                    son_msg:""
+                }
+            },
+            methods:{
+                send(val){
+                    this.son_msg = val;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
