@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #canvas{
+            border: 2px solid #000;
+            display: block;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="800" height="800">
+    当前浏览器不支持canvas,请更换浏览器以后再重试
+</canvas>
+
+
+<script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext("2d");
+
+    ctx.beginPath();
+    for (var i = 0; i < 5; i++) {
+        ctx.lineTo(Math.cos((18+i*72)/180*Math.PI)*300+400,
+                -Math.sin((18+i*72)/180*Math.PI)*300+400);
+
+        ctx.lineTo(Math.cos((54+i*72)/180*Math.PI)*150+400,
+                -Math.sin((54+i*72)/180*Math.PI)*150+400);
+    }
+    ctx.closePath();
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = "#000";
+    ctx.stroke();
+</script>
+</body>
+</html>

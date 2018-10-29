@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #canvas{
+            border: 2px solid #000;
+            display: block;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="1024" height="600">
+        当前浏览器不支持canvas,请更换浏览器以后再重试
+    </canvas>
+
+
+    <script>
+        //首先，找到<canvas>元素:
+        var canvas = document.getElementById("canvas");
+
+        //然后，创建 context 对象 (创建绘图环境)
+        //getContext()指定在画布上绘制的类型
+        var ctx = canvas.getContext("2d");
+
+        ctx.beginPath();
+        //1、画线
+        ctx.moveTo(350,250);
+        ctx.lineTo(750,250);
+        ctx.lineTo(600,175);
+        ctx.lineTo(650,175);
+        ctx.lineTo(550,100);
+        ctx.lineTo(450,175);
+        ctx.lineTo(500,175);
+        ctx.lineTo(350,250);
+
+        //2、设置线宽和颜色
+        ctx.lineWidth = 6;
+        ctx.strokeStyle = "#000";
+
+        //ps:canvas绘图是基于状态的绘图,所以应该先绘制绘图的状态，再绘制
+
+        //设置填充颜色
+        ctx.fillStyle = "#0f0";
+
+        //填充    //如果先绘制，再填充 绘制的线会被挡住一半
+        ctx.fill();
+
+        //3、绘制
+        ctx.stroke();
+
+
+        ctx.closePath();
+
+
+        ctx.beginPath();
+
+
+        ctx.moveTo(540,253);
+        ctx.lineTo(540,450);
+        ctx.lineTo(560,450);
+        ctx.lineTo(560,253);
+
+
+        ctx.lineWidth = 6;
+        ctx.strokeStyle = "#000";
+
+        ctx.fillStyle = "#ff0";
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.closePath();
+
+    </script>
+</body>
+</html>

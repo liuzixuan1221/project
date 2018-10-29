@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #canvas{
+            border: 2px solid #000;
+            display: block;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="800" height="800">
+    当前浏览器不支持canvas,请更换浏览器以后再重试
+</canvas>
+
+
+<script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext("2d");
+
+    var backgroundImages = new Image();
+    backgroundImages.src = "QQ图片20180817163038.jpg";
+    backgroundImages.onload = function(){
+        var pattrem = ctx.createPattern(backgroundImages,"repeat");
+        ctx.fillStyle = pattrem;
+        ctx.fillRect(0,0,800,800)
+    };
+
+</script>
+</body>
+</html>

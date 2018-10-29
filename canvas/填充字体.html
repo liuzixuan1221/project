@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #canvas{
+            border: 2px solid #000;
+            display: block;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="800" height="800">
+    当前浏览器不支持canvas,请更换浏览器以后再重试
+</canvas>
+
+
+<script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext("2d");
+
+
+        var linearGrad = ctx.createLinearGradient(0,0,800,800);
+
+        linearGrad.addColorStop(0.0, "#0ff");
+
+        linearGrad.addColorStop(0.5, "#fccccc");
+
+        linearGrad.addColorStop(1.0, "#f0f");
+
+    ctx.font = "40px normal Arial";
+    ctx.fillStyle =   linearGrad;
+    ctx.fillText("Today is a good day!",40,300);
+
+    ctx.strokeStyle = "#0f0";
+    ctx.strokeText("Today is a good day!",40,500);
+
+    ctx.strokeStyle = "#f0f";
+    ctx.strokeText("Today is a good day!",40,600,300);
+</script>
+</body>
+</html>

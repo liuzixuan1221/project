@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #canvas{
+            border: 2px solid #000;
+            display: block;
+            margin: 50px auto;
+        }
+    </style>
+</head>
+<body>
+<canvas id="canvas" width="800" height="600">
+    当前浏览器不支持canvas,请更换浏览器以后再重试
+</canvas>
+<script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext("2d");
+
+    ctx.lineWidth = 6;
+    ctx.strokeStyle = "#0ff";
+    ctx.rect(100,100,500,300);
+    ctx.fillStyle = "#f0f";
+    ctx.fill();
+    ctx.stroke();
+
+    ctx.strokeRect(500,500,100,50);
+    ctx.fillRect(300,500,100,50);
+</script>
+</body>
+</html>
