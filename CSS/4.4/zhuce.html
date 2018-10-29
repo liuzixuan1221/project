@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            width: 1920px;
+            height: 1800px;
+            background-color: #f2f2f2;
+        }
+
+        .inner {
+            width: 988px;
+            height: 1800px;
+            margin: auto;
+            background-color: white;
+        }
+
+        table {
+            width: 100%;
+            height: 30px;
+        }
+
+        tr {
+            height: 70px;
+        }
+
+        .title {
+            background-color: #f7f7f7;
+            height: 34px;
+        }
+
+        .xh {
+            color: red;
+        }
+
+        .box .h2 {
+            width: 300px;
+        }
+
+        .h2 .box {
+            float: right;
+        }
+
+        .h3 {
+            width: 420px;
+        }
+
+        .h4 {
+            width: 280px;
+        }
+
+        .input_one {
+            width: 98%;
+            height: 36px;
+        }
+
+        .input_seven {
+            height: 36px;
+        }
+
+        .yzm {
+            width: 80px;
+            height: 36px;
+            background-color: #ccc;
+            color: black;
+            margin: auto;
+            float: right;
+            margin-right: 30px;
+        }
+
+        .h3 p {
+            float: right;
+        }
+        .btn{
+            width: 270px;
+            height: 36px;
+            background-color: #e43e42;
+            color: white;
+            text-align: center;
+            margin: auto;
+            line-height: 36px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="inner">
+            <table>
+                <tr class="title" rules="none">
+                    <td colspan="4">账户信息</td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span class="xh">*</span>
+                            <span>用户名:</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+                        <input class="input_one" type="text">
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span class="xh">*</span>
+                            <span>请设置密码:</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+                        <input class="input_one" type="text">
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span class="xh">*</span>
+                            <span>请确认密码：</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+                        <input class="input_one" type="text">
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+            </table>
+            <table>
+                <tr class="title" rules="none">
+                    <td class="title" colspan="4">公司信息</td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span class="xh">*</span>
+                            <span>公司名称：</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+                        <input class="input_one" type="text">
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span class="xh">*</span>
+                            <span>公司所在地：</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+                        <select style="height: 36px">
+                            <option value="">请选择</option>
+                        </select>
+                        <select style="height: 36px">
+                            <option value="">请选择</option>
+                        </select>
+                        <select style="height: 36px">
+                            <option value="">请选择</option>
+                        </select>
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span class="xh">*</span>
+                            <span>公司地址：</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+                        <input class="input_one" type="text">
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span class="xh">*</span>
+                            <span>购买类型/用途：</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+                        <input checked="checked" type="checkbox">IT设备</label>
+                        <input checked="checked" type="checkbox">数码通讯</label>
+                        <input checked="checked" type="checkbox">办公用品耗材</label>
+                        <input checked="checked" type="checkbox">大家电</label>
+                        <input checked="checked" type="checkbox">项目合作-政府采购</label>
+                        <input checked="checked" type="checkbox">礼品</label>
+                        <input checked="checked" type="checkbox">商旅(机票/酒店等)</label>
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span>推荐人手机：</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+                        <input class="input_one" type="text">
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span>企业人数：</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span>公司行情：</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span>公司性质：</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+            </table>
+            <table>
+                <tr class="title" rules="none">
+                    <td colspan="4">联系人信息</td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span class="xh">*</span>
+                            <span>联系人姓名:</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+                        <input class="input_one" type="text">
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span class="xh">*</span>
+                            <span>所在部门：</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span class="xh">*</span>
+                            <span>固定电话:</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+                        <input class="input_one" type="text">
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span class="xh">*</span>
+                            <span>验证手机:</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+                        <input class="input_one" type="text">
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span class="xh">*</span>
+                            <span>短信验证码：</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span>联系人邮箱：</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+                        <input class="input_one" type="text">
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+                <tr>
+                    <td class="h2" colspan="2">
+                        <div class="box">
+                            <span class="xh">*</span>
+                            <span>验证码：</span>
+                        </div>
+                    </td>
+                    <td class="h3">
+                        <input class="input_seven" type="text">
+
+                        <p style="color:#005aa0">换一张</p>
+                        <p style="color:#ccc">看不清？</p>
+                        <div class="yzm">
+                            4csr
+                        </div>
+                    </td>
+                    <td class="h4"></td>
+                </tr>
+
+                <tr style="text-align: center">
+                    <td colspan="4">
+                        我已阅读并同意
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4">
+                        <div class="btn">
+                            立即注册
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

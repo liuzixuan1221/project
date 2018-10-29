@@ -1,0 +1,59 @@
+.inner{
+    width: 1230px;
+    margin: auto;
+}
+.site-nav{
+    height: 32px;
+    background: #f2f2f2;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 32px;
+    font-size: 12px;
+    color: #999;
+}
+
+.site-nav .navL a{
+    float: left;
+    margin: 0 10px;
+    color: #999;
+}
+.site-nav .navL a:hover{
+    color: red;
+}
+.site-nav .navL a:first-of-type{
+    margin-left: 0;
+}
+.site-nav .navR li{
+    float: left;
+    margin: 0 10px;
+}
+.site-nav .navR li  a{
+    color: #999;
+}
+.site-nav .navR li  a:hover{
+    color: red;
+}
+.header{
+    height: 130px;
+}
+.header .logo{
+    height: 130px;
+    width: 290px;
+}
+.header .logo img{
+    width: 240px;
+    height: 130px;
+    margin-left: -20px;
+}
+.header .headerR{
+    width: 625px;
+}
+.footer{
+    height: 1000px;
+}
+.heitiaotiao{
+    position: fixed;
+    width: 35px;
+    height: 100%;
+    background: #000;
+    right: 0;
+}

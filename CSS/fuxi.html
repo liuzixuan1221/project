@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*
+
+            css选择器
+                类选择器    .
+                id选择器    #
+                后代选择器  .a .b
+                子代选择器  .a>.b
+                属性选择器  [attr]
+
+                权重值
+                !important 最高权重值    10000
+                行内  1000
+                id    100
+                类    10
+                元素  1
+
+                伪类:
+
+        */
+
+        * {
+            padding: 0;
+            margin: 0;
+            /* 浏览器默认样式不同 */
+        }
+        div#box{
+            display: inline;
+        }
+        div#box:after{
+            content: "";
+            width: 100px;
+            height: 100px;
+            display: block;
+            background: #f00;
+        }
+        div#box:before{
+            content: "";
+            width: 100px;
+            height: 100px;
+            display: block;
+            background: #00f;
+        }
+        
+        div>p{
+            width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* white-space: nowrap; */
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+    </div>
+    <div>
+            <p>hehehehehehehehafdgsdfgsrsfdggdsfgdsfhehehehehehehehafdgsdfgsrsfdggdsfgdsfhehehehehehehehafdgsdfgsrsfdggdsfgdsfhehehehehehehehafdgsdfgsrsfdggdsfgdsfhehehehehehehehafdgsdfgsrsfdggdsfgdsfhehehehehehehehafdgsdfgsrsfdggdsfgdsfhehehehehehehehafdgsdfgsrsfdggdsfgdsfhehehehehehehehafdgsdfgsrsfdggdsfgdsf</p>
+    </div>
+</body>
+
+</html>

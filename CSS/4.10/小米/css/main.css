@@ -1,0 +1,184 @@
+.inner{
+    width: 1226px;
+    margin: auto;
+}
+.header-box{
+    height: 40px;
+    background-color: #000;
+}
+.header-box .headerNav{
+     width: 400px;
+     height: 40px;
+    background-color: yellow;
+ }
+.header-box .headerMsg{
+    width: 400px;
+    height: 40px;
+    background-color: yellow;
+}
+
+.nav-box{}
+.nav-box .logo{
+    height: 100px;
+}
+.nav-box .logo .logoIcon{
+    width: 55px;
+    height: 55px;
+    background-color: yellow;
+    padding-top: 22px;
+    float: left;
+    margin-right: 10px;
+}
+.nav-box .logo .nav{
+    width: 850px;
+    height: 100px;
+    background-color: yellow;
+    float: left;
+}
+.nav-box .logo .search{
+    width: 296px;
+    height: 50px;
+    border: 1px solid yellow;
+    margin-top: 25px;
+    box-sizing: border-box;
+    float: right;
+}
+.nav-box .banner{
+    width: 1226px;
+    height: 460px;
+}
+.nav-box .banner .bannerNav{
+    width: 234px;
+    height: 460px;
+    background-color: #ccc;
+}
+.nav-box .banner .bannerImg{
+    width: 992px;
+    height: 460px;
+    background-color: yellow;
+}
+
+.nav-box .bannerMsg{
+    margin-top: 14px;
+    width: 1226px;
+    height: 170px;
+    margin-bottom: 26px;
+}
+.nav-box .bannerMsg ul{
+    margin-left: -14px;
+}
+.nav-box .bannerMsg li{
+    width: 316px;
+    height: 170px;
+    background-color: yellow;
+    margin-left: 14px;
+    float: left;
+}
+.nav-box .bannerMsg li:first-of-type{
+    width: 234px;
+}
+.nav-box .shangou{
+    width: 1226px;
+    height: 438px;
+}
+.nav-box .shangou .tit{
+    height: 58px;
+}
+.nav-box .shangou .tit .titShangou{
+    width: 100px;
+    height: 100%;
+    background-color: yellow;
+}
+.nav-box .shangou .tit .titIcon{
+    width: 70px;
+    height: 25px;
+    background-color: yellow;
+    margin-top: 25px;
+}
+.nav-box .con{
+    width: 1226px;
+    height: 380px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+
+}
+.nav-box .con ul{
+    width: 1260px;
+
+}
+.nav-box .con li{
+    width: 234px;
+    height: 340px;
+    background-color: yellow;
+    float: left;
+    margin-right: 14px;
+
+}
+.nav-box .shangouMsg{
+    height: 120px;
+    background-color: yellow;
+    margin-bottom: 42px;
+}
+.main-box{
+    background-color: #ccc;
+    padding-top: 60px;
+}
+.main-box .phone{
+    height: 686px;
+    margin-bottom: 8px;
+}
+.main-box .box-hd{
+    height: 58px;
+}
+.main-box .box-hd h2{
+    width: 100px;
+    height: 58px;
+    background-color: yellow;
+}
+.main-box .box-hd .more{
+    width: 92px;
+    height: 58px;
+    background-color: yellow;
+}
+.main-box .box-hd .tab-list{
+    width: 280px;
+    height: 42px;
+    background-color: yellow;
+    box-sizing: border-box;
+    padding: 16px 0 0;
+}
+.main-box .box-bd{
+    height: 628px;
+}
+.main-box .box-bd ul{
+    width: 1240px;
+}
+.main-box .box-bd li{
+    width: 234px;
+    height: 260px;
+    padding: 20px 0;
+    background-color: yellow;
+    float: left;
+    margin: 0 14px 14px 0;
+}
+.main-box .phone .box-bd li:first-of-type{
+    width: 234px;
+    height: 614px;
+    margin: 0 14px 14px 0;
+    padding: 0;
+}
+.main-box .boxMsg{
+    height: 120px;
+    margin: 28px 0 22px;
+    background-color: yellow;
+}
+.main-box .homeelec{
+    height: 686px;
+    margin-bottom: 8px;
+}
+.main-box .homeelec .box-bd li:nth-of-type(1),.main-box .homeelec .box-bd li:nth-of-type(6){
+    width: 234px;
+    height: 300px;
+    padding: 0;
+    margin: 0 14px 14px 0;
+}

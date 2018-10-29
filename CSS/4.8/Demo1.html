@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        a:link{
+            color: red;
+        }
+        a:visited{
+            color: yellow;
+        }
+        a:hover{
+            color: blue;
+        }
+        a:active{
+            color: green;
+        }
+        .wrap{
+            height: 1000px;
+        }
+        .text{
+
+
+
+            /*字体*/
+            font-size: 30px;
+            color: blueviolet;
+            font-weight: bold;
+            font-style: italic;
+            letter-spacing: 10px;
+            font-family: "微软雅黑";
+            background: transparent;    /*透明色*/
+            width: 300px;
+            height: 300px;
+
+
+            /*透明度*/
+            color: rgba(0,0,0,.5);        /*背景透明色*/
+
+
+
+            opacity: .1;            /*在低级版本ie不兼容*/
+            filter: alpha(opacity=10);
+
+
+            /*文本*/
+            text-align: center;     /*水平居中*/
+            /*line-height: 300px;*/
+            text-indent: 2em;       /*首行缩进两字  em相对单位*/
+            white-space: nowrap;    /*强制不换行*/
+            overflow: hidden;       /*溢出隐藏*/
+            text-overflow: ellipsis;    /*文本超出，用省略号表示*/
+
+
+            /*背景*/
+            /*属性的合写：为了节省代码量，减少所占内存 优化性能*/
+            /*background: red demo2("images/xhr.jpg") no-repeat -100px 0px fixed; height:264px;*/
+            height: 264px;
+            background-color: red;        /*背景颜色*/
+            background-image: url("images/xhr.jpg");        /*背景图片*/
+            background-repeat: no-repeat;       /*背景是否重复*/
+            background-position: -100px 0px;     /*背景图片的位移*/
+            background-attachment: fixed;   /*背景图片固定与否*/
+
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+    <a href="#">我是1</a>
+    <a href="#">我是2</a>
+    <a href="#">我是3</a>
+    <a href="#">我是4</a>
+    <div class="text">顶上了飞机了撒地方就浪费了时间啊浮动欧德宁骚妇你；阿斯蒂芬基拉韦经理桑德拉妇女理发师拿到了发三年多了爱上了据俄罗斯军方就是打了房间看时间浪费的撒佛顶上了飞机了撒地方就浪费了时间啊浮动欧德宁骚妇你；阿斯蒂芬基拉韦经理桑德拉妇女理发师拿到了发三年多了爱上了据俄罗斯军方就是打了房间看时间浪费了据俄罗斯军方就是打了房间看时间浪费你说的你发了就拉数据的绿色按附件栗色卷发；按时发送色狼咖啡机的</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--表单元素-->
+<!--单行文本域-->
+<!--加form为了保证表单里所有的元素 都可以提交到服务器上-->
+<form action="">
+    <fieldset>
+    <legend>表单名</legend>
+    用户名：<input type="text"><br>
+    密码：<input type="password"><br>
+    重置按钮：<input type="reset" value="取消"><br>
+    自提交按钮：<input type="submit" value="登录"><br>
+    自定义按钮：<input type="button" value="按钮 A"><br>
+    <button>谔谔谔谔</button><br>
+    图片按钮：<input type="image" src="images/fdj.png"><br>
+    上传文件按钮：<input type="file"><br>
+
+    <!--单行文本框：属性value/placeholder  进行文字提示-->
+
+<!--    单行文本框：只能写一行文字
+    <input type="text">-->
+
+    搜索框：<input type="text" value="你想搜啥"><br>
+    搜索框：<input type="text" placeholder="你想搜啥"><br>
+
+    <!--表单高级属性-->
+    <!--disabled不可操作-->
+    <!--readonly只读模式-->
+    <label type="text" value="张三" disabled="disabled"><br>
+    <input type="text" value="李四" readonly="readonly"><br>
+
+        单选框：<br>  <!--默认选择中：chceked="chacked"-->
+        <input checked="checked" id="man" type="radio" name="sex" >
+        <label for="man">男</label>
+        <input id="woman" type="radio" name="sex" >
+        <label for="woman">女</label><br>
+
+
+
+        <!--<label for="name">用户名</label>-->
+        <!--<input id="name" type="text"><br>-->
+        多选框：<br>  <!--默认选择中：chceked="chacked"-->
+        <label>你的兴趣爱好是什么？</label>
+        <input type="checkbox" id="e"><label for="e">吃饭</label>
+        <input checked="checked" type="checkbox" id="s"><label for="s">睡觉</label>
+        <input checked="checked" type="checkbox" id="h"><label for="h">打豆豆</label>
+        <input type="checkbox" id="c"><label for="c">同桌叫豆豆</label><br>
+
+
+
+
+        下拉菜单：<br> <!--默认选择中：selected="selected"-->
+        <select>
+            <option value="">请您选择</option>
+            <option value="">丰台区</option>
+            <option selected="selected" value="">海淀区</option>
+            <option value="">昌平区</option>
+            </select><br>
+
+        多行显示下拉菜单:<br>
+        <select multiple="multiple">
+            <option value="">请您选择</option>
+            <option value="">丰台区</option>
+            <option selected="selected" value="">海淀区</option>
+            <option value="">昌平区</option>
+        </select><br>
+        下拉菜单分组：<br>
+        <select>
+            <optgroup label="北京">
+                <option value="">丰台区</option>
+                <option selected="selected" value="">海淀区</option>
+                <option value="">昌平区</option>
+            </optgroup>
+            <optgroup label="上海">
+                <option value="">丰台区</option>
+                <option selected="selected" value="">海淀区</option>
+                <option value="">昌平区</option>
+            </optgroup>
+        </select><br>
+    </fieldset>
+</form>
+</body>
+</html>

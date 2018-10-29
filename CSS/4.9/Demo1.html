@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1{
+            height: 100px;
+            width: 100px;
+            background-color: #0b0b0b;
+            color: white;
+            display: inline;
+        }
+        .div2{
+            height: 100px;
+            width: 100px;
+            background-color: #0b0b0b;
+            color: white;
+            display: inline-block;
+        }
+        .a1{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            color: white;
+            display: block;
+        }
+        .a2{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            color: white;
+            display: inline-block;
+        }
+        input{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            color: white;
+        }
+        .input1{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            color: white;
+            display: block;
+        }
+        .div3{
+            height: 200px;
+            width: 200px;
+            background-color: pink;
+        }
+        .div4{
+             height: 200px;
+             width: 200px;
+             background-color: blueviolet;
+             display: none;      /*隐藏不显示*/
+         }
+        .div3:hover+.div4{     /*+ 紧挨着的兄弟盒子*/
+             display: block;      /*显示为块级元素*/
+             display: inline;        /*显示为行内元素*/
+             display: inline-block;  /*显示为行块元素*/
+        }
+    </style>
+</head>
+<body>
+    <div>这是BFC</div>
+    <div class="div1">这是BFC</div>
+    <div class="div2">这是BFC</div>
+    <a class="a1" href="#">这是IFC</a>
+    <a href="#">这是IFC</a>
+    <a class="a2" href="#">这是IFC</a>
+    <input type="text">
+    <input class="input1" type="text">
+    <div class="div3">
+        点我
+    </div>
+    <div class="div4">隐藏</div>
+</body>
+</html>

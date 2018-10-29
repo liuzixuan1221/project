@@ -1,0 +1,432 @@
+.inner{
+    width: 1150px;
+    margin: auto;
+}
+.daohang{
+    background: #fff;
+    width: 38px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+}
+.header{
+    padding-top: 30px;
+    width: 100%;
+    height: 610px;
+    background: url("../images/bannerV2.jpg");
+    background-attachment: fixed;
+    position: relative;
+}
+.header .wrap .headerLeft{
+
+}
+.header .wrap .headerLeft .left{
+    width: 137px;
+    height: 66px;
+}
+i{
+    display: inline-block;
+    width: 134px;
+    height: 44px;
+    background: url("../images/spriteV2_new.png");
+}
+.icon1{
+    width: 137px;
+    height: 66px;
+    background-position: 0 -370px;
+}
+.header .wrap .headerLeft .right{
+    height: 27px;
+    background: rgba(0,0,0,0.25);
+    display: inline-block;
+    line-height: 27px;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 15px;
+    padding: 0 10px;
+    font-size: 12px;
+}
+.header .wrap .headerRight{
+
+}
+.header .wrap .headerRight .bottom ul{
+    padding-top: 20px;
+}
+.header .wrap .headerRight .bottom li{
+    float: left;
+    margin-left: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+
+
+}
+.header .wrap .headerRight  a{
+    color: white;
+}
+.header .wrap .headerRight .bottom li img{
+    width: 19px;
+    height: 22px;
+    vertical-align: text-top;
+}
+.icon2{
+    width: 10px;
+    height: 12px;
+    background-position: -189px -20px;
+}
+.icon3{
+    width: 7px;
+    height: 10px;
+    background-position: -225px -20px;
+}
+.header .wrap .headerRight .top{
+    float: right;
+    text-align: right;
+    height: 20px;
+    margin-top: -6px;
+}
+.icon4{
+    width: 17px;
+    height: 16px;
+    background-position: -204px -20px;
+    vertical-align: text-bottom;
+    margin-right: 4px;
+}
+.header .wrap .headerRight .top .login{
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+}
+.header .wrap .headerWrap{
+    margin: auto;
+    }
+.header .wrap .headerWrap .wrap-ico{
+    margin: 120px auto 0 auto;
+    height: 69px;
+    width: 540px;
+    text-align: center;
+    display: block;
+}
+.header .wrap .wrap-title{
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 4px;
+    height: 35px;
+    line-height: 35px;
+}
+.header .wrap .wrap-box{
+    margin: 34px auto 0 auto;
+    padding: 0 20px ;
+    width: 773px;
+}
+.header .wrap .wrap-box .boxTop{
+    position: relative;
+    margin-bottom: 5px;
+}
+.header .wrap .wrap-box .boxTop li{
+    font-size: 14px;
+    line-height: 32px;
+    color: #CCCCCC;
+    float: left;
+    margin-right: 20px;
+
+}
+.header .wrap .wrap-box .boxTop li:hover{
+    color: #DDD;
+}
+.header .wrap .wrap-box .boxTop li:active{
+    color: #fff;
+    font-weight: 500;
+}
+.header .wrap .wrap-box .boxTop li:nth-of-type(2):hover+span{
+    margin-left: 90px;
+}
+.header .wrap .wrap-box .boxTop li:hover+span{
+    margin-left: 180px;
+ }
+.header .wrap .wrap-box .boxTop li:hover+span{
+    margin-left: 250px;
+}
+.header .wrap .wrap-box .boxTop span{
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-bottom-color: white;
+    position: absolute;
+    bottom: -5px;
+    left: 22px;
+}
+.header .wrap .wrap-box .boxBottom input{
+    width: 626px;
+    padding-left: 20px;
+    border: 0;
+    height: 55px;
+    line-height: 55px;
+    border-radius: 2px;
+    font-size: 14px;
+}
+.header .wrap .wrap-box .boxBottom .find{
+    width: 127px;
+    height: 55px;
+    border: 0;
+    display: block;
+    border-radius: 0 2px 2px 0;
+    background: #00ae66;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    line-height: 55px;
+}
+.header .wrap .wrap-video{
+    position: absolute;
+    bottom: 34px;
+}
+.header .wrap .wrap-video .pen{
+    float: left;
+    margin-right: 30px;
+}
+.header .wrap .wrap-video .pen img{
+    width: 16px;
+    height: 16px;
+}
+.header .wrap .wrap-video .pen a{
+    color: white;
+    font-size: 12px;
+}
+.home-nav{
+    margin: 0 auto;
+    padding-top: 45px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+.home-nav li{
+    float: left;
+    width: 25%;
+}
+.home-nav li:hover img{
+    margin-top: -10px;
+}
+.home-nav li img{
+    width: 76px;
+    height: 65px;
+}
+.home-nav li .titleOne{
+    font-size: 18px;
+    color: #394043;
+}
+.home-nav li .titleTwo{
+    font-size: 12px;
+    color: #b0b3b4;
+    line-height: 18px;
+    width: 183px;
+    margin: auto;
+}
+.hand-lianjia{
+    background: url("../images/bg-app.jpg")center top;
+    height: 479px;
+}
+.icon5{
+    width: 286px;
+    height: 118px;
+    background-position: -448px -380px;
+ }
+.hand-lianjia .hand-box{
+    width: 479px;
+    padding-top: 40px;
+}
+.hand-lianjia .hand-box .text{
+    line-height: 22px;
+    margin-top: 22px;
+    font-size: 14px;
+    width: 480px;
+    color: #333;
+}
+.hand-lianjia .hand-box .download{
+    margin-top: 40px;
+}
+.icon6{
+    background-position: -20px -139px;
+}
+.icon7{
+    background-position: -20px -197px;
+}
+.icon8{
+    width: 102px;
+    height: 102px;
+    background-position: -463px -138px ;
+}
+.ershoufang{
+    padding: 50px 0 15px;
+}
+.ershoufang .title-top{
+
+}
+.icon9{
+    width: 248px;
+    height: 30px;
+    background-position: -18px -94px;
+}
+.ershoufang .title-top .more{
+    color: #888;
+    margin-top: 10px;
+    width: 1150px;
+    font-size: 14px;
+}
+.ershoufang .title-top .more a{
+    color: #000;
+}
+.ershoufang .title-top .more a:hover{
+    text-decoration: underline;
+}
+.ershoufang .wra{
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.ershoufang ul{
+    margin-top: 70px;
+    width: 1200px;
+}
+
+.ershoufang li{
+    width: 250px;
+    height: 323px;
+    float: left;
+    margin-right: 50px;
+    border-radius: 2px;
+    margin-bottom: 3px;
+
+}
+.ershoufang .textBox{
+    width: 250px;
+    height: 72px;
+    background: #fff;
+}
+.ershoufang .pic{
+    position: relative;
+}
+.ershoufang .pic img{
+    width: 250px;
+    height: 192px;
+}
+.ershoufang .pic span{
+    position: absolute;
+    padding: 0 8px;
+    height: 30px;
+    background: #394043;
+    font-size: 18px;
+    text-align: center;
+    top: 150px;
+    line-height: 30px;
+    color: #fff;
+    left: 0;
+}
+.ershoufang .textBox .one{
+    font-size: 16px;
+    color: #394043;
+    height: 20px;
+    overflow: hidden;
+    padding: 10px 18px 0;
+}
+.ershoufang .textBox .two{
+    color: #999;
+    font-size: 12px;
+    padding: 0 18px;
+    overflow: hidden;
+}
+.ershoufang .textBox .two span{
+    margin-right: 8px;
+}
+.ershoufang .tips{
+    height: 45px;
+    line-height: 45px;
+    padding-right: 5px;
+}
+.ershoufang .tips span{
+    margin-right: 8px;
+    color: #aaa;
+    font-size: 12px;
+}
+.bottomGreen{
+    padding-top: 60px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 240px;
+    background: url("../images/truth-bgV2.jpg") center top;
+}
+.icon10{
+    width: 501px;
+    height: 115px;
+    background-position: -20px -254px;
+}
+
+.GreenR p{
+    color: #fff;
+    font-size: 16px;
+    line-height: 25px;
+}
+.GreenR .serach-inp{
+    width: 531px;
+    height: 29px;
+    margin-top: 18px;
+    padding: 7px 12px;
+    background: #fff;
+    line-height: 29px;
+    border-radius: 2px;
+    font-size: 14px;
+}
+.icon11{
+    width: 18px;
+    height: 18px;
+    background-position: -406px -20px;
+    display: inline-block;
+    margin-top: 5px;
+}
+em{
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    background: url("../images/sidebar_spriteV5.png");
+}
+.em1{
+    margin-top: 200px;
+    background-position: -38px -420px;
+}
+.em1 .box {
+    width: 350px;
+    height: 300px;
+    background: #fff;
+    border: 1px solid #ccc;
+    display: none;
+    position: fixed;
+    right: 38px;
+    top: 200px;
+}
+.em1:hover .box{
+    display: block;
+}
+.guanggao{
+    width: 100%;
+    height: 138px;
+    position: fixed;
+    bottom: 0;
+    z-index: 998;
+    background: #fff;
+    border-top: 2px solid black;
+    display: block;
+}
+.esc{
+    left: 50%;
+    margin-left: -25px;
+    bottom: 79px;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #ccc;
+    z-index: 999;
+}
+.esc:active+.guanggao,.esc:active{
+    display: none;
+}

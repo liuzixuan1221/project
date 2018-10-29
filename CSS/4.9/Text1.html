@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        div{
+            height: 60px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        li{
+            width: 100px;
+            height: 30px;
+            background-color: red;
+            float: left;
+            color: white;
+        }
+        li:nth-child(2){
+            background-color: blue;
+        }
+        li:last-child{
+            background-color: green;
+        }
+        .lt{
+            float: right;
+        }
+        .fl-none{
+            float: none;
+        }
+        .clear{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li class="lt">3</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li class="lt">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>1</li>
+            <li class="lt">2</li>
+            <li>3</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li class="fl-none">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li class="fl-none clear">3</li>
+        </ul>
+    </div>
+</body>
+</html>

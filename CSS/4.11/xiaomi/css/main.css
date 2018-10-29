@@ -1,0 +1,105 @@
+body{
+    font-size: 12px;
+    color: #ccc;
+}
+.header{
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+}
+.inner{
+    width: 1226px;
+    margin: auto;
+}
+.header .headerLeft{
+    margin-top: 8px;
+}
+.header .headerRight{
+    margin-top: 8px;
+}
+.header a{
+    font-size: 12px;
+    color: #b0b0b0;
+    border-right: 1px solid #b0b0b0;
+    padding-right: 7px;
+}
+.header a:hover{
+    color: white;
+}
+.header a.last{
+    border: none;
+}
+.header .spCar{
+    width: 120px;
+    height: 40px;
+    background: #424242;
+    margin-top: -8px;
+    margin-left: 10px;
+    line-height: 40px;
+    text-align: center;
+
+}
+
+.header .spCar{
+    display: block;
+    width: 120px;
+    height: 40px;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+.header .headerRight img{
+    vertical-align: text-bottom;        /*只能用于行块元素*/
+}
+.header2{
+    height: 100px;
+}
+.header2 .logo{
+    margin-top: 22px;
+    margin-right: 190px;
+    width: 55px;
+    height: 55px;
+    background: #ff6700 url("../images/mi-logo.png") center no-repeat;
+}
+.header2 ul{
+    line-height: 100px;
+}
+.header2 li{
+    float: left;
+    color: #333;
+    font-size: 16px;
+    margin-right: 20px;
+}
+.header2 li:hover{
+    color: #ff6700;
+}
+
+.header2 .search{
+    width: 300px;
+    height: 50px;
+    margin-top: 22px;
+    line-height: 50px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.header2 .search .searchL{
+    position: relative;
+    width: 248px;
+    box-sizing: border-box;
+}
+.header2 .search input{
+    position: absolute;
+    width: 223px;
+    height: 48px;
+    padding: 0 10px;
+    border: none;
+}
+
+.header2 .search .searchR{
+    width: 49px;
+    height: 49px;
+    border-left: 1px solid #ccc;
+    background: url("../images/QQ截图20180411102044.png")center no-repeat;
+}
+.header2 .search .searchR:hover{
+    background: #ff6700 url("../images/QQ截图20180411122137.png")center no-repeat;
+}

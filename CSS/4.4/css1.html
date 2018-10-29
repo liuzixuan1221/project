@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--外链样式-->
+    <link rel="stylesheet" href="css/css1.css">
+
+
+    <style>
+        /*导入样式*/
+        @import url("css/css2.css");
+
+        /*通配符选择器    遍历网页中所有的标签*/
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /*内嵌样式    不推荐使用*/
+        /*标签选择器*/
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        /*类选择器*/
+        .div2{
+            background:green;
+        }
+        /*id选择器*/
+        #div3{
+            background: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <!--内联样式-->
+    <!--第一优先级-->
+    <div class="div1" style="height: 100px;width: 100px;background:#000;"></div>
+    <div class="div2"></div>
+    <div id="div3"></div>
+    <div class="div4"></div>
+    <div class="div5"></div>
+</body>
+</html>

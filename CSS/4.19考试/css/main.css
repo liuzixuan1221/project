@@ -1,0 +1,483 @@
+body{
+    font-size: 12px;
+    color: #7f7f7f;
+    font-family: "微软雅黑";
+}
+.inner{
+    width: 1000px;
+    margin: auto;
+}
+.headerTop{
+    background: #002646;
+}
+.headerTop .TopLeft{
+    line-height: 30px;
+    color: #fff;
+}
+.headerTop .TopRight{
+    line-height: 30px;
+    color: #fff;
+}
+.headerTop .TopRight .pic{
+    display: inline-block;
+    height: 20px;
+    vertical-align: middle;
+}
+.headerBottom .logo{
+    padding-top: 27px;
+}
+.headerBottom li{
+    float: left;
+    line-height: 120px;
+    padding: 0 23px;
+}
+.headerBottom li a{
+    color: #7f7f7f;
+}
+.headerBottom .st{
+    float: left;
+    line-height: 120px;
+    background: #0063b6;
+    padding: 0 23px;
+    position: relative;
+}
+.headerBottom .la{
+    padding-right: 0;
+}
+.headerBottom .st a{
+    color: #fff;
+}
+.headerBottom .dian img{
+    display: block;
+    position: absolute;
+    top:83px;
+    left: 38px;
+}
+.headerBottom li a:hover{
+    color: #0063b6;
+}
+.headerBottom .st a:hover{
+    color: #fff;
+}
+.main .banner img{
+    width: 100%;
+    display: block;
+}
+.OnlineConsulting{
+    position: fixed;
+    z-index: 99;
+    top: 21%;
+    right: 11%;
+}
+.OnlineConsulting .close{
+    margin-left: 48px;
+}
+.OnlineConsulting .close img{
+    display: block;
+}
+.OnlineConsulting .box{
+    height: 380px;
+    width: 140px;
+    background: #002646;
+    border-radius: 8px;
+    padding: 18px 12px 22px 12px;
+    box-sizing: border-box;
+}
+.p1{
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    line-height: 18px;
+    margin-bottom: 23px;
+}
+.OnlineConsulting .box .titleTop .p1 span{
+    font-size: 11px;
+}
+.OnlineConsulting .box .QQzx li{
+    width: 100%;
+    height: 29px;
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+.OnlineConsulting .box .QQzx a{
+    line-height: 29px;
+    font-size: 14px;
+    color: #3f7dc0;
+    padding: 0 16px;
+}
+.OnlineConsulting .box .QQzx a img{
+    vertical-align: middle;
+}
+.OnlineConsulting .box .erweima{
+    margin: 10px 0;
+}
+.OnlineConsulting .box .titleBottom{
+    text-align: center;
+    color: #fff;
+    line-height: 25px;
+}
+.OnlineConsulting .box .titleBottom .tel{
+    margin-left: 6px;
+}
+.OnlineConsulting .box .titleBottom .number{
+    font-size: 14px;
+}
+ .CONTACT_US{
+    padding-bottom: 37px;
+    box-sizing: border-box;
+}
+
+.tit_bg_line{
+    background: url("../images/tit_bg_line.png");
+    margin-top: 85px;
+    width: 100%;
+    height: 1px;
+    background-size: cover;
+    position: relative;
+}
+.tit_bg_line>.title{
+    position: absolute;
+    text-align: center;
+    width: 186px;
+    left: 50%;
+    margin-left: -93px;
+    margin-top: -32px;
+}
+.ppp1{
+    font-weight: 500;
+    font-size: 25px;
+    color: #002646;
+}
+.ppp2{
+    display: inline-block;
+    font-size: 14px;
+    height: 27px;
+    border-bottom: 4px solid #0063b6;
+}
+.CONTACT_US ul{
+    margin-top: 60px;
+    width: 1058px;
+}
+.CONTACT_US  li{
+    width: 206px;
+    height: 206px;
+    background: #002646;
+    margin: 30px 58px 0 0;
+    float: left;
+}
+.CONTACT_US  li a{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+.CONTACT_US  li a img{
+    padding: 52px 0 23px;
+    box-sizing: border-box;
+}
+.CONTACT_US  li a p{
+    font-size: 18px;
+    line-height: 25px;
+    color: #fff;
+}
+.CONTACT_US  li:hover{
+    background: #0063b6;
+}
+.ABOUT_US{
+    background: #ededed;
+
+}
+.ABOUT_US aside{
+    width: 500px;
+    height: 370px;
+    padding-top: 30px;
+    box-sizing: border-box;
+    background: #ededed;
+    padding-left: 20px;
+}
+.ABOUT_US aside .title{
+    margin-left: 24px;
+    margin-bottom: 22px;
+}
+.ABOUT_US aside .text{
+    line-height: 24px;
+    width: 465px;
+    text-indent: 2em;
+}
+.MORE{
+    width: 74px;
+    height: 30px;
+    background: #147756;
+    border-radius: 15px;
+    margin-top: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+}
+.PRODUCTS{
+    text-align: center;
+
+}
+.PRODUCTS ul{
+    width: 1021px;
+    margin-top: 60px;
+}
+.PRODUCTS ul li{
+    float: left;
+    width: 234px;
+    height: 287px;
+    background: #ededed;
+    margin: 0 21px 22px 0;
+    text-align: center;
+    padding: 55px 0 40px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+.PRODUCTS ul li .ycBox{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border: 3px solid #0063b6;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    opacity: .8;
+    filter: alpha(opacity=80);
+    display: none;
+}
+.PRODUCTS ul li .ycBoxBottom{
+    background-color:  #0063b6;
+    margin-top: 150px;
+    width: 228px;
+    height: 131px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: 45px;
+    box-sizing: border-box;
+}
+.PRODUCTS ul li:hover{
+    box-shadow:7px 7px 1px #8c8c8c;
+}
+.PRODUCTS ul li:hover .ycBox{
+    display: block;
+}
+.PRODUCTS a{
+    margin: auto;
+}
+.NEWS{
+    background: url("../images/news_bg.png");
+    background-size: 100%;
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.NEWS .top{
+    padding-top: 30px;
+}
+.NEWS .top .tit_bg_line{
+    background: url("../images/tit_bg_white.png");
+    margin-top: 30px;
+    width: 100%;
+    height: 1px;
+    background-size: cover;
+    position: relative;
+}
+.NEWS .top .tit_bg_line>.title{
+    position: absolute;
+    text-align: center;
+    width: 186px;
+    left: 50%;
+    margin-left: -93px;
+}
+.NEWS .top .tit_bg_line>.title .ppp1{
+     color: #fff;
+ }
+.NEWS .top .tit_bg_line>.title .ppp2{
+    color: #fff;
+}
+.NEWS .Ctitle{
+    text-align: center;
+    margin-top: 50px;
+}
+.NEWS .Ctitle a{
+    color: #fff;
+
+}
+.NEWS .Ctitle span{
+    font-size: 14px;
+    margin-right: 9px;
+}
+.NEWS .Ctitle .spB{
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 11px;
+}
+.NEWS .NEWSmain{
+    margin-top: 38px;
+    color: #fff;
+}
+
+.NEWS .NEWSmain aside{
+    margin-left: 36px;
+}
+.NEWS .NEWSmain aside .NEWStop .GNEW{
+    width: 41px;
+    height: 51px;
+    background: #147756;
+    font-size: 16px;
+    text-align: center;
+    line-height: 51px;
+}
+.NEWS .NEWSmain aside .NEWStop P{
+    margin-left: 17px;
+    font-size: 17px;
+    line-height: 51px;
+}
+.NEWS .NEWSmain aside .NEWSbottom{
+    margin-top: 18px;
+    max-width: 658px;
+    line-height: 20px;
+}
+.NEWS .NEWSmain aside span{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.NEWS ul{
+    color: #fff;
+}
+.NEWS ul li{
+    margin-top: 36px;
+    width: 474px;
+}
+.NEWS ul li a{
+    color: #fff;
+}
+.NEWS ul li .square{
+    display: inline;
+    margin-right: 23px;
+}
+.NEWS .ulBox{
+    margin-bottom: 20px;
+}
+.CASE_SHOW{
+    text-align: center;
+    padding-bottom: 20px;
+}
+.CASE_SHOW .nav{
+    margin-top: 60px;
+}
+.CASE_SHOW .nav ul{
+    width: 1010px;
+}
+.CASE_SHOW .nav li{
+    float: left;
+    width: 489px;
+    height: 169px;
+    margin-right: 10px;
+    margin-bottom: 14px;
+}
+.CASE_SHOW .nav .big{
+    width: 501px;
+    height: 352px;
+}
+.CONTACT_US2{
+
+}
+.CONTACT_US2 .navBox{
+    margin-top: 70px;
+}
+.CONTACT_US2 .navBox .navBoxLeft{
+    margin-left: 83px;
+}
+.CONTACT_US2 .navBox .navBoxLeft .title{
+    width: 324px;
+    height: 38px;
+    background: #ededed;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 12px 18px;
+    display: block;
+}
+.CONTACT_US2 .navBox .navBoxLeft .text{
+    width: 322px;
+    height: 167px;
+    border: 1px solid #0063b6;
+    background: #ededed;
+    padding: 18px;
+    box-sizing: border-box;
+    resize: none;
+    display: block;
+    margin-top: 11px;
+}
+.CONTACT_US2 .navBox .navBoxLeft .yanzhengma{
+    width: 161px;
+    height: 38px;
+    background: #ededed;
+    padding: 12px 18px;
+    box-sizing: border-box;
+    margin-top: 11px;
+}
+.CONTACT_US2 .navBox .navBoxLeft button{
+    width: 161px;
+    height: 38px;
+    background: #147756;
+    padding: 12px 18px;
+    box-sizing: border-box;
+    margin-top: 11px;
+    display: block;
+    border: none;
+    color: #fff;
+}
+.CONTACT_US2 .navBox .navBoxRight{
+    margin-right: 20px;
+}
+.CONTACT_US2 .Link{
+    width: 100%;
+    border: 1px solid #002646;
+    box-sizing: border-box;
+    margin-top: 55px;
+}
+.CONTACT_US2 .Link .LinkLeft{
+    background: #002646;
+    width: 172px;
+    height: 58px;
+    line-height: 58px;
+    text-align: center;
+    font-size: 21px;
+    font-style: italic;
+    color: #fff;
+}
+.CONTACT_US2 .Link .LinkRight a{
+    margin-left: 69px;
+    color: #002646;
+    font-style: italic;
+    font-size: 14px;
+    line-height: 58px;
+}
+footer{
+    margin-top: 40px;
+}
+footer .top{
+    line-height: 67px;
+    text-align: center;
+    background: #002646;
+}
+footer .top a{
+    color: #fff;
+    margin-left: 100px;
+}
+footer .top .st{
+    margin-left: 2px;
+}
+footer .bottom {
+    line-height: 40px;
+    background: #000;
+    text-align: center;
+    color: #fff;
+}
+footer .bottom a{
+    color: #fff;
+    text-decoration: underline;
+}
