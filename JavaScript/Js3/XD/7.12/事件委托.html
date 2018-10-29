@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    li{
+      width: 100%;
+      height: 30px;
+      background: chartreuse;
+    }
+</style>
+<body>
+    <button>嘿嘿</button>
+<ul id="ul">
+    <li>亲生</li>
+    <li>亲生</li>
+    <li>亲生</li>
+    <li>亲生</li>
+    <li>亲生</li>
+</ul>
+<script>
+ var btn=document.getElementsByTagName('button')[0];
+ var arrLi=document.getElementsByTagName('li');
+
+ btn.onclick=function(){
+     var li=document.createElement('li');
+     li.innerHTML='抱养';
+     ul.appendChild(li);
+ }
+ul.onclick=function(){
+    alert(1);
+}
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr = [1,2,4,6,5,8,7];
+    arr.push(9);
+    console.log(arr);
+    arr.pop();
+    console.log(arr);
+    arr.unshift(0);
+    console.log(arr);
+    arr.shift();
+    console.log(arr);
+
+    arr.sort(function(a,b){return a-b})
+    console.log(arr);
+    arr.splice(2,4);
+    console.log(arr);
+    arr.reverse();
+    console.log(arr);
+    var arr1 = [5,6,3,4,7];
+
+    newArr = arr1.slice(2,4);
+    console.log(newArr);
+
+    var xxx = newArr.toString();
+    console.log(xxx);
+    var xx = newArr.join("+");
+    console.log(xx);
+
+
+    var x =  xxx.split(",");
+    console.log(x);
+
+    var xxxx = arr1.concat(arr);
+    console.log(xxxx);
+    /*
+    *
+    *   数组的万能方法
+    *   var arr = [1,2,3,4,5,6,7,8,9]
+    *   console.log(arr);
+    *   arr.splice(3,4,100); //从第三位开始 数四位 替换为100 (替换)
+    *   arr.splice(3,0,100); //从第三位开始 数四位 替换为100 (添加)
+    *   arr.splice(3,);     //从第三位开始 删除四位   (删除)
+    *   console.log(arr);
+    *
+    * */
+
+    //concat() 连接两个或者更多的数组，并返回结果
+    //join() 把数组的所有元素放入一个字符串。(数组转换成字符串)
+    //reverse() 颠倒数组中元素的顺序
+    //slice() 返回数组中选定的元素
+    //sort() 方法用于对数组的元素进行排序
+    //toString() 把数组转换为字符串 并返回结果
+</script>
+</body>
+</html>

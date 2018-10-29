@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+#box{
+    width: 100px;
+    height: 100px;
+    background-color: #FF4400;
+    position: absolute;
+    right: 0;
+    top: 1500px;
+
+}
+
+    </style>
+</head>
+<body>
+<div id="box">
+
+</div>
+<script>
+    var oBox=document.getElementById('box');
+    var timer;
+
+    oBox.onclick=function(){
+        var scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+        timer = setInterval(function(){
+            if (scrolltop<=0){
+                clearInterval(timer)
+            }
+            scrolltop-=100;
+            document.documentElement.scrollTop=document.body.scrollTop=scrolltop;
+        },30)
+    }
+
+
+</script>
+
+
+</body>
+</html>

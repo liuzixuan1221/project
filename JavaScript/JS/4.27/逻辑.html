@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    console.log(true && true);              //ture
+//    console.log(true && false);             //false
+//    console.log(false && true);             //false
+//    console.log(false && false);            //false
+//
+//    console.log(true || true);              //ture
+//    console.log(true || false);             //ture
+//    console.log(false || true);             //ture
+//    console.log(false || false);            //false
+
+    var a = window.prompt("请输入数值");
+    if(a%3==0 && a%5==0){
+        alert('threeFive')
+    }else if(a%5==0){
+        alert('five')
+    }else if(a%3==0){
+        alert('three')
+    }else{
+        alert('不能被3、5整除')
+    }
+
+    console.log(((4>=6)||("人"!="阿凡达")) && !(((12 * 2) == 144) && ture));
+
+
+</script>
+</body>
+</html>

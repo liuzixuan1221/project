@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+
+    <script src="utils.js"></script>
+    <script>
+        var box = document.getElementById('box');
+        console.log(utils.css(box, 'width'));
+        utils.css(box,'height','300px');
+        utils.css(box,{
+            marginTop : '50',
+            marginLeft : '60'
+        })
+    </script>
+</body>
+</html>

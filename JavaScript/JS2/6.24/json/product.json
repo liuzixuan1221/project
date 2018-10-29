@@ -1,0 +1,82 @@
+[
+  {
+    "id":1,
+    "jieshao":"HUAWEI MATE 10 4GB+64GB 全网通版(亮黑色)",
+    "jiage":3899,
+    "shijian":"2017-03-15",
+    "redu":118,
+    "img": "img/1.jpg"
+  },
+  {
+    "id":2,
+    "jieshao":"HUAWEI MATE 10 4GB+64GB 全网通版(亮黑色)",
+    "jiage":4899,
+    "shijian":"2017-03-15",
+    "redu":128,
+    "img": "img/2.jpg"
+  },
+  {
+    "id":3,
+    "jieshao":"HUAWEI MATE 10 4GB+64GB 全网通版(亮黑色)",
+    "jiage":5899,
+    "shijian":"2017-03-15",
+    "redu":198,
+    "img": "img/3.jpg"
+  },
+  {
+    "id":4,
+    "jieshao":"HUAWEI MATE 10 4GB+64GB 全网通版(亮黑色)",
+    "jiage":2899,
+    "shijian":"2017-03-15",
+    "redu":126,
+    "img": "img/4.jpg"
+  },
+  {
+    "id":5,
+    "jieshao":"HUAWEI MATE 10 4GB+64GB 全网通版(亮黑色)",
+    "jiage":3599,
+    "shijian":"2017-03-15",
+    "redu":158,
+    "img": "img/5.jpg"
+  },
+  {
+    "id":6,
+    "jieshao":"HUAWEI MATE 10 4GB+64GB 全网通版(亮黑色)",
+    "jiage":7899,
+    "shijian":"2017-03-15",
+    "redu":298,
+    "img": "img/6.jpg"
+  },
+  {
+    "id":7,
+    "jieshao":"HUAWEI MATE 10 4GB+64GB 全网通版(亮黑色)",
+    "jiage":3819,
+    "shijian":"2017-03-15",
+    "redu":98,
+    "img": "img/7.jpg"
+  },
+  {
+    "id":8,
+    "jieshao":"HUAWEI MATE 10 4GB+64GB 全网通版(亮黑色)",
+    "jiage":6999,
+    "shijian":"2017-03-15",
+    "redu":998,
+    "img": "img/8.jpg"
+  },
+  {
+    "id":9,
+    "jieshao":"HUAWEI MATE 10 4GB+64GB 全网通版(亮黑色)",
+    "jiage":3129,
+    "shijian":"2017-03-15",
+    "redu":191,
+    "img": "img/9.jpg"
+  },
+  {
+    "id":10,
+    "jieshao":"HUAWEI MATE 10 4GB+64GB 全网通版(亮黑色)",
+    "jiage":4199,
+    "shijian":"2017-03-15",
+    "redu":148,
+    "img": "img/10.jpg"
+  }
+]

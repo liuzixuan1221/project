@@ -1,0 +1,472 @@
+body{
+    font-size: 12px;
+}
+.inner{
+    width: 1190px;
+    margin: auto;
+}
+header{
+    background: #f2f2f2;
+    border-bottom: 1px solid #ddd;
+    height: 31px;
+}
+header .left a{
+    background: url("../images/upload_8dhi7ll8egg1ee9i12a3fc1lg93b9_609x784.png") no-repeat -4px -234px;
+    padding: 0 20px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: top;
+    margin-left: 20px;
+    color: #333;
+}
+header .right{
+    line-height: 30px;
+    height: 30px;
+}
+header .right li{
+    display: inline;
+    position: relative;
+    z-index: 100;
+    float: left;
+    margin: 0 15px 0 0;
+    height: 31px;
+}
+header .right li a{
+    border-left: 1px solid #ddd;
+    padding-left: 38px;
+    float: left;
+    overflow: hidden;
+    margin-top: 8px;
+    color: #666;
+    line-height: 14px;
+}
+header .right li:first-child a{
+    border: none;
+}
+header .right li:nth-of-type(2){
+    background: url("../images/upload_8dhi7ll8egg1ee9i12a3fc1lg93b9_609x784.png") no-repeat 16px -528px;
+
+}
+header .right li:nth-of-type(3){
+    background: url("../images/upload_8dhi7ll8egg1ee9i12a3fc1lg93b9_609x784.png") no-repeat 8px -420px;
+}
+i.icon1{
+    width: 7px;
+    height: 5px;
+    background: url("../images/upload_8dhi7ll8egg1ee9i12a3fc1lg93b9_609x784.png") no-repeat -4px -229px;
+    display: inline-block;
+    vertical-align: middle;
+}
+header .right li:nth-of-type(4) a{
+    padding-left: 15px;
+}
+header .right li:nth-of-type(5){
+    background: url("../images/upload_8dhi7ll8egg1ee9i12a3fc1lg93b9_609x784.png") no-repeat 8px -566px;
+    margin: 0;
+}
+header .gwc{
+    display: none;
+    width: 200px;
+    padding: 18px 0;
+    text-align: center;
+    color: #999999;
+    height: 18px;
+    line-height: 18px;
+    position: absolute;
+    z-index: 5;
+    top: 31px;
+    left: -90px;
+    background: #eee;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+header .right li:nth-of-type(3):hover >.gwc{
+    display: block;
+}
+header #kffw{
+    display: none;
+    position: absolute;
+    z-index: 5;
+    top: 100%;
+    left: 0;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+    width: 100px;
+}
+header #kffw li{
+    background: none;
+    width: 100%;
+}
+header #kffw li a{
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    margin: 0;
+    overflow: hidden;
+    color: #444444;
+}
+header .right li:nth-of-type(4):hover >#kffw{
+    display: block;
+}
+header #kffw li:hover{
+    background-color: #ccc;
+}
+header #sjht{
+    display: none;
+    position: absolute;
+    z-index: 999;
+    width: 90px;
+    top: 100%;
+    left: 0;
+    background: #eee;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 3px 3px;
+}
+header #sjht li{
+    background: none;
+    width: 100%;
+}
+header #sjht li a{
+    display: block;
+    height: 28px;
+    line-height: 28px;
+    padding: 0 20px;
+    margin: 0;
+    overflow: hidden;
+    color: #444444;
+}
+header .right li:nth-of-type(5):hover >#sjht{
+    display: block;
+}
+header #sjht li:hover{
+    background-color: #ccc;
+}
+.headerIcon .logo{
+    width: 240px;
+    height: 90px;
+    overflow: hidden;
+}
+.headerIcon .logo img{
+    width: 100%;
+    height: 100%;
+}
+.headerIcon .search{
+    width: 482px;
+    height: 90px;
+    margin-left: 120px;
+}
+.headerIcon .search .searchNav{
+    position: relative;
+    z-index: 50;
+    width: 482px;
+    margin-top: 20px;
+}
+.search .searchNav .searchBox{
+    border: 1px solid #f07;
+    width: 480px;
+    height: 34px;
+    border-radius: 0 6px 6px 0;
+    background: #fff;
+}
+.searchNav .searchBox .selectbox{
+    position: relative;
+    float: left;
+    width: 60px;
+    z-index: 10;
+    text-align: center;
+}
+.searchBox .selectbox span{
+    display: block;
+    height: 34px;
+    line-height: 34px;
+    color: #f07;
+    cursor: pointer;
+    background-color: #fff;
+    background: url("../images/asdfadf.png") no-repeat center right;
+}
+.searchBox .selectbox ol{
+    top: 102%;
+    display: none;
+    position: absolute;
+    left: -1px;
+    width: 60px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-top: 1px solid transparent;
+}
+.selectbox ol li a{
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    overflow: hidden;
+    color: #f07;
+    text-align: center;
+}
+.searchBox .selectbox:hover ol{
+    display: block;
+}
+.searchBox form{
+    overflow: hidden;
+    height: 34px;
+}
+.searchBox form .inputText{
+    display: block;
+    overflow: hidden;
+    width: 305px;
+    height: 22px;
+    line-height: 22px;
+    padding: 6px 0 6px 10px;
+    border: none;
+    color: #999;
+    font-size: 12px;
+    background-color: #fff;
+}
+.searchBox form .inputBtn{
+    height: 34px;
+    line-height: 34px;
+    width: 100px;
+    background-color: #f07;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    margin-top: -34px;
+}
+.searchBox .sHistory{
+    position: absolute;
+    left: 60px;
+    top: 35px;
+    width: 320px;
+    z-index: 999;
+    font-size: 12px;
+    background-color: #fff;
+    border: 1px solid #f07;
+    overflow: hidden;
+}
+.sHistory .historyBox{
+    min-height: 286px;
+    background-color: #fff;
+}
+.sHistory .historyBox h3{
+    padding: 10px;
+    height: 16px;
+    line-height: 16px;
+    color: #999;
+    font-size: 12px;
+    font-weight: 400;
+}
+.headerIcon .search .hotWords{
+    width: 482px;
+    height: 20px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+.search .hotWords a{
+    color: #666;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 12px 0 0;
+}
+.search .hotWords a:nth-of-type(4){
+    color: #ff4466;
+}
+.search .hotWords a:nth-of-type(5){
+    color: #ff4466;
+}
+.search .hotWords a:nth-of-type(6){
+    color: #ff4466;
+}
+.search .hotWords a:hover{
+    color: #ff4466;
+    text-decoration: underline;
+}
+.headerIcon .right{
+    float: right;
+    height: 90px;
+    width: 220px;
+}
+.headerIcon .right img{
+    width: 100%;
+    height: 100%;
+}
+
+.banner .bannerTitle{
+    width: 100%;
+    background: #fff;
+    position: relative;
+    border-bottom: 2px solid #f07;
+    height: 40px;
+}  
+.bannerTitle .bTitleLeft{
+    background: url("../images/131743902_57fa7026k3k6eghdcl5cgl8aalckk_257x40.png");
+    height: 40px;
+    width: 257px;
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.bannerTitle .bTitleLeft a{
+    position: absolute;
+    left: 47px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+}
+.bannerTitle .bTitleRight a{
+    display: block;
+    height: 20px;
+    width: 140px;
+    margin-top: 10px;
+    border-right: 1px solid #ddd;
+    text-align: center;
+    line-height: 20px;
+    font-size: 18px;
+    color: #333;
+    float: left;
+}
+.bannerTitle .bTitleRight a:last-of-type{
+    border: none;
+}
+.bannerTitle .bTitleRight a:hover{
+    color: #f07;
+}
+.bannerContent{
+    height: 440px;
+}
+.bannerContent #BGbox{
+    width: 100%;
+    height: 440px;
+    background: rgb(39, 229, 255);
+    margin: 0 auto;
+    position: relative;
+    /*transition: .6s;*/
+}
+.bannerContent .banText{
+    width: 256px;
+    height: 440px;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 100;
+    position: relative;
+}
+.bannerContent .banPic{
+    width: 768px;
+    height: 440px;
+    margin-left: 256px;
+}
+.bannerContent .banPicc{
+    display: none;
+    transition: .6s;
+}
+.bannerContent .banPicc a{
+    float: left;
+}
+.bannerContent .banPicc.now{
+    display: block;
+}
+.bannerContent .banBtn{
+    width: 765px;
+    position: absolute;
+    bottom: 10px;
+    z-index: 10;
+    margin: 0 auto;
+    margin-left: 256px;
+    text-align: center;
+}
+.bannerContent .banBtn a{
+    background: url("../images/upload_6fd40a60b3g62dkcg3cc5ijhkf5fe_298x70.png") no-repeat;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    display: inline-block;
+    background-position: -97px -18px;
+}
+.bannerContent .banBtn a.now{
+    background-position: -157px -18px;
+}
+.bannerContent .banText ul{
+    padding-top: 4px;
+}
+.bannerContent .banText ul li{
+    margin: 0;
+    padding: 0;
+    height: 31px;
+    overflow: hidden;
+}
+.banText ul li dl{
+    margin: 0;
+    padding: 5px 0 5px 18px;
+    vertical-align: top;
+    overflow: hidden;
+    border-left: 2px solid transparent;
+}
+.banText ul li dl dt{
+    height: 21px;
+    line-height: 21px;
+    float: left;
+}
+.banText ul li dl dt a{
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+.banText ul li dl dd{
+    float: left;
+    height: 21px;
+    line-height: 25px;
+}
+.banText ul li dl dd a{
+    height: 100%;
+    float: left;
+    font-size: 12px;
+    color: #666;
+}
+.banText ul li dl dd a.now{
+    color: #f07;
+}
+.banText ul li dl dd a:hover{
+    text-decoration: underline;
+}
+.banText ul li dl dd a:first-child{
+    margin-left: 12px;
+}
+.banText ul li:hover{
+    background: #fff;
+}
+.banText .nBox{
+    position: absolute;
+    width: 777px;
+    height: 440px;
+    top: 0;
+    left: 100%;
+    overflow: hidden;
+    background-color: #fff;
+    font-size: 100px;
+    display: none;
+}
+.banText .nBox.now{
+    display: block;
+}
+i.icon2{
+    background: url("../images/131743902_81e3g2jf3j2e3lgb8fji63i9i7bg0_24x28.png") no-repeat;
+    background-size: 100% 100%;
+    width: 12px;
+    height: 13px;
+    display: inline-block;
+    margin-left: 2px;
+}
+ins{
+    font-size: 0;
+    height: 12px;
+    width: 0;
+    float: left;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    margin: 6px 9px 0;
+}

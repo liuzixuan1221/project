@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.xd{
+    width: 100%;
+    height: 405px;
+
+}
+.Layout{
+    width: 1000px;
+    height: 405px;
+    margin: 0 auto;
+    /* background-color: crimson; */
+}
+.Layout1{
+    width: 240px;
+    height: 405px;
+    float: left;
+    
+}
+
+.Layout1_top{
+    width: 234px;
+    height: 179px;
+    /* background-color: chartreuse; */
+    border-top: 3px solid #FF8400;
+    border-left: 1px solid   #D9E0EE;
+    border-right: 1px solid   #D9E0EE;
+    border-bottom: 1px solid   #D9E0EE;
+}
+.Layout1_bottom{
+    width: 234px;
+    height: 194px;
+    background-color: burlywood;
+    margin-top: 14px;
+    border: 3px solid #FF4400;
+}    
+.Layout2{
+    width: 360px;
+    height: 405px;
+    background-color: blue;
+   float: right;
+   margin-left: 19px;
+}
+.Layout3{
+width: 360px;
+height: 405px;
+background-color: darkorchid;
+float: right;
+}
+.Layout1_top img{
+    width: 218px;
+    height: 161px;
+   margin:  10px 0px 0px 10px;
+}
+.Layout1_bottom img{
+    width: 200px;
+    height: 200px;
+    margin:0 auto;display:block  ;   
+}
+.Layout2Title{
+    width: 358px;
+    height: 34px;
+    background-color: #F8F8F8;
+    border: 1px solid #DBDEE1;
+}
+
+.Layout3Title{
+    width: 358px;
+    height: 34px;
+    background-color: #F8F8F8;
+    border: 1px solid #DBDEE1;
+}
+.a,.c,.d,.e{
+    width: 32px;
+    height: 35px;
+    float: left;
+    font-size: 16px;
+    line-height: 35px;
+    margin-right: 20px
+}
+.b{
+    width: 64px;
+    height: 35px;
+    float: left;
+    font-size: 16px;
+    line-height: 35px;
+    margin-right: 20px
+}
+.a text,.b text,.c text,.d text,.e text{
+    width: 360px;
+    height: 346px;
+    float: left;
+    display: none;
+
+}
+.a text{
+    background-color: cornflowerblue;
+}
+.b text{
+    background-color: crimson;
+}
+.c text{
+    background-color: darkorchid;
+}
+.d text{
+    background-color: fuchsia;
+}
+.e text{
+    background-color: greenyellow;
+}
+.a text p,.b text p,.c text p,.d text p,.e text p{
+    width: 360px;
+    height: 26px;
+    font-size: 14px;
+}
+.a{
+    position: relative;
+}
+.a text{
+    position: absolute;
+    top: 58px;
+}
+
+.b{
+    position: relative;
+}
+
+.b text{
+    position: absolute;
+    top: 58px;
+    left: -120px;
+}
+/* .Layout3Title ul li{
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    float: left;
+    margin-right: 20px
+} */

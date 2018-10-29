@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link id="lk" rel="stylesheet" href="css/c1.css">
+</head>
+<script>
+    window.onload = function() {
+        var arrInput = document.getElementsByTagName('input');
+        var Link = document.getElementById('lk');
+
+        arrInput[1].onclick = function(){
+            Link.href="css/c2.css"
+        }
+        arrInput[0].onclick = function(){
+            Link.href="css/c1.css"
+        }
+    }
+</script>
+<body>
+    <div class="box">
+        <div class="top">
+            换皮肤
+            <input type="button" value="皮肤1">
+            <input type="button" value="皮肤2">
+        </div>
+        <div class="main">
+            输入姓名: <input type="text"><br />
+            输入密码: <input type="password"><br />
+            请您留言: <textarea id="" cols="30" rows="10" style="resize: none"></textarea><br />
+        </div>
+    </div>
+</body>
+</html>

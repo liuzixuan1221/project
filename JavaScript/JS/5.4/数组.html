@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    //字面量创建数组
+        var arr=[]; //空数组
+        var arr1 = [1,NaN,null,undefined,{}];
+
+    //通过构造函数进行创建
+        var arr2 = new Array();         //空数组   长度为0
+        var arr3 = new Array(5);        //写一个参数 表示数组长度 为5
+        var arr4 = new Array(5,6,7,8)   //写多个参数 表示数组内容
+
+    //数组的遍历
+        var arr5=[1,NaN,null,undefined,{}];
+            for(var i = 0;i<arr5.length;i++){
+                console.log(arr1[i]);
+            }
+
+        for(var k in arr5){
+            console.log(arr5[k])
+        }
+
+
+
+
+</script>
+</body>
+</html>

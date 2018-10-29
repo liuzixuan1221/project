@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*核心思想:隐藏所有 显示当前*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .title{
+            background: red;
+            color: #fff;
+            overflow: hidden;
+            width: 500px;
+        }
+        h1{
+            float: left;
+            padding: 0 10px;
+        }
+        .cont{
+            width: 500px;
+            height: 300px;
+            color: #fff;
+        }
+        .cont ul{
+            width: 100%;
+            height: 100%;
+            background: red;
+            display: none;
+            list-style: none;
+
+        }
+        .cont li{
+            line-height: 30px;
+        }
+    </style>
+</head>
+<script>
+    window.onload = function(){
+        var title = document.getElementById('title');
+        var arrH1 = document.getElementsByTagName('h1');
+        var cont = document.getElementById('cont');
+        var arrUl = document.getElementsByTagName('ul');
+
+        arrH1[1].onclick = function(){
+            arrUl[1].style.display = 'block';
+
+            arrUl[2].style.display = 'none';
+            arrUl[0].style.display = 'none';
+        }
+        arrH1[2].onclick = function(){
+            arrUl[2].style.display = 'block';
+
+            arrUl[1].style.display = 'none';
+            arrUl[0].style.display = 'none';
+        }
+        arrH1[0].onclick = function(){
+            arrUl[0].style.display = 'block';
+
+            arrUl[2].style.display = 'none';
+            arrUl[1].style.display = 'none';
+        }
+    }
+</script>
+<body>
+    <div class="title" id="title">
+        <h1>标题1</h1>
+        <h1>标题2</h1>
+        <h1>标题3</h1>
+    </div>
+    <div class="cont" id="cont">
+        <ul style="display: block">
+            <li>标题一对应的内容</li>
+            <li>标题一对应的内容</li>
+            <li>标题一对应的内容</li>
+        </ul>
+        <ul>
+            <li>标题二对应的内容</li>
+            <li>标题二对应的内容</li>
+            <li>标题二对应的内容</li>
+        </ul>
+        <ul>
+            <li>标题三对应的内容</li>
+            <li>标题三对应的内容</li>
+            <li>标题三对应的内容</li>
+        </ul>
+    </div>
+</body>
+</html>

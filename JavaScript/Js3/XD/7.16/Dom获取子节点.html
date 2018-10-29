@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+<body>
+<ul id="list">
+    <li>121212122</li>
+    <li>12112122121</li>
+    <li>121121211221</li>
+    <li>12212121212121</li>
+</ul>
+
+    
+    <script>
+    var oList = document.getElementById('list');
+    alert(oList.childNodes.length)    
+    //获取子节点：childNodes
+    //子节点分为：
+    //1.文本节点 2.元素节点
+    //判断节点类型：nodeType
+
+for(i=0;i<oList.childNodes.length;i++){
+    (oList.childNodes[i].nodeType)      //nodeType  判断节点类型
+  // nodeType  3 文本节点
+   //nodeType 1 元素节点
+}
+if(oList.childNodes[i].nodeType==1){  //判断是不是元素节点
+      oList.childNodes[i].style.color="red";
+}
+
+oList.children[i].style.color="red";
+
+
+//获取子节点：
+
+// 1.childNodes  能获取元素节点的同时还能获取文本节点
+// 2.children     直接获取元素节点
+// 3.nodeType  判断节点的类型
+
+
+
+
+    </script>
+</body>
+</html>

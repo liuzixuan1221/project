@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var fullName='language';
+//    var obj={
+//            fullName:'javascript',
+//            prop:{
+//                getFullName:function(){
+//                        return this.fullName;
+//                    }
+//            }
+//    };
+//    console.log(obj.prop.getFullName());
+//    var test=obj.prop.getFullName;
+//    console.log(test());
+
+//    var name='window';
+//    var Tom={
+//            name:"Tom",
+//            show:function(){
+//                console.log(this.name);
+//            },
+//            wait:function(){
+//                var fun=this.show;
+//                fun();
+//            }
+//    };
+//    Tom.wait();
+
+//普通函数
+function Foo() {
+        getName = function () {
+                console.log(1);
+            };
+        return this;
+    }
+//普通对象
+Foo.getName = function () {
+        console.log(2);
+    };
+//类
+Foo.prototype.getName = function () {
+        console.log(3);
+    };
+//普通变量
+var getName = function () {
+        console.log(4);
+    };
+//普通函数
+function getName() {
+        console.log(5);
+    }
+Foo.getName();
+getName();
+Foo().getName();
+getName();
+new Foo.getName();
+new Foo().getName();
+new new Foo().getName();
+
+/*第一步：提升变量
+function Foo() {
+    getName = function () {
+        console.log(1);
+    };
+    return this;
+    }
+var getName;
+function getName() {
+    console.log(5);
+    }
+
+    普通对象
+    Foo.getName = function () {
+    console.log(2);
+    };
+
+    类
+    Foo.prototype.getName = function () {
+    console.log(3);
+    };
+    getName = function () {
+    console.log(4);
+    };
+
+ Foo.getName();
+ getName();
+ Foo().getName();
+ getName();
+ new Foo.getName();
+ new Foo().getName();
+ new new Foo().getName();
+
+ 第二步：从上到下执行
+
+ Foo.getName(); 普通对象Foo下的getName()  //2
+ getName(); window下的getName()         //4
+ Foo().getName();先Foo()普通函数执行，结果再执行.getName();//1
+ getName();//1
+ new Foo.getName();先Foo.getName()再new//2
+ new Foo().getName();//3
+ new new Foo().getName();//3
+ */
+
+
+
+
+
+
+
+
+
+//    function fn(){
+//        console.log(1);
+//    }
+//    var f=new fn();
+//    var f1 = fn();
+//console.log(typeof f);//Object
+//console.log(typeof f1);//Undefined
+</script>
+</body>
+</html>

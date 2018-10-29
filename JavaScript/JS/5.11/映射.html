@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    //arguments的映射机制，在传参的那一瞬间，如果形参存在就进行一一映射，不存在后面不会再建立起来映射关系
+    var result = 0;
+    function sum(a,b){
+        result = 0;
+        for(var i=0;i<arguments.length;i++){
+            result+=arguments[i];
+        }
+        console.log(result);
+    }
+    sum(1,2);
+    sum(2,3,4,45,5);
+    console.log(sum.arguments);
+
+    function sum(a,b,c){
+        arguments[1]=200;
+        console.log(a,b,c); //1  undefined undefined
+        console.log(arguments[0],arguments[1],arguments[2])
+    }
+    sum(1)
+</script>
+</body>
+</html>

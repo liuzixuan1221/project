@@ -1,0 +1,457 @@
+body{
+    color: #ccc;
+    font-size: 14px;
+    font-family: '微软雅黑';
+    background: #f3f5f7;
+}
+i{
+    background: url("../images/topbar_sprite4.png");
+}
+em{
+    background: url("../images/new_topbar.png");
+}
+.inner{
+    width: 1600px;
+    margin: auto;
+    background: #fff;
+}
+.inner2{
+    position: relative;
+    width: 1470px;
+    margin: auto;
+}
+.top{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: #000;
+    z-index: 99;
+}
+.topBox{
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.top .logo{
+    height: 50px;
+    margin-left: -50px;
+}
+.top .topTitle li{
+    float: left;
+    line-height: 50px;
+    padding: 0 18px 0 18px;
+    margin-right: 8px;
+}
+.top .topTitle li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #ccc;
+}
+.top .topTitle li:hover{
+    background-color: #222;
+}
+.top .topTitle li:hover a{
+    background-color: #222;
+    color: #52e2c0;
+}
+.top .topTitle .pd{
+     position: relative;
+ }
+.top .topTitle .pd .pdBox{
+    position: absolute;
+    width: 100px;
+    height: 180px;
+    background-color: #222;
+    line-height: 36px;
+    text-align: center;
+    display: none;
+    left: 0;
+}
+.top .topTitle .pd .pdBox a{
+    color: #ccc;
+}
+.top .topTitle .pd:hover .pdBox{
+    display: block;
+}
+.top .topTitle .pdBox p:hover{
+    background: #555;
+}
+.icon1{
+    position: absolute;
+    width: 9px;
+    height: 6px;
+    background-position: -262px -18px;
+    top:23px;
+    left:48px;
+}
+.top .topTitle .pd:hover .icon1{
+    background-position: -272px -18px;
+}
+.top .topTitle .shop{
+    position: relative;
+    z-index: 1;
+}
+.top .topTitle .shop .shopBj{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("../images/shop2.gif");
+    z-index: -1;
+    margin-left: -18px;
+}
+.top .topTitle .shop:hover .shopBj{
+    background: url("../images/shop2_hover.gif");
+}
+form{
+    padding: 0 12px;
+    width: 218px;
+    height: 30px;
+    border-radius: 2px;
+    background: #dcdbdb;
+    margin: 9px auto 0;
+    box-sizing: border-box;
+    position: relative;
+    margin-right: 36px;
+}
+form #topInput{
+    font-size: 12px;
+    width: 196px;
+    height: 30px;
+    background: #dcdbdb;
+}
+form #formBox{
+    position: absolute;
+    top: 34px;
+    width: 100%;
+    height: 303px;
+    left: 0;
+    background: #000;
+    padding: 1px 0 2px;
+    box-sizing: border-box;
+    display: none;
+}
+form #formBox li{
+    padding: 0 14px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+form #formBox li a{
+    margin-left: -14px;
+    width: 218px;
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+form #formBox li a:hover{
+    background: rgba(223, 222, 222, 0.3);
+}
+form #formBox li div{
+    margin-left: 14px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: #dededede;
+    text-align: center;
+    line-height: 16px;
+    margin-top: 7px;
+    margin-right: 8px;
+    color: #000;
+}
+.icon2{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-position: -262px -26px;
+    top:6px;
+    left: 190px;
+}
+.login{
+    line-height: 50px;
+}
+.login li{
+    float: left;
+}
+.login li a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #ccc;
+}
+.login .vip{
+    margin-right: 18px;
+}
+.login .vip:hover a{
+    color: #52e2c0;
+}
+.login .computer{
+    width: 70px;
+    height: 50px;
+    position: relative;
+}
+.login .computer .em1{
+    position: absolute;
+    width: 25px;
+    height: 33px;
+    background-position: -24px -1px;
+    top:50%;
+    left: 50%;
+    margin-left: -12.5px;
+    margin-top: -8px;
+}
+.login .computer:hover{
+    background-color: #222;
+}
+.login .computer:hover .em1{
+    background-position: 0 -1px;
+}
+.top .computer:hover .icon1{
+    background-position: -272px -18px;
+}
+.top .computer:hover .smallBox1{
+    display: block;
+}
+.login .shangchuan{
+    width: 70px;
+    height: 50px;
+    position: relative;
+}
+.login .shangchuan .em2{
+    position: absolute;
+    width: 25px;
+    height: 33px;
+    background-position: -120px -1px;
+    top:50%;
+    left: 50%;
+    margin-left: -12.5px;
+    margin-top: -8px;
+}
+.login .shangchuan:hover{
+    background-color: #222;
+}
+.login .shangchuan:hover .em2{
+    background-position: -96px -1px;
+}
+.top .shangchuan:hover .icon1{
+    background-position: -272px -18px;
+}
+.top .shangchuan:hover .smallBox2{
+    display: block;
+}
+.top .smallBox{
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    background-color: #222;
+    line-height: 36px;
+    text-align: center;
+    display: none;
+}
+.top .smallBox p:hover{
+    background: #555;
+}
+.login .dingyue{
+    width: 38px;
+    height: 50px;
+    position: relative;
+}
+.login .dingyue .em3{
+    position: absolute;
+    width: 25px;
+    height: 33px;
+    background-position: -71px -1px;
+    top:50%;
+    left: 50%;
+    margin-left: -12.5px;
+    margin-top: -8px;
+}
+.login .dingyue:hover .em3{
+    background-position: -48px -1px;
+}
+.login .loginLeft{
+    margin-right: 11px;
+}
+.login .loginLeft:hover a{
+    color: #52e2c0;
+}
+.login .loginRight{
+    margin: 0 11px;
+}
+.login .loginRight:hover a{
+    color: #52e2c0;
+}
+.banner{
+    width: 100%;
+    height: 480px;
+    padding-top: 50px;
+}
+.banner #bannerUl{
+    position: relative;
+}
+.banner li{
+    display: none;
+}
+.banner li img{
+    display: block;
+    width: 100%;
+    height: 480px;
+}
+.banner #bannerUl #bannerBox{
+    position: absolute;
+    background: url("../images/title_bg.png");
+    width: 258px;
+    height: 400px;
+    padding: 14px;
+    box-sizing: border-box;
+    top: 29px;
+    right: 65px;
+    text-align: right;
+    line-height: 37px;
+}
+.banner #bannerUl #bannerBox a{
+    display: block;
+    color: #fff;
+}
+.banner #bannerUl #bannerBox a:hover{
+    color: #52e2c0;
+}
+.firstPlay .inner2 .anniu{
+    width: 26px;
+    height: 115px;
+    background: rgba(223, 222, 222, 0.3); 
+    display: none;
+    cursor: pointer;
+}
+.firstPlay .inner2 #anniuLeft{
+    position: absolute;
+    top:50%;
+    left: -40px;
+    margin-top: -50px;
+}
+.firstPlay .inner2 #anniuLeft:hover{
+    background: transparent;
+}
+.firstPlay .inner2 #anniuLeft:hover .b1{
+    background-position: -6px -33px;
+}
+.firstPlay .inner2 #anniuRight{
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    margin-top: -50px;
+}
+.firstPlay .inner2 #anniuRight:hover{
+    background: transparent;
+}
+.firstPlay .inner2 #anniuRight:hover .b2{
+    background-position: -31px -33px;
+}
+b{
+    background: url("../images/turn_arrow2.png")
+}
+.b1{
+    position: absolute;
+    background-position: -59px -33px;
+    top: 35px;
+    left: 7px;
+    width: 12px;
+    height: 47px;
+}
+.b2{
+    position: absolute;
+    background-position: -86px -33px;
+    top: 35px;
+    left: 7px;
+    width: 12px;
+    height: 47px;
+}
+.firstPlay .inner:hover .inner2 .anniu{
+    display: block;
+}
+.firstPlay .titleBox{
+    padding: 44px 0 16px;
+}
+.firstPlay .titleBox h3{
+    color: #000;
+    font-size: 20px;
+    float: left;
+    line-height: 20px;
+    font-weight: bold;
+}
+.firstPlay .titleBox li {
+    float: left;
+    padding-bottom: 16px;
+    border-bottom: 2px solid transparent;
+    color: #333;
+    cursor: pointer;
+}
+.firstPlay .titleBox li span{
+    border-right: 1px dashed #ccc;
+    padding: 0 19px;
+}
+.firstPlay .titleBox li:hover span{
+    color: #52e2c0;
+}
+.firstPlay .line{
+    height: 2px;
+    background: #f4f4f4;
+    margin-top: -18px;
+}
+.firstPlay #nav{
+    margin-top: 17px;
+    height: 398px;
+    position: relative;
+    overflow: hidden;
+}
+.firstPlay #nav ul{
+    width: 1500px;
+    display: none;
+}
+.firstPlay #nav #ulOne{
+    position: absolute;
+    width: 4500px;
+    height: 398px;
+    display: block;
+    left: 0;
+    transition: 2s;
+}
+.firstPlay #nav li{
+    margin-right: 30px;
+    float: left;
+}
+.firstPlay #nav li img{
+    width: 220px;
+    height: 124px;
+    display: block;
+}
+.firstPlay #nav li h5{
+    line-height: 16px;
+    margin: 12px 12px 10px;
+    width: 196px;
+    color: #000;
+    font-weight: 400;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.firstPlay #nav li p{
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0 12px 21px;
+    color: #a4a4a4;
+    width: 196px;
+}
+.firstPlay #nav a:hover h5{
+    color: #52e2c0;
+}
+.firstPlay #nav a:hover p{
+    color: #52e2c0;
+
+}

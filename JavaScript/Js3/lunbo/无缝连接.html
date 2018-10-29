@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #box{
+            width: 500px;
+            height: 300px;
+            margin: 200px auto;
+            border: 5px solid #000;
+            position: relative;
+            overflow: hidden;
+        }
+        ul{
+            position: relative;
+            list-style: none;
+            width: 99999px;
+            left: -500px;
+        }
+        li{
+            float: left;
+            width: 500px;
+            height: 300px;
+        }
+        li.li1{
+            background: red;
+        }
+        li.li2{
+            background: green;
+        }
+        li.li3{
+            background: blue;
+        }
+
+        button{
+            position: absolute;
+            width: 80px;
+            height: 40px;
+        }
+        button:first-of-type{
+            position: absolute;
+            left: 0;
+            top:50%;
+        }
+        button:last-of-type{
+            position: absolute;
+            right: 0;
+            top:50%;
+        }
+    </style>
+    <script src="jquery.js"></script>
+</head>
+
+<body>
+    <div id="box">
+        <ul id="ul">
+            <li class="li3"></li>
+            <li class="li1"></li>
+            <li class="li2"></li>
+            <li class="li3"></li>
+            <li class="li1"></li>
+        </ul>
+        <button>左</button>
+        <button>右</button>
+    </div>
+
+    <script>
+        var oUl = document.getElementById('ul');
+        var oLi = oUl.getElementsByTagName('li');
+        var aButton = document.getElementsByTagName('button');
+        var index = -1;
+        len = oLi.length;
+        aButton[0].onclick = function () {
+            index--;
+            if (index == -len){
+                index = -len+3;
+                oUl.style.left = (index + 1) * 500 + 'px';
+            }
+            $("#ul").animate({"left":index * 500 + 'px'},500);
+        };
+        aButton[1].onclick = function () {
+            index++;
+            if (index > 0){
+                index = -len+3;
+                oUl.style.left = (index - 1) * 500 + 'px';
+            }
+            $("#ul").animate({"left":index * 500 + 'px'},500);
+        }
+    </script>
+
+</body>
+</html>

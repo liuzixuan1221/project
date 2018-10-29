@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="QQ.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="header_top">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="header_top_t">
+                <ul>
+                    <li>音乐馆</li>
+                    <li>我的音乐</li>
+                    <li>客户端</li>
+                    <li>音乐号</li>
+                    <li>VIP</li>
+                </ul>
+            </div>
+            <div class="search">
+                <div class="search_in">
+                    <input type="text" placeholder="搜索音乐、MV、歌单、用户" class="ss" id="ss">
+                    <button>
+                        <i class="xd"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="search_right">
+                <text>登录</text>
+                <ul class="x1">
+                    <p>开通绿钻豪华版</p>
+                </ul>
+                <ul class="x2">
+                    <p>开通付费包</p>
+                </ul>
+            </div>
+            <div class="input_in" id="input_in">
+                <ul>
+                    <li>
+                        <a>1</a>
+                        <span>THAT GIRL</span>
+                        <text>119.2万</text>
+                    </li>
+                    <li>
+                        <a>2</a>
+                        <span>可能否</span>
+                        <text>108.3万</text>
+                    </li>
+                    <li>
+                        <a>3</a>
+                        <span>讲真的</span>
+                        <text>105.9万</text>
+                    </li>
+                    <li>
+                        <a>4</a>
+                        <span>往后余生</span>
+                        <text>95.8万</text>
+                    </li>
+                    <li>
+                        <a>5</a>
+                        <span>浪人琵琶</span>
+                        <text>90.3万</text>
+                    </li>
+                    <h1>
+                        <p>搜索历史</p>
+                        <span class="z1"></span>
+                    </h1>
+                </ul>
+            </div>
+        </div>
+        <div class="header_bottom">
+            <ul>
+                <li class="now" style="color: #31C27C">首页</li>
+                <li>歌手</li>
+                <li>专辑</li>
+                <li>排行榜</li>
+                <li>分类歌单</li>
+                <li>电台</li>
+                <li>MV</li>
+                <li>数字专辑</li>
+            </ul>
+        </div>
+    </div>
+    <div class="index_hd">
+        <div class="index_hd_1">
+            <span></span>
+        </div>
+        <div class="mod_index_tab">
+            <ul>
+                <li class="y1" style="color: #31C27C">为你推荐</li>
+                <li>经典</li>
+                <li>经典国语</li>
+                <li>轻音乐</li>
+                <li>2018世界杯</li>
+                <li>情歌</li>
+            </ul>
+        </div>
+        <div class="section_inner">
+            <ul>
+                <li>
+                    <img src="img/300" alt="">
+                    <span>2018上半年国语新歌 Top 50</span>
+                    <text>播放量：1000.1万</text>
+                </li>
+                <li>
+                     <img src="img/300" alt="">
+                    <span>排解烦恼：上班路上的弦乐摇滚  </span>
+                    <text>播放量：7.6万
+                    </text>
+                </li>
+                <li>
+                        <img src="img/300" alt="">
+                    <span>美国三大广播电台Hip-Hop热线频道歌曲</span>
+                    <text>播放量：6.4万</text>
+                </li>
+                <li>
+                       <img src="img/300" alt="">
+                    <span>避暑令 • 夏日纳凉古风曲</span>
+                    <text>播放量：164.0万</text>
+                </li>
+                <li>
+                    <img src="img/300" alt="">
+                 <span>韩国90零后说唱新生代作品</span>
+                 <text>播放量：30.9万</text>
+             </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        ss.onfocus = function () {
+            input_in.style.height = '230px';
+            input_in.style.transition = 'all 500ms';
+            input_in.style.border = '1px solid #c9c9c9';
+        }
+        ss.onblur = function () {
+            input_in.style.height = '0';
+            input_in.style.transition = 'all 500ms';
+        }
+    </script>
+</body>
+
+</html>

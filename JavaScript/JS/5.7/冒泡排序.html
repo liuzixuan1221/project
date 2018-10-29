@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //冒泡排序：每循环一轮 找一个最大的数    放在后面
+    var arr=[1,13,45,2,3,4,6,10];
+//    var m= 0,n=0;
+//        //   第一层循环控制 轮数
+//    for(var i=0;i<arr.length-1;i++){
+//        //   节流阀
+//        var flag = true;
+//        m++;
+//        //   第二层循环控制 比较次数
+//      for(var j=i+1;j<arr.length;j++){
+//          n++;
+//          if(arr[i]<arr[j]){
+//              var temp;
+//              temp = arr[j];
+//              arr[j] = arr[i];
+//              arr[i] = temp;
+//              flag = false;
+//          }
+//          if(flag){
+//              break;
+//          }
+//      }    /*console.log(arr,m,n);*/
+//    }
+//    console.log(arr,m,n);
+
+
+
+    for(var i=arr.length-1;i>0;i--){
+        for(var j=0;j<=i-1;j++){
+            if(arr[i]<arr[j]){
+                var temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }console.log(arr);
+
+
+    for(var i=0;i<arr.length-1;i++){
+        for(var j= 0;j<arr.length-1;j++){
+            if(arr[j]>arr[j+1]){
+                var temp = arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+        }
+    }console.log(arr)
+</script>
+</body>
+</html>

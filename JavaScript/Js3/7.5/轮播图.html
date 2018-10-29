@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        #box{
+            width: 1125px;
+            height: 549px;
+            position: fixed;
+            left: 50%;
+            top:50%;
+            margin-left: -562.5px;
+            margin-top: -274.5px;
+            border: 4px solid #000000;
+        }
+        #pic{
+            position: absolute;
+            left: 0;
+        }
+        #pic img{
+            display: none;
+            float: left;
+            width: 1125px;
+            height: 100%;
+        }
+        #pic img.now{
+            display: block;
+        }
+        #dian{
+            position: absolute;
+            bottom: 10px;
+            background: rgba(255,255,255,.4);
+            padding: 5px 15px;
+            border-radius: 20px;
+            left: 50%;
+            margin-left: -120px;
+        }
+        #dian li{
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            float: left;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+        #dian li:first-child{
+            margin-left: 10px;
+        }
+        #dian li.now{
+            background: darkred;
+        }
+        #btn{
+            width: 100%;
+            position: absolute;
+            top: 50%;
+        }
+        #btn li{
+            width: 50px;
+            height: 80px;
+            background: rgba(0,0,0,.6);
+            color: #fff;
+            font-size: 60px;
+            line-height: 80px;
+            text-align: center;
+            margin-top: -40px;
+        }
+        #btn li.left{
+            float: left;
+        }
+        #btn li.right{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="pic">
+        <img src="image/0.jpg" alt="" class="now">
+        <img src="image/1.jpg" alt="">
+        <img src="image/2.jpg" alt="">
+        <img src="image/3.jpg" alt="">
+        <img src="image/4.jpg" alt="">
+        <img src="image/5.jpg" alt="">
+        <img src="image/6.jpg" alt="">
+    </div>
+    <ul id="dian">
+        <li class="now"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul id="btn">
+        <li class="left"> < </li>
+        <li class="right"> > </li>
+    </ul>
+</div>
+
+<script>
+    let oBox = document.getElementById('box');
+    let aPic = document.getElementById('pic').getElementsByTagName('img');
+    let aDian = document.getElementById('dian').getElementsByTagName('li');
+    let oLbtn = document.getElementById('btn').getElementsByTagName('li')[0];
+    let oRbtn = document.getElementById('btn').getElementsByTagName('li')[1];
+
+
+    let len = aDian.length;
+    let index = 0;
+
+    for (var i = 0; i < len; i++){
+        aDian[i].index = i;
+        aDian[i].onmouseover = function(){
+            for (let j = 0; j < len; j++){
+                aPic[j].classList.remove('now');
+                aDian[j].classList.remove('now');
+            }
+            aPic[this.index].classList.add('now');
+            this.classList.add('now');
+            index = i;
+        };
+    }
+
+    oRbtn.onclick = function(){
+        if (index < len){
+            for (let i = 0; i < len; i++){
+                aPic[i].classList.remove('now');
+                aDian[i].classList.remove('now');
+            }
+            aPic[index].classList.add('now');
+            aDian[index].classList.add('now');
+            index++;
+        }
+        else{
+            index = 0;
+        }
+    };
+
+    oLbtn.onclick = function(){
+        if (index >= 0){
+            for (let i = 0; i < len; i++){
+                aPic[i].classList.remove('now');
+                aDian[i].classList.remove('now');
+            }
+            aPic[index].classList.add('now');
+            aDian[index].classList.add('now');
+            index--;
+        }
+        else{
+            index = len-1;
+        }
+    };
+    timer();
+    var ding;
+    function timer(){
+        ding = setInterval(function(){
+            if (index < len){
+                for (let i = 0; i < len; i++){
+                    aPic[i].classList.remove('now');
+                    aDian[i].classList.remove('now');
+                }
+                aPic[index].classList.add('now');
+                aDian[index].classList.add('now');
+                index++;
+            }
+            else{
+                index = 0;
+            }
+        },1000)
+    }
+
+    oBox.onmouseover = function(){
+        clearInterval(ding);
+    };
+
+    oBox.onmouseout = function(){
+        clearInterval(ding);
+        timer();
+    }
+
+
+</script>
+
+</body>
+</html>

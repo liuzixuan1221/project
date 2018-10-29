@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+//        1>字面量定义对象     {n多对  属性：属性值}  键值对
+            var obj={
+                name:'刘子萱',
+                age:18,
+                0:'嘻嘻嘻嘻',
+                eat:function(){
+                    console.log('吃吃吃')
+                }
+            //                访问其中的属性2种方法：
+};
+//方式一
+    console.log(obj.name);
+    console.log(obj.age);
+    obj.eat();
+
+//方式二
+    console.log(obj['0']);
+    console.log(obj['age']);
+
+//修改
+    obj.name='老王';
+    console.log(obj);
+
+//增加
+    obj.sex='男';
+    console.log(obj.sex);
+    console.log(obj);
+
+//删除1
+    obj.sex=null;
+    console.log(obj);
+
+//删除2
+    delete obj.sex;
+    console.log(obj);
+
+
+//obj['age']是 obj中的其中一个值age
+//obj[age]是 一个叫age的变量  如果没有这个变量  输出显示undefined
+
+
+//        2>构造函数定义对象
+        var obj1 = new Object();
+        obj1.name='熊大';
+        console.log(obj1);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

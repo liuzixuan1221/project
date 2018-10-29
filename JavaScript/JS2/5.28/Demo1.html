@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+
+        //  基本数据类型操作的是值
+
+        //  引用数据类型操作的是地址
+        var obj={
+            name:'翡翠教育',
+            age:15
+        };
+        var obj1=obj;
+        obj1.name='翡翠昌平';
+
+        console.log(obj.name,obj1.name);
+
+
+
+        //堆栈内存
+//      js在浏览器中执行的时候 浏览器都会为我们的js提供一个全局的作用域
+//      遇到基本数据类型 直接在这个全局作用域的桟内存中执行
+//      遇到引用数据类型
+//        1、首先会开辟一个新的内存空间(对内存)
+//        2、如果是普通对象 直接以键值对的形式存储这个堆内存中
+//           浏览器会自动为他分配一个16进制的地址
+//        3、把这个地址赋值给这个变量
+//           所以这个变量就指向了这片堆内存空间
+
+
+//        栈内存：
+//              基本数据类型
+//              函数的执行
+//        堆内存：
+//              引用数据类型
+//              类*/
+
+
+//        普通对象
+//        1、定义
+//        字面量定义
+//             var obj = {
+//                 name:'小明',
+//                 age:18,
+//                 sex:'男'
+//             };
+//
+///        构造函数定义
+//        var obj1 = new Object();
+//        var tel= 1111;
+//
+//        2、对变量存储的值 实现 增删改查
+//        console.log(obj.name);
+//        console.log(obj.age);
+//        console.log(obj.sex);
+//
+//        console.log(obj['name']);
+//        console.log(obj['age']);
+//        console.log(obj['sex']);
+//        console.log(obj['tel']);
+//
+//        var tel='age';
+//        console.log(obj['age']);
+//        console.log(obj.tel);
+
+
+        var arr = [1,28,131,4,11,34,67,45,4];
+        var sum = 0;
+        var pj = 0;
+        for (var i=0;i<arr.length;i++){
+            sum+=arr[i];
+        }
+        console.log(sum);
+        pj = sum/arr.length;
+        console.log(pj);
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    //电话号码
+////        11位   1开头
+//    let reg = /^1\d{10}$/;
+//    let str = 123321123;
+//    let str1 = 15210999500;
+////    console.log(str.match(reg));
+////    console.log(str1.match(reg));
+//    console.log(reg.test(str));
+//    console.log(reg.test(str1));
+
+
+//    let reg = /^[\+-]?(\d|([1-9]\d+))(\.\d+)?$/;
+////    let reg = /^[\+-]?([1-9]?\d+)(\.\d*)?$/;
+//    let num = '-01';
+//console.log(reg.test(num));
+
+//    let reg = /^\w+([-.]\w+)*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+//    console.log(reg.test('liuzixuan1013@126.com'));
+
+//    let reg = /^[\u4E00-\u9FA5]{2,}(\.[\u4E00-\u9FA5]{2,})?$/;
+//    console.log(reg.test('迪丽热巴.迪力木拉提'));
+
+//  18-65
+//  18-19   20-59   60-65
+//    let reg = /^((1[89])|([2-5]\d)|(6[0-5]))$/;
+//    console.log(reg.test('66'));
+
+//    let reg = /^(\[(object)(\w+)\])$/;
+//    console.log(reg.test('[object Xxx]'));
+
+    let reg = /^(\d{6})(\d{4})(\d{2})(\d{2})\d{2}(\d)(?:\d|X)$/;
+console.log(reg.exec('110103199610131210'));
+
+
+
+    let login = /^(([1-9])(\d{5,10}))$/;
+    console.log(login.test('111111111111656'));
+    let password = /^((\w)|([!@#$%^&*.])){8,18}$/;
+    console.log(password.test('!qwe.1123rw@#$%^'));
+
+</script>
+</body>
+</html>

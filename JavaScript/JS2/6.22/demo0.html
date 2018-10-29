@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*			//	原型继承  把父元素的私有属性 设置为子元素的公有属性
+
+     function F() {
+     this.x = 10;
+     this.y = 20;
+     }
+     F.prototype.sum = function() {
+     console.log(this.x + this.y);
+     };
+
+     function S() {
+     this.z = 50;
+     }
+     S.prototype = new F();
+     //			S.prototype.__proto__==F.prototype
+     var s = new S();
+     //			console.log(s);
+     //			console.log(s.x);
+     s.sum();
+
+     s.x=30;
+     console.log(s.x);
+     var f=new F();
+     console.log(f.x);
+     s.sum();
+     f.sum();
+     console.log(s);*/
+
+    /*			//call继承  只能解决私有属性的继承
+     function F() {
+     this.x = 10;
+     this.y = 20;
+     }
+     F.prototype.sum = function() {
+     console.log(this.x + this.y);
+     };
+
+     function S() {
+     this.z = 50;
+
+     //				var s=new S();
+     //				F.call(s);
+     //				s.x = 10;
+     //				s.y = 20;
+
+     F.call(this);
+     }
+     var s=new S();
+     console.log(s);*/
+
+    //call继承 加原型继承
+    function F() {
+        this.x = 10;
+        this.y = 20;
+    }
+    F.prototype.sum = function() {
+        console.log(this.x + this.y);
+    };
+
+    function S() {
+        this.z = 50;
+        F.call(this);
+    }
+    S.prototype = new F();
+    var s=new S();
+    console.log(s);
+
+</script>
+</body>
+</html>

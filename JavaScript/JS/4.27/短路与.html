@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //短路与
+    var aa = 0 && '';  //
+    console.log(aa);
+
+    //
+
+//&&    短路与 只要左边结果为假    即为假 后面不需要再判断
+//如果两个值都是true.返回第二个值：
+//由于是第二个值   决定了整个表达式是真还是假
+//如果第一个值是false  就返回这个值：因为他直接决定表达式为假
+//0 false  ""false
+
+
+//    var a = 1; b = c = 2, d = 4;
+//    var xxx = !(a*b > a++ && a<d++) || (a-b++ + --c)&& d*a+5;
+//    console.log(xxx);
+
+    var i=1;
+    var a;
+    if(typeof(a) ==undefined ){
+        i++;
+    }else if(null=='null'){
+        ++i;
+    }else{
+        if(typeof (undefined)=='undefined'){
+            alert(i--);
+        }else{
+            alert(--i);
+        }
+    }
+</script>
+</body>
+</html>

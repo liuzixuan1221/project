@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="无缝轮播图.css">
+</head>
+<body>
+<div class="box" id="box">
+    <div class=" small_box" id="small_box">
+        <img src="img/0.jpg" alt="">
+        <img src="img/1.jpg" alt="">
+        <img src="img/2.jpg" alt="">
+        <img src="img/3.jpg" alt="">
+        <img src="img/4.jpg" alt="">
+        <img src="img/5.jpg" alt="">
+        <img src="img/6.jpg" alt="">
+        <img src="img/0.jpg" alt="">
+
+    </div>
+</div>
+<script>
+    var obox=document.getElementById('box');
+    var oSmallbox=document.getElementById('small_box');
+    var aImg=document.getElementsByTagName('img');
+
+    var len=aImg.length-1; //获取img的长度
+    var wImg=aImg[0].offsetWidth; //获取一个img的宽
+    var  number=len*wImg;        // 获取img的总宽
+
+    console.log(len);
+    console.log(wImg);
+    console.log(number);
+
+    var a =0;
+    var timer;
+    setT();
+    function setT (){
+        timer=setInterval(function(){
+            a-=10;
+            if(a>-number){
+                oSmallbox.style.left=a+'px';
+            }else{
+                a=0;
+            }
+        },30)
+    }
+
+    box.onmouseover=function(){
+        clearInterval(timer);
+    }
+    box.onmouseout=function(){
+        setT();
+    }
+
+
+</script>
+
+
+</body>
+</html>

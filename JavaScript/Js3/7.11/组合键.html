@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    document.onkeydown = function(ev){
+        var oEvent = ev||event;
+//            组合键
+//            oEvent.altKey
+//            oEvent.ctrlKey            布尔值当你按住ctrl为真
+//            oEvent.shiftKey
+
+
+        if(oEvent.keyCode == 65 && oEvent.altKey && oEvent.shiftKey){
+            alert("shift alt a 被同时按下");
+        }
+    }
+</script>
+</body>
+</html>

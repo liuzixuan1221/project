@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select name="" id="select1">
+    <option value="">请选择城市</option>
+    <option value="0">北京市</option>
+    <option value="1">上海市</option>
+    <option value="2">广州市</option>
+    <option value="3">天津市</option>
+</select>
+<select name="" id="select2">
+    <option value="">请选择区域</option>
+
+</select>
+
+
+<script>
+    var option = select1.document.getElementsByTagName('option');
+    var arr=[
+        ['北京1','北京2','北京3','北京4','北京5'],
+        ['上海1','上海2','上海3'],
+        ['广州1','广州2','广州3','广州4'],
+        ['天津1','天津2']
+    ];
+//    for (var i=0;i<option.length;i++){
+//        option.value  = i;
+//    }
+    select1.onchange = function(){
+        //onchange 表示 在改变的时候
+        select2.length =0;
+        for(var i=0;i<arr[this.value].length;i++){
+            select2.add(new Option(arr[this.value][i]))
+        }
+    }
+</script>
+</body>
+</html>

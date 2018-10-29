@@ -1,0 +1,73 @@
+.boxTop{
+    background: url("../images/pz_tab.png") no-repeat;
+    display: inline-block;
+    background-position: 0 0;
+    width: 353px;
+    height: 30px;
+}
+.box{
+    width: 1178px;
+    border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    border-top: 3px solid #fbb100;
+    overflow: hidden;
+    height: 305px;
+    background: #ccc;
+    display: none;
+    margin-top: -4px;
+}
+.style{
+    width: 180px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    cursor: pointer;
+}
+#right{
+    margin-left: -7px;
+}
+.now{
+    display: block;
+}
+.color{
+    color: #fff;
+}
+
+
+.daohang{
+    width: 36px;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    box-shadow: -2px 0 6px #ccc;
+}
+ul {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+li{
+    margin-bottom: 10px;
+}
+i{
+    background: url("../images/right-bar.png") no-repeat;
+    display: inline-block;
+    width: 36px;
+    height: 45px;
+    margin-left: 8px;
+}
+.icon1{
+    background-position: -8px -10px;
+}
+.icon2{
+    background-position: -8px -66px;
+}
+.icon3{
+    background-position: -8px -122px;
+}
+.icon4{
+    background-position: -8px -178px;
+}

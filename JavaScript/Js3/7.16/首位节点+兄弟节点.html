@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<ul>
+    <li>111</li>
+    <li>222</li>
+    <li id="li">333</li>
+    <li>444</li>
+    <li>555</li>
+    <li>666</li>
+</ul>
+<script>
+    //首尾子节点
+    //有兼容性问题
+    //firstChild(低版本浏览器),firstElementChild(高版本)
+    //lastChild,lastElementChild
+
+    //兄弟节点
+    //有兼容性问题
+    //nextSibling,nextElementSibling
+    //previousSibling,previousElementSibling
+
+    var aUl = document.getElementsByTagName('ul')[0];
+    var aLi = document.getElementsByTagName('li');
+    var oLi = document.getElementById('li');
+
+
+    console.log(aUl.firstChild);
+    console.log(aUl.firstElementChild);
+    console.log(aUl.lastElementChild);
+
+    console.log(oLi.nextSibling);
+    console.log(oLi.nextElementSibling);
+    console.log(oLi.previousElementSibling);
+
+    if(aUl.firstElementChild){
+        aUl.firstElementChild.style.color = 'red';
+    }else{
+        aUl.firstChild.style.color = 'red';
+    }
+</script>
+</body>
+</html>

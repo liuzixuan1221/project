@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+    <script>
+//        //GO{
+//        //   a = 100;
+//        //   demo = function demo(e){}
+//        //}
+//        a = 100;
+//        function demo(e){
+//            function e(){}
+//            arguments[0] = 2;
+//            document.write(e);//2
+//            if(a){              //a是un所以语句不执行
+//                var b = 123;
+//                function c(){   //if里不能声明function
+//                }
+//            }
+//            var c;
+//            a = 10;
+//            var a;
+//            document.write(b);//un
+//            f = 123;
+//            document.write(c);//un
+//            document.write(a);//10
+//        }
+//        var a;
+//        demo(1);
+//        //AO{
+//        //  a = 10;
+//        //  e = 2;
+//        //  b = un;
+//        //  c = un;
+//        // }
+//        document.write(a);//100
+//        document.write(f);//123
+
+//        var x = 1;
+//        if (function f() {}){
+//            x += typeof (f);
+//        }
+//        console.log(x);
+
+////        GO{
+////            a = function a(){};
+////            demo = un;
+////            glob = 100;
+////            demo = function a(){};
+////        }
+//        function  a (){
+//            function  b( ){
+//                var bbb = 234;
+//                console.log(aaa);//123
+//            }
+//            var aaa = 123;
+//            return b;
+//        }
+//        var glob = 100;
+//        var demo = a();
+////        aAO{
+////            aaa = 123;
+////            b = function b(){};
+////        }
+////因为function a(){}最后把b的值return给了demo，所以demo()==b();
+//        demo();
+////        bAO{
+////            b = 234;
+////            b中没有aaa 所以去aAO中找aaa
+////        }
+
+//        GO{
+//            a = function a(){};
+//            demo = un;
+//        }
+
+//        function a(){
+//            var num = 100;
+//            function b(){
+//                num ++;
+//                console.log(num);
+//            }
+//            return b;
+//        }
+//        var demo = a();
+//        aAO{
+//            num = 100;//101
+//            b = function b(){};
+//        }
+//        demo();//b(); 101
+//        bAO{
+//
+//        }
+//        demo();//102
+
+//    function test(){
+//        var arr = [];
+//        for(var i = 0; i <10; i ++){
+//            (function(j){
+//                arr[j] = function(){
+//                    document.write(j + '')
+//                }
+//            }(i))
+//        }
+//        return arr;
+//    }
+//    var myArr = test();
+//    for(var j= 0; j <10; j++){
+//        myArr[j]();
+//    }
+
+//(function(a,b){
+//    console.log(a + b)
+//}(1,2))
+
+//只有表达式才能被执行
+//        function test(){
+//
+//        }
+//        var demo = function(){
+//            console.log('a');
+//        }();
+
+//        function  test(){
+//            var arr = [];
+//            for (var i = 0; i < 10; i++){
+//
+//
+//              arr[i] = (function(i){
+//                    console.log(i);
+//                }(i))
+//
+//
+//            }
+//            return arr;
+//        }
+//
+//        var myArr = test();
+//        for(var j = 0; j<10;j++){
+//            myArr[j]();
+//        }
+
+//
+//        function  test(){
+//            var arr = [];
+//            for(var i = 0; i < 10; i++){
+//                (function(j){
+//                    arr[j] = function(){
+//                        console.log(j);
+//                    }
+//                }(i))
+//            }
+//            return arr;
+//        }
+//
+//        var myArr = test();
+//        for(var j = 0; j<10; j++){
+//            myArr[j]();
+//        }
+
+
+
+//        a = 100;
+//        function  demo(e) {
+//            arguments[0] = 2;
+//            document.write(e);//2
+//            if(a) {
+//                var b = 123;
+//                function c(){
+//                 }
+//            }
+//            var c;
+//            a = 10;
+//            var a;
+//            document.write(b);//un
+//            f = 123;
+//            document.write(c);//un
+//            document.write(a);//10
+//        }
+//        var a;
+//        demo(1);
+//        document.write(a);//100
+//        document.write(f);//123
+
+          document.write('<table border="1">');
+          for (var i = 1; i <=9; i++){
+              document.write('<tr>');
+              for(var j = 1;j <=i;j++){
+//                  document.write('<td>');
+//                  document.write(i+'*'+j+'='+j*i);
+//                  document.write('</td>');
+
+                  var sum = i * j;
+                  document.write(`<td>${i}*${j}=${sum}</td>`)
+              }
+              document.write('</tr>')
+
+          }
+          document.write('</table>')
+
+    </script>
+</body>
+</html>

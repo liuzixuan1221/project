@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+         /*
+            null 和 undefined 的区别
+            1、 null是一个显示"无"的对象 转为数值时为0
+                undefined是一个表示"无"的原始值,转为数值时为NaN
+                当声明的变量还未被初始化时,变量的默认值为undefined
+
+            2、 null 用来表示尚未存在的对象,常用来表示函数企图返回一个不存在的对象
+
+            3、 undefined表示"缺少值",就是此处应该有一个值,但是还没有定义
+         */
+         var a = 1;
+         function fn(){
+             console.log(a);
+             var a = 5;
+             console.log(a);
+             a++;
+             var a;
+             fn3();
+             fn2();
+             console.log(a);
+             function fn2(){
+                 console.log(a);
+                 a=20;
+             }
+         }
+         function fn3(){
+             console.log(a);
+             a =200;
+         }
+         fn();
+         console.log(a);
+
+
+</script>
+</body>
+</html>

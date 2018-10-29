@@ -1,0 +1,220 @@
+js
+【js的导入】
+行内导入
+嵌入
+外链 - 真实项目开发中    都使用外链
+
+【变量】
+变量的定义
+变量的命名规则
+真实项目中   : _this:全局变量    $this:jq变量
+【js输出语句】
+弹框输出
+    window.alert()   只有取消按钮  取消=>false
+    window.confirm() 取消=>false  确定=>true
+    window.propmt()  取消=>null   确定=>输入返回的内容
+控制台打印输出
+    window.console.log()
+    window.console.dir()    打印输出的更详细
+    window.console.error()    打印输出错误
+    window.console.warn()    打印输出警告
+    下去了解 console下面还有什么方法？
+网页中打印输出
+    window.document.write()
+    window.document.writeIn()  //换行输出
+
+
+【变量里面可以存储的类型  -  数据类型】
+检测数据类型  typeof  ：用引号引起来的数据类型    都属于字符串
+
+基本数据类型
+    number
+    string
+    boolean
+    null    =>object
+    undefined
+
+引用数据类型
+    object
+        数组  Array
+        日期  Date
+        正则  RegExp
+        ...
+    function
+
+***注意：
+每一种  数据类型 要掌握的从这几个方面：
+1、什么样的情况是属于这种数据类型
+2、强制转换  以及  隐式转换  为这种数据的方法
+3、其他数据类型转换为这种数据类型   对应的值    是什么?
+4、本身这种数据类型引申出来的面试题
+【number】
+1、真正的数字     NaN
+2、Number    parseInt    parseFloat
+   - / * % (所有隐式转换都是通过 Number 转换)
+3、"12" => 12    '12px'-12 => NaN    null => 0    undefined => NaN
+   true => 1      false => 0
+   null => 0     undefined => NaN
+   引用数据类型 转化为数字  都需要先转换为字符串(toString)  然后再由字符串变数字
+   [12]=> 12    []=> 0   [12,2,3]=> NaN
+4、NaN   isNaN   NaN和任何值都不相等 也不等于自己  NaN ==NaN //false
+   NaN和其他任何数字做运算    结果都为NaN
+   NaN+"12" =>NaN12
+
+【string】
+1、  ''  ""  引起来的
+2、String    toString    +(+两边有一边为字符串    结果必然为字符串)
+1+2+'3'+4+5 =='3345'
+3、多了一对引号    null=>'null'
+4、typeof typeof 12 =>string
+
+【boolean】
+1、true  false
+2、Boolean   !   !!  if()
+3、在js中  只有0/''/null/undefined/NaN   =>false
+4、[]==![]    =>true
+    ==比较 一般先转换成number比较
+    []转换成0
+    ![]先转换为Boolean类型为false  false为0
+    所以[]==![]    =>true
+【null/undefined】
+null和undefined都不等于  任何其他值
+null=>0
+null==0     =>false
+
+undefined=>false
+undefined==false    => false
+
+【null==undefined  =>true】
+null+10=>10
+undefined+10=>NaN
+true+10=>11
+
+【运算符】
+    算术运算符
+    一元:         + - ! ++ --
+    二元:         + - * / %
+    三元(三目):   表达式1? 表达式2: 表达式3; 等同于简单的if else语句
+    比较运算符
+        > >= < <= == === != !==
+        ==比较值   自动转换数据类型
+        ===比较值、数据类型 3! == '3'   //true
+    逻辑运算符
+        ! & ||  短路与 短路或
+    赋值运算符
+        =   +=   -=   *=   /=   %=
+        num%=1  等于两步操作：运算+赋值
+    逗号运算符
+        取最后一个逗号后面的值
+        var a=(1,2,3)   等同于 a=3
+    ***下去掌握运算符的优先级关系
+【流程控制】
+    顺序结构
+        计算机执行代码 自上而下    从左往右
+    分支结构
+        if(){}else{}                //判断范围
+        switch(){case 1: ;break;}   //判断某个固定值
+        num ===1;比较都是全等于
+    循环结构
+        for(初始值;条件判断;++操作){}
+        while           //不需要有初始值   只要满足条件就可以一直循环
+        do while        //不管条件是否满足  都要执行一次
+
+        continue        //跳过当前循环
+        break           //终止当前整个循环
+
+
+【引用数据类型】
+    1、创建方式(2种)
+    2、引用数据类型的操作
+    3、堆栈内存的释放
+    4、是否构成闭包
+    5、引用数据类型    作用域链    原型链    查找机制
+    6、**学习引用数据类型    就是要熟悉掌握  面向对象里面类的功效：继承  封装  多态
+
+    es6 - 阮一峰
+    变量提升阶段  var   和   let
+    赋值      解构赋值
+    设计模式阶段      高级单例模式
+                     promise
+                     发布订阅模式
+    函数      箭头函数    以及this
+    最后  babel   es6<==>es5相互转换
+    git/svn   gitHub
+
+【基本数据类型  vs  引用数据类型】
+js代码在执行的时候 浏览器会为js提供一个执行环境
+我们把这个执行环境称为“ 全局作用域 ” 前台(window) 后台(global)
+
+基本数据类型  操作的值
+var a = 1;
+b = a;
+b = 2;
+console.log(a);//1
+console.log(b);//2
+
+引用数据类型操作的是引用地址
+引用数据类型在创建的时候
+1、开辟新的堆内存空间(为了方便  分配一个16进制的地址 aaafff000)
+2、把引用数据类型存储进这个内存空间
+对象：键值对  一对对存储进去
+函数：代码字符串    存储进去
+3、把空间地址给了变量 obj
+obj存储的并不是空间里面的某一个具体值    其实存储的是这片空间的地址
+
+【普通对象】
+1、创建方式
+    字面量创建
+        var obj = {键1:值1,键2:值2}
+    构造函数创建
+        var obj = new Object();
+
+2、对象 - 增删查改
+查看的时候   如果直接ojb.sex 那么此时把sex就是作为obj的属性使用  和sex变量没有任何关系
+
+对象是由静态的属性和动态的行为构成
+访问静态属性的时候
+    obj.name
+    obj['name'] //'name'是变量
+    obj[name]   // name 是变量
+
+    如果在对象中不存在这个属性   结果是  //undefined
+访问动态行为的时候
+    obj.say();  //say是一个方法(函数)
+    如果在对象中不存在这个方法   结果是  //直接报错 obj.say is not a function
+
+普通对象中的this指向【this】
+    谁调用这个方法 this就指向谁
+    如果say()方法前面什么都没写  默认是window调用
+    等同于window.say()   此时this指向window
+
+
+
+3、对象的遍历 for in 循环
+对象遍历的时候 如果其中的键有数字   那么数字优先遍历
+如果有多个键  都是数字    遍历的时候 数字键 从小到大排列
+
+4、json对象    vs     普通对象
+var json = {
+    'name':'哈哈哈',
+    'age' : 18 ,
+    'say' : function(){}
+}
+
+5、json是什么？用来前后台数据传输格式
+json数据格式
+json解析
+    json解析为字符串
+        JSON.parse
+        eval()
+    字符串解析为json
+        JSON.stringify
+
+json拷贝
+    普通拷贝
+    浅拷贝
+    深拷贝
+json案例
+    华为商城案例
+    价格排序/上架时间排序/热度排序
+    数据通过ajax获取到 json格式的字符串

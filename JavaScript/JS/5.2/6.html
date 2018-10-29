@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div1" data-name="xiaojiejie"class="show">小姐姐</div>
+
+
+    <script>
+        var div = document.getElementById("div1");
+        //查看
+        console.log(div.getAttribute('data-name'));
+        //修改
+        div.setAttribute('data-name','脑瓜子疼');
+        console.log(div.getAttribute('data-name'));
+        //删除
+        div.removeAttribute('data-name');
+        console.log(div.getAttribute('data-name'));
+    </script>
+</body>
+</html>

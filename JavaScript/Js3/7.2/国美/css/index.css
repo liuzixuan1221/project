@@ -1,0 +1,276 @@
+.inner{
+    width: 1200px;
+    margin:auto;
+}
+.topIcon{
+    background: rgb(243, 75, 62);
+    line-height:0;
+    /*display: block;*/
+}
+.topIcon .pic{
+    position: relative;
+    overflow: hidden;
+}
+#clear{
+    position: absolute;
+    display: block;
+    padding: 6px;
+    top: 3px;
+    right: 3px;
+    cursor: pointer;
+}
+#clear:hover{
+    background: #333;
+    opacity: .6;
+    filter: alpha(opacity=60);
+}
+#clear i{
+    display: block;
+    width: 12px;
+    height: 12px;
+    background:url("../images/ui (1).png") -60px -466px;
+}
+.headerTop{
+    position: relative;
+    border-bottom: 1px solid #f3f3f3;
+    background: #f8f8f8;
+    height: 30px;
+    color: #5e5e5e;
+}
+.headerTop .left,.right{
+    font-size: 12px;
+    line-height: 30px;
+    color: #5e5e5e;
+}
+.headerTop li{
+    position: relative;
+    float: left;
+    margin-right: 12px;
+    border: 1px solid transparent;
+    height: 30px;
+}
+.headerTop li:hover a{
+    color: red;
+}
+.headerTop  li a{
+    color: #aaa;
+}
+.headerTop .left li{
+    z-index: 111;
+}
+.headerTop .left >li:first-child{
+    padding: 0 20px 0 10px;
+}
+.headerTop .left >li:first-child:hover{
+    border: 1px solid #f3f3f3;
+    border-bottom: none;
+    background: #fff;
+}
+
+.headerTop .left >i:last-child a{
+    color: red;
+}
+.headerTop li:hover i.jianTou{
+    background:url("../images/ui (1).png") -55px -433px;
+}
+i.jianTou{
+    position: absolute;
+    top: 12px;
+    right: 6px;
+    background:url("../images/ui (1).png") -62px -433px;
+    width: 7px;
+    height: 4px;
+    overflow: hidden;
+}
+i.liBao{
+    display: inline-block;
+    width: 12px;
+    height: 13px;
+    margin-top: -4px;
+    background:url("../images/ui (1).png") -145px -1496px;
+}
+.headerTop .right li:nth-child(2){
+    padding: 0 20px 0 10px;
+    margin-right: 0;
+}
+.headerTop .right li:nth-child(3){
+    padding: 0 20px 0 10px;
+}
+.headerTop .right li:nth-child(4){
+    padding: 0 20px 0 10px;
+    margin-right: 0;
+}
+.headerTop .right li:nth-child(5){
+    padding: 0 20px 0 10px;
+}
+.headerTop .right li:last-child{
+    padding: 0 20px 0 10px;
+    margin-right: 0;
+}
+.headerTop .ycBox{
+    display: none;
+    height: auto;
+    position: absolute;
+    top: 30px;
+    background: #fff;
+    padding: 0 15px 0;
+    border: 1px solid #f3f3f3;
+    z-index: 10;
+}
+.headerTop .ycBox1{
+    width: 290px;
+    left: 360px;
+}
+.headerTop .left >li:first-child:hover +.ycBox1{
+    display: block;
+}
+.headerTop .top{
+    padding: 5px 0 20px;
+    overflow: hidden;
+}
+i.touXiang{
+    background:url("../images/ui (1).png") 0 -337px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    margin-top: 10px;
+    vertical-align: middle;
+}
+.headerTop .top p{
+    color: #888;
+    line-height: 16px;
+    padding: 20px 0 0 15px;
+    font-size: 12px;
+    width: 220px;
+}
+.headerTop .top p a{
+    color: #069;
+}
+.headerTop .top p a:hover{
+    color: #069;
+}
+.headerTop .down{
+    border-top: 1px solid #f3f3f3;
+    padding-top: 15px;
+    position: relative;
+}
+.headerTop .down ul{
+    margin: 10px auto 0;
+    padding-left: 20%;
+    box-sizing: border-box;
+}
+.headerTop .down ul li{
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+.headerTop .down .jlb{
+    cursor: pointer;
+}
+.headerTop .down .jlb:hover{
+    color: red;
+}
+
+i.cj{
+    display: block;
+    height: 40px;
+    width: 40px;
+    font-size: 40px;
+    line-height: 40px;
+    background:url("../images/ui (1).png") -10px -407px;
+}
+.headerMid{
+    position: relative;
+    height: 120px;
+}
+.headerMid .logo{
+    margin: 32px 10px 0 0;
+}
+.headerMid .searchBox{
+    position: absolute;
+    width: 500px;
+    top: 0;
+    left: 750px;
+    height: 30px;
+    border: 1px solid #dd00a7;
+    font-size: 14px;
+    background: #fff;
+}
+.headerMid .searchBox .choose{
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    margin-left: 10px;
+    color: #A5A5A5;
+    float: left;
+    width: 52px;
+    height: 30px;
+    line-height: 30px;
+    border-right: 1px solid #dd00a7;
+}
+i.xia{
+    position: absolute;
+    width: 11px;
+    height: 7px;
+    right: 8px;
+    top: 11px;
+    background:url("../images/ui (1).png") -145px -1469px;
+}
+.headerMid .searchBox form{
+    position: absolute;
+    top: 0;
+    right: 90px;
+    line-height: 30px;
+    height: 30px;
+    overflow: hidden;
+    color: #bbb;
+    cursor: text;
+}
+.searchBox form input{
+    width: 310px;
+    padding: 5px 5px 5px 10px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #5E5E5E;
+}
+i.vSearch{
+    margin-right: 3px;
+    padding: 5px 0;
+    cursor: pointer;
+    width: 15px;
+    height: 20px;
+    background: url("../images/下载.png") no-repeat center;
+    background-size: 13px 19px;
+}
+.searchBox button{
+    width: 90px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    display: inline;
+    background: #dd00a7;
+    font: 16px/30px 'microsoft yahei';
+    color: #fff;
+    letter-spacing: 2px;
+    text-indent: 0;
+}
+.searchBox .word{
+    margin: 6px 0 0;
+    line-height: 14px;
+    height: 14px;
+    font-size: 12px;
+}
+.searchBox .word li{
+    float: left;
+    margin-right: 8px;
+}
+.searchBox .word li a{
+    color: #A5A5A5;
+}
+.searchBox .word li:first-child a{
+    color: red;
+}
+.searchBox .word li a:hover{
+    color: red;
+}

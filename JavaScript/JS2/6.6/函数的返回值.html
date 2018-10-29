@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+
+<div id="div1"></div>
+<script>
+//    函数的返回值
+//    return:函数内部的私有变量 想被函数外部访问到 需要利用return
+//           return建立起了 函数内部 和外部通信的桥梁
+//    return 中断函数
+//
+//    4种场景：
+//    1、函数没有提供返回值 外部接收函数的执行结果为 undefined
+//        var fn = sum(); function (){里面没有return}
+//    2、函数只提供一个retrun  返回undefined
+//    3、函数return sum; 返回sum
+//    3、函数return;return sum; 函数碰到第一个return 函数中断
+
+//获取css样式的方法
+    function css(ele,attr){
+        if (ele.currentStyle){
+            return ele.currentStyle[attr]
+        }else{
+            return getComputedStyle(ele)[attr]
+        }
+    }
+console.log(div.currentStyle['width']);         //支持ie
+
+//    获取类名的方法 要求兼容所有浏览器
+    document.getElementsByClassName('banner');
+    function getElementsByClassName(el,className){
+        var arr = document.getElementsByTagName(el);
+    }
+    getElementsByClassName('li','li1')
+
+
+</script>
+</body>
+</html>

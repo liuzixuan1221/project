@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    .x{
+        width: 500px;
+        height: 500px;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateX(0deg)rotateY(-80deg)rotateZ(0deg);
+        top: 100px;
+        margin: auto;
+        animation:  x 5s linear  infinite both;
+        transform-origin:50% 50%;
+    }
+ .x:hover .x1{
+    transform:translateZ(500px);
+}
+        .x:hover .x2{
+            transform:translateZ(-500px);
+        }
+        .x:hover .x3{
+            transform:translateZ(500px);
+        }
+        .x:hover .x4{
+            transform:translateZ(-500px);
+        }
+        .x:hover .x5{
+            transform:translateZ(500px);
+        }
+        .x:hover .x6{
+            transform:translateZ(-500px);
+        }
+
+.x1{
+    width: 500px;
+height: 500px;
+position: absolute;
+background:rgba(255, 0,0, 0.5);
+top: 0;
+left: 0;
+text-align: center;
+font-size: 250px;
+color: #FFFFFF;
+transform:  rotateX(90deg) translateZ(250px) ;
+animation:  10s linear infinite both;
+transform-origin:50% 50%;
+}
+.x2{
+    width: 500px;
+height: 500px;
+position: absolute;
+background:rgba(0, 0, 255, 0.5);
+top: 0;
+left: 0;
+ text-align: center;
+font-size: 250px;
+color: #FFFFFF;
+transform:rotateX(90deg) translateZ(-250px);
+}
+
+.x3{
+    width: 500px;
+height: 500px;
+position: absolute;
+background:rgba(0, 255, 255, 0.5);
+top: 0;
+left: 0;
+text-align: center;
+font-size: 250px;
+color: #FFFFFF;
+transform: rotateY(90deg) translateZ(250px)
+}
+
+.x4{
+    width: 500px;
+height: 500px;
+position: absolute;
+background:rgba(255, 255, 0, 0.5);
+top: 0;
+left: 0;
+text-align: center;
+font-size: 250px;
+color: #FFFFFF;
+transform:  rotateY(90deg) translateZ(-250px) ;
+}
+
+.x5{
+    width: 500px;
+height: 500px;
+position: absolute;
+background:rgba(0, 255, 0, 0.5);
+top: 0;
+left: 0;
+text-align: center;
+font-size: 250px;
+color: #FFFFFF;
+transform: translateZ(250px)
+}
+
+.x6{
+width: 500px;
+height: 500px;
+position: absolute;
+background:rgba(120, 1,255, 0.5);
+top: 0;
+left: 0;
+text-align: center;
+font-size: 250px;
+color: #FFFFFF;
+transform:  translateZ(-250px)    rotateY(180deg);
+}
+
+
+.xiao1,.xiao2,.xiao3,.xiao4,.xiao5,.xiao6{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+text-align: center;
+font-size: 125px;
+color: #FFFFFF;
+}
+.xiao1{
+    transform:  rotateX(90deg) translateZ(125px) ;
+    background:rgba(255, 0,0, 0.5);
+}
+.xiao2{
+    transform:rotateX(90deg) translateZ(-125px);
+    background:rgba(0, 0, 255, 0.5);
+}
+.xiao3{
+    transform: rotateY(90deg) translateZ(125px);
+    background:rgba(0, 255, 255, 0.5);
+}
+.xiao4{
+    transform:  rotateY(90deg) translateZ(-125px) ;
+    background:rgba(255, 255, 0, 0.5);
+}
+.xiao5{
+    transform: translateZ(125px);
+    background:rgba(0, 255, 0, 0.5);
+}
+.xiao6{
+    transform:  translateZ(-125px)    rotateY(180deg);
+    background:rgba(120, 1,255, 0.5);
+}
+
+  
+
+
+
+@keyframes x{
+0%{
+    transform: translate3d(30px,30px,30px) rotate3d(1,1,1,300deg) ;    
+}
+100%{
+    transform: translate3d(230px,230px,230px) rotate3d(1,1,1,1500deg); 
+}
+};
+
+    </style>
+</head>
+<body>
+    <div class="x">
+        <div class="x1">上</div>
+        <div class="x2">下</div>
+        <div class="x3">左</div>
+        <div class="x4">右</div>
+        <div class="x5">前</div>
+        <div class="x6">后</div>
+        
+
+    <div class="xiao1">上</div>
+    <div class="xiao2">下</div>
+    <div class="xiao3">左</div>
+    <div class="xiao4">右</div>
+    <div class="xiao5">前</div>
+    <div class="xiao6">后</div>
+
+
+        
+    </div>
+</body>
+
+</html>

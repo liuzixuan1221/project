@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="动画.css ">
+    <script src="startMove.js"></script>
+</head>
+<body>
+ <div id="box"></div>
+
+
+
+
+<script>
+    var oBox=document.getElementById('box');
+    startMove(oBox,{'width':'2000','height':'1000','opacity':10},function(){
+        startMove(oBox,{'left':'500','top':'100'},function(){
+            startMove(oBox,{'width':'300','height':'300','opacity':100,'top':'0','left':'0'})
+        })
+    })
+
+
+
+</script>
+</body>
+</html>

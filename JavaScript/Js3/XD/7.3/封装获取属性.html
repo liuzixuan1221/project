@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div{
+        width: 500px;
+        height: 500px;
+        background-color: #FF4400;
+    }
+</style>
+<body>
+
+<div></div>
+
+
+
+
+
+
+<script>
+
+    oBox1.onclick = function(){
+        //alert(this.style.width)  //获取行内样式
+        alert(getstyle(oBox2,"background"))
+    }
+
+
+
+
+
+    function getStyle(obj,attr){
+         obj.currentStyle[attr];   //ie9 一下的ie1浏览器(低版本)
+         alert(getComputedStyle(obj,false)[attr])  //高版本浏览器
+
+    // 兼容
+    if(obj.currentStyle){
+        return obj.currentStyle[attr];
+    }else {
+        return getComputedStyle(obj,false)[attr]
+    }
+    }
+    alert(getStyle(box,widht))
+</script>
+
+</body>
+</html>

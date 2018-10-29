@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="5.29作业.css">
+</head>
+
+<body>
+        <div class="xd">
+                <div class="Layout">
+                        <div class="Layout1">
+                                <div class="Layout1_top">
+                                        <img src="imges/imgs.png" alt="">
+                                </div>
+                                <div class="Layout1_bottom">
+                                        <img src="imges/imgs.png" alt="">
+                                </div>
+                        </div>
+
+                        <div class="Layout2">
+                                <div class="Layout2Title">
+                                        <ul>
+                                                <li class="c">财经
+                                                        <text>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+
+                                                        </text>
+                                                </li>
+                                                <li class="d">股票
+                                                        <text>
+
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                        </text>
+                                                </li>
+                                                <li class="e">理财
+                                                        <text>
+
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                        </text>
+                                                </li>
+                                        </ul>
+                                </div>
+                        </div>
+                        <div class="Layout3">
+                                <div class="Layout3Title">
+                                        <ul>
+                                                <li class="a">娱乐
+                                                        <text>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                        </text>
+                                                </li>
+                                                <li class="b">娱乐视频
+                                                        <text>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                                <p>月夜醉清风</p>
+                                                        </text>
+                                                </li>
+                                        </ul>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <div>
+
+        </div>
+        <script>
+                var a = document.querySelectorAll('.Layout3Title li');
+                var b = document.querySelectorAll('.Layout3Title li text');
+
+                for (let i = 0; i < a.length; i++) {
+                        a[i].onclick = function () {
+                                for (var j = 0; j < b.length; j++) {
+                                        b[j].style.display = 'none';
+                                        // a[j].classList.remove('a')
+                                }
+                                b[i].style.display = 'block';
+                                // a[i].classList.add('a');
+                        }
+                }
+
+
+
+        </script>
+
+</body>
+
+</html>

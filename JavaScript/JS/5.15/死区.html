@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul li{
+            background: red;
+        }
+        .ull{
+            background: green;
+        }
+        ol li{
+            display: none;
+        }
+
+        #box{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            position: relative;
+        }
+        #box #pp{
+            position: absolute;
+            top:100px;
+            display: none;
+        }
+        .now{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li class="ull">aaa</li>
+    <li>aaa</li>
+</ul>
+<ol>
+    <li>bbb</li>
+    <li>ccc</li>
+</ol>
+
+
+<div id="box">
+    <p id="pp">afdsaf </p>
+</div>
+<script>
+
+
+//es6块级作用域   相当于函数的私有作用域
+//    var a = 12;
+//    if (true) {
+//        console.log(a);
+//        let a = 13;
+//    }
+//    console.log(a);
+
+
+//    var a = 12,
+//        b = 13,
+//        c = 14;
+//    function fn(a){
+//        console.log(a,b,c);//12 undefinded 14
+//        var b = c = a = 20;
+//        console.log(a,b,c);//20 20 20
+//    }
+//    fn(a);
+//    console.log(a,b,c);//12 13 20
+
+//    var ary = [12,23];
+//
+//    function fn(ary){
+//        console.log(ary);
+//        ary[0] = 100;
+//        ary = [100];
+//        ary[0] = 0;
+//        console.log(ary);
+//    }
+//    fn(ary);
+//    console.log(ary);
+//
+
+//    var i = 1;
+//    function fn(i){
+//        return function (n){
+//            console.log(n+(++i));
+//        }
+//    }
+//    var f = fn(2);
+//    f(3);
+//(fn(5))(6);
+//    fn(7)(8);
+//    f(4);
+
+//var i = 1;
+//function fn(i){
+//    return function (n){
+//        console.log(n+(++i));
+//    }
+//}
+//(fn(5))(6);
+//var f = fn(2);
+//f(3);
+//f(4);
+//fn(7)(8);
+//f(5);
+//
+//var i = 2;
+//    function  fn(){
+//        i +=2;
+//        return function (n){
+//            console.log(n + (--i));
+//        }
+//    }
+//    var f = fn();
+//    f(2);           //5
+//    f(3);           //5
+//    fn()(2);        //5
+//    fn()(3);        //7
+//    f(4);           //7
+
+
+//    var i = 1;
+//    function  fn(i) {
+//        i+=2;
+//        return function (n) {
+//            console.log(n + (++i));
+//        }
+//    }
+//    fn(1)(2);       //6
+//    var f = fn(1);
+//    f(3);           //7
+//    f(4);           //9
+//    fn(2)(3);       //8
+//    f(5);           //11
+//
+//var ul = document.querySelectorAll('ul li');
+//var ol = document.querySelectorAll('ol li');
+//
+//    function xxk(A,B,C,D) {
+//        for (var i = 0; i < A.length; i++) {
+//            A[i].index = i;
+//            A[i].onclick = function () {
+//                for (var j = 0; j < A.length; j++) {
+//                    A[j].classList.remove(C);
+//                    B[j].classList.remove(D);
+//
+//                }
+//                this.classList.add(C);
+//                B[this.index].classList.add(D);
+//            }
+//        }
+//    }
+//
+//
+//    xxk(ul,ol,'ull','now');
+
+//
+//    var a= 10,
+//        b= 10;
+//    function fn(a){
+////        console.log(a,b);       10 undefined
+////        console.log(a,b,c);       报错
+//        a *= 2;
+//        var b= a;
+//        b++;
+//        c = b;
+//        console.log(a,b,c);     //20 21 21
+//    }
+//    a = fn(a);
+//    console.log(a,b,c);         //undefined 10 21   因为没有return返回值  所有是undefined
+
+//    var ary = [12,23];
+//    function fn(ary){
+//        console.log(ary);
+//        ary[2] = 34;
+//        ary = [34];
+//        ary[5] = 45;
+//        console.log(ary[2]);
+//        console.log(ary);
+//    }
+//    fn(ary);
+//    console.log(ary);
+
+
+//    var fn = function sum() {
+//        console.log(1, sum);
+//    };
+//    fn();
+//    sum();
+
+//console.log(a, fn);
+//    if(1 === 1){
+//        console.log(a,fn);
+//        var a = 12;
+//        function fn(){
+//            console.log(1);
+//        }
+//    }
+//
+//    var n = 10;
+//    function fn(){
+//        console.log(n);
+//    }
+//    fn();
+//    ~function(){
+//
+//        var n=100;
+//        fn();
+//    }();
+//
+//
+//    var i = 2;
+//    function fn(){
+//        var i =3 ;
+//        return function (n){
+//            console.log(n + (++i));
+//        }
+//    }
+//    var f = fn(4);
+//    f(2);
+//    fn(5)(2);
+//    fn(6)(3);
+//    f(3);
+
+
+    let i = 1;
+    let fn = function (n){
+        i *=2;
+        return function (m){
+            i += n + m;
+            console.log(i);
+        }
+    };
+    let f = fn(2);
+    f(3);
+    fn(2)(3);
+    f(4);
+    f(5);
+</script>
+</body>
+</html>

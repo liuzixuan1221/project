@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    //  字面量定义数组
+//    var arr = [];//是一个空数组
+//    //  构造函数定义数组
+//    var arr = new Array();
+//
+//
+//    var arr = [5];  //此时数组的长度为一  里面的值是5
+//    var arr = [1,2,3,0];    //数组长度4
+//    var arr = new Array(4); //数组的长度是4 值为空
+//    var arr = new Array(4,5);   //值为4,5 长度为2
+//    console.log(arr);
+//    var arr = new Array(null);  //值为null 长度为1
+
+
+//    【数组】
+//        1、数组的定义(两种方式定义的区别)
+//            字面量
+//            构造函数定义
+//        2、数组的相关属性
+//            数组的索引   arr[索引]   数组的索引从0开始
+//                        数组的最大索引 arr.length-1
+//            数组的长度   arr.length
+//        3、数组的遍历   首选for循环
+//            for循环
+//            for in 循环
+//            for of 循环 (es6)
+
+
+//var arr = [1,2,3,5,8];
+//for (var i = 0; i < array.length; i++) {
+//    console.log(i);     //索引
+//    console.log(arr[i]);    //值
+//}
+//for (var obj in arr) {
+//    console.log(key);    //索引
+//    console.log(arr[key]);  //值
+//}
+//for(let val of arr){
+//    console.log(val);    //值
+//}
+
+
+//        4、数组方法  遍历(数组的迭代 - 面向对象的思想编程)
+//              传一个回调函数
+//           forEach
+//           some
+//           every
+//           filter
+//           reduce
+//           reduceRight
+//
+//           find
+//           findIndex
+//        5、数组的方法
+//           直接修改原数组：
+//           splice();  //增删改
+//           reverse(); //数组的反转
+//           sort();    //数组的排序(快速排序)
+//           push(值);pop(); //末尾添加/删除
+//           unshift(值);shift();    //头部添加/删除
+//
+//           不修改原数组：(数组的迭代)
+//           toString();    //数组转换为字符串
+//           join("自定义分隔符");    //数组转换为字符串
+//           split("")      //把字符串分割为数组
+//           concat();      //两个数组合并    连接
+//           slice();       //数组的截取/克隆
+//
+//    var arr1 = [5,4,2,7,5,8,1,9];
+//    var arr = [1,2,3];
+//    //arr.push(4);          末尾添加一个数4
+//    //arr.pop();            末尾删除4
+//    //arr.unshift(4);       头部添加4
+//    //arr.shift();          头部删除
+//    //arr.reverse();        3,2,1
+//    //arr.sort();           1,2,3按顺序排列
+//    //arr.splice(0,3);      [] 从索引0开始删除3个元素  两参删
+//    //arr.splice(0,0,4,5,6);[4,5,6,1,2,3]
+//    //arr.splice(0,1,4);    三参改或增
+//    document.write(arr);
+//    arr = arr.toString();
+//    document.write(typeof arr);
+//
+//    var arr2 = arr1.slice(3,6);     //slice含头不含尾
+//    var arr3 = arr1.slice(0,arr1.length);
+//console.log(arr3);
+
+//        var arr = [];
+//        for(i=1;i<101;i++){
+////            arr[arr.length] = i;
+////            arr[i-1] = i;
+//            arr.push(i);
+//        }
+//console.log(arr);
+//    var arr = ["刘备","关羽","张飞"];
+//    var str = arr[0];
+//for (var i = 1; i < arr.length; i++){
+//    str += '|' + arr[i];
+//}
+//
+//
+//
+//
+//    var arr = ["刘备","关羽","张飞"];
+////    arr.splice(1,0,"|");
+////    arr.splice(3,0,"|");
+//      arr = arr.join("|");
+//console.log(arr);
+
+//    var arr = '刘备|关羽|张飞';
+//    arr = arr.split('|');
+//console.log(arr);
+
+//    indexOf           检测这个值在数组中的索引  如果存在返回索引
+//                      如果不存在 返回-1
+//    lastindexOf
+
+//    6、数组的去重(面试必问题)
+
+    var arr=[1,9,1,2,3,4,3,2,1];
+//    var arr1 = [];
+//    for (i=0;i<arr.length;i++){
+//        var flag = true;//
+//        for (var j = 0;j<arr1.length;j++){
+//            if (arr1[j] == arr[i]){
+//                flag = false;
+//            }
+//        }
+//        if(flag){
+//            arr1.push(arr[i]);
+//        }
+//    }
+//console.log(arr1);
+
+//    var arr2=[];
+//    for (var i = 0; i < arr.length; i++) {
+//            if (arr2.indexOf(arr[i]) ==-1){
+//                arr2.push(arr[i]);
+//            }
+//    }
+//console.log(arr2);
+
+//    var arr3 = [];
+//    var obj = {};
+//    for (var i=0;i<arr.length;i++){
+//        if ( obj[arr[i]] == undefined){
+//            obj[arr[i]] = 1;
+//        }
+//    }
+//    for (var key in obj){
+//        arr3.push(key);
+//    }
+//console.log(obj);
+//console.log(arr3);
+
+//    var obj = {};
+//    for (var i = 0; i < arr.length;i++){
+//    if ( typeof (obj[arr[i]])!== 'undefined'){
+//        arr.splice(i,1);
+//        i--;
+//    }else{
+//        obj[arr[i]] = true;
+//    }
+//}
+//    console.log(arr);
+
+
+</script>
+</body>
+</html>

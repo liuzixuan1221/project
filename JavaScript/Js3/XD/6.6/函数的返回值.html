@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #div1{
+        width: 500px;
+        height: 500px;
+          background-color: blue;
+       position:absolute;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="div1" style="position: absolute;"></div>
+    <script>
+    function css(ele,attr){
+        if(ele.currenStyle){
+            return ele.currenStyle[attr]
+        }else{
+            return getComputedStyle(ele)[attr];
+        }
+    }
+    console.log(getComputedStyle(div1).width); //不兼容ie
+    console.log(div1.currenStyle['width']); //ie
+
+
+    console.log(css(div1,'width'));
+    console.log(css(div1,'height'));
+    console.log(css(div1,'position'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul{list-style: none}
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 1350px;
+            height: 400px;
+            margin: 50px  auto;
+            border: 1px solid #000;
+            overflow: hidden;
+        }
+        div ul{
+            width: 1450px;
+        }
+        div ul li{
+            width: 200px;
+            height: 400px;
+            float: left;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li style="background: red"></li>
+        <li style="background: orange"></li>
+        <li style="background: yellow"></li>
+        <li style="background: green"></li>
+        <li style="background: aqua"></li>
+        <li style="background: blue"></li>
+        <li style="background: purple"></li>
+    </ul>
+</div>
+
+
+<script>
+    var div = document.getElementsByTagName('div')[0];
+    var arrLi = document.getElementsByTagName('li');
+
+
+    for(var i = 0; i < arrLi.length; i++){
+        arrLi[i].onmouseover = function (){
+            for (var j = 0; j < arrLi.length; j++){
+                animate(arrLi[j], {"width":100});
+            }
+            animate(this, {"width":800});
+        }
+    }
+
+    div.onmouseout = function() {
+        for(var j = 0; j < arrLi.length; j++){
+            animate(arrLi[j],{"width":200});
+        }
+    };
+
+
+
+    function animate(ele,json,fn){
+        clearInterval(ele.timer);
+        ele.timer = setInterval(function () {
+            for(var k in json){
+                var bool = true;
+                var leader = parseInt(getStyle(ele,k)) || 0;//获取的是字符串
+                var step = (json[k]-leader)/10;
+                step = step>0?Math.ceil(step):Math.floor(step);
+                ele.style[k] = leader + step + "px";
+                if(json[k] != parseInt(getStyle(ele,k))){
+                    bool = false;
+                }
+            }
+            if(bool){
+                clearInterval(ele.timer);
+                if(fn){
+                    fn();
+                }
+            }
+        },10);
+    }
+
+    function getStyle(ele,attr){
+        if(ele.currentStyle != undefined){
+            return ele.currentStyle[attr]
+        }else{
+            return window.getComputedStyle(ele,null)[attr];
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    h1{
+        cursor: pointer;
+    }
+    ul{
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <h1>标题1
+        <ul>
+        <li>内容1</li>
+        <li>内容1</li>
+        <li>内容1</li>
+        <li>内容1</li>
+    </ul>
+    </h1>
+    <h1>标题2
+            <ul>
+            <li>内容2</li>
+            <li>内容2</li>
+            <li>内容2</li>
+            <li>内容2</li>
+        </ul>
+        </h1>
+        <h1>标题3
+                <ul>
+                <li>内容3</li>
+                <li>内容3</li>
+                <li>内容3</li>
+                <li>内容3</li>
+            </ul>
+            </h1>
+            <h1>标题4
+                    <ul>
+                    <li>内容4</li>
+                    <li>内容4</li>
+                    <li>内容4</li>
+                    <li>内容4</li>
+                </ul>
+                </h1>
+                <script>
+                var h1 = document.getElementsByTagName('h1');
+                var ul = document.getElementsByTagName('ul');
+                // for(var i=0;i<h1.length;i++){
+                //     h1[i].index=i;
+                //     h1[i].onclick=function(){
+                //      for(var j=0; j<ul.length;j++){
+                //          ul[j].style.display='none'
+                //      }
+                //      ul[this.index].style.display='block'
+                //     }  
+
+                // }
+
+              h1[0].onclick=function(){
+                  if(ul[0].style.display=='block'){
+                      ul[0].style.display='none'
+                  }else{
+                      ul[0].style.display='block';
+                  }
+              }
+                
+                </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发不留言</title>
+    <style>
+        .box{
+            width: 550px;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        .box textarea{
+            width: 400px;
+        }
+        .box li{
+            width: 440px;
+            line-height: 30px;
+            border-bottom: 1px dashed #cccccc;
+        }
+        .box li a{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="box">
+    <label for="">请输入</label>
+    <textarea name="" id="text" cols="30" rows="10"></textarea>
+    <input id="btn" type="button" value="发布">
+    <ul id="ul">
+
+    </ul>
+</div>
+<script>
+btn.onclick=function() {   //当点击btn绑定的事件
+    var val = text.value;
+    if (!val || val == '打到...') {          //把文本框输入的内容
+        alert('请输入正确的信息，再重新发布');
+        text.value = '';
+        return; //中断函数
+
+    }
+    //创建/添加li元素的
+    var li = document.createElement('li');
+    li.innerHTML = val + '<a href="">删除</a>>';
+    ul.children.length == 0 ? ul.appendChild(li) : ul.insertBefore(li, ul.children[0]);
+    text.value = '';
+    //实现删除功能
+    var a = document.getElementsByTagName('a');
+    for (var i = 0; i < a.length; i++) {
+        a[i].onclick = function () {
+            ul.removeChild(this.parentNode);
+            return false;  //去掉标签的默认行为
+        }
+    }
+}
+</script>
+</body>
+</html>

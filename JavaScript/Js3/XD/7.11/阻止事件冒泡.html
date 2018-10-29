@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        width: 100px;
+        height: 100px;
+        background: seagreen;
+    }
+</style>
+<body>
+    <input type="button" value="按钮">
+    <div></div>
+    <script>
+        window.onload=function(){
+            var oBotn=document.getElementsByTagName('input')[0];
+            var  oDiv=document.getElementsByTagName('div')[0];
+    oDiv.onclick=oBotn.onclick=function(ev){
+            var oEvent=ev||event;
+            oDiv.style.display='block';
+
+            //阻止事件冒泡
+            oEvent.cancelable=true;//兼容低版本ie的
+            oEvent.stopPropagation();//不兼容ie6 7 8
+    }
+    document.onclick=function(){
+        oDiv.style.display='none';
+    }
+
+
+
+
+
+
+
+
+        }
+
+    
+    
+    
+    
+    </script>
+</body>
+</html>

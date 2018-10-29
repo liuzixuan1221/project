@@ -1,0 +1,141 @@
+.inner{
+    width: 1000px;
+    margin: auto;
+}
+.xgsf{
+    padding-top: 40px ;
+    box-sizing: border-box;
+}
+.Left{
+    width: 650px;
+    height: 375px;
+}
+.Ltop{
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+.Ltop .pic{
+    margin-right: 25px;
+}
+#titleBox{
+    line-height: 30px;
+}
+#titleBox span{
+    font-size: 14px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.Ltop .playAll{
+    border: 1px solid #dbdbdb;
+    border-radius: 2px;
+    padding: 5px 10px 5px 20px;
+    position: relative;
+    cursor: pointer;
+}
+i{
+    background: url("../images/icon_splice.png");
+
+}
+.icon1{
+    width: 12px;
+    height: 14px;
+    background-position: 0 0;
+    position: absolute;
+    left: 5px;
+    top: 7px;
+}
+.Ltop .playAll:hover{
+    color: #009af3;
+    border-color:#009af3;
+}
+.Ltop .playAll:hover .icon1{
+    width: 12px;
+    height: 14px;
+    background-position: 0 -30px;
+    position: absolute;
+    left: 5px;
+    top: 7px;
+}
+.Lbox{
+    height: 299px;
+    border-top: 1px solid #eee;
+}
+.Lbox #sort ul{
+    display: none;
+}
+.Lbox #sort li{
+    position: relative;
+    line-height: 35px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.Lbox #sort li:hover{
+    color: #009af3;
+    background: rgba(90,90,255,.2);
+}
+.Lbox #sort .page2{
+    display: none;
+}
+
+.icon2{
+    width: 21px;
+    height: 12px;
+    background-position: -120px -240px;
+    position: absolute;
+    top:12px;
+    left: 150px;
+}
+.page{
+    position: relative;
+}
+#icon3{
+    position: absolute;
+    background-position: -30px -240px;
+    width: 6px;
+    height: 9px;
+    left: 260px;
+    cursor: pointer;
+}
+#icon4{
+    position: absolute;
+    background-position: -90px -240px;
+    width: 6px;
+    height: 9px;
+    left: 300px;
+    cursor: pointer;
+
+}
+.Right{
+    width: 320px;
+}
+.Right .Rtop{
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.Right .more{
+    font-size: 13px;
+    line-height: 19.5px;
+    color: #ccc;
+    margin-top: 7px;
+}
+.Right .Rbox{
+    width: 332px
+}
+.Right .Rbox .other{
+    width: 154px;
+    height: 125px;
+    margin-right: 12px;
+    float: left;
+}
+.Right .Rbox .one{
+    width: 320px;
+    height: 175px;
+    margin-bottom: 12px;
+}
+.Right .Rbox .other img{
+    width: 100%;
+}
+.Right .Rbox .one img{
+    width: 100%;
+}

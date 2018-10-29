@@ -1,0 +1,476 @@
+body{
+    font-size: 12px;
+}
+.inner{
+    width: 1180px;
+    margin: auto;
+}
+
+ .headerOne{
+     position: relative;
+     z-index: 1;
+    height: 65px;
+}
+ .headerOne .logo{
+    width: 126px;
+    height: 43px;
+    margin: 11px 50px 0 0;
+}
+
+.headerOne form{
+    position: relative;
+    width: 30%;
+    height: 28px;
+    border: 1px solid #8ebefc;
+    border-radius: 3px;
+    margin-top: 19px;
+}
+.headerOne form input{
+    margin-left: 5px;
+    width: 100%;
+    height: 28px;
+}
+.headerOne form button{
+    position: absolute;
+    background-color: #a4cbff;
+    background-position: -52px -603px;
+    width: 42px;
+    height: 30px;
+    cursor: pointer;
+    top: -1px;
+    right: -1px;
+    border-radius: 0 5px 5px 0;
+}
+.headerOne ul{
+    height: 15px;
+    line-height: 15px;
+    margin: 23px 0 0 0;
+}
+.headerOne ul li{
+    display: block;
+    border-right: 1px solid #b2b2b2;
+    padding: 0 10px;
+    margin-right: 10px;
+    float: left;
+    cursor: pointer;
+}
+.headerOne #language{
+    position: relative;
+    background: #fff;
+}
+.headerOne ul .lanBorder{
+     border: 1px solid #ccc;
+     border-bottom: 1px solid #fff;
+ }
+#lanBox{
+    position: absolute;
+    z-index: -1;
+    width: 600px;
+    height: 300px;
+    border: 1px solid #ccc;
+    background: #fff;
+    top: 15px;
+    left: -470px;
+    display: none;
+    padding-left: 35px;
+    box-sizing: border-box;
+}
+.headerOne ul #lanBox p{
+    float: left;
+    line-height: 10px;
+    padding: 10px 30px;
+    margin:  30px 10px;
+}.headerOne ul #lanBox p:hover{
+     background: #ccc;
+ }
+i{
+    display: inline-block;
+    background: url("../images/un_header_footer20160610.png") no-repeat;
+    vertical-align: middle;
+}
+.icon1{
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-position: -66px -610px;
+    top:9px;
+    left: 15px;
+}
+.headerTwo{
+    width: 100%;
+    height: 40px;
+    background-color: #2577e3;
+}
+.headerTwo #ulTwo{
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+    background-color: #2577e3;
+}
+.headerTwo #ulTwo li{
+    float: left;
+    display: inline-block;
+    height: 40px;
+}
+.headerTwo #ulTwo li a{
+    display: block;
+    height: 40px;
+    padding: 0 8px;
+    color: #fff;
+}
+.headerTwo #ulTwo .ycBox{
+    position: absolute;
+    width: 1178px;
+    height: 35px;
+    border: 1px solid #2577e3;
+    border-top: none; 
+    top: 40px;
+    left: 0px;
+    display: none;
+    text-align: center;
+    background: #fff;
+}
+.headerTwo #login{
+    position: relative;
+    height: 40px;
+    width: 128px;
+    padding:0 5px 0 27px;
+    background: #ff9913;
+    color: #fff;line-height: 20px;
+}
+.headerTwo #login a{
+    color: #fff;
+}
+.headerTwo #login a:hover{
+    text-decoration: underline;
+}
+.headerTwo #login #loginBox{
+    position: absolute;
+    z-index: 1;
+    left: -1px;
+    width: 160px;
+    border: 1px solid #ccc;
+    height: 100px;
+    background: #fff;
+    display: none;
+    cursor: pointer;
+}
+.headerTwo #login #loginBox .denglu{
+    margin: auto;
+    margin-top: 16px;
+     width: 120px;
+     height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 20px;
+     background: #ff8844;
+ }
+.headerTwo #login #loginBox .denglu:hover{
+    background:#ff9913;
+}
+.headerTwo #login #loginBox p a{
+    color: blue;
+    margin-left: 10px;
+}
+.headerThree{
+    width: 100%;
+    height: 40px;
+    background-color: #fff;
+}
+.headerThree li{
+    float: left;
+    line-height: 40px;
+    margin: 0 21px;
+}
+.headerThree li a{
+    color: #777;
+}
+.headerThree li a:hover{
+     color: #2577e3;
+ }
+#banner{
+    position: relative;
+}
+#banner .bannerBox{
+    position: absolute;
+    width: 580px;
+    height: 300px;
+    top: 20px;
+    left: 370px;
+}
+#banner .bannerBox .BoxLeft{
+    height: 300px;
+    width: 90px;
+    background-color: #2577e3;
+}
+#banner .bannerBox .BoxLeft li{
+    width: 90px;
+    height: 42px;
+    color: #fff;
+    text-align: left;
+    line-height: 42px;
+    font-size: 16px;
+    cursor: pointer;
+    padding-left: 4px;
+    box-sizing: border-box;
+}
+#banner .bannerBox .BoxLeft li:hover{
+    color: #2577e3;
+    background: #fff;
+    border-left: 4px solid #ff9915;
+    padding-left: 0;
+    box-sizing: border-box;
+}
+#banner .bannerBox .BoxLeft li b{
+    display: block;
+    margin: auto;
+    width: 60px;
+    height: 42px;
+    border-bottom: 1px dashed #ccc;
+}
+#banner .bannerBox .BoxLeft .lll{
+    color: #2577e3;
+    background: #fff;
+    border-left: 4px solid #ff9915;
+    padding-left: 0;
+    box-sizing: border-box;
+}
+#banner .bannerBox .BoxRight{
+    background-color: #fff;
+    width: 450px;
+    height: 275px;
+    padding: 20px 20px 5px;
+    display: none;
+}
+#banner .bannerBox .BoxRight p{
+    border-bottom: 2px solid #ccc;
+}
+#banner .bannerBox .BoxRight p a{
+    padding: 1px;
+    margin-bottom: -2px;
+    float: left;
+    margin-right: 20px;
+    color: #000;
+}
+#banner .bannerBox .BoxRight p .aaa{
+    color:#2577e3;
+    border-bottom: 2px solid #2577e3;
+}
+#banner .bannerBox .BoxRight .BrUl{
+    width: 450px;
+    height: 170px;
+    background: #ccc;
+    margin-top: 20px;
+}
+#banner .bannerBox .BoxRight .BrUl li {
+    font-size: 40px;
+    text-align: center;
+    line-height: 170px;
+    display: none;
+}
+#banner .bannerBox .BoxRight .BrUl .first{
+    position: relative;
+    padding-left: 30px;
+    line-height: 50px;
+    font-size: 16px;
+    text-align:left;
+}
+#banner .bannerBox .BoxRight .BrUl .first input{
+    background: #fff;
+    box-shadow: 0 0 2px #000;
+    font-size: 16px;
+    line-height: 30px;
+}
+#banner .bannerBox .BoxRight .BrUl .first #inputBox{
+    position: absolute;
+    width: 420px;
+    height: 170px;
+    box-shadow: 0 0 2px #000;
+    background: #fff;
+    top:42px;
+    left: 83px;
+    display: none;
+}
+#banner .bannerBox .BoxRight .BrUl .first #inputBox #xxx{
+    position: absolute;
+    font-size: 30px;
+    cursor: pointer;
+    top:-10px;
+    right: 10px;
+}
+#banner .img{
+    display: none;
+}
+#banner img{
+    width: 100%;
+}
+#banner #dian{
+    position: absolute;
+    top:90%;
+    left: 65%;
+}
+#banner #dian li{
+    float: left;
+    margin-right: 5px;
+    width: 8px;
+    height: 8px;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+
+.xx .xxTop .topLeft li{
+    position: relative;
+    float: left;
+    font-size: 16px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.sanjiao:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top:20px;
+    margin-left: -6px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    border-bottom: 6px solid #2577e3;
+}
+.xx .xxTop #topRight{
+    font-size: 12px;
+    color: #3be3ff;
+    margin-top: 10px;
+}
+#icon2{
+    background-position: -23px -264px;
+    width: 7px;
+    height: 4px;
+    transform:rotate(0deg);
+}
+.xx .xxBox{
+    margin-top: 5px;
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-top: 2px solid #2577e3;
+    box-sizing: border-box;
+}
+.xx .xxBox li{
+    font-size: 100px;
+    text-align: center;
+    line-height: 500px;
+    display: none;
+}
+
+
+.zuChe .zuCheTop{
+    margin-top: 20px;
+}
+.zuChe .zuCheTop li{
+    position: relative;
+    float: left;
+    font-size: 16px;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.zuChe .zuCheTop .now{
+    color: #2577e3;
+}
+.zuChe .zuCheTop .now:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 14px;
+    margin-left: -6px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+    border-bottom: 6px solid #2577e3;
+}
+.zuChe .zuCheBottom{
+    margin-top: 5px;
+    width: 100%;
+    height: 220px;
+    border: 1px solid #ccc;
+    border-top: 2px solid #2577e3;
+    box-sizing: border-box;
+}
+.zuChe .zuCheBottom li{
+    font-size: 100px;
+    text-align: center;
+    line-height: 220px;
+    display: none;
+}
+.zuChe .zuCheBottom .now{
+    display: block;
+}
+
+
+
+
+.cejian{
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    width:100%;
+    bottom: 55px;
+}
+.cejian #tubiao{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: .4s;
+    }
+.cejian #pop{
+    position: absolute;
+    left: -100%;
+    bottom: -55px;
+    width: 100%;
+    height: 176px;
+    background: rgba(0,0,0,.8);
+    transition: 1s;
+    margin: auto;
+}
+.cejian #pop .popImg{
+    position: absolute;
+    top:0;
+    left: 50%;
+    margin-left: -500px;
+}
+.cejian #pop .popEwm{
+    position: absolute;
+    top:0;
+    left: 50%;
+    margin-left: 290px;
+    width: 150px;
+    height: 100%;
+    padding: 0 2px 0 16px;
+    color: #fff;
+    background: rgba(150,150,150,.6);
+    text-align: center;
+    line-height: 50px;
+}
+.cejian #pop .popEwm img{
+    margin-left: -12px;
+    height: 115px;
+    width: 115px;
+}
+.cejian #pop #popClose{
+    position: absolute;
+    top:10px;
+    right: 465px;
+    font-size: 38px;
+    line-height: 20px;
+    color: #9aa1a8;
+    cursor: pointer;
+}

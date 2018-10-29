@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="ajax.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: auto;
+        }
+        .div{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        ol,ul{
+            list-style: none;
+        }
+        #ol{
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+        }
+        #ol>li{
+            width: 198px;
+            padding: 0 20px;
+            height: 40px;
+            float: left;
+            font-size: 20px;
+            text-align: center;
+            border:1px solid #999999;
+           color: #cc005f;
+        }
+        #ul{
+            width: 1250px;
+            overflow: hidden;
+        }
+        #ul>li{
+            float: left;
+            width: 225px;
+            height: 460px;
+            margin: 16px 16px 0 0;
+            border: solid 1px #e0e0e0;
+        }
+        #ul>li>img{
+            width: 100%;
+        }
+        #ul>li:hover{
+            border:1px solid #e83632;
+        }
+        #ul>li>div:nth-child(2){
+            height: 116px;
+            padding: 39px 15px 10px 15px;
+            position: relative;
+        }
+        #ul>li>div:nth-child(2)>div:nth-child(1){
+            padding: 4px 9px;
+            background-color: #fff;
+            border: solid 1px #e0e0e0;
+            position: absolute;
+            top: -25px;
+            left: 62px;
+            z-index: 3;
+        }
+        #ul>li>div:nth-child(2)>div:nth-child(1)>img{
+            width: 80px;
+            height: 40px;
+        }
+        #ul>li>div:nth-child(2)>p:nth-child(2){
+            font-size: 14px;
+            height: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        #ul>li>div:nth-child(2)>p:nth-child(3){
+            color: #999;
+            height: 18px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 12px;
+        }
+        #ul>li>div:nth-child(2)>p:nth-child(4){
+            height: 46px;
+            overflow: hidden;
+            font-size: 10px;
+            color: #666;
+            padding-top: 3px;
+        }
+        #ul>li>div:nth-child(2)>p:nth-child(4)>span:first-child{
+            font-size: 26px;
+            color: #f10180;
+            margin-right: 3px;
+        }
+        #ul>li>div:nth-child(2)>p:nth-child(5){
+            font-size: 14px;
+            color: #f10180;
+            text-align: center;
+            line-height: 28px;
+            width: 100%;
+            height: 28px;
+            border: solid 1px #f10180;
+            display: block;
+        }
+    </style>
+    <script src="ajax.js"></script>
+</head>
+<body>
+<div class="div">
+    <ol id="ol">
+        <li type="全部商品">全部商品</li>
+        <li type="连衣裙">连衣裙</li>
+        <li type="休闲裤">休闲裤</li>
+        <li type="衬衫">衬衫</li>
+        <li type="套装">套装</li>
+    </ol>
+    <ul id="ul">
+        <!--<li>-->
+            <!--<img src="img/11.jpg" alt="">-->
+            <!--<div>-->
+            <!--<div>-->
+                <!--<img src="img/primary_160x80_90.jpg" alt="">-->
+            <!--</div>-->
+                <!--<p>MO&Co.女装爽购节专场</p>-->
+                <!--<p>跨品牌3件7折，2件8折</p>-->
+                <!--<p><span>1.7</span>折起</p>-->
+                <!--<p>立即抢购</p>-->
+            <!--</div>-->
+        <!--</li>-->
+
+    </ul>
+</div>
+<script>
+    var oUl=document.getElementById('ul');
+    var oOl=document.getElementById('ol');
+    var aOLi=oOl.getElementsByTagName('li');
+
+    ajax("wph.json",function(data) {
+        var _data = eval("(" + data + ")");
+        for (var i = 0; i < _data.length; i++) {
+
+            var aUli = document.createElement('li');
+            var oImg = document.createElement('img');
+            var oDiv = document.createElement('div');
+            var oDiv1 = document.createElement('div');
+            var oImg1 = document.createElement('img');
+            var oP = document.createElement('p');
+            var oP1 = document.createElement('p');
+            var oP2 = document.createElement('p');
+            var oP3 = document.createElement('p');
+            var oSpan = document.createElement('span');
+            oUl.appendChild(aUli);
+            aUli.appendChild(oImg);
+            aUli.appendChild(oDiv);
+            oDiv.appendChild(oDiv1);
+            oDiv1.appendChild(oImg1);
+            oDiv.appendChild(oP);
+            oDiv.appendChild(oP1);
+            oDiv.appendChild(oP2);
+            oP3.appendChild(oSpan);
+            oDiv.appendChild(oP3);
+
+            oImg.src = _data[i].img;
+            oImg1.src = _data[i].img1;
+            oP.innerHTML = _data[i].price;
+            oP1.innerHTML = _data[i].youhui;
+            oP2.innerHTML = _data[i].zhe;
+            oP3.innerHTML = _data[i].qiang;
+            oSpan.innerHTML = _data[i].zhekou;
+        }
+    })
+
+    for (var i = 0; i < aOLi.length; i++) {
+        aOLi[i].onclick=function(){
+            for (var j = 0; j < aOLi.length; j++) {
+                aOLi[j].style.background='white';
+                aOLi[j].style.color='';
+            }
+            this.style.background='red';
+            this.style.color='white';
+
+
+        oUl.innerHTML='';
+            console.log(this.getAttribute("type"));
+
+           var type=this.getAttribute("type");
+            ajax("wph.json",function(data){
+                var _data=eval("("+data+")");
+                for (var i = 0; i < _data.length; i++) {
+                   if(_data[i].type ==type){
+                       var aUli=document.createElement('li');
+                       var oImg=document.createElement('img');
+                       var oDiv=document.createElement('div');
+                       var oDiv1=document.createElement('div');
+                       var oImg1=document.createElement('img');
+                       var oP=document.createElement('p');
+                       var oP1=document.createElement('p');
+                       var oP2=document.createElement('p');
+                       var oP3=document.createElement('p');
+                       var oSpan=document.createElement('span');
+
+                       oUl.appendChild(aUli);
+                       aUli.appendChild(oImg);
+                       aUli.appendChild(oDiv);
+                       oDiv.appendChild(oDiv1);
+                       oDiv1.appendChild(oImg1);
+                       oDiv.appendChild(oP);
+                       oDiv.appendChild(oP1);
+                       oDiv.appendChild(oP2);
+                       oP2.appendChild(oSpan);
+                       oDiv.appendChild(oP3);
+
+                       oImg.src=_data[i].img;
+                       oImg1.src=_data[i].img1;
+                       oP.innerHTML=_data[i].price;
+                       oP1.innerHTML=_data[i].youhui;
+                       oP2.innerHTML=_data[i].zhe;
+                       oP3.innerHTML=_data[i].qiang;
+                       oSpan.innerHTML=_data[i].zhekou;
+                   }if(type =="全部商品"){
+
+                        var aUli=document.createElement('li');
+                        var oImg=document.createElement('img');
+                        var oDiv=document.createElement('div');
+                        var oDiv1=document.createElement('div');
+                        var oImg1=document.createElement('img');
+                        var oP=document.createElement('p');
+                        var oP1=document.createElement('p');
+                        var oP2=document.createElement('p');
+                        var oP3=document.createElement('p');
+                        var oSpan=document.createElement('span');
+
+                        oUl.appendChild(aUli);
+                        aUli.appendChild(oImg);
+                        aUli.appendChild(oDiv);
+                        oDiv.appendChild(oDiv1);
+                        oDiv1.appendChild(oImg1);
+                        oDiv.appendChild(oP);
+                        oDiv.appendChild(oP1);
+                        oDiv.appendChild(oP2);
+                        oP2.appendChild(oSpan);
+                        oDiv.appendChild(oP3);
+
+                        oImg.src=_data[i].img;
+                        oImg1.src=_data[i].img1;
+                        oP.innerHTML=_data[i].price;
+                        oP1.innerHTML=_data[i].youhui;
+                        oP2.innerHTML=_data[i].zhe;
+                        oP3.innerHTML=_data[i].qiang;
+                        oSpan.innerHTML=_data[i].zhekou;
+                    }
+
+                }
+            })
+
+        }
+    }
+</script>
+</body>
+</html>

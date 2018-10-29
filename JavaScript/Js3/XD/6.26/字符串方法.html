@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //找出字符串中所有的数字？
+        var str = 'abc7hjk9qwe912';
+        var arr=[];
+        for (var i = 0;i<str.length;i++){
+            if(str.charAt(i)>=0&&str.charAt(i)<=9){
+                arr.push(str.charAt(i));
+
+            }
+        }
+        alert(arr);  //数字只能是一位数，不能拼起来
+        
+        var str = 'abc7hjk9qwe912';
+        var arr= [];
+        var tmp=' ';
+        for(var i=0;i<str.length;i++){
+            if(str.charAt(i)>=0&&str.charAt(i)<=9){
+                tmp+=str.charAt(i)
+            }else{
+                if(tmp){
+                    arr.push(tmp)
+                    tmp=' '
+                }
+            }
+        }
+    if(tmp){
+        arr.push(tmp)
+        tmp=' '
+    }
+     console.log(arr)
+     alert(arr); //数字可以是多位数的，数字可以是拼接的
+
+//电话(手机)号码
+//1.11位数字
+//2.以1开头
+let reg= /^1\{10}$/
+let str='123324432'
+let str1='12332443332'
+//console.log(str1.match(reg));//捕获
+console.log(reg.test(str));
+console.log(reg.test(str1));
+
+
+let reg = /^[+-]?(\d|([1-9]\d+))(\.\d+)?$/;
+let reg = /^\w+([-.]\w+)*@[A-Za-Z0-9]+(\.[A-Za-Z0-9]+)$/;
+let reg =/^\[\u4E00-\u9FA5]{2,}(\.[\u4E00-\u9FA5]{2,})?$/; //中文所有字[\u4E00-\u9FA5]   
+let reg = /^((1[89])|([2-5]\d)|(6[0-5]))$/;    //年龄18-65之间
+
+
+let reg = /^\[object.+\ ]$/;
+console.log(reg.test(reg));
+
+let reg =/^(\d{6})(\d{4})(\d{2})(\d{2})\d{2}(\d)(?:\d|x)$/;
+
+
+
+        </script>
+</body>
+</html>

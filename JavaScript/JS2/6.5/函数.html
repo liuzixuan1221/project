@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    函数
+//    1、函数的定义
+//        字面量定义
+//            function  定义函数的关键字
+//            function fn(){}
+//        构造函数定义
+            var fn = function(){
+                alert(1);
+            };
+
+            function toBig(){
+                alert(2);
+            }
+
+            let fn1 = function(){
+                alert(3);
+            }
+//    2、函数定义好之后  必须执行才能起到函数的作用
+//            函数的执行  函数名()
+//    3、   函数定义的工作原理：
+//            - 开辟一个新的堆内存空间
+//            - 然后把函数中的内容 当作代码字符串存进内存中
+//              而对象 是对象中的内容当做  键值对 一对对存进去
+//            - 浏览器为空间分配的地址 返回给变量
+//          函数的执行原理：
+//            - 形参赋值
+//            - 变量提升
+//            - 函数自上而下执行
+//            - 内存释放(销毁)
+//    4、【函数的作用：封装】
+//          在真实项目中，我们一把都会把实现一个具体功能的代码封装在函数中：
+//          封装在一个函数中，页面中就基本上很难出现重复一样的代码了，
+//          减少了页面中代码的冗余度，提高了代码的重复利用率：
+//          实现【低耦合高内聚】
+//    5、想要实现封装功能  需要用到参数
+//      参数分为：实参  形参
+//          实参个数=形参个数       正常执行
+//          实参个数<形参个数       多出的形参都是undefined
+//          实参个数>形参个数       正常执行  多出的实参被忽略
+//
+//
+//
+//
+//
+//
+//        function sum(a,b,c){
+//            c = 0;
+//            c = a + b;
+//            console.log(c);
+//        }
+//        sum(1,2);
+
+//
+//        function sum(){
+//            console.log(arguments);
+//            console.log(arguments.callee);          //callee指函数本身 在严格模式下禁用
+//            console.log(arguments.callee.caller);   //caller指函数的this指向
+//        }
+
+//var poor = 0,sum = 0, product = 0;
+//        function xxx(arr){
+//            if (arguments.length == 2){
+//               cha = arguments[0] - arguments[1];
+//                console.log(cha);
+//            }else if(arguments.length == 3){
+//                sum = arguments[0] + arguments[1] + arguments[2];
+//                console.log(sum);
+//            }else if (arguments.length == 4){
+//                product = arguments[0] * arguments[1] * arguments[2] * arguments[3];
+//                console.log(product);
+//            }
+//        }
+//        xxx(1,1);
+//        xxx(1,1,3);
+//        xxx(1,1,3,5);
+
+
+
+
+
+
+//        arguments 类数组
+//        arguments 类数组
+//        arguments 只有函数
+//        arguments 实参集合
+//        arguments 类数组
+//        arguments 映射 (实参和形参的映射)
+//        函数在执行的时候  实参传给形参的一瞬间
+//        建立实参形参的映射关系  一旦建立起映射关系
+//        当实参的集合改变时 形参里面储存的值  也会对应改变
+//        如果没有建立起映射关系  当实参的集合改变的时候
+//        形参里面存储的值  不会再改变
+
+//
+//    function sum(x,y,z){
+//        arguments[0]=11;
+//        arguments[2]=12;
+//        arguments[3]=13;
+//        result = x + y + z;
+//        console.log(result);
+//    }
+//    sum(1,2);       //NaN
+
+//    function sum(){
+//        [...arr] = arguments;
+//        arr = [].slice.call(arguments);
+//        console.log(eval(arr.join('+')));
+//    }
+//sum(1,2,3,4,4,566);
+
+
+//        6、函数的作用域
+//            全局作用域
+//              1、就是执行的时候  浏览器会为Js代码的执行提供一个全局的作用域
+//                 客户端里是window/node里面是global
+//              2、在全局作用域下执行的方法 定义的变量 都属于全局变量/全局方法
+//            私有作用域
+//              1、函数执行的时候  保护函数内部的私有变量不受外界的影响
+//                 所以构成了一个私有的作用域
+//              2、在函数里面定义的变量/方法都属于私有变量/方法(形参也属于私有变量)
+//        7、变量
+//              1、直接写了一个变量赋值xxx,他就属于全局变量
+//              window 上的属性存在一一映射关系
+//                  b = 0 window.b //0;
+//                windex.b='xxx';     b//xxx
+//                当我们定义了一个变量 b === 111;相当于给window这个对象绑定了一个属性b 存储得值为111
+//              2、在函数外面用var定义的变量 也属于全局变量    和window也存在映射
+//              3、在函数里面 用var关键字定义的变量 属于私有变量
+//              作用域链：如果自己的私有作用域中没有这个变量
+//                  就会往上级作用域查找  往上级作用域一级一级查找
+//                  一直找到window为止 的这个机制
+//                  我们称为'作用域链'
+
+
+</script>
+</body>
+</html>

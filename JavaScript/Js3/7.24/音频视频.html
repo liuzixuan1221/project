@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="playVid()" type="button">播放视频</button>
+<button onclick="pauseVid()" type="button">暂停视频</button>
+<button onclick="loadVid()" type="button">重新加载视频</button>
+<br />
+<br />
+<video id="video1" controls="controls">
+    <source src="mov_bbb.mp4" type="video/mp4">
+    <source src="mov_bbb.ogg" type="video/ogg">
+</video>
+
+
+<script>
+    var myVideo1=document.getElementById("video1");
+    var myVideo2=document.getElementById("video2");
+
+    function playVid()
+    {
+        myVideo1.play();
+    }
+
+
+    function pauseVid()
+    {
+        myVideo1.pause();
+    }
+    function loadVid(){
+        myVideo1.load();
+    }
+</script>
+
+</body>
+</html>

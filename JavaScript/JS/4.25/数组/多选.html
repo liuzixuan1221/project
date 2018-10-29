@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<script>
+    window.onload = function(){
+//        找人
+    var all = document.getElementById('in1');
+    var box = document.getElementById('box');
+//        box.getElementByTagName('input')  获取box下面的所有input
+    var arrIn = box.getElementsByTagName('input');
+//        2、绑定事件
+        all.onclick = function(){
+//        3、书写事件驱动
+            for(var i=0;i<=arrIn.length;i++){
+                arrIn[i].checked=all.checked;
+            }
+        }
+
+    }
+</script>
+<body>
+<input type="checkbox" id="in1">全选
+<div id="box">
+    <input type="checkbox" name="e">1
+    <input type="checkbox" name="e">2
+    <input type="checkbox" name="e">3
+    <input type="checkbox" name="e">4
+    <input type="checkbox" name="e">5
+    <input type="checkbox" name="e">6
+    <input type="checkbox" name="e">7
+</div>
+</body>
+</html>

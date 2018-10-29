@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+input{
+    width: 200px;
+    height: 50px;
+}
+button{
+    width: 50px;
+    height: 30px;
+    background: blue;
+    border:none;
+}
+ul{
+    width: 200px;
+    background: blueviolet
+}
+li{
+    width: 200px;
+    height: 30px;
+    background: chartreuse;
+    border: 2px solid red;
+    float: left;
+}
+span{
+    float: right;
+}
+
+</style>
+<body>
+<input id="x1" type="text"><br>
+
+<button id="but">发送</button>
+<ul id="ul">
+<li>46654  <span>删除</span></li>
+<li>5445  <span>删除</span></li>
+<li>45454  <span>删除</span></li>
+<li>4545 <span>删除</span> </li>
+<li>45454  <span>删除</span></li>
+</ul>
+<script>
+window.onload=function(){
+var oIpn =document.getElementById('x1');
+var oBut =document.getElementById('but');
+var oUl =document.getElementById('ul');
+var aLi=oUl.getElementsByTagName('li');
+var aSpan =oUl.getElementsByTagName('span');
+
+
+for(i=0;i<aLi.length;i++){
+    oBut.onclick=function(){
+
+}
+}
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        button {
+            margin: 20px;
+            width: 50px;
+            height: 30px;
+        }
+        .box {
+            height: 300px;
+            margin: 20px 0;
+            position: relative;
+            background-color: #ccc;
+        }
+        .box1 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <button>走起...</button>
+    <div class="box">
+        <div class="box1" id="box1"></div>
+    </div>
+
+
+    <script>
+
+        //需求：点击按钮，box1这个盒子向右一直移动。
+        //步骤：
+        //1.老三步。
+        //2.定时器。
+        //3.每隔30ms为div的style.left赋值，每次获取自身的位置+步长。
+
+
+        var btn = document.getElementsByTagName("button")[0];
+        var box1 = document.getElementById("box1");
+
+        btn.onclick = function () {
+            setInterval(function () {
+                box1.style.left = box1.offsetLeft + 10 + "px";
+            },20);
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>

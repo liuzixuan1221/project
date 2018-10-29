@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时钟</title>
+    <style>
+        #box{
+            line-height: 170px;
+            font-size: 100px;
+            text-align: center;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <img src="img/0.png" alt="">
+    <img src="img/0.png" alt="">
+    :
+    <img src="img/0.png" alt="">
+    <img src="img/0.png" alt="">
+    :
+    <img src="img/0.png" alt="">
+    <img src="img/0.png" alt="">
+</div>
+<script>
+    setInterval(function(){
+        var _Date = new Date();
+        var aImg = document.getElementsByTagName('img');
+        var nHuor = _Date.getHours(),
+                nMin = _Date.getMinutes(),
+                nSec = _Date.getSeconds();
+        aImg[0].src = "img/"+parseInt(nHuor/10)+".png";
+        aImg[1].src = "img/"+parseInt(nHuor%10)+".png";
+        aImg[2].src = "img/"+parseInt(nMin/10)+".png";
+        aImg[3].src = "img/"+parseInt(nMin%10)+".png";
+        aImg[4].src = "img/"+parseInt(nSec/10)+".png";
+        aImg[5].src = "img/"+parseInt(nSec%10)+".png";
+    },1000)
+</script>
+</body>
+<ml>

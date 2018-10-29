@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+//    (function () {
+//        console.log(1);
+//    })();
+//    ~function(){console.log(2);}();
+//    !function(){console.log(3);}();
+//    +function(){console.log(4);}();
+//
+//
+//    function fn(){
+//        console.log('指向同一个堆内存空间');
+//    }
+////    setInterval(fn,500);
+////    setInterval(fn,500);
+//
+//
+//    setInterval(function(){
+////        console.log('指向两个堆内存空间');
+//    },1);
+//    setInterval(function(){
+////        console.log('指向两个堆内存空间')
+//    },1);
+
+//
+//    var arr = [0,1,2];
+//    (function(arr){
+//        //arr 0 1 2
+//        arr[0] = 11;
+//        arr[1] = 22;
+//        //arr 11,22,2
+//        arr = [2,3,4];
+//        arr[0] = 11;
+//        //arr [11,3,4]
+//    })();
+//    console.log(arr);
+//
+//
+//    var a;
+//    console.log(a);
+//    console.log(window.a);
+//    console.log('a' in window);
+//    a = 10;
+//
+
+//    var a = 12;
+//    console.log(a);
+//    console.log(window.a);
+//    window.a = 13;
+//    console.log(a);
+
+//    console.log(a,b);
+//    var a = 12,
+//        b = 12;
+//    //undefined undefined;
+//
+//    console.log(a,b);
+//    var a = 12;
+//        b = 12;
+//    //报错
+
+//
+//    function fn(){
+////        console.log(a,b);
+//        var a = b = 13;
+//        console.log(a,b);
+//    }
+//    fn();
+//    console.log(a,b);
+//
+//
+//    var num = 10;
+//    fun();
+//    function fun(){
+//        console.log(num);
+//        var num = 20;
+//    }
+//
+//
+//    var a = 18;
+//    f1();
+//    function f1(){
+//        var a=9;
+//        console.log(a);
+//        console.log(b);
+//        var b = '123';
+//    }
+//    console.log(a);
+//    console.log(b);
+//
+//
+//    f1();
+//    console.log(c);//9
+//    console.log(b);//9
+//    console.log(a);//报错
+//    function f1(){
+//        var a = b = c = 9;
+//        console.log(a);//9
+//        console.log(b);//9
+//        console.log(c);//9
+//    }
+//
+
+
+
+
+
+//    var color = "red";
+//    function outer() {
+//        var anotherColor = "blue";
+//        function inner() {
+//            var tmpColor = color; //red
+//            color = anotherColor;//blue
+//            anotherColor = tmpColor;//red
+//            console.log(anotherColor);  //red
+//        }
+//        inner();
+//    }
+//    outer();
+//    console.log(color); //blue
+//
+//
+//    sum();
+//    fn();
+//    var fn = function(){
+//        console.log(1);
+//    };
+//    fn();
+//    function sum(){
+//        console.log(2);
+//    }
+//
+//
+//    console.log(a);
+//    if('a' in window){
+//        var a = 100;
+//    }
+//    console.log(a);
+
+
+//
+//'use strict'
+//   var f = function() {return true;};
+//   var g = function() {return false;};
+//    ~function () {
+//        if(g() && [] == ![]){
+//            f = function () {return false;};
+//            function  g () {return true;}
+//        }
+//    }();
+//    console.log(f());
+//    console.log(g());
+
+//    function fn
+//    1、不管条件是否满足  都要进行变量提升  只提升函数名  不提升函数值
+//    console.log(fn);//undefined
+//
+//
+//    if ( 1===1 ){
+//        //2、如果条件成立  进入判断题  代码按照原代码顺序  正常自上而下执行
+//        //(模拟es6块级作用域)
+//        function fn(){
+//            console.log('ok');
+//        }
+//        console.log(fn);//函数
+//    }
+//    console.log(fn);//函数
+//
+
+
+
+//    fn();
+//    function fn() {console.log(1);}
+//    fn();
+//    function fn() {console.log(2);}
+//    fn();
+//    var fn = 100;
+//    fn();
+//    function fn() {console.log(3);}
+//    fn();
+//    function fn() {console.log(4);}
+//    fn();
+//
+//    //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+//    function fn() {console.log(1);}
+//    function fn() {console.log(2);}
+//    function fn() {console.log(3);}
+//    function fn() {console.log(4);}
+//    fn();
+//    fn();
+//    fn();
+//    fn=100;
+//    fn();
+//    fn();
+//    fn();
+//
+//  //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+//    function fn() {console.log(4);}
+//    fn();//4
+//    fn();//4
+//    fn();//4
+//    fn=100;
+//    fn();//100不是函数  报错
+//    fn();
+//    fn();
+
+//    console.log(a);
+//    var a = 12;
+//    console.log(window.a);
+//    console.log(a);
+
+//    //let 不会变量提升
+//    console.log(a);//报错
+//    let a = 12;
+//    console.log(window.a);
+//    console.log(a);
+//
+//var a = 13;
+//console.log(a);//报错
+//let a = 12;
+//console.log(window.a);
+//console.log(a);
+
+
+//有自己私有的    不用别人的   语法检测
+//    let a = 10,
+//        b = 10;
+//    console.log(a,b);
+//    let fn = function(){
+////        console.log(a,b);
+//        let a = b = 20;
+//        console.log(a, b);
+//    };
+//    fn();
+//    console.log(a,b);
+</script>
+</body>
+</html>

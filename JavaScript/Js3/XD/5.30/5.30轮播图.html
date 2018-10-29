@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    ul{
+        list-style: none;
+    }
+    .xd img{
+        width: 100%;
+        height: 445px;
+        overflow: hidden;
+        display: none;
+    }
+    .xd{
+        position: relative;
+    }
+    .xd ul li{
+        width: 10px;
+        height: 10px;
+        background-color: blue;
+        float: left;
+        margin-left:  5px;
+        border-radius: 50%;
+        background: rgba(255,255, 255, .3);
+        transition: all .2s;
+        cursor: pointer;
+    }
+    .xd ul {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .xd ul   .now{
+     transform:scale(1.2);
+     background: rgba(255, 255,255, 1);
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="xd">
+<img style="display: block;" src="img/20160713154957678313.jpg" alt="">
+<img src="img/20170913175748750902.jpg" alt="">
+<img src="img/20170929134028425664.jpg" alt="">
+<img src="img/20180529102657496732.jpg" alt="">
+<img src="img/20180529182218140197.jpg" alt="">
+<img src="img/20180530003254199489.jpg" alt="">
+        <ul>
+            <li class="now"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <!-- <input type="text">+
+    <input type="text">=
+    <input type="button" value="求值">
+        
+
+
+    
+    <script>
+var a=document.querySelectorAll('.xd li');
+var b= document.querySelectorAll('.xd img');
+  for(var i=0;i<a.length;i++){  
+      a[i].index=i;  // this等于a[0];
+    a[i].onmouseover=function(){
+     for (var j=0;j<b.length;j++){
+          b[j].style.display='none';
+       }
+       b[this.index].style.display='block';
+     }
+ }
+
+
+
+
+// var a=document.getElementsByTagName('input');
+// a[2].onclick=function(){
+//     if((a[0].value)==' '||(a[1].value)==' ') {
+//         return;
+//     }
+//     var val1=parseFloat(a[0].value);
+//     var val2=parseFloat(a[1].value);
+     
+    
+//     //   console.log(val1+val2);
+//       var sum=val1+val2;
+//       if(isNaN(sum)){
+//           alert('输入错误 请重新输出');
+//       } else {
+//           console.log (sum);
+//       }
+// }
+
+
+
+</script>
+
+</body>
+</html>

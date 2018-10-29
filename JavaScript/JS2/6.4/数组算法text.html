@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr=[3,5,2,6,8,1,4]
+    var l=0,c=0;
+    for (var i=0;i<arr.length-1;i++){
+        l++;
+        var flag = true;
+        for (var j=0;j<arr.length-1-i;j++){
+            if (arr[j]>arr[j+1]){
+                var temp;
+                temp = arr[j+1];
+                arr[j+1] = arr[j];
+                arr[j] = temp;
+                flag = false;
+                c++;
+                console.log(arr);
+            }
+        }
+        if (flag){
+            break;
+        }
+    }
+//    console.log(arr,l,c);
+</script>
+</body>
+</html>

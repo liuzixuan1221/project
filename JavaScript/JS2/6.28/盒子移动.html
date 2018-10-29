@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        button {
+            margin: 20px;
+            width: 50px;
+            height: 30px;
+        }
+        .box {
+            height: 300px;
+            margin: 20px 0;
+            position: relative;
+            background-color: #ccc;
+        }
+        .box1 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            background-color: red;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            background-color: green;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="走起...">
+<input type="button" value="移动至200">
+<input type="button" value="移动至400">
+<div class="box">
+    <div class="box1" id="box1"></div>
+    <div class="box2" id="box2"></div>
+</div>
+
+<script>
+    var btn = document.getElementsByTagName('input')[0];
+    var btn200 = document.getElementsByTagName('input')[1];
+    var btn400 = document.getElementsByTagName('input')[2];
+    var box1 = document.getElementById('box1');
+    var box2 = document.getElementById('box2');
+    var timer = null;
+    btn.onclick = function(){
+        if (btn.value == "走起..."){
+            btn.value = "停!!!";
+            timer = setInterval(function(){
+                box1.style.left = box1.offsetLeft + 10 + 'px';
+            },20)
+        } else if (btn.value == "停!!!"){
+            btn.value = "走起...";
+            clearInterval(timer);
+        }
+    };
+
+    btn200.onclick = function(){
+        animate(box1,200);
+    };
+    btn400.onclick = function(){
+        animate(box2,400);
+    };
+    function animate(ele,target){
+        clearInterval(ele.timer);
+        ele.timer = setInterval(function(){
+            var step = (target - ele.offsetLeft) / 10;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+//            if(step > 0 ){
+//               step =  Math.ceil(step)
+//            }else {
+//               step =  Math.floor(step)
+//            }
+            ele.style.left = ele.offsetLeft + step + "px";
+            if (Math.abs(target - ele.offsetLeft) < Math.abs(step)){
+                ele.style.left = target + 'px';
+                clearInterval(ele.timer);
+            }
+        },30);
+    }
+
+</script>
+</body>
+</html>

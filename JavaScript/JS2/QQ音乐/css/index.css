@@ -1,0 +1,422 @@
+body{
+    font-size: 14px;
+    color: #333;
+    font-family: "微软雅黑";
+}
+#BG{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color:rgba(0,0,0,.3);
+    z-index: 100;
+    display: none;
+}
+.inner{
+    width: 1200px;
+    margin: auto;
+}
+.headerTop .logo{
+    padding-top: 22px;
+}
+.headerTop .title{
+    margin-left: 28px;
+}
+.headerTop .title li{
+    float: left;
+}
+.headerTop .title li a{
+    display: block;
+    padding: 0 20px;
+    line-height: 90px;
+    height: 90px;
+    text-align: center;
+    font-size: 18px;
+    color: #000;
+}
+.headerTop .title li a.now{
+    background-color: #31c27c;
+    color: #fff;
+}
+.headerTop .search{
+    border: 1px solid #c9c9c9;
+    padding: 0 33px 0 11px;
+    line-height: 36px;
+    width: 220px;
+    height: 36px;
+    margin-left: 28px;
+    margin-top: 26px;
+    position: relative;
+    border-radius: 3px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+.headerTop .search input{
+    width: 174px;
+    height: 36px;
+    border: 0 none;
+    font-size: 14px;
+}
+.headerTop .search i.icon1{
+    position: absolute;
+    top: 50%;
+    right: 11px;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    background: url("../images/icon_sprite.png");
+    background-position: 0 -40px;
+    cursor: pointer;
+}
+.headerTop .search i.icon1:hover{
+    background-position: 0 -60px;
+}
+.headerTop .searchBox{
+    position: absolute;
+    top: 33px;
+    left: -1px;
+    background: #FFF;
+    width: 218px;
+    border: 1px solid #c9c9c9;
+    text-align: left;
+    font-size: 14px;
+    line-height: 36px;
+    height: 0;
+    overflow: hidden;
+}
+.headerTop .searchBox.now{
+    height: 238px;
+}
+.searchBox li{
+    overflow: hidden;
+}
+.searchBox li:hover{
+    background-color: #31c27c;
+}
+.searchBox li:hover a span{
+    color: #fff;
+}
+.searchBox a{
+    display: block;
+    padding-left: 11px;
+    padding-right: 11px;
+}
+.searchBox a span:first-of-type{
+    color: #ff4222;
+    float: left;
+    width: 18px;
+}
+.searchBox a span:nth-of-type(2){
+    float: left;
+    color: #333;
+    max-width: 140px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.searchBox a span:last-of-type{
+    float: right;
+    color: #999;
+    font-size: 12px;
+}
+.searchBox .history{
+    padding: 5px 0 0 16px;
+    border-bottom: 1px solid #f2f2f2;
+    color:#ccc;
+    line-height: 50px;
+}
+.searchBox .history i.icon2{
+    position: absolute;
+    top: 208px;
+    right: 11px;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    background: url("../images/icon_sprite.png");
+    background-position: -100px 0;
+}
+.searchBox .history i.icon2:hover{
+    background-position: -20px -60px;
+}
+.headerTop .login span a{
+    font-size: 16px;
+    float: left;
+    width: 38px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 90px;
+    color: #000;
+}
+.headerTop .login span a:hover{
+    color: #31c27c;
+}
+.headerTop .login .lvZuan{
+    line-height: 39px;
+    margin-top: 24px;
+    padding: 0 9px;
+    margin-left: 10px;
+    margin-right: 0;
+    font-size: 13px;
+    border-radius: 2px;
+    border: 1px solid #31c27c;
+    background-color: #31c27c;
+    color: #fff;
+    cursor: pointer;
+}
+.headerTop .login .ffb{
+    line-height: 39px;
+    margin-top: 24px;
+    padding: 0 9px;
+    margin-left: 10px;
+    margin-right: 0;
+    font-size: 13px;
+    border: 1px solid #c9c9c9;
+    color: #333;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.headerTop .login .lvZuan:hover{
+    background-color: #2caf6f;
+    border-color: #2caf6f;
+    color: #fff;
+}
+.headerTop .login .ffb:hover{
+    background-color: #ededed;
+    color: #333;
+}
+.login .loginBox{
+    position: fixed;
+    z-index: 100;
+    top: 157px;
+    margin: 10px;
+    left: 679px;
+    width: 560px;
+    height: 410px;
+    overflow: hidden;
+    border: 1px solid #bfbfbf;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
+    background-color: #fff;
+    padding-bottom: 10px;
+    display: none;
+}
+.loginBox #close{
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    color: #7a7a7a;
+    cursor: pointer;
+    z-index: 10;
+}
+.loginBox .top{
+    position: relative;
+    line-height: 55px;
+    text-align: center;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 16px;
+    font-weight: 400;
+}
+.loginBox .top a{
+    margin: 0 55px;
+    color: #000;
+}
+.loginBox .top .now{
+    display: inline-block;
+    color: #31c27c;
+}
+.loginBox .loginCont{
+    position: relative;
+    padding-bottom: 5px;
+}
+.loginBox .loginCont p.title{
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+    line-height: 60px;
+}
+.loginBox .loginCont p.text{
+    font-size: 16px;
+    color: #666;
+    text-align: center;
+}
+.loginBox .loginCont p.text:last-of-type{
+    margin-bottom: 40px;
+}
+.loginBox .loginCont p.text a{
+    color: #3481cf;
+}
+.loginBox .qq{
+    display: none;
+}
+.loginBox .weixin{
+    display: none;
+}
+.loginBox .weixin .code{
+    width: 160px;
+    height: 160px;
+    margin:  50px auto 0;
+}
+.loginBox .weixin .code img{
+    width: 100%;
+    height: 100%;
+}
+.loginBox .weixin p{
+    line-height: 28px;
+    font-size: 13px;
+    text-align: center;
+    margin: 10px;
+}
+.loginBox .weixin span{
+    color: #999;
+}
+.loginCont form{
+    width: 272px;
+    height: 42px;
+    position: relative;
+    z-index: 10;
+    font-size: 12px;
+    border: 1px solid silver;
+    border-radius: 3px;
+    margin: auto;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.loginCont form .zhangHao{
+    width: 258px;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    height: 18px;
+    padding: 10px 0 10px 10px;
+    line-height: 18px;
+    color: #333;
+    font-size: 14px;
+}
+.loginCont form .miMa{
+    width: 258px;
+    position: relative;
+    top: 2px;
+    left: 2px;
+    height: 18px;
+    padding: 10px 0 10px 10px;
+    line-height: 18px;
+}
+.loginCont .button{
+    width: 272px;
+    background-color: #86ce2f;
+    margin: 20px auto;
+    border-radius: 5px;
+}
+.loginCont button{
+    width:100%;
+    height: 40px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    line-height: 35px;
+}
+.loginCont .ziDongDengLv{
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 10px;
+}
+.loginCont .ziDongDengLv .zddl{
+    background: 0 0;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.loginCont .mmBox{
+    margin-top: 40px;
+    font-size: 12px;
+    color: #7a7a7a;
+}
+.loginCont .mmBox a{
+    margin: 0 5px;
+    color: #7a7a7a;
+    cursor: pointer;
+}
+.loginCont .mmBox a:hover{
+    text-decoration: underline;
+}
+.loginBox .now{
+    display: block;
+}
+.headerBottom{
+    height: 51px;
+    line-height: 51px;
+    border-top: 1px solid #f2f2f2;
+    padding-left: 230px;
+    margin-right: -50px;
+}
+.headerBottom li{
+    float: left;
+    font-size: 15px;
+    margin-right: 47px;
+}
+.headerBottom li a{
+    color: #000;
+}
+.headerBottom li a.now{
+    color: #31c27c;
+}
+.banner{
+    width: 1920px;
+    height: 500px;
+    background-color: #eee;
+}
+.banner .top{
+    padding-top: 4.16667%;
+    padding-bottom: 2%;
+}
+.banner .top h2{
+    text-align:center;
+    font-size: 30px;
+    line-height: 1.5;
+}
+.banner .title{
+    height: 50px;
+    text-align: center;
+}
+.banner .title li{
+    display: inline-block;
+    font-size: 15px;
+    margin: 0 24px;
+}
+.banner .title li a{
+    color: #000;
+}
+.banner .title li a:hover{
+    color: #31c27c;
+}
+.banner .bannerPlay{
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.banner .bannerPlay ul{
+    position: relative;
+    width: 1250%;
+}
+.banner .bannerPlay ul li{
+    float: left;
+    margin-right: 20px;
+}
+.banner .bannerPlay ul li .img{
+    background-color: rgba(255,255,255,1);
+    width: 224px;
+    height: 224px;
+    overflow: hidden;
+}
+.banner .bannerPlay ul li .img:hover img{
+    background-color: rgba(255,255,255,.6);
+    transform: scale(1.2);
+}
+.banner .bannerPlay ul li img{
+    width: 100%;
+    height: 100%;
+    transition:all .6s;
+}
+.banner .bannerPlay ul li p{
+    line-height: 22px;
+    font-weight: 400;
+}

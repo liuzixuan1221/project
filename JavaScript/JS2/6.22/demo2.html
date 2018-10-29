@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function F(){
+        this.x = 10;//s.x = 10
+        this.y = 20;//s.y = 20
+    }
+    F.prototype.sum = function(){
+        console.log(this.x+this.y);
+    };
+    function S(){
+        this.z  = 50;
+        F.call(this);
+    }
+
+
+    S.prototype = Object.create(F.prototype);
+//    ↑↑↑↑↑↑相当于↓↓↓↓↓↓
+      function Temp(){
+
+      }
+        Temp.prototype = F.prototype;//Temp.prototype就指向了F的原型
+        S.prototype = new Temp();
+//作为同类的实例，S.prototype就不会受到污染，
+//并且同时S.prototype原型下的__prototype__指向F.prototype
+    var s = new S();
+    console.log(s);
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #ul1{
+        position: absolute;
+    }
+</style>
+<body>
+    <ul  id="ul1">
+        <li>梁朝林</li>
+        <li>周润林</li>
+        <li>吴彦林</li>
+        <li>刘德林</li>
+    </ul>
+    <script>
+    //鼠标菜单键
+   //oncontextmenu事件：用户右击鼠标时触发并打开上下文菜单。
+   window.onload=function(){
+       var oUl=document.getElementById('ul1');
+       document.oncontextmenu=function(ev){
+        var oEvent=ev||event;
+        oUl.style.display='block';
+        oUl.style.left=oEvent.clientX+'px';
+        oUl.style.top=oEvent.clientY+'px';
+        return false; //阻止事件的默认行为，会把冒泡传播都阻止
+       };
+       document.onclick=function(){
+           oUl.style.display='none';
+       }
+   }
+    
+    
+    </script>
+</body>
+</html>

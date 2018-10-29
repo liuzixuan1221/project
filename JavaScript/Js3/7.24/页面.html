@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<script>
+    window.onload = function(){
+
+        var body = document.getElementsByTagName('body')[0];
+
+        var bl = localStorage.getItem("page");
+
+        if(bl == 1){
+            body.style.backgroundColor = 'red';
+        }
+        else if(bl == 2){
+            body.style.backgroundColor = 'green';
+        }
+        else if(bl == 3){
+            body.style.backgroundColor = 'blue';
+        }
+    }
+</script>
+</body>
+</html>

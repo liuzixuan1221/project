@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="生成">
+    <ul>
+
+    </ul>
+
+    <script>
+        var btn = document.getElementsByTagName('input')[0];
+        var ul = document.getElementsByTagName('ul')[0];
+        var oLi1 = document.createElement('li');
+        var oLi2 = document.createElement('li');
+        var oLi3 = document.createElement('li');
+        var oLi4 = document.createElement('li');
+//
+//        btn.onclick =function(){
+//            oLi1.innerHTML = '沉鱼';
+//            oLi2.innerHTML = '落雁';
+//            oLi3.innerHTML = '闭月';
+//            oLi4.innerHTML = '羞花';
+//            ul.appendChild(oLi1);
+//            ul.appendChild(oLi2);
+//            ul.appendChild(oLi3);
+//            ul.appendChild(oLi4);
+//        }
+
+
+        var arrLi = ['沉鱼','落雁','闭月','羞花'];
+
+        btn.onclick = function(){
+            for(var i=0;i<arrLi.length;i++){
+                var li = document.createElement('li');
+                li.innerHTML = arrLi[i];
+                ul.appendChild(li);
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+</html>

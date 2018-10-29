@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="点击变色">
+<ul id="ul">
+    <li>忒难了</li>
+    <li>忒难了</li>
+    <li>忒难了</li>
+    <li>忒难了</li>
+    <li>忒难了</li>
+    <li>忒难了</li>
+    <li>忒难了</li>
+    <li>忒难了</li>
+    <li>忒难了</li>
+    <li>忒难了</li>
+</ul>
+
+
+<script>
+    var btn = document.getElementsByTagName('input')[0];
+    var ul = document.getElementById('ul');
+    var arrLi = ul.childNodes;
+
+    btn.onclick = function(){
+        var li=[],j=0;
+        for(var i = 0; i <arrLi.length; i++){
+            if(arrLi[i].nodeType == 1){
+                li[j] = arrLi[i];
+                j++;
+            }
+        }
+        for(var k=0;k<li.length;k++){
+            if(k%2==0){
+                li[k].style.background = 'red';
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

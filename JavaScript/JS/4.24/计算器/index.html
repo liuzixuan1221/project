@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //读取按钮的值，传给输入框
+        function inputEvent(e){
+//把val的值改为每个事件的innerHTML值
+            var val=e.innerHTML;
+//获取input标签
+            var xsval=document.getElementById("input");
+//标签里的value连接每个事件的innerHTML值
+            xsval.value+=val;
+        }
+        //计算出结果
+        function inputOper(){
+            var xsval=document.getElementById("input");
+            xsval.value=eval(document.getElementById("input").value);
+        }
+        //清零
+        function clearNum(){
+            var xsval=document.getElementById("input");
+            xsval.value="";
+            document.getElementById("input").focus();
+        }
+        //退格
+        function backNum(){
+            var arr=document.getElementById("input");
+            arr.value=arr.value.substring(0,arr.value.length-1);
+        }
+    </script>
+    <style>
+        .body{
+            width: 620px;
+            height: 800px;
+            background: cornflowerblue;
+            border: 5px solid #ccc;
+            border-radius: 25px;
+            box-shadow: 7px 7px 10px #ccc;
+            margin: auto;
+        }
+        #input{
+            display: block;
+            width: 500px;
+            height: 120px;
+            background: #ccc;
+            border-radius: 25px;
+            border: 4px solid #9f9f9f;
+            margin: auto;
+            margin-top: 20px;
+            font-size: 50px;
+            text-align:right;
+        }
+        ul{
+            list-style: none;
+            width: 520px;
+        }
+        li{
+            float: left;
+            background: #ccc;
+            width: 110px;
+            height: 100px;
+            margin: 10px;
+        }
+        li .btn{
+            width: 100%;
+            height: 100%;
+            font-size: 50px;
+        }
+    </style>
+    <script src="js/jisuanqi.js"></script>
+</head>
+<body>
+        <div class="body">
+        <input id="input" type="text">
+        <ul>
+            <li><input class="btn" type="button" value="+" onclick="inputEvent(this)"></li>
+            <li><input class="btn" type="button" value="-" onclick="inputEvent(this)"></li>
+            <li><input class="btn" type="button" value="*" onclick="inputEvent(this)"></li>
+            <li><input class="btn" type="button" value="/" onclick="inputEvent(this)"></li>
+            <li><input class="btn" type="button" value="7" onclick="inputEvent(this)"></li>
+            <li><input class="btn" type="button" value="8" onclick="inputEvent(this)"></li>
+            <li><input class="btn" type="button" value="9" onclick="inputEvent(this)"></li>
+            <li><input class="btn" type="button" value="%" onclick="inputEvent(this)"></li>
+            <li><input class="btn" type="button" value="4" onclick="inputEvent(this)"></li>
+            <li><input class="btn" type="button" value="5" onclick="inputEvent(this)"></li>
+            <li><input class="btn" type="button" value="6" onclick="inputEvent(this)"></li>
+            <li><input class="btn" type="button" value="←" onclick="backNum()"></li>
+            <li><input class="btn" type="button" value="1" onclick="inputEvent(this)"></li>
+            <li><input class="btn" type="button" value="2" onclick="inputEvent(this)"></li>
+            <li><input class="btn" type="button" value="3" onclick="inputEvent(this)"></li>
+            <li><input class="btn" type="button" value="C" onclick="clearNum()"></li>
+            <li><input class="btn" type="button" value="." onclick="inputEvent(this)"></li>
+            <li><input class="btn" type="button" value="0" onclick="inputEvent(this)"></li>
+            <li style="width: 240px;margin-right: 0;"><input class="btn" type="button" value="=" onclick="inputOper(this)"></li>
+        </ul>
+    </div>
+</body>
+</html>

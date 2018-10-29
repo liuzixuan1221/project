@@ -1,0 +1,102 @@
+body{
+    font-family: '微软雅黑';
+}
+.inner{
+    width: 1170px;
+    margin: auto;
+}
+header .headerTitle{
+    color: #5e5e5f;
+    font-size: 22px;
+    font-family: '宋体';
+    margin-top: 24px;
+}
+header .headerRight #hahaha{
+    margin-top: 27px;
+}
+header .headerRight li{
+    float: left;
+    line-height: 19px;
+    border-right: 1px dashed #000;
+    padding-right: 20px;
+    margin-left: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+header .headerRight li:last-of-type{
+    border: none;
+    padding-right: 0;
+
+}
+#banner{
+    height: 514px;
+}
+#banner .bBox{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 80px;
+    line-height: 500px;
+}
+#banner img{
+    width: 100%;
+    height:100%;
+    display: none;
+}
+.main{
+    padding: 80px 0 55px 0;
+}
+.icon>span{
+    margin-left: 13px;
+    font-size: 17px;
+    color: #ac1a1b;
+    cursor: pointer;
+}
+.icon .hx{
+    width: 76%;
+    height: 1px;
+    background: #ccc;
+    margin-top: 13px;
+    margin-left: 18px;
+}
+.icon .more{
+    width: 72px;
+    height: 25px;
+    background: #e13a4b;
+    color: #ffffff;
+}
+.main .cgal ul{
+    margin-top: 40px;
+    width: 1200px;
+}
+.main .cgal li{
+    width: 270px;
+    height: 215px;
+    float: left;
+    margin: 0 30px 26px 0;
+}
+.main .cgal li a{
+    width: 100%;
+    height:100%;
+    color: #000;
+}
+.main .cgal li img{
+    display: block;
+}
+.main .cgal li .title{
+    height: 55px;
+    width: 268px;
+    border: 1px solid #ccc;
+}
+.main .cgal li .title p{
+    margin-top: 5px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+}
+.main .cgal li .title p span{
+    font-size: 11px;
+    color: #ccc;
+}
+

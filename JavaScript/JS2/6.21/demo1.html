@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    单例模式
+//    var xiaoMing = {
+//        name : '小明',
+//        age : 18
+//    };
+//
+//    var xiaoHong = {
+//        name : '小红',
+//        age : 18,
+//        xiaoMingName : xiaoMing.name
+//    };
+//    console.log(xiaoMing.name);
+//    console.log(xiaoHong.xiaoMingName);
+
+////    工厂模式
+//    function factory(){
+////        1.原料
+//        var obj = {};
+////        2.加工
+//        obj.name = n;
+//        obj.sex = s;
+////        3.出厂
+//        return obj;
+//    }
+//    var xm = factory('小明',1);
+//    var xh = factory('小红',2);
+
+//    构造函数模式 Person 不仅是函数名 还是类名
+//    function Person(){
+//        var n = 10;
+////      this指向Person类创建的实例 xm/xh
+////      加工
+//        this.name = n;
+//        this.sex = s;
+//    }
+//    var xm = new Person();//xm属于Person类的实例
+//    var xh = new Person();//xh属于Person类的实例
+//
+//
+////    原型模式 Prototype 原型对象:存放的这个类公有的方法属性
+//    function Person(){
+//        this.name = n;
+//        this.sex = s;
+//    }
+//
+//    Person.prototype.fn1 = function (){
+//        console.log(1);
+//    };
+//    Person.prototype.fn2 = function (){
+//        console.log(2);
+//    var xm = new Person();//xm属于Person类的实例
+//    var xh = new Person();//xh属于Person类的实例
+
+    var arr = [1,1,1,2,3,5,3,3,4,4,5,4];
+
+    Array.prototype.unique = function(){
+        var obj = [];
+        for (var i = 0; i < this.length;i++){
+            if(!obj[this[i]]){
+                obj[this[i]] = true;
+            }else{
+                this[i] = this[this.length-1];
+                this.length--;
+                i--;
+            }
+        }
+    };
+    arr.unique();
+    console.log(arr);
+</script>
+</body>
+</html>

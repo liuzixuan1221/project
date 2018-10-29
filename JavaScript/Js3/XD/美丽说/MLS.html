@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: auto;
+            background: #eee;
+        }
+        #ul{
+            width: 1200px;
+            margin: 0 auto;
+            height: auto;
+            overflow: hidden;
+        }
+        #ul>li{
+            width: 260px;
+            height: auto;
+            float: left;
+            padding: 20px;
+            background: #ff0;
+            list-style: none;
+        }
+        #ul>li img{
+            width: 260px;
+            height: auto;
+            display: block;
+        }
+        #ul>li>p{
+            width: 260px;
+            height: 50px;
+            line-height: 50px;
+            background: #ff0;
+        }
+        #ul>li>p:nth-child(2){
+            width: 260px;
+            height: 50px;
+            line-height: 50px;
+            background: #ff0;
+        }
+        #ul>li>p:nth-child(2)>span:nth-child(1){
+            width: 100px;
+            height: 50px;
+            float: left;
+        }
+        #ul>li>p:nth-child(2)>span:nth-child(2){
+            width: 100px;
+            height: 50px;
+            float: right;
+            text-align: right;
+        }
+        #ul>li>p:last-child{
+            width: 260px;
+            height: 50px;
+            color: #333;
+            overflow:hidden;
+            white-space: nowrap;
+            text-overflow:ellipsis;
+        }
+    </style>
+    <script src="MLS.json"></script>
+    <script src="ajax.js"></script>
+</head>
+
+<body>
+<div id="x">
+    <ul id="ul1"></ul>
+</div>
+<script>
+    var oul=document.getElementById('ul1');
+   ajax("MLS.json",function(data){
+      var _data = eval("("+data+")")
+       for (var i = 0; i < _data.length; i++) {
+           var oLi=document.createElement('li')
+           var oImg=document.createElement('img')
+           var aP1=document.createElement('p')
+           var aP2=document.createElement('p')
+           var aSpan1=document.createElement('span')
+           var aSpan2=document.createElement('span')
+
+           //添加
+            oul.appendChild(oLi);
+           oLi.appendChild(oImg);
+           oLi.appendChild(aP1);
+           oLi.appendChild(aP2);
+           aP1.appendChild(aSpan1);
+           aP1.appendChild(aSpan2);
+
+           oImg.src=_data[i].img;
+           aP2.innerHTML=_data[i].text;
+
+       }
+   },function(){
+       alert("失败")
+   })
+</script>
+</body>
+</html>

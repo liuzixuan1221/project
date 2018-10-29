@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    document.cookie = 'userName = liuzixuan'
+//    alert(document.cookie);
+//
+//    var oDate = new Date();
+//    oDate.setDate(oDate.getDate()+7);
+//
+//
+//    document.cookie = 'password = 123456;expires = '+oDate;
+//    alert(document.cookie);
+
+//存
+    function setCookie(name,value,iDay){
+        var oDate = new Date();
+        oDate.setDate(oDate.getDate() + iDay);
+        document.cookie = name + "=" + value + ";expires=" + oDate;
+
+    }
+setCookie("userName","xiaoming",7);
+    setCookie("age","18",7);
+
+
+    //取
+    function getCookie(name){
+        //"userName=lzx; age=18; password=666666"
+
+        //split(", ")   => [userName=lzx,age=18,password=666666]
+        //split("=")    => [userName,lzx] [age,18] [password,666666]
+
+        console.log(document.cookie);
+        var arr = document.cookie.split('; ');  //["age=18","userName=lzx","password=666666"]
+        console.log(arr);
+        for(var i = 0; i < arr.length; i++){
+
+            var arr2 = arr[i].split("=");   //["age","18"] ["userName","lzx"] ["password","666666"]
+            console.log(arr2);
+            if(arr2[0] == name){
+                return arr2[1];
+            }
+        }
+        return "";
+    }
+
+    alert(getCookie("userName"));
+    alert(getCookie("age"));
+
+    //删除
+    function  removeCookie(name) {
+        setCookie(name, "haha", -1);
+    }
+    removeCookie("password");
+</script>
+</body>
+</html>

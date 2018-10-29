@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//
+//function factorial(n){
+//    if (n===1){
+//        return 1;
+//    }
+//    n *= factorial(n-1);
+//    return n;
+//}
+//console.log(factorial(6));
+
+//求和
+//    function sum(n){
+//        if (n === 1){
+//            return 1;
+//        }
+//        n += sum(n - 1);
+//        return n;
+//    }
+//console.log(sum(100));
+
+//  斐波那契
+//      function Fibonacci(n){
+//          if (n === 2 || n === 1){
+//              return 1;
+//          }
+//          n = Fibonacci(n - 2) + Fibonacci(n - 1);
+//          return n;
+//      }
+//console.log(Fibonacci(3));
+
+
+      var arr = [1,2,[1,2,3,[1,2,3],[1,2,[1,2,3,[1,2,3,[1,2,3],[1,2,3]]],3]],3];
+      function flat(arr){
+          var sum = 0;
+          for (var i = 0; i < arr.length; i++){
+              if (typeof arr[i] == 'number'){
+                  sum += arr[i];
+              }else {
+
+              }
+          }
+      }
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+
+    //方式1       使用中间变量
+    var a=11,b=22;
+    console.log(a,b);
+    var temp;
+    temp = a;
+    a = b;
+    b = temp;
+    console.log(a,b);
+
+
+    //方式2       不使用中间变量
+    var x=33,y=44;
+    console.log(x,y);
+    x = x+y;
+    y = x-y;
+    x = x-y;
+    console.log(x,y);
+
+</script>
+</body>
+</html>

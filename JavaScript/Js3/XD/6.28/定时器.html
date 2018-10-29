@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <style>
+                * {
+                    padding: 0;
+                    margin: 0;
+                }
+                button {
+                    margin: 20px;
+                    width: 50px;
+                    height: 30px;
+                }
+                .box {
+                    height: 300px;
+                    margin: 20px 0;
+                    position: relative;
+                    background-color: #ccc;
+                }
+                .box1 {
+                    width: 100px;
+                    height: 100px;
+                    position: absolute;
+                    left: 0;
+                    background-color: red;
+                }
+            </style>
+                    <button>GOGO林哥过来,啧啧</button>
+                    <button>GOGO林哥爬过来,啧啧</button>
+                    <div class="box">
+                        <div class="box1" id="box1"></div>
+                    </div>
+                   <script>
+                   var a = document.getElementsByTagName('button')[0];
+                   var c = document.getElementsByTagName('button')[1];
+                   var b =document.getElementById('box1');
+       
+                a.onclick=function(){
+                    animate(b,200);
+                    console.log(a);
+                }
+                c.onclick=function(){
+                    animate(b,400);
+                    console.log(c);
+                }     
+                // function animate(target){
+                //     console.log(1);
+                //   var timer = setInterval (function(){
+                //       if(b.offsetLeft  === target){
+                //           clearInterval(timer);
+                         
+                //       }else{
+                //           b.style.left=b.offsetLeft + 10 + 'px';
+                //           console.log(b.offsetLeft);
+                //       }
+                //   },1);
+                // }
+// //封装缓动动画
+// function animate(ele,target){
+//     clearInterval(ele.timer);   //查克拉在这不要注释前面这行代码
+//     ele.timer = setInterval(function(){
+//         var step = (target-ele.offsetLeft)/10;
+//               step = step>0?Math.ceil(step):Math.floor(step);
+//               ele.style.left=ele.offsetLeft + step +'px';
+//               console.log(1);
+//               if(Math.abs(target-ele.offsetLeft)<Math.abs(step)){
+//                   ele.style.left=target+'px';
+//                   clearInterval(ele.timer);
+//               }
+//     },30);
+// }
+
+          
+                   </script> 
+</body>
+</html>

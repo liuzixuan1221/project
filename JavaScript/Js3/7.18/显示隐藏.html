@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button{
+            display: block;
+            width: 160px;
+            height: 60px;
+            margin: auto;
+        }
+        #box{
+            width: 400px;
+            height: 300px;
+            background: #000;
+            margin: 300px auto;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button>按钮</button>
+
+    <div id="box">
+
+    </div>
+
+    <script>
+        var btn = document.getElementsByTagName('button')[0];
+        var box = document.getElementById('box');
+
+        btn.onclick = function(ev){
+            box.style.display = 'block';
+            var oEvent = event||ev;
+
+            try{
+                oEvent.stopPropagation();           //不兼容低版本浏览器
+            }catch (e){
+                oEvent.cancelBubble = true;         //兼容低版本浏览器
+                console.log(e);
+            }
+        };
+
+//        事件冒泡和事件捕获
+//        冒泡：从内到外   是指ie的           就是从目标对象到外层的顺序触发     从最具体的到最不具体的开始
+//        捕获：从外到内   是指其他浏览器的    就是从最外层到目标对象的顺序触发   从最不具体的到最具体的开始
+
+
+        document.onclick = function(){
+            box.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

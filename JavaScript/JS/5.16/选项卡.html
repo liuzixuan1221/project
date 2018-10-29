@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul,ol{
+            list-style: none;
+            overflow: hidden;
+        }
+        ul>li{
+            float: left;
+            margin-left: 10px;
+            width: 50px;
+            height: 30px;
+            background: yellow;
+        }
+        ol>li{
+            float: left;
+            width: 230px;
+            height: 30px;
+            margin-left: 10px;
+            background: cornflowerblue;
+            display: none;
+        }
+        .now{
+            display: block;
+        }
+        .show{
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li class="show">1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<ol>
+    <li class="now">111</li>
+    <li>222</li>
+    <li>333</li>
+    <li>444</li>
+</ol>
+
+
+<script>
+    var uLi = document.querySelectorAll('ul>li');
+    var oLi = document.querySelectorAll('ol>li');
+
+
+//    function way1 (a,b,c,d) {
+//        for (var i = 0; i < a.length; i++) {
+//            a[i].index = i;
+//            a[i].onclick = function () {
+//                for (var j = 0; j < a.length; j++) {
+//                    a[j].classList.remove(c);
+//                    b[j].classList.remove(d);
+//                };
+//                this.classList.add(c);
+//                b[this.index].classList.add(d);
+//            }
+//        }
+//    }
+//    way1(uLi,oLi,'show','now');
+
+
+//    function way2 (a,b,c,d) {
+//        for (let i = 0; i < a.length; i++) {
+//            a[i].onclick = function () {
+//                for (let j = 0; j < a.length; j++) {
+//                    a[j].classList.remove(c);
+//                    b[j].classList.remove(d);
+//                };
+//                a[i].classList.add(c);
+//                b[i].classList.add(d);
+//            }
+//        }
+//    }
+//    way2(uLi,oLi,'show','now');
+
+
+
+</script>
+</body>
+</html>

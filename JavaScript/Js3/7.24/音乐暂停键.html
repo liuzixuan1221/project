@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #btn.play{
+            animation: haha 2s infinite linear;
+            -webkit-animation: haha 2s infinite linear;
+        }
+        @keyframes haha {
+            0%{
+                transform: rotateZ(0deg);
+                -webkit-transform: rotateZ(0deg);
+            }
+            100%{
+                transform: rotateZ(360deg);
+                -webkit-transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<audio id="music" src="See%20You%20Again.mp3"></audio>
+<div class="mmy"></div>
+<img src="mImg.png" alt="" id="btn">
+
+
+<script>
+    var oMusic = document.getElementById('music');
+    var oBtn = document.getElementById('btn');
+
+    var flag = true;
+
+    oBtn.onclick = function () {
+        if (flag){
+            oMusic.play();
+            oBtn.classList.add('play');
+            flag = false;
+        }else{
+            oMusic.pause();
+            oBtn.classList.remove('play');
+            flag = true;
+        }
+    };
+
+</script>
+</body>
+</html>

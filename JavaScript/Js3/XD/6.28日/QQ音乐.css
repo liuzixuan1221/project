@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.xd{
+    width: 100%;
+    height: 80px;
+    background-color: #F2F2F2;
+    overflow: hidden;
+}
+.xd h1{
+text-align: center;
+margin-top: 20px;
+color: #333;
+letter-spacing: 10px;
+}
+.xd1{
+    width: 100%;
+    height: 450px;
+    background-color: #FAFAFA;
+    margin: 0 auto;
+}
+.xd2{
+    width: 1200px;
+    height: 50px;
+    position: relative;
+    margin: 0 auto;
+}
+.xd2 ul{
+    width: 610px;
+position: absolute;
+ /* right: 0; */
+left: 50%;
+}

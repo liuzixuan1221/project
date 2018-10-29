@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background: rebeccapurple;
+            display: none;
+        }
+        #btn2{
+            display: block;
+            margin-top: 200px;
+        }
+        #box2{
+            position: absolute;
+            top:310px;
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+<button id="button">按钮</button>
+<div class="box" id="box"></div>
+<div id="w">
+    5秒钟后跳转到百度官网直接跳转请 <a href="https://baidu.com">点击这里</a>
+</div>
+
+<input type="text"placeholder="请输入验证码">
+<button id="btn">发送验证码</button>
+
+<button id="btn2">go</button>
+<div id="box2" style="left: 0;width: 200px;"></div>
+<script>
+//    setInterval(callback,interval);
+//    setInterval(回填函数,执行时间,(默认单位毫秒));
+
+    button.onclick = function(){
+        //函数里面存放一堆指令，函数的作用封装
+        box.style.display = 'block';
+        setTimeout(function(){
+            box.style.display = 'none';
+        },5000);
+    }
+//    var timer=null, num = 5;
+//    timer = setInterval(function(){
+//            num--;
+//            w.innerHTML= num+'秒钟后跳转到百度官网直接跳转请 <a href="https://baidu.com">点击这里</a>';
+//            if(num<1){
+//                clearInterval(timer);
+//                location.href='https://baidu.com';
+//            }
+//    },1000);
+
+
+    var timer=null,num=5;
+    btn.onclick = function(){
+        btn.disabled = 'true';
+        timer = setInterval(function(){
+            btn.innerText = `${num}秒后再次输入验证码`;
+            num--;
+            if (num <0){
+                clearInterval(timer);
+                btn.disabled = false;
+                btn.innerText = '请输入验证码';
+                num=5;
+            }
+        },1000);
+    };
+
+    var width = document.documentElement.clientWidth;
+    var timer1 = null,lc=10;
+    btn2.onclick = function(){
+        if(btn2.innerText =='go'){
+            timer1 = setInterval(function(){
+                lc+=10;
+                box2.style.left = lc+'px';
+                btn2.innerText = 'back';
+
+                if(parseInt(box2.style.left)>=width-box2.style.width){
+                    clearInterval(timer1);
+                }
+
+            },5)
+        }
+        else {
+            if (btn2.innerText == 'back') {
+                timer1 = setInterval(function () {
+                    lc-= 10;
+                    box2.style.left = lc + 'px';
+                    btn2.innerText = 'go';
+
+                    if (parseInt(box2.style.left) <= 0) {
+                        clearInterval(timer1);
+                    }
+
+                }, 5)
+
+            }
+        }
+    }
+</script>
+</body>
+</html>

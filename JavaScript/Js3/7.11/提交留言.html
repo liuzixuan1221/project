@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+        }
+        textarea{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<textarea name="" cols="30" rows="10" id="text1"></textarea>
+<input type="text" id="text2">
+<input type="button" id="text3" value="回车">
+
+
+<script>
+    var oBtn = document.getElementById('text3');
+    var oTxt1 = document.getElementById('text1');
+    var oTxt2 = document.getElementById('text2');
+
+    oBtn.onclick = function(){
+        oTxt1.value += oTxt2.value + '\n';
+        oTxt2.value = '';
+    };
+    oTxt2.onkeydown = function(ev){
+        var oEvent = ev||event;
+        if (oEvent.ctrlKey && oEvent.keyCode == 13){
+            oTxt1.value += oTxt2.value + '\n';
+            oTxt2.value = '';
+        }
+    }
+</script>
+</body>
+</html>

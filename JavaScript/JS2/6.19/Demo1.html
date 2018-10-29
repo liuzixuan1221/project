@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .banner{
+            position: relative;
+        }
+        .banner img{
+            height: 445px;
+            width: 100%;
+            display: none;
+        }
+        .banner img.show{
+            display: block;
+        }
+        ul{
+            list-style: none;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+        li{
+            float: left;
+            width: 10px;
+            height: 10px;
+            background: rgba(200,200,200,.6);
+            border-radius: 50%;
+            margin-left: 5px;
+        }
+        li.show{
+            background: rgba(0,0,0,.6);
+        }
+        #left{
+            position: absolute;
+            top:50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 60px;
+            height: 100px;
+            background: rgba(0,0,0,.6);
+            color: #fff;
+            font-size: 60px;
+            line-height: 100px;
+            text-align: center;
+            cursor: default;
+        }
+        #right{
+            position: absolute;
+            top:50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 60px;
+            height: 100px;
+            background: rgba(0,0,0,.6);
+            color: #fff;
+            font-size: 60px;
+            line-height: 100px;
+            text-align: center;
+            cursor: default;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner" id="banner">
+        <img src="images/20160713154957678313.jpg" alt="" class="show">
+        <img src="images/20170913175748750902.jpg" alt="">
+        <img src="images/20170929134028425664.jpg" alt="">
+        <img src="images/20180426194321802726.jpg" alt="">
+        <img src="images/20180426194711300588.jpg" alt="">
+        <img src="images/20180426204049263691.jpg" alt="">
+
+        <ul id="dian">
+            <li class="show"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <div id="left"><</div>
+        <div id="right">></div>
+    </div>
+
+
+    <script>
+        let bannerImg = banner.getElementsByTagName('img');
+        let dian = document.querySelectorAll('#dian li');
+        let index = 0;
+        let timer = null;
+
+        for(let i=0;i<dian.length;i++){
+            dian[i].onmouseover = function(){
+                for(let i=0;i<bannerImg.length;i++){
+                    bannerImg[i].classList.remove('show');
+                    dian[i].classList.remove('show');
+                }
+                bannerImg[i].classList.add('show');
+                this.classList.add('show');
+                index = i;
+            }
+        }
+
+        right.onclick = function(){
+            index++;
+            if(index > dian.length-1){
+                index = 0;
+            }
+
+            for(let j=0;j<bannerImg.length;j++){
+                bannerImg[j].classList.remove('show');
+                dian[j].classList.remove('show');
+            }
+            bannerImg[index].classList.add('show');
+            dian[index].classList.add('show');
+        };
+
+        left.onclick = function(){
+            index--;
+            if(index < 0){
+                index = dian.length-1;
+            }
+
+            for(let j=0;j<bannerImg.length;j++){
+                bannerImg[j].classList.remove('show');
+                dian[j].classList.remove('show');
+            }
+            bannerImg[index].classList.add('show');
+            dian[index].classList.add('show');
+        };
+
+        timer = setInterval(function(){
+            index++;
+            if(index > dian.length-1){
+                index = 0;
+            }
+
+            for(let j=0;j<bannerImg.length;j++){
+                bannerImg[j].classList.remove('show');
+                dian[j].classList.remove('show');
+            }
+            bannerImg[index].classList.add('show');
+            dian[index].classList.add('show');
+        },1000);
+
+        banner.onmousemove = function(){
+            clearInterval(timer);
+        };
+        banner.onmouseout = function(){
+            timer = setInterval(function(){
+                index++;
+                if(index > dian.length-1){
+                    index = 0;
+                }
+
+                for(let j=0;j<bannerImg.length;j++){
+                    bannerImg[j].classList.remove('show');
+                    dian[j].classList.remove('show');
+                }
+                bannerImg[index].classList.add('show');
+                dian[index].classList.add('show');
+            },1000);
+        };
+
+    </script>
+</body>
+</html>

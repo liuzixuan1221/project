@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .title{
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+        .title h4{
+            float: left;
+            margin-right: 20px;
+        }
+        .title ul{
+            overflow: hidden;
+        }
+        .title ul li{
+            float: left;
+            margin-left: 20px;
+            color: #ccc;
+            cursor: pointer;
+        }
+        .box{
+            background: #ccc;
+            height:1040px;
+            width: 100%;
+        }
+        .box li{
+            width: 18%;
+            height: 500px;
+            margin: 10px 1%;
+            background: #fff;
+            float: left;
+            padding: 20px;
+            border: 5px solid transparent;
+            box-sizing: border-box;
+        }
+        .box li .img{
+            width: 100%;
+            height: 20%;
+            line-height: 50%;
+            font-size: 40px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .box li .jieshao{
+            line-height: 30px;
+            width: 100%;
+            font-size: 20px;
+            color: #ccc;
+        }
+        .box li .jiage{
+            margin: 40px 0;
+        }
+        .box li .shijian{
+            margin: 40px 0;
+        }
+        .box li:hover{
+            border: 5px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">
+        <h4>排序:</h4>
+        <ul>
+            <li>上架时间</li>
+            <li>价格</li>
+            <li>热度</li>
+        </ul>
+    </div>
+    <ul class="box">
+        <!--<li>-->
+            <!--<div class="img">介四手机</div>-->
+            <!--<div class="jieshao">介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍</div>-->
+            <!--<div class="jiage">￥4488</div>-->
+            <!--<div class="shijian">时间 ：2014-01-01</div>-->
+            <!--<div class="redu">热度 ：12345678</div>-->
+        <!--</li>-->
+         <!--<li>-->
+            <!--<div class="img">介也四手机</div>-->
+            <!--<div class="jieshao">介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍</div>-->
+            <!--<div class="jiage">￥2188</div>-->
+            <!--<div class="shijian">时间 ：2014-01-01</div>-->
+            <!--<div class="redu">热度 ：12242278</div>-->
+        <!--</li>-->
+         <!--<li>-->
+            <!--<div class="img">介还四手机</div>-->
+            <!--<div class="jieshao">介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍</div>-->
+            <!--<div class="jiage">￥<div class="jg">9988</div></div>-->
+            <!--<div class="shijian">时间 ：2014-01-01</div>-->
+            <!--<div class="redu">热度 ：<div class="rd">12345888</div></div>-->
+        <!--</li>-->
+         <!--<li>-->
+            <!--<div class="img">介还还四手机</div>-->
+            <!--<div class="jieshao">介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍</div>-->
+            <!--<div class="jiage">￥3288</div>-->
+            <!--<div class="shijian">时间 ：2014-01-01</div>-->
+            <!--<div class="redu">热度 ：12311111</div>-->
+        <!--</li>-->
+         <!--<li>-->
+            <!--<div class="img">介还还还四手机</div>-->
+            <!--<div class="jieshao">介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍</div>-->
+            <!--<div class="jiage">￥1488</div>-->
+            <!--<div class="shijian">时间 ：2014-01-01</div>-->
+            <!--<div class="redu">热度 ：22345678</div>-->
+        <!--</li>-->
+         <!--<li>-->
+            <!--<div class="img">介都四手机</div>-->
+            <!--<div class="jieshao">介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍</div>-->
+            <!--<div class="jiage">￥5598</div>-->
+            <!--<div class="shijian">时间 ：2014-01-01</div>-->
+            <!--<div class="redu">热度 ：33335678</div>-->
+        <!--</li>-->
+         <!--<li>-->
+            <!--<div class="img">介真四手机</div>-->
+            <!--<div class="jieshao">介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍</div>-->
+            <!--<div class="jiage">￥6788</div>-->
+            <!--<div class="shijian">时间 ：2014-01-01</div>-->
+            <!--<div class="redu">热度 ：145235678</div>-->
+        <!--</li>-->
+         <!--<li>-->
+            <!--<div class="img">介四最贵手机</div>-->
+            <!--<div class="jieshao">介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍</div>-->
+            <!--<div class="jiage">￥111188</div>-->
+            <!--<div class="shijian">时间 ：2014-01-01</div>-->
+            <!--<div class="redu">热度 ：11111118</div>-->
+        <!--</li>-->
+         <!--<li>-->
+            <!--<div class="img">介四最热手机</div>-->
+            <!--<div class="jieshao">介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍</div>-->
+            <!--<div class="jiage">￥1234</div>-->
+            <!--<div class="shijian">时间 ：2014-01-01</div>-->
+            <!--<div class="redu">热度 ：88888888</div>-->
+        <!--</li>-->
+         <!--<li>-->
+            <!--<div class="img">介四破手机</div>-->
+            <!--<div class="jieshao">介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍介四型号介绍</div>-->
+            <!--<div class="jiage">￥1</div>-->
+            <!--<div class="shijian">时间 ：2014-01-01</div>-->
+            <!--<div class="redu">热度 ：1</div>-->
+        <!--</li>-->
+    </ul>
+
+
+
+    <script>
+        var title = document.querySelectorAll('.title ul li');
+        var shouji = document.querySelectorAll('.box li');
+        var jiage = document.querySelectorAll('.box li .jg');
+        var redu = document.querySelectorAll('.box li .rd');
+
+        console.log(jiage[1]);
+        
+        
+    </script>
+</body>
+</html>

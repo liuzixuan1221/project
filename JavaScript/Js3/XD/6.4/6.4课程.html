@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+    <script>
+    // var arr = [1,2,3];
+    // arr.push(4);  末尾添加一个数4
+    // arr.pop(); 末尾减少一个数
+    // arr.unshift(4); 头部添加一个数
+    // arr.shift();头部删除一个数
+    // arr.reverse();数组顺序反转
+    // arr.sort();排序，按照数值的大小
+    // arr.splice(0,3)  从索引0开始，删除3位数；
+    // arr.splice(0,0,4,5,6); 从头部添加三个数
+    // arr.splice(0,1,4); 从头部删除一个数，在添加一4
+    // console.log(arr);
+    //克隆数组
+// var arr1=[9,464,54,54,545,6,546,54,654,654];
+// var arr2=arr1.slice(0,arr1.length);  
+// console.log(arr1);
+// console.log(arr2);
+//slice数组的截取 含头不含尾
+// var arr1=[9,464,54,54,545,6,546,54,654,654];
+// var arr2=arr1.slice(3,6);  // 索引
+// console.log(arr2);
+// console.log(arr1);
+
+
+// var arr = ["刘备","张飞","关于"];
+// var str = arr[0];
+// for (var i =1; i<arr.length;i++) {
+//     str+='丨'+arr[i]
+// } 
+// console.log(str);
+
+// var arr = ["刘备","张飞","关于"];
+// var arr =arr.join('丨');
+// console.log(arr);
+
+// var arr= [1,1,2,3,4,3,2,1];  //1234
+// var newArr=[];
+//  for(var i=0;i<arr.length;i++){
+//     var flag=true;//假设不存在的
+//     for( var j=0;j<newArr.length;j++){
+//     if(newArr[j] ===arr[i]){
+//         flag=false;
+//     }
+//     }
+//     if(flag){
+//          newArr.push(arr[i]);
+//        }
+//  }
+// console.log(newArr);
+//  var arr= [1,1,2,3,4,3,2,1];
+// for(var i=0;i<arr.length;i++){
+//     if(newArr)
+// }
+// var arr=[1,1,2,3,4,3,2,1],
+// newArr=[];
+// obj={};
+// for(var i=0;i<arr.length;i++){
+//     if(obj[arr[i]]=undefined){
+//         boj[arr[i]]=true;
+//     }
+// }
+// for(var key in obj){
+//     newArr.push(key);
+// }
+// console.log(newArr);
+
+
+// var arr=[1,1,2,3,4,3,2,1],//1234
+// obj={};
+// for(var i=0;i<arr.length;i++){
+//     if(typeof(obj[arr[i]])!=='undefined'){
+//         arr.splice(i,1);
+//         i--;
+
+//     }else{
+//         obj[arr[i]]=true;
+//     }
+// }
+// console.log(arr);
+
+// var a=12;
+//  var b=13;
+// var temp;
+// temp=a;
+// a=b;
+// b=temp;
+// console.log(a,b);
+// a+=b;
+// b=a-b;
+// a-=b;
+// console.log(a,b);
+
+// var arr=[6,3,5,7,2,1];
+// var l=0,c=0;
+// //l 轮数              c次数
+// //  外层循环       控制轮数
+// for(var i= 0;i<arr.length-1;i++){
+//     l++;
+//     //内层循环  找最大的放到后面   控制比较的次数
+//     for(var j=0;j<arr.length-1;j++){
+//         if(arr[j]>arr[j+1]){
+//             var temp;
+//             temp=arr[j];
+//             arr[j]=arr[j+1];
+//             arr[j+1]=temp;
+//             c++;
+//             flag=false;
+//         }
+//         }
+//         if(flag){
+//             break;
+//         }
+//     }
+// console.log(arr,l,c);
+
+//插入算法
+// var arr=[2,1,3,4,5,6,7,8];
+// var l=0,c=0;
+// for(var i=1;i<arr.length;i++){
+//     l++;
+//     var flag=true;
+//     for (var j=i;j>0;j--){
+//         if(arr[j]<arr[j-1]){
+//             var temp=arr[j];
+//             arr[j]=arr[j-1];
+//             arr[j-1]=temp;
+//             flag=false;
+//             c++;
+//         }
+//     }
+//     if(flag){
+//         break;
+//     }
+// }
+// console.log(arr,l,c);
+
+
+
+
+    </script>
+</body>
+</html>

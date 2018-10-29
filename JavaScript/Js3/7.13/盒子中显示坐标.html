@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            background: pink;
+            position: relative;
+            left: 50%;
+        }
+        p{
+            position: absolute;
+            left:30%;
+            top: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <p>
+            鼠标在盒子中得x轴坐标: <span></span>px   <br />
+            鼠标在盒子中得y轴坐标: <span></span>px
+        </p>
+    </div>
+
+<script>
+    var oBox = document.getElementsByClassName('box')[0];
+    var aSpan = document.getElementsByTagName('span');
+
+    oBox.onmousemove = function(ev){
+        var oEvent = event || window.ev;
+
+//        var pageY =  oEvent.pageY || oEvent.clientY + scroll().top;
+//        var pageX =  oEvent.pageX || oEvent.clientX + scroll().left;
+
+        var boxY = oBox.offsetTop;          //获取盒子的初始坐标
+        var boxX = oBox.offsetLeft;
+
+//        var y = pageY - boxY;
+//        var x = pageX - boxX
+
+        var y = oEvent.clientY - boxY;      //获取盒子的真实坐标
+        var x = oEvent.clientX - boxX;
+
+        aSpan[0].innerHTML = x;
+        aSpan[1].innerHTML = y;
+    }
+</script>
+</body>
+</html>

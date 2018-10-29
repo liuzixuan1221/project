@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    <!--闭包-->
+
+//    闭包广义：函数执行的时候会形成一个私有作用域  保护函数内部的变量不受外界干扰
+//       我们把这种保护机制称为闭包
+//    闭包狭义：把函数当作返回值
+//       函数执行的时候会形成一个'不销毁作用域'
+//       只有外部变量占用了函数内部的私有闭包  才会构成闭包
+
+//    闭包有两种模型：
+//    柯理化函数:
+//        function fn(){
+//            return function f(){
+//
+//            }
+//        }
+//
+//
+
+
+
+
+//    惰性函数：
+//        function fn(){
+//            return {
+//                sum:function(){},
+//                fib:function(){};
+//            }
+//        }
+
+//    为什么项目中要使用闭包？
+//    团队协作开发的时候  命名不冲突  自己是自己私有的  不会冲突
+//    保护作用/保存作用
+//    源码框架结构分析
+//    jq源码：
+
+//    (function fn{
+//        var jQuery = function(){};
+////        通过把jQuery挂载到window上 暴露出接口
+//        window.jQuery = window.$ = jQuery;
+//    })();
+////    zepto源码：
+//        var zepto = (function(){
+//            return {
+//                zepto:function(){}
+//            }
+//        })();
+
+//    使用的优势弊端?
+//    优势:保护作用 保存作用
+//    弊端:闭包会形成不销毁的私有作用域 会造成内存  内存溢出
+//    闭包非常耗性能
+//    真实项目开发中:尽量减少闭包的使用
+
+
+
+//    var i = 1;
+//    function fn(i){
+//        i += 2;
+//        return function (n){
+//            console.log(n + (++i));
+//        }
+//    }
+//    fn(1)(2);       //6
+//    var f = fn(1);
+//    f(3);           //7
+//    f(4);           //9
+//    fn(2)(3);       //8
+//    f(5);           //11
+
+//    var i = 1;
+//    function fn(i){
+//        i += 3;
+//        return function (n){
+//            console.log(n + (++i));
+//        }
+//    }
+//    fn(2)(1);           //7
+//    var f = fn(2);
+//    f(4);               //10
+//    f(5);               //12
+//    fn(3)(4);           //11
+//    f(6);               //14
+
+//    var i = 3;
+//    function  fn(){
+//        i += 3;
+//        return function (n) {
+//            console.log(n + (--i));
+//        }
+//    }
+//    var f = fn();
+//    f(3);       //8
+//    f(4);       //8
+//    fn()(1);    //7
+//    fn()(2);    //10
+//    f(3);       //10
+
+    var num = 10;
+    var obj = {num: 20};
+    obj.fn = (function (num) {
+        var num = 20;
+        this.num = num * 3;
+        num++;
+        return function (n) {
+            this.num = this.num + n;
+            num++;
+            console.log(num);
+                }
+        })(obj.num);
+    var fn = obj.fn;
+//        fn(5);
+//        obj.fn(10);
+        console.log(num, obj.num);
+</script>
+</body>
+</html>

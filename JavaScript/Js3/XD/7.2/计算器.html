@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    div li{
+        width: 100px;
+        height: 50px;
+        background-color: aqua;
+    }
+</style>
+<body>
+    <!-- <input type="text" id="x1">+
+    <input type="text" id="x2">
+    <button id="x4">=</button>
+    <input type="text" id="x3"> -->
+<div>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+    <script>
+        // var x1 = document.getElementById('x1');
+        // var x2 = document.getElementById('x2');
+        // var x3 = document.getElementById('x3');
+        // var x4 = document.getElementById('x4');
+
+        // x4.onclick = function () {
+        //     x3.value = Number(x1.value) + Number(x2.value);
+        // }
+
+//  var a = 1;   //变量提升
+//         function fn(){  
+//             console.log(a)  
+//             var a = 5;  
+//             console.log(a);  
+//             a++;  
+//             var a;  
+//             fn3();  
+//             fn2();  
+//             console.log(a);  
+//             function fn2(){
+//                 console.log(a);
+//                 a=20;
+//             }
+//         }
+//         function fn3(){  
+//             console.log(a);  
+//             a =200;
+//         }
+//         fn();
+//         console.log(a);
+
+
+// window.onload = function(){    //闭包
+// var b=2;
+// function shou1(){
+// var a =1;
+// function shou2(){
+// console(a,b);
+// }
+// }
+// }
+
+var aLi = document.getElementsByTagName('li');
+for(var i=0;i<aLi.length;i++){
+    if(i%2==1){
+        aLi[i].style.background='red';
+    }
+}
+
+
+    </script>
+</body>
+
+</html>

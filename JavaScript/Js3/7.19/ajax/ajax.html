@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+     .box{
+         white-space: nowrap;
+         text-overflow: ellipsis;
+         overflow: hidden;
+     }
+
+    </style>
+    <script src="ajax.js"></script>
+
+</head>
+<body>
+
+
+<script>
+    window.onload = function() {
+
+//        ajax(demo2,funS,funE);        //ajax(地址,返回成功,返回失败)
+        ajax("date/demo1.json", function (data) {
+            alert(data);         //ajax获取的东西都是字符串，必须转换为对象
+                var _data = eval("("+data+")");     //json字符串转换为json对象  eval("("+data+")");
+            alert(_data.name);
+        }, function () {
+            alert("失败")
+        })
+    }
+</script>
+</body>
+</html>

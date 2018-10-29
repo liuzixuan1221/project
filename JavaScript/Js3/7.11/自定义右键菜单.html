@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #ul1{
+            display: none;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <ul id="ul1">
+        <li>嘟嘟嘟</li>
+        <li>嘟嘟嘟</li>
+        <li>嘟嘟嘟</li>
+        <li>嘟嘟嘟</li>
+    </ul>
+<script>
+    <!--oncontextmenu事件:用户右击鼠标时触发并打开上下文菜单-->
+        window.onload = function(){
+            var oUl = document.getElementById('ul1');
+
+            document.oncontextmenu = function(ev){
+                var oEvent = ev||event;
+                oUl.style.display = 'block';
+                oUl.style.left = oEvent.clientX + 'px';
+                oUl.style.top = oEvent.clientY + 'px';
+                return false; //阻止事件的默认行为   会把冒泡传播都阻止
+            };
+
+            document.onclick = function(){
+                oUl.style.display = 'none';
+            }
+        }
+</script>
+</body>
+</html>

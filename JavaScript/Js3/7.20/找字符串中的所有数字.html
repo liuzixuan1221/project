@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = "dwa34dgsre4gds2gdsfgs3412dga123fsa37621s100";
+    var arr = [];
+    var tmp = "";
+
+    for (var i = 0; i < str.length; i++){
+        if (str.charAt(i) >=0 && str.charAt(i) <= 9){
+            tmp += str.charAt(i);
+        }
+        else {
+            if (tmp == ""){
+                //不管
+            }else {
+                arr.push(tmp);
+                tmp = "";
+            }
+        }
+    }
+    if (tmp == ""){
+        //不管
+    }else {
+        arr.push(tmp);
+        tmp = "";
+    }
+    console.log(arr);
+
+
+
+
+
+    var re = /\d+/g;
+    console.log(str.match(re));
+
+
+</script>
+</body>
+</html>

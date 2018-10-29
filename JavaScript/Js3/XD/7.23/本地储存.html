@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<button id="btn1">储存</button>
+<button id="btn2">取出</button>
+<button id="btn3">删除</button>
+<button id="btn4">删除全部</button>
+<script>
+   window.onload =function(){
+       var oBtn1 = document.getElementById('btn1');
+       var oBtn2 = document.getElementById('btn2');
+       var oBtn3 = document.getElementById('btn3');
+       var oBtn4 = document.getElementById('btn4');
+
+       oBtn1.onclick = function(){
+           localStorage.setItem('劫','无形之刃，最为致命')
+           localStorage.setItem('亚索','哈撒尅，面对疾风吧')
+           localStorage.setItem('薇恩','让我来净化，那些肮脏的蠢蛋')
+       }
+
+        oBtn2.onclick = function(){
+          localStorage.getItem('劫')
+          localStorage.getItem('亚索')
+          localStorage.getItem('薇恩')
+       }
+        oBtn3.onclick = function(){
+          localStorage.removeItem('劫')
+//          localStorage.removeItem('亚索')
+//          localStorage.removeItem('薇恩')
+       }
+        oBtn4.onclick = function(){
+          localStorage.clear();
+       }
+
+
+
+   }
+//   共同点： 都是用来存储数据的
+//   区别：
+
+//       localStorage  本地储存  只要不手动删除 永久存在   存储数据大
+//       sessionStorage 本地储存 只要不关闭页面  就会消失  存储数据超大
+//       cookie     也是存储 可以设定过期时间    存储数据
+
+</script>
+</body>
+</html>

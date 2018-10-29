@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="轮播图.css">
+</head>
+<body>
+<div class="box" id="box">
+     <div class="box_in">
+         <img src="img/0.jpg" alt="">
+         <img src="img/1.jpg" alt="">
+         <img src="img/2.jpg" alt="">
+         <img src="img/3.jpg" alt=" ">
+         <img src="img/4.jpg" alt="">
+         <img src="img/5.jpg" alt="">
+         <img src="img/6.jpg" alt="">
+     </div>
+    <ul class="u">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul class="u1">
+        <li class="l1" id="z"><</li>
+        <li class="l2" id="y">></li>
+    </ul>
+</div>
+<script>
+    var aLi=document.querySelectorAll('.u li');
+    var aImg=document.querySelectorAll('.box_in img');
+
+
+    aLi[0].style.background='red';
+
+    for(let i=0;i<aLi.length;i++){
+       aLi[i].onmouseover=function(){
+           for(var j=0;j<aImg.length;j++){
+             aLi[j].style.background='white';
+               aImg[j].style.display='none';
+           }
+           aLi[i].style.background='red';
+           aImg[i].style.display='block';
+       }
+    }
+
+
+
+   var z=document.getElementById('z');
+    var y=document.getElementById('y');
+
+    var number=0;
+    y.onclick=function(){
+        if(number<aLi.length-1){
+            number++;
+        }else {
+            number=0
+        }
+
+        for(var j=0;j<aImg.length;j++){
+            aLi[j].style.background='white';
+            aImg[j].style.display='none';
+        }
+        aLi[number].style.background='red';
+        aImg[number].style.display='block';
+    }
+
+
+
+
+    z.onclick=function(){
+        if(number<=0){
+            number=aLi.length-1
+        }else{
+            number--;
+        }
+
+        for(var j=0;j<aImg.length;j++){
+            aLi[j].style.background='white';
+            aImg[j].style.display='none';
+        }
+        aLi[number].style.background='red';
+        aImg[number].style.display='block';
+    }
+
+
+
+    var oBox=document.getElementById('box');
+    timer();
+    var ding;
+    function timer(){
+        ding=setInterval(function(){
+            if(number<aLi.length-1){
+                number++;
+            }else {
+                number=0
+            }
+
+            for(var j=0;j<aImg.length;j++){
+                aLi[j].style.background='white';
+                aImg[j].style.display='none';
+            }
+            aLi[number].style.background='red';
+            aImg[number].style.display='block';
+        },1000)
+    }
+    oBox.onmouseover=function(){
+         clearInterval(ding);
+    }
+    oBox.onmouseout=function(){
+        timer();
+    }
+
+
+
+
+</script>
+</body>
+</html>

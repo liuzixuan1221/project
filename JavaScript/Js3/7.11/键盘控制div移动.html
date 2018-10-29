@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background: deepskyblue;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+
+    <script>
+        var oBox = document.getElementById('box');
+        document.onkeydown = function(ev){
+            var oEvent = ev||event;
+            if (oEvent.keyCode == 37){
+                oBox.style.left = oBox.offsetLeft - 5 + 'px';
+            }
+            else if(oEvent.keyCode == 38){
+                oBox.style.top = oBox.offsetTop - 5 + 'px';
+            }
+            else if(oEvent.keyCode == 39){
+                oBox.style.left = oBox.offsetLeft + 5 + 'px';
+            }
+            else if(oEvent.keyCode == 40){
+                oBox.style.top = oBox.offsetTop + 5 + 'px';
+            }
+        }
+    </script>
+</body>
+</html>

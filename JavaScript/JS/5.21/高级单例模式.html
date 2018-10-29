@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //工厂模式
+//    function createPerson(name,age){
+//        //1、原料---开辟一个堆内存空间
+//        var obj = {};
+//        //2、原料加工
+//        obj.name = name;
+//        obj.age = age;
+//        //3、出厂
+//        return obj;
+//    }
+//
+//    var p1 = createPerson('小明',15);
+//    var p2 = createPerson('小红',18);
+//    console.log(p1, p2);
+
+    function CreatePerson(name,age){
+        this.name = name;
+        this.age = age;
+    }
+
+    var p1 = new CreatePerson('小明',15);
+    var p2 = CreatePerson('小红',18);
+    console.log(p1);
+    console.log(p2);
+</script>
+</body>
+</html>

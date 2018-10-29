@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        function getStyle(obj,attr){
+            //obj.currentStyle[attr] ;  //ie9   以下的  IE1浏览器 (低版本)
+            //getComputedStyle(obj.false)[attr];
+
+
+            if (obj.currentStyle){
+                return obj.currentStyle[attr];
+            }else{
+                return getComputedStyle(obj,false)[attr]
+            }
+        }
+</script>
+</body>
+</html>

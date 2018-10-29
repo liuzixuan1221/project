@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+    </style>
+    <script>
+//      函数:一堆指令的集合
+//      变量声明  利用var   关键字     es6用    let 这个关键字
+//      =   赋值  把右边的值   赋值给 左边
+//      function    定义函数的关键字
+
+//      函数的定义 函数只定义不执行 没有任何意义   function    toBig(){
+//      函数的执行 函数名称()                    toBig()
+        function    toBig(){
+            var oDiv = document.getElementById('div1');
+            oDiv.style.width = '400px';
+            oDiv.style.height = '400px';
+        }
+        function    toSmall(){
+            var oDiv = document.getElementById('div1').style;
+            oDiv.width = '200px';
+            oDiv.height = '200px';
+        }
+    </script>
+</head>
+<body>
+<div id="div1"
+     onmouseover="toBig()"  onmouseout="toSmall()">
+</div>
+</body>
+</html>

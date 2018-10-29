@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+//    数组的11中方法：
+//    pop:头部删除                push：头部添加
+//
+//    shift：尾部删除             unshift:尾部添加
+//
+//    concat：数组的拼接          reverse：反转数组
+//
+//    splice:数组的增删改         slice：数组的克隆，截取
+//
+//    tostring：强制转为字符串    sort：数组排序
+//
+//    join：用某个字符隔开，转为字符串
+
+
+////    字符串的16种方法：
+//      1.charAt()  返回指定位置的字符           2.charCodeAt()返回指定位置的字符的编码
+//
+//      3.concat  拼接字符串                    4.fromCharCode()根据字符串编码返回字符
+//
+//      5.indexOf() 检索字符串，找第一个         6.lastlndexOf() 检索字符串 从后面开始找 从前面开始数
+//
+//      7.match() 检索字符串 找到一个或者多个     8.replace() 替换
+//
+//      9.search() 搜索                        10.split() 剪切字符串 装华为数组
+//
+//      11.slice() 剪切字符串 两个参数：从第几位剪切到第几位不包含最后一位、 一个参数：从第几位到最后
+//
+//      12.substr() 从第几位开始再截取几位，包含最后一位
+//
+//      13.substring()  截取 一个参数：从第几位开始，截取到后面所有 两个参数：从第几位开始，截取到后面第几位，不包括最后一位
+//
+//      14.toLowerCase() 转换为小写         15.toUpperCase() 转换为大写
+//
+//      16.trim() 清空收尾空格
+//
+//
+////什么是闭包？
+//    一个函数能访问另一个函数的私有变量，就是闭包；
+//
+//    优点：具有保存保护的作用。    缺点：容易造成内存泄漏，内存溢出
+//
+////    同步和异步的区别
+//    同步：很多件事，必须一件一件的做，上件事做好，才能做下一件事。
+//
+//    异步：很多件事同时做
+//
+//
+//
+//
+//    什么是事件冒泡：从目标对象到外层的顺序触发。
+//
+//    阻止事件冒泡：
+//
+//    function (ev){
+//        var oEvent = ev||event;
+//        try{
+//            oEvent.stopPropagation();
+//        }catch{
+//          oEvent.cancelBubble=true;
+//        }
+//    }
+//
+//    数组排序：
+//    var arr=[3,2,1];
+//    console.log(arr.sort(function(a,b){
+//        return a-b;
+//    }))
+//
+//
+//
+
+//    数组去重：
+//    var arr=[1,1,2,2,3,3];
+//    var Arr=[];
+//for (var i = 0; i < arr.length; i++) {
+//        if(Arr.indexOf(arr[i])==-1){
+//            Arr.push(arr[i]);
+//        }
+//}
+//console.log(Arr);
+
+
+
+
+//    this的理解：
+//    1.this总是指向函数的直接调用者(非间接调用者)
+//
+//    2.如果有new关键字 this指向触发这个事件的对象
+//
+//    3.在事件中 this指向触发这个事件的对象
+
+
+
+
+
+//    Get和Post的区别：
+//
+//    1.get 是从服务器上获取数据，post是向服务器传送数据
+//
+//    2.在客户端 get 方式通过 demo2 提交数据，数据在 demo2 中可以看到
+//      post 方式数据放在HTML Header内提交
+//
+//    3.对于 get 方式服务器端同 Request.Querystring获取变量的值
+//      对于 post 方式服务器端用 Request.Form 获取提交的数据
+//
+//    4.get 方式提交的数据最多124字节 而 post 没有限制
+//
+//    5.安全问题： 使用 get 时 参数会显示在地址栏上，而 post 不会
+//      因此 如果数据是中文数据而非敏感数据，那么视同 get
+//      如果用户输入的不是中文字符而且包含敏感数据用 post 为好
+
+
+
+//    正则手机号：
+//    var rel= /^1[3456789][0-9]{9}$/;
+//
+//
+//    正则邮箱：
+//    var rel = /^\w+@[0-9a-z]+\.[a-z]+$/i;
+
+
+
+    cookie：
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

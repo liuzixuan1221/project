@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        select{
+            width: 300px;
+            height: 500px;
+            background: #00ae66;
+            font-size: 30px;
+            line-height: 30px;
+            margin: 100px 250px 0 250px;
+            float: left;
+        }
+        input{
+            float: left;
+            margin: 600px 0 0;
+
+        }
+    </style>
+</head>
+<body>
+<select multiple="multiple">
+    <option value="">香蕉</option>
+    <option value="">苹果</option>
+    <option value="">鸭梨</option>
+    <option value="">榴莲</option>
+</select >
+<input type="button"value=">>>">
+<input type="button"value=">">
+<input type="button"value="<">
+<input type="button"value="<<<">
+<select multiple="multiple">
+
+</select>
+
+<script>
+    //    1、找元素
+    var arrIn =document.getElementsByTagName('input');
+    var left = document.getElementsByTagName('select')[0];
+    var right = document.getElementsByTagName('select')[1];
+    var opt = left.children;
+
+    //    2、绑定事件
+    //全部到右边
+    arrIn[0].onclick = function(){
+        opt = left.children;
+        for (var i =  opt.length-1; i >=0; i--) {
+            right.appendChild(opt[0]);
+        }
+    };
+    //全部到左边
+    arrIn[3].onclick = function(){
+        opt =  right.children;
+        for (var i =  opt.length-1; i >=0; i--) {
+            left.appendChild(opt[0]);
+        }
+    };
+    //部分到右边
+    arrIn[1].onclick = function(){
+        opt = left.children;
+        for (var i =  opt.length-1; i >=0; i--) {
+            if(opt[i].selected == true){
+                opt[i].selected = false;
+                right.appendChild(opt[i]);
+            }
+        }
+    };
+    //部分到左边
+    arrIn[2].onclick = function(){
+        opt = right.children;
+        for (var i =  opt.length-1; i >=0; i--) {
+            if(opt[i].selected == true){
+                opt[i].selected = false;
+                left.appendChild(opt[i]);
+            }
+        }
+    };
+
+
+
+
+
+
+
+    // var Left = document.getElementsByTagName('select')[0];
+    // var Right = document.getElementsByTagName('select')[1];
+    // var arrInput = document.getElementsByTagName('input');
+    // var optL = Left.children;
+    // var optR = Right.children;
+    //
+    //
+    //
+    // //第一个全部到右边
+    // arrInput[0].onclick = function () {
+    //     for(var i = optL.length-1;i >= 0;i--){
+    //         var optR = document.createElement('option');
+    //         optR.innerHTML = optL[0].innerHTML;
+    //         Left.removeChild(optL[0]);
+    //         Right.appendChild(optR);
+    //     }
+    // }
+    // //第二个部分到右边
+    // arrInput[1].onclick = function () {
+    //     for(var i = optL.length-1;i >= 0;i--){
+    //         if (optL[i].select == true){
+    //             var optR = document.createElement('option');
+    //             optR.innerHTML = optL[0].innerHTML;
+    //             optL[i].selected = false;
+    //             Left.removeChild(optL[i]);
+    //             Right.appendChild(optR);
+    //         }
+    //     }
+    // }
+    // //第三个部分到左边
+    // arrInput[2].onclick = function () {
+    //     for(var i = optR.length-1;i >= 0;i--){
+    //         if (optR[i].select == true){
+    //             var optL = document.createElement('option');
+    //             optL.innerHTML = optR[0].innerHTML;
+    //             optR[i].selected = false;
+    //             Right.removeChild(optR[i]);
+    //             Left.appendChild(optL);
+    //         }
+    //     }
+    // }
+    // //第四个全部到左边
+    // arrInput[3].onclick = function () {
+    //     for(var i = optR.length-1;i >= 0;i--) {
+    //         var optL = document.createElement('option');
+    //         optL.innerHTML = optR[0].innerHTML;
+    //         Right.removeChild(optR[0]);
+    //         Left.appendChild(optL);
+    //     }
+    // }
+
+</script>
+</body>
+</html>

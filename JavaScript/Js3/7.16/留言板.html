@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        textarea{
+            display: block;
+            margin: auto;
+            width: 800px;
+            height: 200px;
+        }
+        #btn{
+            display: block;
+            background: blueviolet;
+            color:#fff;
+            height:40px;
+            width: 100px;
+            border-radius: 8px;
+            margin: 20px auto;
+        }
+        .box{
+            display: block;
+            margin: auto;
+            width: 800px;
+            border-radius: 10px;
+            background: #ccc;
+            border: 1px solid #999;
+            padding: 10px;
+            list-style: none;
+        }
+        .box li{
+            border: 1px solid #999;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            padding: 0 5px;
+        }
+        .box li span{
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+<textarea name="" id="in" cols="30" rows="10"></textarea>
+<input type="button" id="btn" value="发送">
+<ul class="box">
+    <li>111111<span>删除</span></li>
+    <li>111111<span>删除</span></li>
+    <li>111111<span>删除</span></li>
+    <li>111111<span>删除</span></li>
+    <li>111111<span>删除</span></li>
+</ul>
+
+<script>
+    var oIn = document.getElementById('in');
+    var oBtn = document.getElementById('btn');
+    var oUl = document.getElementsByClassName('box')[0];
+    var aSpan = document.getElementsByTagName('span');
+
+    oBtn.onclick = function(){
+        var text = oIn.value;
+        var oLi = document.createElement('li');
+        var oSpan = document.createElement('span');
+        oLi.innerHTML = text;
+        oSpan.innerHTML = '删除';
+        oLi.appendChild(oSpan);
+
+        if(oUl.children.length>0){
+            if (oUl.firstElementChild){
+                oUl.insertBefore(oLi,oUl.firstElementChild);
+            }else{
+                oUl.insertBefore(oLi,oUl.firstChild);
+            }
+        }else{
+            oUl.appendChild(oLi);
+        }
+
+        oSpan.onclick = function(){
+            oUl.removeChild(this.parentNode);
+        }
+    };
+    for (var i = 0; i < aSpan.length; i++){
+        aSpan[i].onclick = function(){
+            oUl.removeChild(this.parentNode);
+        }
+    }
+</script>
+
+
+</body>
+</html>

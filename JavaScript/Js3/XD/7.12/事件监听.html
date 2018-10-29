@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<!-- 事件监听  DOM2事件 -->
+<body>
+    <script>
+    var oBtn = document.getElementById('btn1');
+    // 事件监听
+    // oBtn.onclick=aaa;
+    // oBtn.onclick=bbb;
+//对象.attachEvent(事件名，函数)  支持的是IE10及以下
+//对象addEventlistener(事件名，函数)  支持的是除了IE低版本
+oBtn.attachEvent("onclick",aaa);
+oBtn.attachEvent("onclick",bbb);
+
+oBtn.attachEvent  ("onclick",aaa);
+oBtn.attachEvent  ("onclick",bbb);
+    
+    </script>
+</body>
+</html>

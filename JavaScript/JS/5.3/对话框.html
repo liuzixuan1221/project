@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .cont{
+            margin: 20px 50px;
+            float: left;
+
+        }
+        .cont h3{
+            text-align: center;
+            width: 500px;
+        }
+        .cont .tBox{
+            width: 500px;
+            height: 600px;
+            background: #ccc;
+            border: 3px solid #333;
+            margin: 20px 0;
+            clear: both;
+
+        }
+        .cont .tBox .wo{
+            color: #0c8ed9;
+            text-align: right;
+        }
+        .cont .input{
+            width: 465px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cont1" class="cont">
+        <h3>用户1</h3>
+        <div class="tBox">
+
+        </div>
+        <input class="input" type="text">
+        <input type="button" value="提交">
+    </div>
+
+    <div id="cont2" class="cont">
+        <h3>用户2</h3>
+        <div class="tBox">
+            <!--<div class="wo">-->
+                <!--<div class="time">2016.12.21</div>-->
+                <!--<div class="text">Hello World</div>-->
+            <!--</div>-->
+            <!--<div class="ni">-->
+                <!--<div class="time">2016.12.21</div>-->
+                <!--<div class="text">Hello World</div>-->
+            <!--</div>-->
+        </div>
+        <input class="input" type="text">
+        <input type="button" value="提交">
+    </div>
+</body>
+
+<script>
+    var box1 = cont1.children[1];
+    var input1 = cont1.children[2];
+    var btn1 = cont1.children[3];
+
+    var box2 = cont2.children[1];
+    var input2 = cont2.children[2];
+    var btn2 = cont2.children[3];
+
+    btn1.onclick = function () {
+        addMeg(input1,box1,box2);
+    }
+
+
+    btn2.onclick = function () {
+        addMeg(input2,box2,box1);
+    }
+
+
+    function addMeg(input,box1,box2){
+        var val2 = input.value;
+        var oDiv1 = document.createElement('div');
+        var oDiv2 = document.createElement('div');
+        var date = new Date(),
+                time = date.toLocaleString();
+
+        oDiv1.innerHTML = `
+        <div class="time">${time}我</div>
+        <div class="text">${val2}</div>
+        `;
+        oDiv1.className = 'wo';
+        box1.appendChild(oDiv1);
+
+        oDiv2.innerHTML = `
+        <div class="time">${time}</div>
+        <div class="text">${val2}</div>
+        `;
+        oDiv2.className = 'ni';
+        box2.appendChild(oDiv2);
+        input.value = '';
+    }
+</script>
+</html>

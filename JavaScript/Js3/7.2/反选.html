@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+全选：<input type="button"value="全选" id="quanxuan"><br/>
+不选：<input type="button"value="不选" id="buxuan"><br/>
+反选：<input type="button"value="反选" id="fanxuan"><br/>
+<div id="div">
+    <input type="checkbox" ><br/>
+    <input type="checkbox" ><br/>
+    <input type="checkbox" ><br/>
+    <input type="checkbox" ><br/>
+    <input type="checkbox" ><br/>
+    <input type="checkbox" >
+</div>
+
+<script>
+    var oQuanXuan = document.getElementById('quanxuan');
+    var oBuXuan = document.getElementById('buxuan');
+    var oFanXuan = document.getElementById('fanxuan');
+    var aInput = div.getElementsByTagName('input');
+
+    oQuanXuan.onclick = function(){
+        for (var i = 0; i < aInput.length; i++){
+            aInput[i].checked = true;
+        }
+    };
+    oBuXuan.onclick = function(){
+        for (var i = 0; i < aInput.length; i++){
+            aInput[i].checked = false;
+        }
+    };
+    oFanXuan.onclick = function(){
+        for (var i = 0; i < aInput.length; i++){
+
+            //1
+            if(aInput[i].checked == true){
+                aInput[i].checked = false;
+            }else{
+                aInput[i].checked = true;
+            }
+
+            //2
+//            aInput[i].checked = !aInput[i].checked;
+        }
+    }
+</script>
+</body>
+</html>

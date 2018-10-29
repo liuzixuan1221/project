@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// function fn (x){
+//     return function(){
+//         return function(){
+//             return 3;
+//         }
+//     }
+// }
+
+// let fn=()=> ()=> ()=>3;
+
+
+// console.log(fn()()());
+
+
+
+
+
+// var  fn = function fn(x){
+//     return function(y){
+//         return x+y;
+//     };
+// };
+
+
+// let fn =x =>y=>x+y
+
+
+// let fn = ( x=0 ,y=0) => x+y;
+// console.log (fn(10,20));
+
+// var fn =function(x=0,y=0){
+//      return x+y
+// }
+// fn(10,20)
+// console.log (fn(10,20)); 
+
+
+
+//  let ary=[12,13,'feicui'];
+// let [a,b,c]=ary;
+// console.log(a,b,c);
+// let[a, ,b]=ary;
+// console.log(a,b);
+
+
+
+ 
+// let [a]=ary; //a=12
+// let [a,...b]=ary; //a=12 b=[23,'feicui]
+// console.log(b);
+
+
+// let newAry = ary.slice();
+// console.log(newAry); 
+
+
+
+//  let data = {
+//        name: 'xxx',
+//        age: 27,
+//        score: [
+//            110,
+//            130,
+//            20
+//        ]
+//  };
+// // [a,b,c]=ary
+
+
+//    let {name,age, score: [chinese, , english=0]} = data;
+//    console.log(name + ' 语文:' + chinese + ' 英语:' + english);
+
+
+
+// console.log(fn(10,9.8,9.5,8.7,8.8,8,9.2,8.9));
+//要求：去掉一个最大值  去掉一个最小值 求剩余数的平均值 小数点保留两位
+// function fn(){
+//     // console.log(arguments);
+//     arguments=Array.from(arguments);
+//     arguments.sort(function(a,b){
+//         return a-b;
+//     });
+// arguments.pop();
+// arguments.shift();
+// eval(arguments.join('+'));
+// console.log((eval(arguments.join('+'))).toFixed(2));
+// }
+
+
+
+
+
+// let fn1 = (...arg)=>{
+//     console.log(arg);
+//     //链式写法
+//     arg.sort(function(a,b){
+// return a-b;
+//  }).pop();
+//  arg.shift();
+//  console.log(arg);
+// }
+// console.log(fn(10,9.8,9.5,8.7,8.8,8,9.2,8.9));
+
+
+
+
+// let fn = function(){
+//     var sum = Math.random();
+//     return function(){
+//         console.log(sum);
+//     }
+// }
+// //函数执行的时候形成一个不销毁的私有作用域 闭包
+// var f=fn();
+// console.log(f);
+// f();
+// f();
+// f();
+// f();
+// f();
+// f();
+// f();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

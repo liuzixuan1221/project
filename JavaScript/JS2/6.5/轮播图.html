@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        img{
+            width: 100%;
+            height: 445px;
+            display: none;
+        }
+        img.now{
+            display: block;
+        }
+        .banner{
+            position: relative;
+        }
+        ul{
+            position: absolute;
+            list-style: none;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 10px;
+        }
+        ul .now{
+            background: rgba(255,255,255,.6);
+        }
+        li{
+            width: 10px;
+            height: 10px;
+            background: rgba(0,0,0,.6);
+            border-radius: 50%;
+            float: left;
+            margin-right: 10px;
+        }
+        .arrow{
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+            line-height: 60px;
+        }
+        .arrow div{
+            width: 40px;
+            height: 60px;
+            background: rgba(0,0,0,.5);
+            position: absolute;
+            top:50%;
+            margin-top: -30px;
+        }
+        .arrRight{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner" id="banner">
+        <img src="images/20160713154957678313.jpg" alt="" class="now">
+        <img src="images/20170913175748750902.jpg" alt="">
+        <img src="images/20170929134028425664.jpg" alt="">
+        <img src="images/20180426194321802726.jpg" alt="">
+        <img src="images/20180426194711300588.jpg" alt="">
+        <img src="images/20180426204049263691.jpg" alt="">
+
+        <ul>
+            <li class="now"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <div class="arrow">
+            <div class="arrLeft" id="left"><</div>
+            <div class="arrRight" id="right">></div>
+        </div>
+    </div>
+
+
+    <script>
+        let arrImg = document.querySelectorAll('.banner img');
+        let arrLi = document.querySelectorAll('ul li');
+        let index = 0;
+        let timer = null;
+
+        function ycsy(i){
+            for (let i = 0;i < arrImg.length;i++){
+                arrImg[i].classList.remove('now');
+                arrLi[i].classList.remove('now');
+            }
+            arrLi[i].classList.add('now');
+            arrImg[i].classList.add('now');
+        }
+
+        for (let i = 0;i < arrLi.length;i++){
+            arrLi[i].onclick = function(){
+                ycsy(i);
+                index = i;
+            };
+        }
+        console.log(index);
+
+        right.onclick = rightClick;
+        function rightClick(){
+            index++;
+            if (index > arrImg.length-1){
+                index = 0;
+            }
+            ycsy(index);
+        }
+
+        left.onclick = function(){
+            if (index < 0){
+                index = arrImg.length-1;
+            }
+            ycsy(index);
+            index--;
+        };
+
+        timer = setInterval(rightClick,1000);
+        banner.onmousemove = function(){
+            clearInterval(timer);
+        };
+        banner.onmouseout = function(){
+                timer = setInterval(rightClick,1000);
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 500px;
+            height: 500px;
+            border: 5px solid #000;
+            margin: auto;
+        }
+        span{
+            font-size: 50px;
+            color: #000;
+            float: right;
+            margin-top: -12px;
+        }
+    </style>
+    <script>
+        function    esc(){
+            document.getElementById('div1').style.display = 'none';
+        }
+    </script>
+</head>
+<body>
+    <div id="div1">
+        <span class="span1" onclick="esc()">X</span>
+    </div>
+</body>
+</html>

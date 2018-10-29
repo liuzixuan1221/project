@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    var obj={
+////        键值对的形式
+//        name:'小明',
+//        sex:'男',
+//        age:18
+//    };
+//    for(var key in obj){
+//        console.log(key);
+//        console.log(obj[key]);
+//    }
+//
+//    var json = {
+//        'name':'小明',
+//        'sex':'男',
+//        'age':18
+//    };
+//    for(var key in obj){
+//        console.log(key);
+//        console.log(obj[key]);
+//    }
+//
+//
+////    json解析
+////    json解析为json格式的字符串 JSON.stringify()
+//        document.write(JSON.stringify(json));
+////    json格式的字符解析为json格式的对象 JSON.parse()
+////    注意 属性要用双引号包含 否则会出错
+//    var str = '{"name":"小明","sex":"男","age":"18"}';
+//    console.log(JSON.parse(str));
+//
+////    json的拷贝
+////    简单拷贝
+//    var json = {
+//        'name' : '小明',
+//        'sex' : '男',
+//        'age' : 18
+//    };
+//    var json1 = json;
+//    json1.age = 10;
+//    console.log(json);
+
+//    浅拷贝
+//    var json = {
+//        'name' : '小明',
+//        'sex' : '男',
+//        'age' : 18,
+//        'friends' : {
+//            'name' : '小红',
+//            'sex' : '女',
+//            'age' : 18
+//        }
+//    };
+//    var json1 = {};
+//    for(var key in json){
+//        json1[key] = json[key];
+//    }
+//
+//    json1.age = 10;
+//    json1.friends.age = 1;
+//    console.log(json);
+
+//    深拷贝
+    var json = {
+        'name' : '小明',
+        'sex' : '男',
+        'age' : 18,
+        'friends' : {
+            'name' : '小红',
+            'sex' : '女',
+            'age' : 18
+        }
+    };
+    function copyJson(json){
+        var newJson = {};
+        for (var key in json){
+            if (typeof json[key] == 'object'){
+                newJson[key] = copyJson(json[key]);
+            }else{
+                newJson[key] = json[key];
+            }
+        }
+        return newJson;
+    }
+    var json1 = copyJson(json);
+    json1.age = 10;
+    json1.friends.age = 1;
+    console.log(json);
+</script>
+</body>
+</html>

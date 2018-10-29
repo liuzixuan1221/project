@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+    <ul id="list">
+        <li>111111111111</li>
+        <li>222222222222</li>
+        <li>333333333333</li>
+        <li>444444444444</li>
+        <li>555555555555</li>
+        <li>666666666666</li>
+    </ul>
+
+
+
+
+<script>
+
+    //DOM就理解成标签
+    var oList = document.getElementById('list');
+
+//
+    alert(oList.ChildNodes.length);
+//h
+//    获取子节点是    childNodes
+//    子节点分为
+//    1、文章分点
+//    2、元素节点
+//    判断节点类型：nodeTpye
+//
+//
+    for (var i = 0; i < oList.childNodes.length;i++){
+        alert(oList.childNodes[i].nodeType); //nodeType 判断节
+        //nodeType 3 文本节点
+        //nodeType 1 元素节点
+    }
+
+    if (oList.childNodes[i].nodeType ==1){  //判断是不是元素节点
+        oList.childNodes[i].style.color = '#f00'
+    }
+
+//
+//
+//    获取子节点：
+//    1、childNodes  能获取元素节点的同时还能获取文本节点
+//    2、children    直接获取元素节点
+//
+//
+//    判断节点的类型
+
+
+    console.log(oList.parentNode);
+</script>
+</body>
+</html>

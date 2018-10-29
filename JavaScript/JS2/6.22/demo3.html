@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+//    class Person{
+//        constructor(){
+//
+//        }
+//    }
+//    class Man extends Person{
+//        constructor(){
+//            super();
+//        }
+//    }
+
+    function Fn(){
+        var n = 10;
+        this.m = n;
+    }
+
+    var f = new Fn();
+    console.log(f instanceof Fn);
+    console.log('m' in f);
+    console.log('n' in f);
+    console.log(f.hasOwnProperty('m'));
+    console.log(f.hasOwnProperty('n'));
+    console.log(f.hasOwnProperty('toString'));
+
+
+    function hasPubProperty(obj,attr){
+        return attr in obj && !obj.hasOwnProperty('attr');
+    }
+    console.log(hasPubProperty(f,'m'));
+    console.log(hasPubProperty(f,'n'));
+    console.log(hasPubProperty(f,'toString'));
+
+    function fn(){
+        console.log(toString.call(1));
+        console.log(toString.call('1'));
+        console.log(toString.call(fn));
+        console.log(toString.call([]));
+        console.log(toString.call({}));
+    }
+
+</script>
+</body>
+</html>

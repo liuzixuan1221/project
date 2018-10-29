@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            height: 10000px;
+        }
+        #back{
+            position: fixed;
+            right: 0;
+            top: 80%;
+            width: 100px;
+            height: 100px;
+            background: #3be3ff;
+            color: #fff;
+            line-height: 100px;
+            text-align: center;
+            display: none;
+            cursor: pointer;
+        }
+        #back.now{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    这是顶部
+
+    <div id="back">返回顶部</div>
+
+<script>
+    var oBack = document.getElementById('back');
+    var timer = null;
+
+
+    window.onscroll = function(){       //鼠标滚轮事件
+        scrolltop = document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrolltop <= 0){
+            oBack.classList.remove('now');
+        }else {
+            oBack.classList.add('now');
+        }
+    };
+
+    oBack.onclick = function(){
+        timer = setInterval(function(){
+            if(scrolltop <= 0){
+                clearInterval(timer);
+            }
+            scrolltop -= 100;
+            document.documentElement.scrollTop = document.body.scrollTop = scrolltop;
+        },20)
+    }
+</script>
+</body>
+</html>

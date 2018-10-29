@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //    随机数  0-1包含0  不包含1  0-0.9999   0-99.999
+    //0-1   0-995  5-1000
+    //5-1000
+    //0-100  1-100   arr.length=24;  0-24
+    console.log(Math.ceil(Math.random()*995)+5);
+
+    console.log(Math.ceil(0.1));  //向上取整  1
+    console.log(Math.ceil(0));  //向上取整  1
+    console.log(Math.ceil(0.5));  //向上取整  1
+    console.log(Math.ceil(0.9));  //向上取整  1
+    console.log(Math.ceil(-1.1));  //向上取整  -1
+    console.log(Math.ceil(-5.1));  //向上取整  -5
+    console.log(Math.ceil(-9.1));  //向上取整  -9
+
+    console.log(Math.floor(0.9)); //向下取整 0
+    console.log(Math.floor(0.1)); //向下取整 0
+    console.log(Math.floor(0.5)); //向下取整 0
+    console.log(Math.floor(-0.9)); //向下取整-1
+
+    console.log(Math.round(0.1));//四舍五入 0
+    console.log(Math.round(0.5));//四舍五入 1
+    console.log(Math.round(-0.5));//四舍五入 0
+
+
+
+
+
+</script>
+</body>
+</html>

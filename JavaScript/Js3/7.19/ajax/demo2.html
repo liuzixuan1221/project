@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            width: 100%;
+        }
+        #list{
+            overflow: hidden;
+            list-style: none;
+            width: 1200px;
+            height: auto;
+            background: #ccc;
+            margin: auto;
+        }
+        #list li{
+            position: relative;
+            float: left;
+            width: 25%;
+            border: 5px solid #ccc;
+            box-sizing: border-box;
+            height: 500px;
+            background: red;
+        }
+        .box{
+            position: absolute;
+            width: 100%;
+            height: auto;
+            background: #fff;
+            bottom: 21px;
+            overflow: hidden;
+        }
+        span:first-child{
+            float: left;
+        }
+        span:last-of-type{
+            float: right;
+        }
+        .jieshao{
+            width: 100%;
+            position: absolute;
+            background: #fff;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            bottom: 0;
+        }
+    </style>
+
+    <script src="ajax.js"></script>
+</head>
+<body>
+    <ul id="list">
+
+    </ul>
+
+
+    <script>
+        window.onload = function(){
+            var oUl = document.getElementById('list');
+            ajax("date/demo2.json",function (data){
+                alert('成功');
+                var _data = eval("("+data+")");
+                for (var i = 0; i < _data.length; i++) {
+                    var aLi = document.createElement('li');
+                    var oP1 = document.createElement('p');
+                    var oP2 = document.createElement('p');
+                    var oSpan1 = document.createElement('span');
+                    var oSpan2 = document.createElement('span');
+                    oP1.className = 'box';
+                    oUl.appendChild(aLi);
+                    aLi.appendChild(oP1);
+                    oP1.appendChild(oSpan1);
+                    oP1.appendChild(oSpan2);
+                    aLi.appendChild(oP2);
+                    oP2.className = 'jieshao';
+                    aLi.style.backgroundColor = _data[i].background;
+                    oSpan1.innerHTML = _data[i].price;
+                    oSpan2.innerHTML = _data[i].hot;
+                    oP2.innerHTML = _data[i].jieshao;
+                }
+
+
+
+            },function(){
+                alert("失败");
+            })
+
+        }
+    </script>
+</body>
+</html>

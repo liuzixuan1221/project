@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1 {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+        #div2{
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+    </style>
+
+</head>
+<body>
+<!--需求：鼠标点击这个div的时候 让他变大-->
+
+
+<!--on click    在点击的时候-->
+<!--document    文档-->
+<!--get Element By  Id  获取  元素  通过  id  [ 在document文档下通过id get获取Element元素('') ]-->
+<!--onclick 鼠标点击-->
+<!--onmouseover 鼠标移上去   盒子变大-->
+<!--onmouseout  鼠标移走    盒子变小-->
+<!--行内引入JS  不推荐-->
+
+<!--引号的使用规则     计算机一根筋  使用【就近原则】识别引号-->
+<!--内单外双-->
+<!--内双外单-->
+    <div id="div1" onclick='
+        document.getElementById("div1").style.width = "400px";
+        document.getElementById("div1").style.height = "400px";
+    '></div>
+
+
+    <div id="div2"
+        onmouseover="
+        document.getElementById('div2').style.width = '400px';
+        document.getElementById('div2').style.height = '400px';
+        "
+        onmouseout="
+        document.getElementById('div2').style.width = '200px';
+        document.getElementById('div2').style.height = '200px';
+    "></div>
+</body>
+</html>

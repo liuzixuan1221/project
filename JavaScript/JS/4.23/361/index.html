@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>361°多一度热爱，361°官方商城</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/favicon.ico">
+</head>
+<script>
+    function    showSearch(){
+        document.getElementById('searchInput').style.display = 'block';
+    }
+    function    showHdBox(){
+        document.getElementById('hdBox').style.display = 'block';
+    }
+    function    escHdBox(){
+        document.getElementById('hdBox').style.display = 'none';
+    }
+</script>
+<body>
+    <header class="clearfix" >
+        <div id="hdBox"  onmouseout="escHdBox()">
+            <div class="hdBoxLeft fl">
+                <img src="images/active_1226.jpg" alt="">
+                "热爱无国界 火炬手选拔"
+            </div>
+            <div class="hdBoxRight fr">
+                <img src="images/active_0925.jpg" alt="">
+                "炼于内 型于外"
+            </div>
+        </div>
+        <div class="inner">
+            <div class="top">
+                <a href="">
+                    <span>English</span>
+                    <img src="images/area.jpg" alt="">
+                    <span class="cx">店铺查询</span>
+                </a>
+            </div>
+            <div class="nav-con">
+                <a class="logo" href="">
+                    <img src="images/logo.png" alt="">
+                </a>
+                <div class="nav-box">
+                    <ul class="clearfix">
+                        <li><a href="">首页</a></li>
+                        <li><a href="">商城</a></li>
+                        <li>
+                            <a href=""  onmouseover="showHdBox()">活动</a>
+                        </li>
+                        <li><a href="">新闻</a></li>
+                        <li><a href="">丝绸之路</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-right fr">
+                <div class="search">
+                    <a href="" onmouseover="showSearch()">
+                        <img src="images/search.png" alt="">
+                    </a>
+                    <form id="searchInput">
+                        <input type="text" placeholder="查找鞋服">
+                    </form>
+                </div>
+                <div class="personal">
+                    <a href="">
+                        <img src="images/personal.png" alt="">
+                    </a>
+                </div>
+                <div class="gouwuche">
+                    <a href="">
+                        <img src="images/shopping.png" alt="">
+                        <div class="quan0">
+                            0
+                        </div>
+                    </a>
+                    <div class="gwcBox">
+                        您的购物车还没有产品
+                        <a href="">
+                        <div class="qgg">去逛逛</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="banner">
+            <img src="images/banner1226.jpg" alt="">
+        </div>
+        <ul class="clearfix">
+            <li class="one">
+                <img src="images/special6.jpg" alt="">
+                <div class="oneBox">不像我，才是我|魏晨告诉你什么是“型”我态度</div>
+            </li>
+            <li class="two">
+                <img src="images/special4.jpg" alt="">
+            </li>
+            <li class="two">
+                <img src="images/special3.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/recommend.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/recommend2.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/recommend3.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+    <footer></footer>
+</body>
+</html>

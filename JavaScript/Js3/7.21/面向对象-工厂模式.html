@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    /*
+    *   注释：
+    *   构造函数和别的函数没有什么区别  就是一个普普通通的函数，
+    *   之所以叫构造函数只是因为他和别的函数的作用不同而已他是用来构造一个对象
+    *
+    *   ps:不同的人有不同的作用，也就有了不同的叫法，比如警察
+    *
+    *
+    * */
+
+
+    //封装        ==>     工厂
+    function gg(name,age,sex,chi,he,wan){       //构造函数  ==>     类
+        var obj = new Object();     //创建对象      ==>     原料
+
+        //  加工
+        //添加属性
+        obj.name = name;
+        obj.age = age;
+        obj.sex = sex;
+
+        //添加方法
+        obj.chi = function(){
+            alert(chi);
+        };
+        obj.he = function(){
+            alert(he)
+        };
+        obj.wan = function(){
+            alert(wan)
+        };
+        obj.chi();
+        obj.he();
+
+        return obj;     //出厂
+    }
+
+    var newObj = gg("lzx",18,"男","次红骚右","一起哈啤","WOW");
+
+    alert(newObj.age);
+    newObj.wan();
+
+    var newObj1 = gg("wzy",20,"男","次右","喝酒","LOL");
+
+    alert(newObj1.age);
+    newObj1.wan();
+
+    /*
+    * 类与对象的概念：
+    *
+    * 类就相当于模具       做蛋糕的模具
+    * 对象相当于产品       蛋糕
+    *
+    * */
+
+
+
+
+    /*
+    *   工厂方式的问题
+    *
+    *   问题：
+    *       没有new       ps:鸡蛋里挑骨头
+    *       函数重复定义   ps:稍严重，造成资源浪费
+    *
+    *   加上new
+    *       偷偷做了两件事
+    *           替你创建了一个空白对象
+    *           替你返回了这个对象
+    *       new和this
+    * */
+</script>
+</body>
+</html>

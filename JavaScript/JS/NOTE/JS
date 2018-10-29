@@ -1,0 +1,922 @@
+#JS书写三步骤：
+1、找人	(找元素)
+2、绑定事件	(例：点击事件)
+3、书写事件驱动	(例：点击之后	让元素变大	实则是给元素设置宽高)
+
+一、浅聊前端发展史
+二、关于浏览器的内核和引擎
+三、html                    描述网页的超文本标记语言            结构层
+    css                     层叠样式表                        样式层
+    JavaScript(js)          轻量级的客户端脚本编程语言         行为层/交互层
+    编程语言是具备一定逻辑的，拥有自己的编程思想
+    (面向对象编程 [OOP]、面向过程编程)
+        -   面向对象
+            + C++
+            + JAVA
+            + PHP
+            + C# (.net)
+            + JS
+            + ...
+
+        -   面向过程
+            + C
+
+    JavaScript      JAVA  没啥必然关系
+    js以前只是一门脚本语言    现在可以基于node做后台服务器方面的程序
+    所以  js也称为   一门全栈编程语言
+
+2、学习js其实就是学习js的组成，它由三部分组成
+    ESMAScript  JS的语法规范     JS核心
+    Dom 文档对象模型   document object model
+        提供api(属性和方法) 供我们操作dom和元素
+    Bom 浏览器对象模型 browser object model
+        提供一些api(属性和方法) 供我们操作浏览器
+3、ESMAScript
+    它是JS的语法规范，JS中的变量、数据类型、语法规范、操作语句、设计模式等等都是ES规定的
+4、js中的变量、语法规范、数据类型
+5、变量(variable)
+    它不是具体的值，只是一个用来存储具体值的容器或者代名词，
+    因为它存储的值可以改变，所以成为变量
+
+    基于ES语法规范，在JS中创建变量有以下方式
+    - var       (ES5)
+    - function  (ES5)   创建函数(函数名也是变量，只不过存储的值是函数类型而已)
+    - let       (ES6)   创建的是常量
+    - import    (ES6)   基于ES6的模块规范导出需要的信息
+    - class     (ES6)   基于ES6创建类
+    - const     (ES6)
+
+    var a,b,c=10;       =>      var a; var b; var c=10;
+    var a=b=c=10;       =>      var a=10; b=10; c=10;
+
+创建变量，命名的时候需要遵循一些规范
+-   严格区分大小写
+        var a;  console.log(A);//报错
+
+-   遵循驼峰命名法：
+            小驼峰：getElementById
+            大驼峰：GetElementById
+
+-  按照数字、字母、下换线或者$来命名
+        (数字不能作为名字的开头)，命名的时候居于英文单词拼接
+        成一个完整的名字(第一个单词字母小写，其余每一个有意义单词的首字母都大写)
+        var 1;      // 报错
+        var _this;  // _表示全局变量
+        var $div;   // $表示jQuery变量
+
+-   不能使用关键字和保留字：在JS中有特殊含义的叫做关键词，
+    未来可能会成为关键字的叫做保留字
+    var var;    // 报错
+
+-   匈牙利命名法：结合数据类型命名     按照功能命名
+    num str oDiv    arrLi
+
+        oDiv=>    objectDiv 一个对象
+        arrLi=>   arrayLi   多个对象
+
+
+【js的输出语句】
+1、3种弹框输出    检测错误
+    alert(a);       只有确定按钮
+    confirm(b);     有确定和取消按钮
+    prompt("c")     不仅有确定和取消按钮  还可以输入内容
+
+2、在控制台打印输出      console.log(a,b,c);     调试错误
+3、在网页打印输出        document.write(a,b,b);
+
+【变量注意点】     var 变量名=值；
+    一般定义变量  定义变量    必须使用关键字var
+    var     a;      可以只定义不赋值    输出undefined
+    var     b=1;    也可以既定义也赋值   输出值
+
+    但如果没有用关键字var定义变量    必须同时    定义加赋值
+    a=1;   才不会报错    属于全局变量  不推荐使用   会污染全局
+
+    var a;          underfined
+    var b=1;        1
+    var a=c=2;      2           =>   var a=1;  b=1;
+    var a, b, c;    underfined  =>   var a;  var b;  var c;
+    var _a;         underfined
+    var $a=2;       2
+    var A=10;       10
+
+    a=1;    全局变量
+
+
+【js数据类型】
+    检测数据类型  typeof()    检测输出的数据类型   都会自动加引号
+- 基本数据类型(值类型)   - 占内存
+    + 数字 number
+    + 字符串 string
+    + 布尔 boolean
+    + null  (空指针对象 所以数据类型object)
+    + undefined  (数据类型'undefined')
+- 引用数据类型          - 堆内存
+    + 对象object
+        + 普通对象
+        + 数组对象
+        + 日期对象
+        + Math
+        + 正则对象
+        + ...
+    + 函数function
+- ES6中新增加的一个特殊的类型：Symbol，唯一的值
+
+【数字Number数据类型】
+1、NaN = not a number
+2、isNaN() 检测一个数是否是一个非数
+
+        //      NaN = not a number
+        //      isNaN() 检测一个数是否是一个非数
+        //      浏览器检测的这个值   会自动转换为数据类型
+        //      是一个非数      真   不是一个数字
+        //      不是一个非数    假   是一个数字
+3、强制转换为数据类型
+
+    Number(变量)
+    parseInt(变量)
+    parSeFloat(变量)
+
+    隐式转化    + - % / *   自动转化为数字
+    '12' - 10 == 2   true - 12 == -11
+
+4、其他类型强制转换为数字的时候，对应的哪个值？
+    字符串 string   '123'=>123     'w123'=>NaN    '123px'=>NaN     ''=>0
+    布尔 boolean    true=>1        false=>0
+    null            =>0
+    undefined       =>NaN
+    函数 function(){} =>NaN
+
+    对象  []=0   [34]=34    [1,2,3,4]=NaN
+
+    引用数据类型转换为数字的时候  先通过xxx.toString()转换为字符串
+    然后再通过Number(变量)转换为数字
+
+    [],false,null,""    =>0;
+    除了  数组[]        []=>0   [34]=34    [1,2,3,4]=NaN
+    其余引用数据类型    都是转换为NaN
+5、拓展知识
+    =   赋值          右边赋值给左边
+    ==  判断是否相等  判断等号两边的值是否相等    自动把等号两边的值转换为数字类型
+    === 判断是否全等  判断等号两边的值和类型 是否都相等   不会自动转换
+
+比较
+    null==undefined     //true
+    null/undefined/NaN  不等于任何值
+
+运算
+    null+10 =>10    null和其他数据类型做运算时 null=>0
+    undefined+10 =>NaN
+    NaN+10 =>NaN        undefined/NaN和其他数据类型做运算 结果都是NaN
+
+重要： isNaN检测的机制
+1、首先验证当前要检测的值是否为数字类型的，如果不是，
+浏览器会默认的把值转换为数字类型
+
+    把非数字类型的值转换为数字
+    -   其他基本类型转换为数字：直接使用Number这个方法转换的
+    -   把引用数据类型值转换为数字：先把引用之调取toString
+        转换为字符串，然后再把字符串调取Number转换为数字
+
+2、parseInt / parseFloat
+>   等同于Number，也是为了把其他类型的值转换为数字类型
+>   和Number的区别在于字符串转换分析上
+>   Number：出现任意非有效数字字符，结果就是NaN
+>   parseInt：把一个字符串中的整数部分解析出来，
+    ParseFloat是把一个字符串中小数(浮点数)部分解析出来
+
+
+【2、布尔boolean】
+1、boolean   只有true  fales
+2、强制转换  Boolean()   !true =>false   非      !!=>true=true
+   隐式转换    !取反  1112=>true
+    3、其他数据类型转换为布尔？
+    数字number    0:  false       其余有效数字转换为true
+    NaN     => false
+    []      => true
+    [] == ![]        //true
+    字符串string   只有空字符串转换为   false   其余都是true
+    null
+    undefined
+
+    在js中只有"0/NaN/" "/null/undefined"这个五个值转换为布尔类型的false，其余都转换为true
+
+
+【3、字符串string】
+1、用一对'' 或者是一对""引起来的内容   即为字符串
+2、强制转换  String(变量)      变量.toString()
+    null和undefined没有toString()方法    所以不能使用
+    隐式转换    +       加号两边只要有一边为字符串 进行+运算的时候 结果必然为字符串
+3、其他数据类型转换为string?
+    0  =>   "0"
+4、.length查看字符串长度
+5、转义字符  var str="我说：'qwer\"a\"sdf'"
+
+BAT面试题
+var obj={}
+console.log(typeof typeof typeof typeof)
+
+腾讯面试题
+typeof(null)  =="null"?     =>"objexct" == "null"        //不等于false
+typeof(null)  ==null?                                    //不等于fales
+typeof(undefined)  ==undefined?     => 'undefined' == undefined         //不等于fales
+typeof(undefined)  =="undefined"    => 'undefined' == 'undefined'       //等于true
+
+
+
+
+
+【4、null和undefined】
+都代表空或者没有
+null:空对象指针      认为赋值
+undefined:未定义     浏览器自动分配的值 var a; // undefined;
+
+null和undefined不等于任何其他值
+null=>  0   false
+undefined=>   NaN   false
+
+null==undefined //true
+
+作运算的时候  null=>0 undefined=>NaN
+null+10=10
+undefined+10=NaN
+undefined+'12'=NaN12
+
+
+null一般都是意料之中的没有(通俗理解：一般都是人为手动的先赋值为null，后面的程序中我们会再次给它赋值)
+var num = null; //=>null是手动赋值，
+    预示着后面我会把num变量的值进行修改
+
+undefined代表的没有一般都不是人为手动控制的，
+    大部分都是浏览器自主为空(后面可以赋值也可以不赋值)
+var num; //=>此时变量的值浏览器给分配的就是undefined
+
+
+
+【js的引入方式】
+1、行内引入js    <div onclick="big()"></div>
+2、行内结合嵌入式   <script></script>
+3、嵌入式js
+4、外链js          <script src=""></script>
+
+
+【对象】
+1、定义两种方式
+>字面量定义对象        var obj={name='xxx',age:18};
+>构造函数定义对象      var obj=new Object();
+2、对象的操作(增删改查)
+查看：
+    obj.age;
+    obj['age'];
+
+    数字只能用这种方式obj[0]
+
+修改：
+    obj.age=58;
+
+增加：
+    obj.xxx="";
+
+删除：obj.xxx=null;
+     delete obj.xxx;
+
+3、操作对象注意点
+> obj['age']和obj[age]的区别？
+        'age'表示是obj的其中一个属性,age表示一个变量
+> 如果访问的属性 不存在 输出undefined
+> 对象的属性名是唯一的，一个对象的属性名不能重复
+        obj.id => undefined
+
+【数组对象->object】
+1、数组的定义
+字面量定义：      var arr=[];
+构造函数定义：    var arr = new   Array();
+
+2、数字的访问
+数组的长度通过 arr.length获取
+索引值：从0开始    最大索引 arr.length-1
+arr[index]
+
+3、数组的遍历(找到数组中的每个值)
+    for(var i=0;i<arr.length;i++){
+        console.log(arr[i]);
+    }
+
+4、涉及到算法
+    数组的冒泡排序
+    数组插入排序
+    数组的sort排序
+
+5、数组的方法
+    普通方法
+    迭代方法
+
+6、数组的去重
+
+
+【引用数据类型】
+普通对象    去银行办卡
+var obj={
+    //键值对
+    name:'啊啊',
+    age:18,
+    study:function(){
+    console.log('爱学习');
+    }
+}
+
+
+
+【堆栈内存】
+在js中有两个重要的内存：堆内存/栈内存
+
+- 栈内存
+    +   提供代码执行的环境
+    +   基本类型值都是直接的存储在栈内存中的
+- 堆内存
+    +   引用类型值都存储在堆内存中
+
+    1、开辟一个新的堆内存空间
+    2、以键值对的形式，把对象中的内容存储到空间
+    3、浏览器会这片空间自动分配一个16进制地址
+    4、分配好之后 把这个地址   给了变量
+
+
+【运算符】
+优先级：算数运算符>比较运算符>逻辑运算符>赋值运算符>逗号运算符
+代码从上至下  从左往右执行
+
+    先算() 再算一元运算符 再算二元运算符 再算比较运算符
+    三目运算符仅高于赋值运算符   var a = c>d?c:d;  先三目
+    算数运算符
+        >>> 一元运算符(正+ 负- 非! ++ --)
+        ++i     i++     相当于i进行加1操作
+        ++i     先加1    后赋值  i=i+1
+        i++     先赋值    后加1  i=i+1
+
+        --i     先减1    后赋值  i=i-1
+        i--     先赋值    后减1  i=i-1
+
+        a=a+5   ==>a+=5
+
+        >>> 二元运算符(+ - * / %)
+        5%3=2   2%5=2
+
+        >>> 三目运算符
+        a>b?a:b;        a>b满足条件 执行a 否则执行b
+            等同于if   else语句
+            适用于一些比较简单的if else语句
+
+
+
+比较运算符
+    > >= < <= = == === != !==
+逻辑运算符
+   先! 后& 最后||
+
+    短路与
+    &&    短路与 只要左边结果为假    即为假 后面不需要再判断
+    如果两个值都是true.返回第二个值：
+    由于是第二个值   决定了整个表达式是真还是假
+    如果第一个值是false  就返回这个值：因为他直接决定表达式为假
+    0 false  ""false
+
+    短路或
+
+
+赋值运算符
+    =+  -=  *=  /=  %=
+逗号运算符   (只取最后一个逗号后面的值)
+    ,
+            var a=(1,2,3,4,5);
+            console.log(a);     //5
+
+
+【流程控制】
+1、顺序执行
+    自上而下    从左往右
+2、条件分支
+    if else
+    shitch case
+
+
+3、循环
+    for         先判断是否满足条件    如果满足条件      执行循环体
+                                     如果不满足条件   直接跳出循环
+    while
+
+    do while    不管满不满足条件    先执行一遍   然后再判断是否满足条件
+
+    break 中断循环(跳出整个循环)
+    continue  跳过此次循环    进入下一次循环
+
+
+DOM
+document object model   文档对象模型          说白了就是html
+dom树    根节点 就是document=>html>head和body...
+
+1、获取元素的方式
+//方式一：通过id获取元素  唯一的
+var li1 = document.getElementById('li1');
+console.log(li1);
+
+//方式二：通过上下文获取元素
+var bottom = document.getElementById('bottom');
+var arrUl = bottom.getElementsByTagName('ul')[0];
+
+//方式三：通过标签名获取元素 getElementsByTagName        类数组(不是数组但类似数组)
+var arrUl = bottom.getElementsByTagName('ul')[0];
+
+//方式四：通过类名获取元素  getElementsByClassName
+var arrLi1 = document.getElementsByClassName('box');
+//不兼容      后面我们自己封装一个函数 解决他的兼容
+
+//方式五：通过标准选择器方式获取   一般用于移动端
+var arrLi2 = document.querySelector('.box>li');
+//var arrLi2 = document.querySelector(选择器)
+//获取的是box下面的第一个子元素li
+
+var arrLi3 = document.querySelectorAll('.box>li');
+//var arrLi3 = document.querySelectorAll(选择器)
+//获取的是box下面的所有子元素li
+
+//方式六：获取整个html文档    获取html等价获取body  由于不兼容   产生两种写法
+document.documentElement    获取html
+document.body               获取body
+
+//获取一屏幕的高度
+document.body.clientHeight||document.documentElement.clientHeight;
+//获取一屏幕的宽度
+document.body.clientWidth||document.documentElement.clientWidth;
+
+//方式七：通过name获取
+var Li = document.getElementsByName('title');
+
+
+【节点】
+ /*
+        节点：元素   注释  空格符 换行符
+        换行父也当成文本节点去处理
+        childNodes子节点(元素 + 注释 + 换行符)
+     */
+
+    /*
+        【节点的类型】
+                        节点的类型           节点的名称           节点的值
+                         nodeType            nodeName           nodeValue
+       元素节点              1               大写的标签名           null
+       文本节点              3                  #text           文本的内容
+       注释节点              8                #comment          注释的内容
+       document             9               #document              null
+     */
+    var tab = document.getElementById('tab');
+    console.log(tab.childNodes);//
+    var com1 = tab.childNodes[0];
+    console.log(com1.nodeType);//
+    console.log(com1.nodeName);//
+    console.log(com1.nodeValue);//
+
+
+    console.log(tab.nodeType);//
+    console.log(tab.nodeName);//
+    console.log(tab.nodeValue);//
+
+
+    var oLis = document.getElementsByTagName('li');
+    var oLi = oLis[0];
+    console.log(oLi.nodeType);//
+    console.log(oLi.nodeName);//
+    console.log(oLi.nodeValue);//
+
+3、节点访问
+    JS中表示DOM节点之间相互关系的属性
+    1.childNodes                所有的子节点
+    2.children                  子元素节点        IE8浏览器会把文本节点也当成元素节点
+    3.previousSibling           哥哥节点
+    4.previousElementSibling    哥哥元素节点      (ie8及以下浏览器不支持)
+    5.nextSibling               弟弟节点
+    6.nextElementSibling        弟弟元素节点      (ie8及以下浏览器不支持)
+    7.firstChild                第一个子节点
+    8.firstElementChild         第一个子元素节点  (ie8及以下浏览器不支持)
+    9.lastChild                 最后一个子节点
+    10.lastElementChild         最有一个子元素节点(ie8及以下浏览器不支持)
+    11.parentNode               父节点
+
+4、dom属性的操作  和对象属性操作对比记忆
+    操作元素            操作对象
+
+    设置属性   setAttribute
+
+    删除属性   removeAttribute
+
+    获取属性   getAttribute
+
+
+   <body>
+       <div id="div1" data-name="xiaojiejie"class="show">小姐姐</div>
+
+       <script>
+           var div = document.getElementById("div1");
+           //查看
+           console.log(div.getAttribute('data-name'));
+           //修改
+           div.setAttribute('data-name','脑瓜子疼');
+           console.log(div.getAttribute('data-name'));
+           //删除
+           div.removeAttribute('data-name');
+           console.log(div.getAttribute('data-name'));
+       </script>
+   </body>
+
+5、动态操作dom节点
+    createElement   创建一个新元素
+    appendChild      末尾追加元素
+    insertBefore    在...之前插入元素
+    removeChild     移除元素
+    replaceChild    替换元素
+    cloneNode(true) 克隆/复制   元素
+
+6、操作dom元素的内容
+    //value是带有value属性的标签拥有的值。
+    一般是单闭合标签的属性。(可赋值,也可以获取值 input)
+
+    //innerHTML属性,双闭合标签两个标签之间的内容。
+    (识别标签)(可赋值,也可以获取)
+
+    //innerText属性,双闭合标签两个标签之间的内容。
+    (不识别标签)(可赋值,也可以获取)
+
+
+
+【数组】
+1、数组的数据类型 ->    typeof([]) -> object 引用数据类型
+2、数组的定义 类比字面量
+    字面量创建数组                     字面量创建对象
+var arr = [//存储任何数据类型]          var obj = new Object()
+
+    构造函数创建数组                   构造函数创建对象
+var obj = new Array()                  var obj = new Object()
+3、数组的遍历 (访问数组)  首选for循环
+    数组的长度   arr.length
+    数组的索引   arr[index]  index索引
+    数组最大的索引值为:  arr.length-1
+    itar + tab  快捷键
+
+    【3种遍历方式】
+    for循环  遍历
+    for(var i=0;i<arr.length;i++){arr[i]//数组中的内容项}
+    for   in遍历
+    for(var key in arr){arr[key]//数组中的内容项}
+    for   of遍历  +   es6语法
+    es6-> for(var key of arr){arr[key]//数组中的内容项}
+4、数组的操作
+    arr.length可以直接赋值操作
+    清空数组的方式：
+    arr.length = 0;
+    arr = [];
+    arr.splice(0,arr1.length);  从索引0开始  删除数组 length长度(arr.length)个数
+
+    delete arr[i]   可以删除  删完之后还占位  所以不修改数组的长度
+
+
+    数组的长度：length
+    数组的索引：index
+    数组的内容：arr[index]
+    数组的最大索引：arr.length-1
+5、案例
+
+6、数组的常用方法
+        1.方法的作用和意义
+        2.参数
+        3.返回值
+        4.原有的数组是否改变
+
+    -   push()          将内容添加到数组末尾的位置
+
+        含义: 向数组的末尾添加
+        参数: 任何数据类型的参数 一到多个参数;
+        返回值: 新数组的长度
+        原有的数组是否改变：改变了
+
+    -   pop()           删除最后一项
+
+         含义: 删除数组的最后一项
+         参数: 无;
+         返回值: 被删除的那一项
+         原有的数组是否改变：改变了
+
+    -   unshift()       添加到数组的开启位置
+
+         含义: 向数组的开头添加
+         参数: 任何数据类型的参数 一到多个参数;
+         返回值: 新数组的长度
+         原有的数组是否改变：改变了
+
+    -   shift()         删除第一项
+
+         含义: 删除数组的开头的一项
+         参数: 无;
+         返回值: 被删除的那一项
+         原有的数组是否改变：改变了
+
+    -   reverse()       反向排列
+
+         含义: 把原数组倒过来
+         参数: 无;
+         返回值:倒过来的新数组
+         原有的数组是否改变：改变
+
+    -   sort(function(a,b){return a-b}) 可以从小到大或从大到小排列
+
+         含义: 把元素按照从小到大的顺序依次排列
+         参数: 无;
+         返回值:排序后的数组
+         原有的数组是否改变：改变
+
+         弊端: ary.sort() 不能排序10以上的数字
+
+    -   splice(n,m,x)   从索引n开始删除m个，用x的内容替换删除的内容
+
+         1.删除的作用
+         splice(n,m)
+         含义: 表示从索引n开始 删除m个
+         参数: n,m;
+         返回值:把删除的那些项 以一个新数组的 形式返回
+         原有的数组是否改变：改变了
+
+         注意: splice(n) 表示从索引n开始 一直删除到数组的末尾
+              splice() 原数组不发生改变 返回的结果为[]
+              splice(0) 表示把原数组清空 复制一份一模一样(克隆)的数组返回
+
+         2.替换的作用
+         splice(n,m,x)
+         含义: 表示从索引n开始 删除m个,而且把删除的那些项用x代替
+         参数: n,m,x;
+         返回值:把删除的那些项 以一个新数组的形式返回
+         原有的数组是否改变：改变了
+
+         3.增加的作用
+         splice(n,0,x)
+         含义: 表示从索引n开始  n之前增加一个x
+         参数: n,0,x;
+         返回值:[]
+         原有的数组是否改变：改变了
+
+    -   concat()        合并数组
+    -   slice(n,m)      从索引n截取到索引m(包前不包后)
+
+         含义: 表示从索引n开始 查找到索引m 但是不包括索引m
+         参数: n,m;
+         返回值:把查找的结果以一个新数组返回
+         原有的数组是否改变：不变
+
+         注意: 索引为负数  索引+length 转换为正数索引
+
+         数组的克隆
+         ary.slice()
+
+    -   join("")        数组的每一项靠一起返回一个字符串
+
+         含义: 把数组中的值 以我们传进去的符号进行拼接
+         参数: 符号;
+         返回值:我们最后拼接的结果
+         原有的数组是否改变：没变
+
+    -   toString()      转换成字符串
+
+         含义: 把数组中的值 转换为字符串
+         参数: 无;
+         返回值:以字符串的形式返回
+         原有的数组是否改变：没变
+
+    -   split()         字符串转换成数组
+
+    -   indexOf()       判断数组是否有这一项，
+                        若有则返回这一项的索引，没有则返回-1
+
+          含义: 第一次出现的索引值
+          参数: 我们要检测的那个值;
+          返回值:对应数的索引
+          原有的数组是否改变：没变
+
+          注意: 如果数组中没有某一项的值 我们用indexOf查找的结果为-1
+          所以我们这个原理 去检测判断存在或者不存在进行相对应的操作
+          if(ary.indexOf(i) > -1){
+              //存在
+          }else{
+              //不存在
+         }
+
+    -    lastIndexOf()
+
+           含义: 最后一次出现的索引值
+           参数: 我们要检测的那个值;
+           返回值:对应数的索引
+           原有的数组是否改变：没变
+
+7、数组中的算法(核心)
+冒泡排序
+插入排序
+快速排序
+
+8、类数组(类似于数组 但又不是数组)
+var li = document.getElementsByTagName('li');           ->对象
+有  li.length 这个属性
+因为不是数组  所以不能使用数组的方法     比如:push等方法
+
+如果想实现   把一个类数组  转换为数组   (想使用的方法)?
+[].slice.call(li)
+
+9、数组的迭代(遍历数组)
+forEach()
+map()
+some()
+filter()
+every()
+reduce()
+
+
+新知识
+
+1、定时器
+间隔定时器
+        setInterval()       开关间隔定时器
+        clearInterval()     关闭定时器
+炸弹定时器
+        setTimeout()        开启炸弹定时器
+        clearTimeout()      关闭定时器
+
+
+        clearTimeout()
+        clearInterval()
+        都可以关闭   你开启的任何定时器
+
+使用定时器的方法:
+    1、  var timer = null;
+    2、  clearInterval(timer);
+
+setInterval(callback,interval);
+setInterval(回填函数,执行时间,(默认单位毫秒));
+clearInterval(开启的定时器的名称)
+clearTimeout(开启的定时器的名称)
+
+
+在js中    直接操作css样式   都属于直接操作(查看/修改)行内样式
+字体图标
+1、阿里巴巴图标库           需要几个图标就 下载几个图标
+    icon    iconFont    icon-xxxxxxx
+2、Font Awesome图标库       直接打包引入font包 想使用那个图标 直接引入类名即可
+    fa      fa-2x       fa-xxxxxx-xx
+
+
+
+【函数】
+1、函数的数据类型   =>  function
+2、函数的定义/创建
+字面量创建
+-
+    function fn(){
+    }
+
+
+-
+    //把一个匿名函数 给了变量fn1
+    var fn1 = function(){
+    }
+
+    fn1();          //执行函数
+    fn;             //打印整个函数
+
+-
+    构造函数创建
+    var fn2 = new Function();
+
+
+
+function 函数名(){};    //声明函数
+函数名();               //执行函数
+函数名;                 //打印整个函数
+
+3、函数的作用:    封装
+在真实项目中  我们一般会把实现一个具体功能的代码封装在函数
+ - 1、如果当前这个功能需要在页面中执行多次，不封装成为函数,
+    每一次想实现这个功能,都需要重新把代码写一遍，浪费时间,
+    而封装在一个函数中,以后项实现多次这个功能,
+    我们就没有必要再重新写代码了,只需要把函数重新的执行即可,
+    提高了开发效率
+ - 2、封装在一个函数中,页面中就基本上很难出现重复一样的代码了。
+    减少了页面中代码的冘余度,提高了代码的重复利用率,`低耦合高内聚`
+
+    我们把这种编程思想称为【封装】 符合oop(面向对象)中类的作用
+    (面向对象中我们需要学习的编程思想 就是类的 继承 封装 多态)
+    【函数的核心工作原理】
+    函数的数据类型 - 也是引用数据类型
+
+    function fn (//一堆指令 total+100)
+    var obj = {nam//8}{
+    1、首先在全局作用中声明一个变量
+    2、浏览器检测到obj存储的是一个对象
+        1=>开辟一个新的堆内存空间
+        2=>把对象中的键值对 一对对 存储到堆内存中
+        浏览器为这片堆内存分配一个16进制的地址 比如：aaff000
+        3=>把分配好的地址 aafff000给了obj 此时obj指向这片堆内存
+
+    function fn (//一堆指令 total+100;){}
+    函数定义时的执行步骤:
+        1、首先在全局作用中声明一个变量fn
+        2、浏览器检测到fn存储的是一个引用数据类型
+            1=>开辟一个新的堆内存空间
+            2=>把函数执行体 当作一堆字符串 存储到堆内存中
+            浏览器为这片堆内存分配一个16进制的地址 比如：aaff111
+            3=>把分配好的地址 aafff111给了fn 此时fn指向这片堆内存
+
+函数创建的时候 工作原理    (3)
+注意：function中的代码当作一堆字符串存储进内容
+
+
+4、函数执行时的步骤：
+    函数的执行
+    函数名()
+    fn()    //函数的执行
+    fn      //打印输出整个函数
+
+    1、开辟一桟内存
+    2、形参赋值
+    3、变量提升
+    4、函数自上而下执行(把字符串先转换为表达式,然后一步步执行)
+    5、内存销毁/释放
+
+
+5、函数的参数
+    形参
+    实参
+    fun sum(a,b,c,d){ arg[1]=200; }
+    sum(1,2)
+    sum(1)
+    sum(1,2,3)
+    实参个数 = 形参个数     正常运行
+    实参个数 > 形参个数     正常运行
+    实参各户 < 形参个数     不传参的默认都是undefined
+    函数中的内置对象arguments
+    arguments - 是实参的集合
+    arguments映射机制
+    arguments - 类数组
+
+    es6 -  fun sum(...ary){ arr[0] }
+    ary就是一个数组
+    没有映射机制
+
+6、函数的返回值 用return
+> 返回值是函数提供的一个出口：
+    我们如果想在外面使用函数私有的一些信息，
+    那么就需要通过return，把这些信息返回出来供外面使用：
+
+    函数不写返回值         默认返回undefined
+    只写  return          默认返回undefined
+    return sum(变量);     返回sun(变量);
+    return 可以中断函数    return;return 1;    //1不会输出
+
+    return false; 阻止事件默认行为
+8、函数中的this
+    document.body.onclick = function(){
+        // this===document.body
+        }
+    1、谁执行这个事件   this就指向谁
+
+9、匿名函数
+    匿名函数就是没有名字的函数:  函数表达式   和   自执行函数
+    //=>把一个没有名字的函数(有名字也无所谓)作为值赋值给一个变量
+    或者一个元素的某个事件等： ·函数表达式·
+    oBox.onclick = function(){}
+
+
+    //=>创建函数和执行函数放在一起了,创建完成立马执行： ·自执行函数·
+    (function(n){})(10);
+
+    //=>以下都是自执行函数,符号只是控制语法规则
+    //自执行函数 语法
+    (function (){
+        console.log(1);
+    })();
+
+    ~function(){console.log(2);}();
+    !function(){console.log(3);}();
+    +function(){console.log(4);}();
+
+//  setInterval(callback,interval)
+    //指向同一个堆内存空间
+    function fn(){
+        console.log(1);
+    }
+    setInterval(fn,1);
+    setInterval(fn,1);
+
+    //指向两个堆内存空间
+    setInterval(function(){
+        console.log(1);
+    },1);
+    setInterval(function(){
+        console.log(1);
+    },1);
+
+

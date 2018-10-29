@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: red;
+            margin: 3px;
+        }
+        .box1{
+            height: 40px;
+        }
+        .box2{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<!--点击box1  让box2进行显示-->
+<!--js做动画的三步骤-->
+<!--1、找元素       (找人)-->
+<!--2、绑定事件     (拉手)-->
+<!--3、书写事件驱动 (之后做的事情)-->
+
+    <div class="box1" id="box1"></div>
+    <div class="box2" id="box2"></div>
+
+
+<script>
+    //1、找元素
+    //get Element By Id 通过id获取元素
+    //on click 点击的时候
+    //function(){} 表示一个函数 存放一堆指令
+    document.getElementById('box1').onclick = function(){
+        document.getElementById('box2').style.display = 'block';
+    };
+</script>
+</body>
+</html>

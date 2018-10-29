@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header{
+    width: 100%;
+    height: 90px;
+    background: #FFFFFF;
+}
+.header_in{
+    width: 1200px;
+    height: 90px;
+    margin: 0 auto;
+    position: relative;
+}
+.header_in_img{
+    width: 390px;
+    height: 58px;
+    position: absolute;
+    top: 15px;
+    left: 0px;
+}
+.header_in_img img{
+    width: 390px;
+    height: 58px;
+}
+.z{
+    width: 100%;
+    height: 515px;
+    padding-top: 10px;
+    background: #efefef;
+}
+.dp_fl{
+    width: 100%;
+    height: 515px;
+}
+.dp_fl_in{
+    width: 1200px;
+    height: 500px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    text-align: center;
+}
+.dp_fl_in_span{
+    font-size: 30px;
+    line-height: 200px;
+}
+.dp_fl_in_p{
+    width: 1200px;
+    height: 48px;
+    margin-bottom: 16px;
+}
+.dp_fl_in_p a{
+    width: 100px;
+    height: 30px;
+    border: 1px solid transparent;
+    color: #fff;
+    background-color: #343a40;
+    font-size: 1.25rem;
+    padding: .5rem 1rem;
+    display: inline-block;
+    border-radius: 5px;
+}
+.d{
+    width: 1200px;
+    height: 40px;
+    margin: 15px auto;
+    background: #FFFFFF;
+}
+.nav{
+    width: 1200px;
+    height: 40px;
+}
+.nav li{
+    height: 40px;
+    width: 448px;
+    margin: auto;
+}
+.nav p{
+    float: left;
+    height: 40px;
+}
+.nav a{
+    padding: 8px 16px 8px 16px;
+    line-height: 40px;
+}
+.nav li p:hover a{
+    color: #0056b3;
+}
+.x{
+    width: 1200px;
+    height: 48px;
+    margin: auto;
+}
+.text-center{
+    width: 1200px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 15px;
+}
+.site-footer-context-2-1{
+    width: 300px;
+    height: 20px;
+    margin: 0 auto;
+    padding: 5px 0;
+    text-align: center;
+}
+.site-footer-context-2-1 img{
+    width: 14px;
+    height: 16px;
+    float: left;
+    margin-left: 55px;
+}
+.site-footer-context-2-1 p{
+    font-size: 15px;
+    text-align: center;
+    height: 20px;
+    float: left;
+    display: inline-block;
+    margin-left: 5px;
+}
+.site-footer-context-2-1 p:hover{
+    color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        .tit{
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .tit h3{
+            margin-right: 20px;
+            float: left;
+            line-height: 60px;
+        }
+        .tit .now{
+            border-top: 1px solid red;
+        }
+        .cont ul{
+            width: 300px;
+            height: 200px;
+            border: 1px solid red;
+            font-size: 30px;
+            display: none;
+        }
+        .cont .show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="tab">
+    <div class="tit">
+        <h3 class="now">标题1</h3>
+        <h3>标题2</h3>
+        <h3>标题3</h3>
+    </div>
+    <div class="cont">
+        <ul class="show"><li>内容1</li></ul>
+        <ul><li>内容2</li></ul>
+        <ul><li>内容3</li></ul>
+    </div>
+</div>
+
+<script>
+    //找元素
+    var arrTit = document.querySelectorAll('.tit h3');
+    var arrCont = document.querySelectorAll('.cont ul');
+
+    for(var i=0;i<arrTit.length;i++){
+        arrTit[i].index = i;
+        arrTit[i].onclick = function(){
+            for(var j=0;j<arrCont.length;j++){
+                arrTit[j].setAttribute('class','');
+                arrCont[j].setAttribute('class','');
+            }
+            this.setAttribute('class','now');
+            arrCont[this.index].setAttribute('class','show');
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #box{
+            padding-top: 200px;
+            margin:auto;
+            width: 1200px;
+            font-size: 100px;
+            line-height: 165px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+
+        <img src="img/1.png" alt="">
+        <img src="img/7.png" alt="">
+        :
+        <img src="img/0.png" alt="">
+        <img src="img/3.png" alt="">
+        :
+        <img src="img/7.png" alt="">
+        <img src="img/7.png" alt="">
+
+    </div>
+
+<script>
+
+    date();
+    setInterval(function(){
+        date();
+    },1000);
+
+
+    function date(){
+        var _date = new Date();
+
+        var h = _date.getHours();
+        var m = _date.getMinutes();
+        var s = _date.getSeconds();
+
+        var str = num(h) + num(m) + num(s);
+        var arr = str.split("");
+
+        var aImg = document.querySelectorAll('img');
+
+
+        for (var i = 0; i < aImg.length; i++){
+            aImg[i].src = "img/"+arr[i]+".png";
+        }
+    }
+
+
+
+    function num(x){
+        if (x < 10){
+            return "0"+ x;
+        }else {
+            return "" + x;
+        }
+    }
+
+</script>
+</body>
+</html>

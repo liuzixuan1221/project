@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    li{
+        width: 100%;
+        height: 30px;
+        background: red;
+        margin:20px;
+        line-height: 30px;
+        text-align: center;
+    }
+</style>
+<body>
+    <ul id="ul">
+        <li id="li1"></li>
+    </ul>
+    <script>
+    
+    // var oul =document.getElementById('ul');     
+    //  for(var i=0;i<1000;i++){                             // 创建1000遍
+    //   var oLi=document.createElement('li');  //创建li
+    //   oLi.innerHTML=i;   //给li 添加内容
+    //   oul.appendChild(oLi)  //把里添加到ul里面去 
+    //  }
+
+
+
+
+
+
+
+
+
+
+  var oList =document.getElementById('ul');     
+  var oLi1=document.getElementById('li1');
+     for(var i=0;i<30;i++){                             // 创建1000遍
+      var oLi=document.createElement('li');  //创建li
+      oLi.innerHTML=i;   //给li 添加内容
+      if(oList.firstElementChild){
+        oList.insertBefore(oLi,oList.firstElementChild)
+    }else{
+        oList.insertBefore(oLi.oList.firstChild)
+    }
+     }
+ 
+   
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .x{
+         width: 1600px;
+         height: 480px;
+         background: url(2.jpg) no-repeat center;
+        
+        
+        /* 位移 */
+        /* transform:translate(500px,100px,30deg);
+        -ms-transform:translate(500px,100px);
+        -webkit-transform: translate(500px,100px);
+        -o-transform: translate(500px,100px);
+        -moz-transform: translate(500px,100px); */
+         /* 旋转 */
+        /* transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+        -webkit-transform: rotate(30deg);
+        -o-transform: rotate(30deg);
+        -moz-transform: rotate(30deg); */
+      /* 缩放 */
+      /* transform: scale(2,3);               <!-- 放大是整数 缩小写小数 -->
+      -ms-transform: scale(2,3);
+      -webkit-transform: scale(2,3);
+      -o-transform: scale(2,3);
+      -moz-transform: scale(2,3); */
+      /* 翻转 */
+    /* transform: skew(30deg,30deg);
+    -ms-transform: skew(30deg,30deg);
+    -webkit-transform: skew(30deg,30deg);
+    -o-transform: skew(30deg,30deg);
+    -moz-transform: skew(30deg,30deg); */
+
+
+    transition:30s all;
+     
+    }
+    .x:hover{
+        transform : skew(100deg,100deg) scale(0.5,0.5) rotate(100deg) translate(500px,300px) ;                             
+             transform: translate3d(500px,500px,500px) rotate3d(1,1,1,1090deg) scale3d(0.5,0.3,0.1)skew(1090deg,1090deg);     
+           
+    }
+
+    
+</style>
+<body>
+     <div class="x"></div>
+</body>
+</html>

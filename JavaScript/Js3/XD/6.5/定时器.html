@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    /* .x{
+        width: 200px;
+        height: 200px;
+        background-color: coral;
+    }
+    .d{
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+    }
+     */
+     img{
+            width: 100%;
+            display: none;
+        }
+        img.now{
+            display: block;
+        }
+        .banner{
+            position: relative;
+        }
+        ul{
+            list-style: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 10px;
+        }
+        li{
+            width: 10px;
+            height: 10px;
+            background: rgba(0,0,0,.5);
+            border-radius: 50%;
+            float: left;
+            margin-right: 10px;
+            transition: all 1s;
+
+
+        }
+        li.now{
+            background: white;
+        }
+        .arrow{
+            font-size: 40px;
+            text-align: center;
+            line-height: 60px;
+           color: rgba(255,255,255,.3);
+        }
+        .arrow div{
+            width: 40px;
+            height: 60px;
+            background: rgba(0,0,0,.5);
+            position: absolute;
+            /*top: 50%;*/
+            /*margin-top: -30px;*/
+            top:0;
+            bottom: 0;
+            margin: auto;
+        }
+        .arrow .arrowRight{
+            right: 0;
+        }
+
+
+    </style>
+</head>
+<body>
+        <!-- <input id="x" type="text" value="请输入验证码">
+        <input id="d" type="button" value="点击获取验证码"> -->
+<!-- <div class="x"></div>
+<div class="d"></div> -->
+<!-- <div class="w" id="w">5秒钟后跳转到百度官网 直接跳转请<a href="https://www.baidu.com/">点击这里</a></div> -->
+<div class="banner" id="banner">
+    <img class="now" src="img/1.jpg" alt="">
+    <img src="img/2.jpg" alt="">
+    <img src="img/3.jpg" alt="">
+    <img src="img/4.jpg" alt="">
+    <img src="img/5.jpg" alt="">
+    <img src="img/6.jpg" alt="">
+    <img src="img/7.jpg" alt="">
+    <img src="img/8.jpg" alt="">
+    <img src="img/9.jpg" alt="">
+    <img src="img/10.jpg" alt="">
+
+
+    <ul>
+        <li class="now"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="arrow">
+        <div class="arrowLeft" id="left">&lt;</div>
+        <div class="arrowRight" id="right">&gt;</div>
+    </div>
+</div>
+    <script>
+
+
+// var num=5;
+// var timer = null;
+// d.onclick=function(){
+//     //禁用按钮
+//     this.disabled = true;
+//     //设置按钮的值
+//     timer = setInterval(function(){
+//         d.value = num +"秒后可再次发送";
+//         num--;
+//         if(num<0){
+//             clearInterval(timer);
+//         d.value="点击发送验证码";
+//             d.disabled = false;
+//             num = 5;
+//         }
+//     },1000
+//     );
+// };
+
+
+
+
+
+//     var x=document.querySelectorAll('.x');
+//     var d=document.querySelectorAll('.d');
+// setTimeout(function(){
+//     x[0].style.display='none';
+//     d[0].style.display='none';
+// } ,1000);
+//    var num = 5;
+//    var timer = setInterval(function(){
+//        var w =document.getElementById("w");
+//        w.innerHTML = num+'钟秒后跳转到百度官网直接跳转请'
+//    })
+    
+    
+let arrImg= document.querySelectorAll('.banner img'),
+     arrLi = document.querySelectorAll('.banner li');
+     console.log(arrImg,arrLi );
+     let index = 0;
+     //圆点点击
+     for(let i=0; i<arrLi.length;i++){
+         arrLi[i].onclick=function(){
+            // alert(1);
+             for (let j=0;j<arrImg.length;j++){
+                 arrImg[j].className='';
+                 arrLi[j].className='';
+             }
+             arrImg[i].className='now';
+             this.className='now';
+             index=i;
+         }
+     }
+    //  点击右边按钮
+     right.onclick=function(){
+         index++;
+         if(index>arrLi.length-1){
+             index=0;
+         }
+         for (let j=0;j<arrImg.length;j++){
+                 arrImg[j].className='';
+                 arrLi[j].className='';
+             }
+   arrImg[index].className='now';
+   arrLi[index].className='now';
+     };
+     //点击左边按钮
+     left.onclick=function(){
+         index++;
+         if(index>arrLi.length-1){
+             index=0;
+         }
+         for (let j=0;j<arrImg.length;j++){
+                 arrImg[j].className='';
+                 arrLi[j].className='';
+             }
+   arrImg[index].className='now';
+   arrLi[index].className='now';
+     };
+     //自动轮播
+    timer = setInterval(rightClick,1000);
+    banner.onmouseover = function(){
+        clearInterval(timer);
+    };
+    banner.onmouseout = function(){
+        timer = setInterval(rightClick,1000);
+    };
+
+    function rightClick(){
+        index++;
+        if(index>arrLi.length-1){
+            index=0;
+        }
+        for (let j = 0; j < arrImg.length; j++) {
+            arrImg[j].className='';
+            arrLi[j].className ='';
+        }
+        arrImg[index].className='now';
+        arrLi[index].className ='now';
+    }
+
+    </script>
+</body>
+</html>

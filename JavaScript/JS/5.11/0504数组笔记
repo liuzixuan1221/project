@@ -1,0 +1,264 @@
+数组
+1，数组的数据类型->typeof（[]）--object
+2，数组的定义-----类比创建对象
+字面量创建数组                 字面量创建对象
+var arr=[//存储任何数据类型]    var obj={//键值对}
+构造函数创建数组                构造函数创建对象
+var obj=new Array()             var obj=new Object
+3,数组遍历（访问数组）首选for循环
+    数组的长度 arr.length
+    数组的索引 arr[index]             index索引
+    数组的最大索引值为arr.length-1
+    itar+   tab快捷键
+    数组遍历方式（3中）
+    for循环   遍历  //首选for(var i=0;i<arr.length;i++)
+    for in遍历for(var k in arr)(arr[k])
+    for of遍历    //es6语法
+    数组的迭代（遍历数组）
+    forEach（function(item,index){
+        //item  arr[i];//数组的值
+        //index i//数组的索引
+    }）
+
+    map（）
+    some（）
+    every（）
+    filter()
+    reduce（）
+4,数组的操作
+    数组的长度：.length
+    数组的索引：index
+    数组的内容：arr[index]
+    数组的最大索引：arr.length-1
+    arr.length可以之间赋值操作
+    清空数组的方式：
+        arr.length=0
+        直接赋值一个空数组arr=[];
+        利用索引值删除数组，arr.splice(0,arr.length) 从索引0开始，删除5个（arr.length==5）
+        delete arr[1] 删除指定索引值的内容但是不修改数组的长度empty
+        var arr=[1,2,3]   arr[88] //undefined
+
+5，数组的案例
+    1-100的数存储到数组中
+    求和
+
+6，数组常用的方法
+
+        1，方法的作用和意义
+        2，参数
+        3，返回值
+        4，原有的数组是否改变
+
+        push（）将内容添加到数组末尾的位置
+        pop（）删除最后一项
+        unshift（）添加到数组的开始位置（头部添加）
+        shift（）删除第一项
+        reverse（）反向排列
+        sort（function（a，b）{return a-b}）可以从小到大或从大到小排列
+        splice(n，m，x)从索引n开始删除m个，用x的内容替换删除的内容
+        concat（）合并数组
+
+        slice（n，m）从索引n截取到索引m（包前不包后） 四位验证码    arr.slice克隆数据
+        join（“&”）按照指定字符将数组拼接成字符串
+        join（）"5,6,3"拼接字符就是逗号
+        join（“”）数组的每一项靠一起返回一个字符串
+        toString（）转换成字符串
+        eval()把字符串转化为真正的表达式
+        eval（"1+2+3+4"）=>10
+
+        indexOf（）
+        lastIndexOf（）判断数组是否有这一项，若有则返回这一项的索引，没有则返回-1
+
+        function sum（）{eval（arr.join("+")）}
+
+
+/*  【1.数组的添加】 push  unshift
+    1.push
+    含义: 向数组的末尾添加
+    参数: 任何数据类型的参数 一到多个参数;
+    返回值: 新数组的长度
+    原有的数组是否改变：改变了
+
+    2.unshift
+     含义: 向数组的开头添加
+     参数: 任何数据类型的参数 一到多个参数;
+     返回值: 新数组的长度
+     原有的数组是否改变：改变了
+    */
+ //【2.数组的删除】 pop  shift
+    /*1.pop
+     含义: 删除数组的最后一项
+     参数: 无;
+     返回值: 被删除的那一项
+     原有的数组是否改变：改变了
+
+     2.shift
+     含义: 删除数组的开头的一项
+     参数: 无;
+     返回值: 被删除的那一项
+     原有的数组是否改变：改变了
+    * */
+  //【3.数组的修改】
+        /*1.删除的作用
+        * splice(n,m)
+         含义: 表示从索引n开始 删除m个
+         参数: n,m;
+         返回值:把删除的那些项 以一个新数组的 形式返回
+         原有的数组是否改变：改变了
+
+         注意: splice(n) 表示从索引n开始 一直删除到数组的末尾
+              spclice() 原数组不发生改变 返回的结果为[]
+              splice(0) 表示把原数组清空 复制一份一模一样(克隆)的数组返回
+
+         2.替换的作用
+         splice(n,m,x)
+         含义: 表示从索引n开始 删除m个,而且把删除的那些项用x代替
+         参数: n,m,x;
+         返回值:把删除的那些项 以一个新数组的形式返回
+         原有的数组是否改变：改变了
+
+         3.增加的作用
+         splice(n,0,x)
+         含义: 表示从索引n开始  n之前增加一个x
+         参数: n,0,x;
+         返回值:[]
+         原有的数组是否改变：改变了
+        */
+ //[4.数组的查询 数组的截取  含头不含尾]
+     /*slice(n,m)
+      含义: 表示从索引n开始 查找到索引m 但是不包括索引m
+      参数: n,m;
+      返回值:把查找的结果以一个新数组返回
+      原有的数组是否改变：不变
+
+      注意: 索引为负数  索引+length 转换为正数索引
+
+      数组的克隆
+      ary.slice()
+     * */
+//[5.数组拼接]
+    /*
+    concat:
+    含义: 表示把当前数组和新一个新数组进行拼接
+    参数: 我们要拼接的内容;
+    返回值:最后拼接的结果 以一个新的数组返回
+    原有的数组是否改变：没变
+    * */
+//[6.数组转换为字符串]
+    /*
+     1.toString();
+     含义: 把数组中的值 转换为字符串
+     参数: 无;
+     返回值:以字符串的形式返回
+     原有的数组是否改变：没变
+
+     2.join();
+     含义: 把数组中的值 以我们传进去的符号进行拼接
+     参数: 符号;
+     返回值:我们最后拼接的结果
+     原有的数组是否改变：没变
+
+    * */
+
+//[8.验证数组中是否包含某一项]
+    /* 1.indexOf
+     含义: 第一次出现的索引值
+     参数: 我们要检测的那个值;
+     返回值:对应数的索引
+     原有的数组是否改变：没变
+
+    注意: 如果数组中没有某一项的值 我们用indexOf查找的结果为-1
+    所以我们这个原理 去检测判断存在或者不存在进行相对应的操作
+    if(ary.indexOf(i) > -1){
+        //存在
+    }else{
+        //不存在
+    }
+
+     2.lastIndexOf
+     含义: 最后一次出现的索引值
+     参数: 我们要检测的那个值;
+     返回值:对应数的索引
+     原有的数组是否改变：没变
+    * */
+7，******数组去重（5种）必须掌握*****
+var arr=[1,2,3,4,5,5,5,5]//[1,2,3,4,5]
+    1、双for循环一层找原数组的每一个值
+    2、indexOf
+    3、数组结合对象(性能比较高)    [] {}        //优化为只用一个空对象
+    4、es6       new Set
+        Array.form（new Set（arr））
+        （...new Set（arr））
+    5、扩展到原型上面   ——代表所有实例都可以使用
+        arr.unique（）
+8， 数组中的算法
+    冒泡排序   原理：每循环一轮 选一个最大的数 放到最后    最大的数：两两比较
+    插入排序    原理：每循环一轮 都插入一个数  并与已经排好的其他的数进行比较
+    快速排序    arr.sort(function（a，b）{return a-b});//运用已经封装好的函数进行封装   //二分法
+9，类数组（类似于数组，但又不是数组   是一个对象，有length属性，但没有数组的方法）
+var li = document。getElementByTagName（"li"）;————》对象
+li.length这个属性
+因为不是数组  所以不能使用数组的方法 比如：push等方法
+
+如果想实现   把一个类数组  转换成数组（想使用的方法）？
+[].slice.call(li);
+
+10,数组的迭代（遍历数组）
+forEach（）
+map（）
+some（）
+every（）
+filter()
+reduce（）
+   》 二级联动菜单 var arr = [1,2,3,[2,4]];
+   》 随机数
+        //0-1(包含0不包含1)
+            console.log(Math.random());
+            console.log(Math.random()*100);
+            //随机数 1-100
+            console.log(parseInt(Math.ceil(Math.random()*99))+1);
+
+            var arr = [10];
+            console.log(parseInt(Math.ceil(Math.random()*(100-arr.length)))+arr.length);
+
+
+            //向上取整
+            console.log(Math.ceil(0.1));//1
+            //向下取整
+            console.log(Math.floor(0.9));//0
+            //四舍五入
+            console.log(Math.round(0.1));//0
+            console.log(Math.round(0.5));//1
+            console.log(Math.round(-0.5));//0
+            console.log(Math.round(-0.9));//-1
+
+    》点名表---定时器
+    随机点名表
+11定时器
+    间隔定时器
+            setInterval(回调函数，时间)   开启定时器
+            clearInterval() 关闭定时器
+
+     炸弹定时器
+            setTimeout()
+            clearTimeout()
+    都可以关闭 你开启的任何定时器
+     使用定时器的方法：
+     1 var timer = null；
+     2 clearInterval（timer）；
+     3 timer = setInterval（callback,interval）
+    timer 记录的是定时器开启的次数
+     setInterval（callback,interval）
+     setTimerout(回调函数，执行时间)
+     clearInterval（开启定时器的名称）
+     clearTimeout（开启定时器的名称）
+
+     在js中 直接操作css样式 都属于直接操作（查看 /修改/设置）行内样式
+
+     图标库
+ 1、   Font Awesome 直接打包引入font包 想使用那个图标 直接引用类名
+        fa fa-2x fa-addderss-book
+     http://fontawesome.dashgame.com
+ 2、  阿里巴巴图标库  需要几个下载几个使用
+    icon iconFont icon-xingxing
+     http://www.iconfont.cn/help/detail?spm=a313x.7781069.1998910419.15&helptype=code

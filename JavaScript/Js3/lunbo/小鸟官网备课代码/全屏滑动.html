@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body,#box{
+            width: 100%;
+            height: 100%;
+            background: #fff;
+        }
+        .boxT{
+            width: 100%;
+            height: 80px;
+            background: #0d74ac;
+        }
+        .boxT span{
+            width: 100px;
+            height: 78px;
+            border: 1px solid #fff;
+            float: left;
+            margin-left: 50px;
+            color: #fff;
+            text-align: center;
+            line-height: 80px;
+        }
+        .boxB{
+            width: 100%;
+            height: calc(100% - 80px);
+            background: #000;
+            position: relative;
+            overflow: hidden;
+        }
+        #lunbo{
+            width: 100%;
+            height: calc((100% - 80px)*5);
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #lunbo div{
+            width: 100%;
+            height: calc(100% / 5 + 80px);
+            font-size: 100px;
+            text-align: center;
+        }
+        .div1{background: #f00;}
+        .div2{background: #0f0;}
+        .div3{background: #00f;}
+        .div4{background: #ff0;}
+        .div5{background: #f0f;}
+
+        button {
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-size: 40px;
+            color: #fff;
+            position: absolute;
+            left: 50%;
+            margin-left: -50px;
+            background: #000;
+            opacity: 0.5;
+        }
+        .btnT{
+            top: 0;
+        }
+        .btnB{
+            bottom: 0;
+        }
+        #mask{
+            width: 100%;
+            height: 100%;
+            background: #00f;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+    </style>
+
+    <script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+
+    <div id="box">
+        <div class="boxT">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+        </div>
+        <div class="boxB">                           <!--100% -80px-->
+            <div id="lunbo">                         <!--100%-80px * 5-->
+                <div class="div1">1</div>             <!--100%/5+80-->
+                <div class="div2">2</div>
+                <div class="div3">3</div>
+                <div class="div4">4</div>
+                <div class="div5">5</div>
+            </div>
+            <button class="btnT"> 上 </button>
+            <button class="btnB"> 下 </button>
+
+        </div>
+    </div>
+    <div id="mask"></div>
+
+
+
+    <script>
+        $(function(){
+            var index =0;
+            var th = $(window).height()-80
+
+            //  ******************** 判断滚轮滚动方向 *****************
+            var scrollFunc = function (e) {
+                e = e || window.event;
+                if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件
+                    if (e.wheelDelta > 0) { //当滑轮向上滚动时
+                        fn2()
+                    }
+                    if (e.wheelDelta < 0) { //当滑轮向下滚动时
+                        fn1()
+                    }
+                } else if (e.detail) {  //Firefox滑轮事件
+                    if (e.detail> 0) { //当滑轮向上滚动时
+                        alert("滑轮向上滚动");
+                    }
+                    if (e.detail< 0) { //当滑轮向下滚动时
+                        alert("滑轮向下滚动");
+                    }
+                }
+            }
+            //给页面绑定滑轮滚动事件
+            if (document.addEventListener) {//firefox
+                document.addEventListener('DOMMouseScroll', scrollFunc, false);
+            }
+            //滚动滑轮触发scrollFunc方法  //ie 谷歌
+            window.onmousewheel = document.onmousewheel = scrollFunc;
+
+            //  ******************** end *****************
+
+
+
+
+            function fn1(){
+                if ($("#lunbo").is(':animated')) {
+                    return;
+                }
+                index++;
+                if(index>4){
+                    index=4
+                }
+                $("#lunbo").animate({"top":-(index*th)},1000)
+            }
+
+
+            function fn2(){
+
+                if ($("#lunbo").is(':animated')) {
+                    return;
+                }
+                index--;
+                if(index<0){
+                    index=0
+                }
+                $("#lunbo").animate({"top":-(index*th)},1000)
+            }
+
+            $(".boxT>span").click(function(){
+                index =$(this).index()
+                $("#lunbo").animate({"top":-(index*th)},1000)
+
+            })
+
+            
+
+            setTimeout(function(){
+                    $("#mask").slideUp(1000)
+            },5000)
+
+
+        })
+    </script>
+
+
+
+
+
+<!--<script>
+    $(function() {
+        var index = 0;
+        var th = $(window).height() - 80
+        var scrollFunc = function (e) {
+            e = e || window.event;
+            if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件
+                if (e.wheelDelta > 0) { //当滑轮向上滚动时
+//                    fn2()
+                    alert("当滑轮向上滚动时")
+                }
+                if (e.wheelDelta < 0) { //当滑轮向下滚动时
+//                    fn1()
+                    alert("当滑轮向下滚动时")
+                }
+            } else if (e.detail) {  //Firefox滑轮事件
+                if (e.detail > 0) { //当滑轮向上滚动时
+                    alert("滑轮向上滚动");
+                }
+                if (e.detail < 0) { //当滑轮向下滚动时
+                    alert("滑轮向下滚动");
+                }
+            }
+        }
+        //给页面绑定滑轮滚动事件
+        if (document.addEventListener) {//firefox
+            document.addEventListener('DOMMouseScroll', scrollFunc, false);
+        }
+        //滚动滑轮触发scrollFunc方法  //ie 谷歌
+        window.onmousewheel = document.onmousewheel = scrollFunc;
+
+
+    $(".btnT").click(function(){
+
+            if ($("#lunbo").is(':animated')) {
+                return;
+            }
+            index++;
+            if (index > 4) {
+                index = 4
+            }
+
+
+            var th = $(window).height() - 80
+//            alert(th)
+
+            $("#lunbo").animate({"top": -(index * th)}, 1000)
+
+        })
+
+
+        $(".btnB").click(function(){
+
+            if ($("#lunbo").is(':animated')) {
+                return;
+            }
+        index&#45;&#45;;
+        if (index < 0) {
+            index = 0
+        }
+
+
+//            alert(th)
+
+        $("#lunbo").animate({"top": -(index * th)}, 1000)
+
+        })
+
+        $(".boxT>span").click(function(){
+            index =$(this).index()
+            $("#lunbo").animate({"top":-(index*th)},1000)
+
+        })
+
+
+
+
+
+
+    })
+
+
+</script>-->
+
+
+
+
+
+
+
+</body>
+</html>

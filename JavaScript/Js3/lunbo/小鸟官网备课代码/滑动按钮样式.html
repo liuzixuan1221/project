@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+    <meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+    <title>百度地图API自定义地图</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .box{
+            width: 300px;
+            height: 30px;
+            margin: 300px auto;
+        }
+        .box div{
+            width: 130px;
+            height: 30px;
+            border-radius: 30px;
+            overflow: hidden;
+        }
+        .div_L{
+            background: #ccc;
+            float: left;
+        }
+        .div_R{
+            background: #ccc;
+            float: right;
+        }
+        #l_div{
+            background: #00f;
+            float: right;
+            
+        }
+        #r_div{
+            background: #00f;
+            width: 0px;
+            float: left;
+        }
+
+
+    </style>
+    <script src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<!--<div class="box">
+    <div class="div_L div_g">
+        <div id="l_div"></div>
+    </div>
+    <div class="div_R div_g">
+        <div id="r_div"></div>
+    </div>
+</div>
+<script>
+    $(function(){
+        $(".div_g").on("click",function(){
+            $(this).find("div").animate({"width":"130px"},500)
+            $(this).siblings().find("div").animate({"width":"0px"},200)
+
+        })
+    })
+</script>-->
+
+<div class="box">
+    <div class="div_L">
+        <div id="l_div"></div>
+    </div>
+    <div class="div_R">
+        <div id="r_div"></div>
+    </div>
+</div>
+
+
+
+
+<script>
+//    $(".div_R").on("click",function(){
+//        $("#r_div").animate({"width":"130px"},500)
+//        $("#l_div").animate({"width":"0px"},200)
+//    })
+//    $(".div_L").on("click",function(){
+//        $("#l_div").animate({"width":"130px"},500)
+//        $("#r_div").animate({"width":"0px"},200)
+//    })
+
+
+    $(".box>div").on("click",function(){
+        $(this).find("div").animate({"width":"130px"},500)
+        $(this).siblings().find("div").animate({"width":"0px"},200)
+    })
+
+
+
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //6、数组去重****重要 1,2,3,4
+    var arr=[1,2,3,4,1,2,3,4,1,2]
+    var newArr=[];
+    //1、双层for循环  ->解决数组去重
+    //1,2,3,4    1
+    for(var i=0;i<arr.length;i++){
+        var flag=true;
+        for(var j=0;j<newArr.length;j++){
+            if(newArr[j]===arr[i]){
+                flag=false;
+                break;
+            }
+        }
+        if(flag){newArr.push(arr[i]);}
+    }
+    //2、indexOf -> 数组去重
+    for(var i=0;i<arr.length;i++){
+        if(newArr.indexOf(arr[i])===-1){
+            newArr.push(arr[i]);
+        }
+    }
+
+    //3、数组结合对象  (崔磊)  - 高性能
+    var arr=[1,2,3,4,4,5,6,7,84,3,3];
+    var obj={};
+    var newArr=[];
+    for (var i = 0; i < arr.length; i++) {
+        if (!obj[arr[i]]) {
+            newArr.push(arr[i]);
+            obj[arr[i]]=1;
+        }
+    }
+    console.log(newArr);
+    //4、ES6新去重方式
+    /*一：*/ let resultarr=[...new Set([1,2,3,4,4,5,6,7,84,3,3])];
+    /*二：*/ var a=Array.from(new Set([1,2,3,4,4,5,6,7,84,3,3]));
+
+    //5、原型上扩展自己的unique(去重方法)
+    Array.prototype.unique = function() {
+        var n = {}, r = [];
+        for (var i = 0; i < this.length; i++) {
+            if (!n[this[i]]) {
+                n[this[i]] = true;
+                r.push(this[i]);
+            }
+        }
+        return r;
+    };
+    var a = [1,2,3,4,4,4,5];
+    var b = a.unique();
+    console.log(b);
+
+</script>
+</body>
+</html>

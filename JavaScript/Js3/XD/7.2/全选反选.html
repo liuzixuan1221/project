@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="button" value="全选" id="a"><br>
+<input type="button" value="不选" id="b"><br>
+<input type="button" value="反选" id="c"><br>
+
+<div id="div">
+        <input type="checkbox"><br>
+        <input type="checkbox"><br>
+        <input type="checkbox"><br>
+        <input type="checkbox"><br>
+        <input type="checkbox"><br>
+        <input type="checkbox"><br>
+        <input type="checkbox"><br>     
+</div>
+
+    <script>
+     var a = document.getElementById('a');
+     var b = document.getElementById('b');
+     var c = document.getElementById('c');
+     var div = document.getElementById('div');
+     var aInput = div.getElementsByTagName('input');
+
+     a.onclick=function(){
+         for(var i=0;i<aInput.length;i++){
+                aInput[i].checked=true;
+         }
+     }
+     b.onclick=function(){
+         for(var i=0;i<aInput.length;i++){
+                aInput[i].checked=false;
+         }
+     }
+     c.onclick=function(){
+         for(var i=0;i<aInput.length;i++){
+                if(aInput[i].checked ==false){
+                    aInput[i].checked =true;
+                }else{
+                    aInput[i].checked = false;
+                } 
+     }
+     }
+                      
+    </script>
+</body>
+</html>

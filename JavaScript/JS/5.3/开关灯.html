@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .body1{
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+<!--<input type="button" value="关灯">-->
+<button>关灯</button><br />
+
+<input type="button" value="禁用">
+<input type="text"><br />
+
+
+京东：<input type="text" value="我是获取焦点"><br />
+<script>
+    var btn = document.getElementsByTagName('button')[0];
+    var body = document.body;
+    btn.onclick = function () {
+        if(btn.innerText == '开灯'){
+            btn.innerText = '关灯';
+            body.className = '';
+        }else if(btn.innerText =='关灯'){
+            btn.innerText = '开灯';
+            body.className = 'body1';
+        }
+    }
+
+    var inp = document.getElementsByTagName('input');
+    inp[0].onclick = function () {
+        if(inp[0].value =='解禁'){
+            inp[0].value = '禁用';
+            inp[1].disabled = false;
+        }else {
+            inp[0].value = '解禁';
+            inp[1].disabled = true;
+        }
+    }
+
+    inp[2].onfocus = function () {
+        if(inp[2].value == '我是获取焦点'){
+            inp[2].value = '';
+        }
+    }
+    inp[2].onblur = function () {
+            inp[2].value = '我是获取焦点';
+    }
+</script>
+</body>
+</html>

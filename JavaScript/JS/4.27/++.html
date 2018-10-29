@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var i=2;
+    //  0 + 2 + 2 = 4
+    //  i++ + ++i + i++
+    //  i=1    2    3
+//    console.log(i++ + ++i + i++);
+    //  2 - 4 + 2 + 4 - 6 = -2
+    //  i++ - ++i +2 + i++ - ++i
+//    console.log(i++ - ++i +2 + i++ - ++i);
+    //  i=3   4    5    6
+    //  i++ * ++i
+    console.log(i++ + --i + 5 + i++ + --i + 2 + ++i + i--);
+
+//    var i=100;
+//    i++;
+//    j=i++;
+//    y=++j;
+//    alert(j);
+//    alert(y);
+//    alert(i);
+
+    var a = 1,
+        a = ++a + a-- + a++;
+    alert(a);
+    var a = 1; var b = ++a + ++a; console.log(b);
+    var a = 1; var b = a++ + ++a; console.log(b);
+    var a = 1; var b = a++ + a++; console.log(b);
+    var a = 1; var b = ++a + a++; console.log(b);
+
+</script>
+</body>
+</html>

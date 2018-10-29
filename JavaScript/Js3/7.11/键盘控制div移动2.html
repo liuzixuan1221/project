@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box {
+            background: deepskyblue;
+            width: 1000px;
+            height: 800px;
+            position: relative;
+            left: 50%;
+            top: 50%;
+            margin-left: -500px;
+        }
+
+        #div1 {
+            width: 100px;
+            height: 100px;
+            background: rebeccapurple;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="div1"></div>
+</div>
+
+<script>
+    var oBox = document.getElementById('box');
+    var oDiv = document.getElementById('div1');
+    document.onkeydown = function (ev) {
+        var oEvent = ev || event;
+
+        if (oEvent.keyCode == 37) {
+            oDiv.style.left = oDiv.offsetLeft - 5 + 'px';
+            if (oDiv.offsetLeft < 0) {
+                oDiv.style.left = 0;
+            }
+        }
+        else if (oEvent.keyCode == 38) {
+            oDiv.style.top = oDiv.offsetTop - 5 + 'px';
+            if (oDiv.offsetTop < 0) {
+                oDiv.style.top = 0;
+            }
+        }
+        if (oEvent.keyCode == 39) {
+            oDiv.style.left = oDiv.offsetLeft + 5 + 'px';
+            if (oDiv.offsetLeft > oBox.offsetWidth - oDiv.offsetWidth) {
+                oDiv.style.left = oBox.offsetWidth - oDiv.offsetWidth + 'px';
+            }
+        }
+        if (oEvent.keyCode == 40) {
+            oDiv.style.top = oDiv.offsetTop + 5 + 'px';
+            if (oDiv.offsetTop > oBox.offsetHeight - oDiv.offsetHeight) {
+                oDiv.style.top = oBox.offsetHeight - oDiv.offsetHeight + 'px';
+            }
+        }
+    }
+</script>
+</body>
+</html>

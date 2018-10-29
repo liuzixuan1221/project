@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-1.8.3/jquery.min.js"></script>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box{
+            width: 600px;
+            height: auto;
+            border:1px solid #ccc;
+            margin: 100px auto 0;
+        }
+        .box .title{
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        a{
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <!--<div class="title">-->
+        <!--<h1>dlasdhalsd</h1>-->
+        <!--<p>djlkasjdlkas</p>-->
+    <!--</div>-->
+</div>
+<a href="javascript:void(0);">加载更多</a>
+<script>
+    function get_data(star,num){
+        $.get('demo.json',function(data){
+            data = eval(data);
+            data = data["list"];
+            var l = data.length;
+            if((star+num) >= l){
+                num = l - star;
+                b = 0;
+            }
+            for(var i = star;i<(star+num);i++){
+                var content = "";
+                content = content + "<div class='title'><h1>"+ data[i].h1 +"</h1><p>"+ data[i].p +"</p></div>";
+                $(".box").append(content);
+            }
+        })
+        return star+num;
+    }
+    var star = 0;
+    var num = 5;
+    var b = 1;
+    star = get_data(star,num);
+    $("a").click(function(){
+        if(b == 0){
+            alert("none");
+        }else{
+            star = get_data(star,num);
+        }
+    })
+    //27行
+</script>
+</body>
+</html>

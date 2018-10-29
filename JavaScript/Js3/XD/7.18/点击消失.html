@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        width: 100px;
+        height: 50px;
+    }
+    div{
+        width: 500px;
+        height: 500px;
+        background: chartreuse;
+        display: none;
+    }
+</style>  
+<body>
+    <button id="but">按钮</button>
+    <div id="div"></div>
+
+<script>
+
+
+window.onload=function(){
+    var oBut=document.getElementById('but');
+var oDiv=document.getElementById('div');
+ 
+ oBut.onclick=function(ev){
+     oDiv.style.display='block';
+     //阻止冒泡事件
+     var oEvent = event||ev;
+     try{
+         oEvent.stopPropagation();   //不兼容低版本浏览器
+     }catch(e){
+         oEvent.cancelBubble=true;  //  兼容低版本
+     }
+ }
+
+
+document.onclick=function(){
+    oDiv.style.display='none';
+}
+}
+
+ //面试题  事件冒泡与事件捕获的区别
+ //事件冒泡是从里到外   就是从最具体的。到最不具体的
+ //事件捕获是从外到里   就是从最不具体的到最具体的
+
+</script>
+</body>
+</html>

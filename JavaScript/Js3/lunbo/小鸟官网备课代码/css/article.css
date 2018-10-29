@@ -1,0 +1,101 @@
+/*主体*/
+.main-box .box{
+    width: 780px;
+    height: 1788px;
+    background: white;
+    overflow: hidden;
+    padding: 70px 160px 220px;
+}
+.main-box{
+    background: #f1f2f6;
+    height: auto;
+    width: 100%;
+}
+.main-box .box >h1{
+    font-size: 54px;
+    height: 60px;
+    line-height: 60px;
+    font-weight: bold;
+    text-align: center;
+    color:#311759;
+    margin-bottom: 5px;
+}
+.main-box .box .subhead{
+    font-size: 18px;
+    letter-spacing: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color:#311759;
+}
+.main-box .box >img{
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 60px;
+}
+.main-box .list h2{
+    color: #311759;
+    font-size: 30px;
+    font-weight: bold;
+    height: 60px;
+    background: url("../images/pen_line_long.png") no-repeat -320px 58px;
+}
+.main-box .list{
+    height: 60px;
+    width:100%;
+    position: relative;
+}
+.main-box .list img:nth-child(2){
+    margin-top: 19px;
+}
+.main-box .list span{
+    width: 61px;
+    height: 58px;
+    background: url(../images/pen_article.png) no-repeat;
+    position: absolute;
+    right: 0px;
+    top: 7px;
+    cursor: pointer;
+}
+.main-box .list span:hover{
+    background-position: -61px 0;
+}
+.main-box .author-info{
+    color: #6b6a6f;
+    padding-top: 15px;
+    margin-bottom: 60px;
+    font-family: Arial, Helvetica, sans-serif
+}
+.main-box .like_btn_wrap {
+    margin: 0 auto;
+    margin-top: 80px;
+    width: 73px;
+    height: 73px;
+    position: relative;
+}
+.main-box .like_btn_wrap .like_btn {
+    width: 73px;
+    height: 73px;
+    margin: 0 auto;
+    background: url(../images/article_iflike.png) no-repeat;
+    cursor: pointer;
+}
+.main-box .like_btn_wrap .like_btn:hover{
+    animation:su-pudding 1s linear;
+}
+.main-box .like_btn_wrap .like_btn:hover +.like_nomber{
+    width: 135px;
+    transition: all 0.3s ease;
+}
+.main-box .like_btn_wrap .like_nomber {
+    width: 0;
+    height: 35px;
+    position: absolute;
+    z-index: 10;
+    top:20px;
+    left: 83px;
+    background: url(../images/article_iflike_nomberbg.png) no-repeat;
+    line-height: 35px;
+    color: #fff;
+    text-align: center;
+}

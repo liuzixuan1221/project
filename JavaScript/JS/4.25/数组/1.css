@@ -1,0 +1,10 @@
+body{
+    background: cornflowerblue;
+}
+.box{
+    width: 1000px;
+    height: 800px;
+    background: yellowgreen;
+    border: 2px solid #ccc;
+    margin: auto;
+}

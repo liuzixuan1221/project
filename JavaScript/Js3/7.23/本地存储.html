@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">存</button>
+    <button id="btn2">取</button>
+    <button id="btn3">删</button>
+    <button id="btn4">删全部</button>
+
+<script>
+    window.onload = function(){
+        var oBtn1 = document.getElementById('btn1');
+        var oBtn2 = document.getElementById('btn2');
+        var oBtn3 = document.getElementById('btn3');
+        var oBtn4 = document.getElementById('btn4');
+
+
+
+
+        oBtn1.onclick = function(){
+            localStorage.setItem("姓名","小明");
+            localStorage.setItem("性别","男");
+            localStorage.setItem("年龄",18);
+        };
+
+        oBtn2.onclick = function(){
+            alert(localStorage.getItem("姓名"));
+            alert(localStorage.getItem("性别"));
+            alert(localStorage.getItem("年龄"));
+        };
+
+        oBtn3.onclick = function(){
+            localStorage.removeItem("姓名");
+//            localStorage.removeItem("性别");
+//            localStorage.removeItem("年龄");
+        };
+
+        oBtn4.onclick = function(){
+            localStorage.clear("");
+        }
+
+
+
+        /*
+        *   共同点：都是用来存储数据的
+        *
+        *   区别：
+        *   localStorage    本地存储    只要不手动删除它都永久存在   存储数据大
+        *
+        *   sessionStorage  本地存储    只要关闭页面 就会清空
+        *
+        *   cookie          也是存储    可以设定过期时间    存储数据小
+        *
+        * */
+    }
+</script>
+</body>
+</html>

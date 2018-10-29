@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+     #div1{
+         width: 100%;
+         height: auto;
+         position: relative;
+     }
+   #div1>div{
+       width: 300px;
+       height: 300px;
+       position: absolute;
+       top: 30px;
+       left: 0;
+       background: #0C8ED9;
+       display: none;
+   }
+        input.now{
+            background: #86ce2f;
+            border: none;
+        }
+      #div1>div.now{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+<div id="div1">
+    <input type="button" value="aaa" class="now">
+    <input type="button" value="bbb">
+    <input type="button" value="ccc">
+
+
+    <div id="box1" class="now">aaa</div>
+    <div id="box2">bbb</div>
+    <div id="box3">ccc</div>
+</div>
+<script>
+    window.onload=function(){
+
+
+    var aInput = document.getElementsByTagName('input');
+    var oDiv1 = document.getElementById('div1');
+    var aBox = oDiv1.getElementsByTagName('div');
+
+    console.log(aInput);
+    console.log(aBox);
+
+    for(var i = 0;i<aInput.length;i++){
+        aInput[i].index=i;
+        aInput[i].onclick= function(){
+                    for(var i = 0;i<aBox.length;i++){
+                        aInput[i].classList.remove('now');
+                        aBox[i].classList.remove('now');
+                    }
+                    aInput[this.index].classList.add('now');
+                    aBox[this.index].classList.add('now');
+                }
+
+    }
+
+
+
+
+    }
+
+
+
+
+
+    //无函数嵌套
+    //对应关系
+//    1.window.onload   ---->    构造函数
+//
+//
+//    2.初始化整个程序    ---->     初始化整个对象
+
+
+//      变量      ----》  属性
+//      函数      ----》  方法
+
+
+
+</script>
+</body>
+</html>

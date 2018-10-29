@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div id="box" style="height: 2000px;background: #f00;">
+
+</div>
+
+<script type="text/javascript">
+    var bodyBox = document.getElementById("box")
+
+
+    window.onscroll= function(){
+        var wholeHeight=bodyBox.scrollHeight;
+        var scrollTop=document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        var divHeight=document.documentElement.clientHeight;
+
+        console.log(wholeHeight);
+        console.log(scrollTop);
+        console.log(divHeight);
+
+
+        if(divHeight+scrollTop>=wholeHeight){
+            console.log(("已经到达底部"));
+        }
+
+        if(scrollTop==0){
+            console.log(("已经到达顶部"));
+        }
+    }
+
+
+</script>
+
+</body>
+</html>

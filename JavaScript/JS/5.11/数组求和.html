@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //数组求和
+    var arr = [a,2,[1,2,3,[1,2,3],[1,2,[1,2,3,[1,2,3,[1,2,3],[1,2,3]]],3]],3];
+    function sum(arr){
+        var s = 0;
+        for(var i=0;i<arr.length;i++){
+            if(Array.isArray(arr[i])){
+                s+=sum(arr[i])
+            }else{
+                s+=arr[i];
+            }
+        }
+        return s;
+    }
+
+    console.log(sum(arr));
+</script>
+</body>
+</html>

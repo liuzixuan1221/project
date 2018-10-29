@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var a1=1;
+        var a2=12.34;
+        var a3=-1234;
+        console.log(typeof (a1));
+
+        console.log(0.1+0.2);           //0.30000000000000004
+        console.log(0.07*100);          //7.000000000000001
+        console.log(0.1+0.2 == 0.3);    //false
+
+        console.log(1/0);               //Infinity  无穷大
+        console.log(-1/0);              //-Infinity 无穷小
+        console.log("aaa"/1);           //NaN       非数
+
+        //      非数
+        //      NaN = not a number
+        //      isNaN() 检测一个数是否是一个非数
+        //      浏览器检测的这个值   会自动转换为数据类型
+        //      是一个非数      真   不是一个数字
+        //      不是一个非数    假   是一个数字
+
+        console.log(isNaN(111));                //fales
+        console.log(isNaN("aaa"/111));          //true  NaN
+        console.log(isNaN("aaa"));              //true  NaN
+        console.log(isNaN("123"));              //fales 123
+        console.log(isNaN(NaN));                //true
+        console.log(isNaN(undefined));          //true  NaN
+        console.log(isNaN(null));               //fales 0
+
+        console.log(isNaN("aaa"/111));          //true
+        console.log(isNaN("aaa"));              //true
+        console.log(isNaN(NaN));                //true
+        console.log(isNaN(undefined));          //true
+        console.log(isNaN("123"+"abc"));        //true
+        console.log(isNaN(111));                //fales
+        console.log(isNaN("123"));              //fales
+        console.log(isNaN("123"+111));          //fales
+        console.log(isNaN(null+10));            //fales
+
+    //    字符串转换为数字
+        console.log(Number(''));        //0
+        console.log(Number('13'));      //13
+        console.log(Number('13px'));    //NaN
+        console.log(Number('13.5'));    //13.5
+
+    //    布尔类型boolean转换为数字
+        console.log(Number(true));      //1
+        console.log(Number(false));     //0
+
+    //    undefined/null转换为数字
+        console.log(Number(undefined)); //NaN
+        console.log(Number(null));      //0
+
+    //  [对象]    {}  {name:1}    [12,23]  []
+        console.log(({}).toString());                   // [object Object]
+        console.log(({name:1}).toString());             // [object Object]
+        console.log([12,23].toString());                // 12,23
+        console.log([12].toString());                   // 12
+        console.log([].toString());
+        console.log(/ /.toString());                    // / /
+        console.log(/^$/.toString());                   // /^$/
+
+//      Number强制转换为数字
+        console.log(Number(({}).toString()));           //NaN
+        console.log(Number(({name:1}).toString()));     //NaN
+        console.log(Number([12,23].toString()));        //NaN
+        console.log(Number([12].toString()));           //12
+        console.log(Number([].toString()));             //0
+        console.log(Number(/ /.toString()));            //NaN
+        console.log(Number(/^$/.toString()));           //NaN
+        console.log(Number('13.5px'));                //NaN
+        console.log(Number('13.5'));                  //13.5
+        console.log(Number('we13.5px'));              //NaN
+        console.log(Number('13.523'));              //13.523
+        console.log(Number('13.5px'));              //NaN
+        console.log(Number('we13.5px'));            //NaN
+
+
+//      parseInt强制转换为整型
+        console.log(parseInt('13.5px'));                //13
+        console.log(parseInt('13.5'));                  //13
+        console.log(parseInt('we13.5px'));              //NaN
+
+//      parseFloat强制转换为浮点数    (小数)
+        console.log(parseFloat('13.523'));              //13.523
+        console.log(parseFloat('13.5abc'));              //13.5
+        console.log(parseFloat('13'));                  //13
+        console.log(parseFloat('we13.5px'));            //NaN
+//      =       赋值      右边的赋给左边
+//      ==      等于      只判断是否相等 (自动转换为数字进行比较)   是否相等
+//      ===     全等于    不仅判断等号两边的值是否相等 还判断等号两边的类型是否相等
+
+
+//      NaN不等于任何数据类型    甚至连自己都不相等
+//      NaN和任何数据类型做运算   结果还是NaN
+        var num='ww';
+        if(Number(num)==NaN){
+            alert('num不是数字');
+        }
+        else{
+            alert('NaN不等于任何数据类型');
+        }
+        console.log(NaN==NaN);          //false
+        console.log(NaN===NaN);         //false
+        console.log(NaN+123);           //NaN
+        console.log(NaN+'www');         //NaNwww
+
+        console.log(isNaN('13'));               //false
+        console.log(isNaN('帅'));               //true
+        console.log(isNaN(true));               //false
+        console.log(isNaN(false));              //false
+        console.log(isNaN({age:9}));            //true
+        console.log(isNaN([12,23]));            //true
+        console.log(isNaN([12]));               //false
+        console.log(isNaN(/^$/));               //true
+        console.log(isNaN(function(){}));       //true
+
+        console.log(1==1);                  //true
+        console.log(1=='1');                //true
+        console.log(1===1);                 //true
+        console.log(1==='1');               //false
+        console.log(1==true);               //true
+        console.log(1===true);              //false
+        console.log(2==true);               //false
+        console.log(0==false);              //true
+        console.log(0==undefined);          //false
+        console.log(0==null);               //false         null\undefined\NaN  不等于任何值
+        console.log(null==undefined);       //true          特殊的，计算机认为它相等
+        console.log(null===undefined);      //false
+
+        console.log(undefined==undefined);  //true
+        console.log(null==null);            //true
+        console.log(NaN==NaN);              //false
+
+        console.log(undefined==0);          //false
+        console.log(null==0);               //false
+        console.log(null==0);               //false
+
+        console.log(undefined+10);          //NaN
+        console.log(null+10);               //10
+        console.log(NaN+10);                //NaN
+
+
+        console.log(Number(""));
+        console.log(Boolean([]));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,993 @@
+js
+1、js引入(3)
+2、js基本语法
+3、变量
+    var
+    let
+    1、变量命名规范(数字/字母/下划线/$)
+        al      普通变量
+        _this   全局变量
+        $jq     jq的变量
+    2、驼峰式命名法    getElementById
+    3、匈牙利命名法    (按数据类型划分)
+    4、不能以Js保留字或者关键字命名
+
+    全局变量
+            没用关键字定义的变量
+            在全局作用域(window)下定义的变量
+    局部变量
+            在函数里利用var/let关键字定义的变量
+            形参
+    变量提升(var 关键字的)
+        1、等号两边的变量 只提升左边
+        2、条件判断下的变量提升(无论条件是否成立 都会变量提升)
+        3、重名下的变量提升
+
+    let(es6)    语法检测
+        1、没有变量提升
+        2、不能重名
+        3、切断和window的映射
+        4、暂时性死区 TDZ
+
+        console.log(a);
+        let a = 15;
+
+        typeof(a);
+
+        const 定义常量(变量里存储的值不能修改)
+            const PI = 3.1415926;
+
+
+4、Js的数据类型(7)
+    typeof              检测数据类型
+    isNaN(num)          检测是否是一个数
+    name in obj         检测 name 是否是对象obj的属性
+    hasOwnPropety       检测是否是这个对象的私有属性
+    hasPublicPropety    检测是否是这个对象的公有属性(自己封装的)
+
+    基本数据类型
+        Number
+        String
+        Boolean
+        Null
+        Undefined
+
+    引用数据类型
+        Object
+        Function
+
+    数据类型的转换：
+    1、转化为数据     Number  parseInt  parseFloat - * / % ==
+    2、转化为字符串   String toString
+    3、转换为布尔类型 Boolean ! !! if(){}
+    4、null和undefined
+        null == undefined   //true
+        null == NaN         //false
+        null == 0           //false
+        undefined 一样
+
+        基本数据类型操作的是  值
+        引用数据类型操作的是  地址
+
+5、运算符
+    算数  %   三目运算符   bz>xw?bz:xw;
+    比较  == === != !==
+    逻辑  (解决兼容问题)  ! && || 先 '非' 后 '与' 最后 '或'    短路与 0&&1 // 0  短路或 0&&1 // 1
+    赋值  a+=b++      a=a+b++
+    逗号  a=(1,2,3)   //3
+
+6、流程控制
+    顺序结构：自上而下
+    选择结构：(无限嵌套)
+              if else       判断范围
+              switch case   判断固定值
+              num = '1';
+              switch(num){
+                  case 1:alert(1);
+              }
+              //不输出1
+              num === 1;    //注意是全等比较
+    循环结构
+              for(){}
+              while(){}
+              do while
+
+              break      中断循环
+              continue   跳过当次循环  进入下一次循环
+
+引用数据类型 - 操作地址
+
+1、数组
+var arr = [1,2,3];
+arr[index]
+arr.length
+
+数组的遍历(3);
+首选 for 循环
+for in          // for (var key in arr){}
+for of          // for (let key of arr){}
+
+数组的算法：
+冒泡
+插入
+快速排序(二分法)
+
+数组的方法：
+pop
+push
+shift
+unshift
+reverse反转
+slice克隆
+splice增删改
+sort
+
+join
+toString
+split
+
+concat
+indexOf
+lastIndexOf
+
+数组的迭代(遍历 - 面向对象的思想去编程的)
+forEach
+filter数组的过滤
+some
+every
+reduce
+reduceRight
+find
+
+数组去重(5)
+arr = [1,2,3,1,2,1,1,1,2]   //[1,2]
+    1、双for循环    外循环 找到原数组的每一项 内循环 找到新数组的每一项  比较两数组
+    2、利用newArr.indexOf(arr[i])==-1;
+    3、对象结合数组
+    var obj = {};
+    var arr = [];
+    if(!obj[arr[i]){
+        newArr.push();
+        obj[arr[i]] = true;
+    }
+    4、es6
+    newArr = Array.from(new Set(arr));
+    Array.from      类数组转换为数组
+    new Set(arr)    去重
+    5、在数组的原型上面扩展去重方法
+    Array.prototype.unique = function(){
+        var obj = {};
+        if(!obj[arr[i]){
+             newArr.push();
+             obj[arr[i]] = true;
+    }
+
+    6、类数组
+    类似于数组   具有index length
+    但是 不能调用数组的方法
+    类数组转换为数组
+    Array.from()        //es6
+    [].slice.call(arr)  //es5
+
+
+
+2、函数
+    1、函数的定义使用
+    function fn(){}
+    var fn = function(){};
+    var fn = new Function();
+
+    fn//打印整个函数
+    fn()//函数的执行 打印的是函数执行结果
+
+    2、匿名函数  匿名函数执行方式 - 自执行函数
+    (function(){}}();
+    +function(){}();
+    !function(){}();
+    ~function(){}();
+
+    3、函数的参数 - 封装
+    形参
+    实参
+    可变参
+    形参 = 实参 正常执行
+    形参 > 实参 没有对应实参的形参 默认为Undefined
+    形参 < 实参 正常执行
+
+    可变参 agruments - 实参的集合
+    function fn(){}P{ fn(1,2,3)
+    agruments天生存在的
+    agruments和实参存在映射关系
+
+    4、函数的返回值return (4种) return 中断函数
+    函数执行的时候没有返回值    默认返回undefined
+    function fn(){}
+    var a = fn();   //a=undefined
+
+    函数执行的时候 只有一个return   返回undefined
+    function fn(){ 1.log; return;}
+    var a = fn();   //a=undefined
+
+    函数执行的时候 有一个return sum  返回undefined
+    function fn(){ 1.log; return sum;}
+    var a = fn();   //a=sum
+
+    函数执行的时候 有一个return sum   返回undefined
+    function fn(){ return; 1.log; return sum;}
+    var a = fn();   //a=undefined
+
+    5、箭头函数(es6)
+    function fn(){
+        return sum;
+    }
+    变成箭头函数↓↓↓
+    let fn = ()=>return sum;
+
+    function fn(){
+        return function(){
+            return function(){
+                return 3;
+            }
+        }
+    }
+    console.log(fn()()());
+    变成箭头函数↓↓↓
+    let fn = ()=> ()=> ()=> 3;
+    console.log(fn()()());
+
+
+    function fn1(x){
+        return 2;
+    }
+    console.log(obj.fn1());
+    变成箭头函数↓↓↓
+    let fn1 = x => 2;
+    console.log(obj.fn1());
+
+    并不适用于所有的场景 需要this就不能使用箭头函数
+    由于箭头函数 没有this主体
+    它的this继承于上级作用域
+
+    注意两个知识点：
+    1.箭头函数 里面没有arguments
+    但是我们可以用拓展运算符...arg接收实参
+    let fn = (...arg)=>{
+    	console.log(arguments);
+    	console.log(arg);
+    	console.log(10);
+    };
+    fn(10,20,30)
+    2.箭头函数里面没有this主体
+      let obj={
+      	fn:(function (){
+      		var that=this;
+      		return function(){
+      			console.log(this);
+      			console.log(that);
+      		}
+      	})()
+      }
+      fn();//_this  =window
+    谁执行这个函数 this指向谁
+      obj.fn();//this->obj
+      obj.fn.call(window);//this->obj
+      箭头函数里的this  继承上下文的宿主环境
+      let obj1={
+      	fn:(function (){
+      		var that=this;
+      		return ()=>{
+      			console.log(this);
+      		}
+      	})()
+      }
+      obj1.fn();//this->window
+
+
+    ES6解构赋值
+    //	对象的解构赋值
+    var obj = {
+    	name:'炫宣',
+    	sex:'小公举',
+    	age:8
+    }
+
+    //注意 解构时 需要起的变量名 和 对象里面的属性名对应
+    let {name,...a}=obj;
+    console.log(name,a);
+
+    var _obj = obj;
+    _obj.n
+    _obj.s
+    _obj.a
+    let {name:n,sex:s,age:a}=obj;
+    console.log(n,s,a);
+
+    let newObj = {...obj,eat:function(){}}
+    console.log(obj.name,obj.sex,obj.age);
+
+    6、函数的递归     -函数自己调用自己
+       ***函数的回调(callback)
+            -函数当作一个形参使用
+       函数的返回 ->闭包
+
+    7、闭包：函数执行的时候 形成一个不销毁的私有作用域 保护函数内部的私有不受外界的干扰 这种保护机制叫做闭包
+    闭包的作用：保护 保存作用
+        团队项目开发的时候 保证团队的协作 为了避免全局变量的冲突 利用闭包可以减少造成全局污染
+
+        利用闭包解决选项卡问题
+        随机数获取问题
+        高级单例模式
+
+        缺点：耗性能 内存泄漏
+
+    闭包的模型：
+    柯理化函数
+        function(){
+            return function(){}
+            }
+    惰性函数:返还的是一个对象
+        function(){
+            return{
+                fn1:function(){},
+                fn2:function(){}
+            }
+        }
+
+    闭包的应用:
+    jq对闭包的应用    window.jQuery = window.$ = jQuery
+    zepto对闭包的应用
+        return{
+            fn1:function(){}
+            fn2:function(){}
+        }
+
+    自己对闭包的理解：保护作用 保存作用
+
+
+    【对象】
+    1、普通对象
+        var obj = {name:1,age:2};
+        var obj = new Object();
+
+    对象的增删改查     对象解构赋值
+    查obj.name    obj['name']
+
+    遍历for in
+
+    2、json对象
+    json是一种传输的数据格式
+    json严格要求    所有的属性 必须加引号
+    var obj = {'name':1,'age':2};
+
+    1、json的解析
+    2、json的拷贝
+
+
+    面向对象：在js中   万物皆对象
+    继承(原型) 封装(函数) 多态
+
+    对象: 万物介对象  (大自然)
+    类:  Object 基类 所有的类都是基于object类衍生的(动物类、植物类、生物类...)
+    实例: 实实在在存在的一个个体(小明 狼 苹果 乳酸菌)
+    js中的类: Object Array Function Number String Boolean HTMLcollecton
+
+     三句话：
+     原型对象上面存放的是这个类的公共方法/属性
+
+     所有的函数都天生自带一个属性 prototype(原型对象)
+     所有的对象都天生自带一个属性 __proto__(原型)
+     所有的实例都通过__proto__属性 指向所属类的 原型对象
+
+     对象
+     1、单例模式 - 命名空间  给每一个变量都开辟一个堆内存空间
+        保证命名不冲突
+
+     每一个命名空间都是对象Object类的一个单独实例=>单例模式
+     var xiaoming = {//命名空间
+
+     }
+
+     var xiaohong = {
+
+     }
+
+     高级单例模式 - 项目中使用的模式
+     var render = (function(){
+        function fn1(){};
+        function fn2(){};
+        function fn3(){};
+        return{
+            fn2:fn2,
+            fn3:fn3
+        }
+     })()
+
+     闭包会形成一个不销毁的私有作用域：内存泄漏(内存溢出) 消耗性能
+
+     2、工厂模式(3步骤): 原料 加工 出厂
+     3、构造函数模式   this
+        构造函数具有两个角色：即可以当作普通函数调用
+        还可以当做 类 使用
+        普通函数的执行原理：
+            1、函数执行形成一个私有桟内存
+            2、形参赋值
+            3、变量提升
+            4、函数自上而下执行
+            5、堆栈内存释放
+        构造函数的执行原理：
+            1、new Person 形成一个私有桟内存
+     4、原型模式 (结合构造函数)
+
+     每一个函数都天生自带一个属性Prototype(原型对象)
+     prototype这个原型对象 有天生自带一个属性  constructor(构造器)
+     每一个对象有天生自带一个属性_proto__ (实例是对象)
+
+     原型：prototype(原型对象)：用来存放类的公有属性
+
+     原型链：实例想要调用某一个方法的时候，先找自己私有的
+     如果私有的空间中没有 那么他会退通过__proto__往所属类的原型上查找
+     如果原型上也没有 它会通过 _proto__ 一直网上查找
+     如果找到则已，如果没找到一直找到Object基类上为止
+     如果还找不到 返回undefined/或者报错
+
+     那么我们把这种通过 __proto__一直往上查找的机制'原型链'
+     作用域链：变量/函数的查找
+     原型链：原型对象上公共方法的查找
+
+
+     原型重定向(我们自己修改了原来默认的prototype指向的内存) 之后 没有constructor属性 需要自己手动添加
+
+     原型、原型链、原型重定向：
+            扩展自己的类
+            可以原来内置类的基础上扩展方法
+            可以把公共方法 放在原型上 供别人使用
+            可以书写自己的原型方法
+
+     内置类的原型 不能重定向 但是在原来的基础上可以扩展
+     自定义的类   可以重定向
+
+
+     es6
+     class person{
+     
+     }
+
+     1、函数的三种角色
+         function fn(){}
+
+         普通函数
+         fn()
+
+         构造函数执行(把函数当做一个类 去创建一个实例)
+         new fn()
+
+         fn当做一个对象执行
+         fn.add()
+
+         2、链(作用域链(window) 原型链(Object))
+
+     【this指向】
+     1、总结this指向
+     	在自执行函数里 this->window
+     	在构造函数中 this->实例
+     	谁执行函数 this就指向谁
+     	事件 谁执行这个事件 this指向谁
+     	在回调函数中 this指向window
+     	在箭头函数中的  this一般指向上下文this(宿主环境)
+     				箭头函数中 不可以强制改变
+     2、this指向的改变
+     强制改变this 指向
+
+     第一个参数是用来改变this的
+     call()    后面的参数就是实参   立即执行
+     apply()  第二个参数是一个数组(实参的集合)  立即执行
+     bind()  预修改this指向  预修改 最后想执行 需要自己手动执行
+     new（把this改变成  实例的this）
+
+     arguments  和 this只有函数才有 是函数的内置类
+
+     【js中实现继承的方式】
+     类的多态(水的状态)
+     	父:eat  子：eat
+     类的继承(通过原型 原型链实现继承)
+     	原型继承
+     	call继承
+     	拷贝继承
+     	寄生式组合继承     Object.creat()
+
+
+     3、对象上面的方法
+     instanceof:检测某一个实例是否隶属于这个类
+     in：检测当前对象是否存在某个属性(不管当前这个属性是对象的私有属性还是公有属性，只要存在 结果就是TRUE)
+     toString
+     constructor
+     hasOwnProperty：检测当前属性是否为对象的私有属性
+     自己封装了一个hasPubProperty
+
+     typeof 检测数据类型
+     toString 具体检测出这个隶属于那个类
+     (只有对象上toString 可以检测js中划分的类)
+
+
+     排序案例
+        json文件中不能写注释
+        写json   代码中的键值对用双引号引起来
+
+
+        第一个面试题：
+        利用get/post请求数据有什么区别
+
+     ajax请求四步骤：
+        1、创建ajax实例
+        2、打开本地数据与浏览器的连接
+        3、数据发送
+        4、服务器返回数据
+
+
+
+
+dom
+document object model
+文档对象模型
+根节点document>html>head/body>其他元素
+
+【获取的元素的方式】
+1、通过id获取元素
+    var div1 = document.getElementById('div1');
+    新版浏览器 直接使用id不用获取
+2、通过标签名获取（类数组）
+    var div1 = document.getElementsByTagName('div');
+    获取的 类数组(类似于数组 有长度 和索引 但是不能操作的数组的方法)
+3、通过上下文获取
+    var arrLi = div1.getElementsByTagName('li');
+    获取的是div1这个唯一对象下面的额所有li元素
+4、通过类名获取（类数组  有兼容问题）
+     var arrLi = div1.getElementsByClassName('li1');
+5、h5提供最新的api 通过选择器获取（一般用于移动端获取元素  不存在映射）
+    var arrLi = document.querySelectorAll('.top li');//类数组
+    var li = document.querySelector('.bottom li');//bottom下的第一个li元素
+6、表单元素特有的(不常用 只做了解)
+    var in1 = document.getElementsByName('pwd');
+7、获取整个浏览器页面(当前窗口)
+    获取html元素和body元素
+    var width1 = document.documentElement || document.body;
+
+
+
+【dom节点类型】
+                  nodetype      nodeName
+标签（元素）节点    1             LI
+文本节点            3
+注释节点            8
+document            9
+
+
+
+
+
+【节点访问】
+js中表示DOM节点之间相互的属性
+1.childNodes
+  所有的子节点
+2.children
+  子元素节点，IE8浏览器会把文本节点也当成元素节点
+3.previousSibling
+  哥哥节点
+4.previousElemntSibling
+  哥哥元素节点（ie8及以下浏览器不支持）
+5.nextSibling
+  弟弟节点
+6.nextElementSibling
+  弟弟元素节点（ie8及以下浏览器不支持）
+7.firstChild
+  第一个子节点
+8.firstElementChild
+  第一个子元素节点（ie8及以下浏览器不支持）
+9.lastChild
+  最后一个子节点
+10.lastElementChild
+  最后一个子节点（ie8及以下浏览器不支持）
+11.parentNode
+  父节点
+
+
+
+【dom属性操作】  和对象属性操作对比记忆
+  操作元素      操作对象
+
+   操作dom元素的行内属性
+设置属性
+  setAttribute（‘属性名’，‘值’）
+删除属性
+  removeAttribute
+获取属性
+  getAttribute
+
+操作dom元素的外部样式/嵌入样式/行内的
+console.log（getComputedStyle（oDiv，null）.height）；不兼容ie
+console.log（oDiv.currentStyle.height）；ie获取方式
+
+getComputedStyle（oDiv，null）.height||oDiv.currentStyle.height          第一个参数  当前元素；伪元素
+
+【动态操作dom节点】
+（喜新厌旧）先写新的参数，然后旧的参数
+
+createElement    创建一个新元素
+appendChild      末尾追加元素
+insertBefore     在。。。之前插入元素
+removeChild      移除元素
+replaceChild     替换元素
+cloneNode（）    浅克隆
+cloneNode（true）  深克隆/复制   元素
+
+
+return false  去掉标签的默认行为
+
+
+
+操作dom元素的内容
+value是带有value属性的标签拥有的值。
+一般是单闭合标签的属性（可赋值，也可获取值input）
+
+innerHTML属性，双闭合标签两个标签之间的内容
+不仅识别文字，还识别标签，（可赋值，也可获取值）
+
+innerText属性，双闭合标签两个标签之间的内容
+只识别文字，（可赋值，也可获取值）
+
+dom映射(也叫dom的重排)
+    dom元素只要其中有一个元素 样式/顺序 发生变化  浏览器就会对现有的所有dom元素 进行重新渲染
+dom树(html文档)    DomTree
+    document   文档 =>html => head/body =>
+dom回流/重排(reflow) - 耗性能
+dom重绘(repaint) - 耗性能
+
+
+DOM的映射机制
+    页面中的HTML元素,和JS中通过相关方法获取到的元素集合
+    或者元素对象存在映射关系(一个改另一个会跟着自动修改)
+
+    appendChild在追加元素对象的时候,如果这个元素之前容器中已经存在,
+    此时不是克隆一份新的追加到末尾.而是把所有的元素移动到末尾位置
+
+    querySelectorAll获取的集合是静态集合,不存在上述所谓的映射机制,所以基于这种办法,数据绑定完成后需要重新的获取一次
+
+DOM的回流
+    当DOM元素的结构或者位置发生改变
+    (删除\增加\改变位置\改变大小...)都会引发回流,所谓回流,就是浏览器抛弃原有计算的结构和样式,
+    从新进行DOM TREE或者RENDER TREE,非非非非常...消耗性能
+
+    1.计算DOM结构(DOM TREE)
+    2.加载CSS
+    3.生成渲染树(RENDER TREE),渲染树是和样式相关的
+    4.浏览器基于GPU(显卡)开始按照RENDER TREE画页面
+
+    减少dom回流的方法:
+        文档碎片
+        基于文档碎片(虚拟内存中开辟的一个容器)可以解决这个问题dom回流
+
+        var frg = document.reateDocumentFragment();
+        for(var i = 0;i < ary.length;i++){
+            frg.appendChild(ary[i]);
+        }
+        oUl.appendChild(frg);//若没有则表示添加 若有则表示移动位置
+
+DOM重绘:当某个DOM元素样式更改(位置没变只是样式更改) 浏览器重新渲染这个元素
+    box.style.color = 'red';
+    box.style.fontSize = '16px';
+    上面的操作出发了两次重绘 性能上有所消耗 真是项目中为了优化这个性能 我们最好一次性把需要需改的样式搞定,例如:
+
+    减少dom重绘的方法:
+        通过cssText 样式一次全部设置
+        xxx.cssText = {
+            color:'red',
+            fontSize:'16px';
+        }
+        通过类名 添加一次类名
+
+        xxx.classList.add('xxx1');
+
+
+正则:是一个用来处理字符串的规则
+
+    1.正则只能用来处理字符串
+    2.处理一般包含两方面:
+        A:验证当前字符串是否符合某个规则"正则匹配"
+        B:把一个字符串中符合规则的字符获取到"正则捕获"
+
+    学习正则其实就是在学习如何编写规则,每一个正则都是由修饰"元字符"、"符"两部分组成
+
+    创建正则的两种方式
+        let reg1 = /^\d+$/g;                    //字面量方式
+        let reg2 = new RegExp("^\\d+$","g")     //构造函数方式
+
+    正则两个斜杠//之间包起来的都是"元字符",斜杠后面出现的都是"修饰符"
+    let reg = /^\d+$/g;
+
+
+    常用的修饰符
+        i: ignoreCase   忽略大小写匹配
+        m: multiline    多行匹配
+        g: global       全局匹配
+
+    常用的元字符
+        [特殊元字符]
+            \d      0~9之间的一个数字
+            \D      非0~9之间的任意字符
+            \w      "数字 字母 下划线"中的任意一个 =>/[0-9a-zA-Z_]/等价于\w
+            \s      匹配任意一个空白字符 (包括\t制表符[TAB键四个空格])
+            \b      匹配边界符 'zhu'(z左边和u右边就是边界)    'zhu-feng'(z左边 u右边 f左边 g右边是边界)
+            \n      匹配一个换行符
+            \       转义字符(把一个普通字符转义为特殊的字符,例如: \d,把有特殊含义的转换为普通意思,例如: \. 此处的点就不是任意字符,而是一个小数点)
+            .       不仅仅是小数点,代表除了\n以外的任意字符
+            ^       以某个元字符开头
+            &       以某个元字符结尾
+            x|y     x或者y中的任意一个(a|z...)
+            [xyz]   x或者y或者z中的任意一个
+            [^xyz]  除了x\y\z以外的任意字符
+            [a-z]   获取a-z中的任意一个字符([0-9] 等价于\d ...)
+            [^a-z]  除了a-z的任意字符
+            ()      正则分组
+            (?:)    当前分组只匹配不捕获
+            (?=)    正向预查
+            (?!)    负向预查
+            ...
+
+
+            []的细节
+            [+-]    //+ -
+            [18-19] //错误的
+            [18|19] //1| 1|8 |9
+
+            ()
+            1.提高优先级
+            2.分组引用  (\d)(\w)\2\1
+            3.分组捕获
+
+        [量词元字符: 让其左边的字符出现多少次]
+            *       出现零到多次
+            ?       出现零到一次
+            +       出现一到多次
+            {n}     出现N次
+            {n,}    出现N到多次
+            {n,m}   出现N到M次
+
+        [普通元字符]
+            只要在正则中出现的元字符(在基于字面方式创建),除了特殊和有量词意义的以外,其余的都是普通元字符
+
+
+    正则捕获：
+        基于EXEC可以实现正则的捕获
+        reg.exec(str)
+            1.如果当前正则和字符串不匹配，捕获的结果是Null
+            2.如果匹配，捕获的结果是一个数组
+                0：大正则捕获的内容
+                index：正则捕获的起始索引
+                input：原始操作的字符串
+                ...
+            3.执行一次EXEC只能捕获到第一个和正则匹配的内容
+              其余匹配的内容还没有捕获到 =>"正则的捕获有懒惰性"：
+              只能捕获到第一个匹配的内容，剩余的默认捕获不到
+              解决懒惰性：捕获的时候 要全局匹配
+
+        MATCH方法 str.match(reg)
+        MATCH方法也有自己的局限性，在正则设置了G的情况下，
+        基于MATCH捕获的单独只有大正则匹配的，
+        小分组的内容没有单独抽取出来(不设置G的情况下和执行EXEC一样)
+
+        懒惰性
+            2018e2019
+            exec => 2018    exec => 2018   exec => 2018
+            exec 捕获 LAST-INDEX不变导致了正则捕获的懒惰性
+            解决懒惰性：捕获的时候 让全局匹配
+            exec => 2018    exec => 2019    exec => null
+        贪婪性
+            2018e2019   \d+     2   2018    匹配到的是最长的字符串
+            exec => 2018
+            解决贪婪性： \d+?     可以解决贪婪(匹配到的是最短的字符串)
+            exec => 2
+
+
+    正则必须掌握的方法  test,exec   match,replace
+        特长:
+        match 能一次性把匹配的内容都拿到 str.match(reg)
+        exec 在于处理分组,能拿到分组里的内容 reg.exec(str)
+        replace是字符串替换 str.replace()
+        str.replace(值类型或正则,数值类型或回调函数)
+
+        简单正则案例：
+            手机号验证
+            邮箱验证
+            证件号
+
+            表单验证
+
+        时间格式化 fomatTime
+            统计字符串中 字符串出现的个数 以及  出现次数最多的
+            获取url地址 问号后面的值  (问号传参)
+            获取url地址 #(哈希 hash)后面的值 (hash传值)
+
+                    
+
+
+
+内置类 - String类
+    charAt(index)        字符串遍历 查找当前索引的对应的字符串
+
+        var str = "Hello World!";
+        for (var i = 0; i < str.length; i++) {
+            console.log(str.charAt(i))
+        };
+        输出结果: H e l l o   W o r l d !
+
+    charCodeAt(index)    查找当前索引的对应的字符串的code码
+        var str = "Hello World!";
+        var n = str.charCodeAt(0);
+        console.log(n);
+        console.log(str.charAt(0));
+        输出结果: 72 H
+
+    concat()    字符串的拼接
+        var str1 = "Hello ",
+            str2 = "World",
+            str3 = "!";
+        console.log(str1.concat(str2,str3));
+        输出结果: Hello World!
+
+    indexOf()   检测某个字符在字符串中是否存在 如果不存在返回-1 存在返回对应的索引
+        var str = "Hello World, welcome to the universe.";
+        var n = str.indexOf("w");
+        console.log(n);
+        输出结果: 13
+
+    lastIndexOf()从末尾开始检测
+        var str = "I am from runoob, welcome to runoob site.";
+        var n = str.lastIndexOf("runoob");
+        console.log(n);
+        输出结果: 29
+
+    match()     正则捕获
+        var str = "The rain in SPAIN stays mainly in the plain";
+        var n = str.match(/ain/g);
+        console.log(n);
+        输出结果：["ain","ain","ain"]
+        MATCH方法也有自己的局限性，在正则设置了G的情况下，
+            基于MATCH捕获的单独只有大正则匹配的，
+            小分组的内容没有单独抽取出来(不设置G的情况下和执行EXEC一样)
+
+    replace()   字符串替换
+        var str = "Visit Microsoft!";
+        var n = str.replace("Microsoft","Runoob");
+        console.log(n);
+        输出结果：Visit Runoob!
+
+    search()    正则匹配 检测
+        var str = "Visit Runoob!";
+        var n = str.search("Runoob");
+        console.log(n);
+        输出结果: 6
+
+    slice()     字符串截取(含头不含尾)
+        var str = "Hello World!";
+        var n = str.slice(1,5);
+        console.log(n);
+        输出结果：ello
+
+    substring() 字符串截取(含头不含尾)
+        var str = "Hello World!";
+        var n1 = str.substring(3);
+        var n2 = str.substring(3,7);
+        console.log(n1);
+        console.log(n2);
+        输出结果: lo World!   lo W
+
+    substr()    字符串截取(索引,个数)
+        var str = "Hello World!";
+        var n = str.substr(2,3);
+        console.log(n);
+        输出结果: llo
+
+    split()     把字符串分割为数组
+        var str = "How are you doing today?";
+        var n = str.split(" ");
+        console.log(n);
+        输出结果: ["How", "are", "you", "doing", "today?"]
+
+    toLocaleLowerCase()     保存成本地语言(一般用于国际时间转化成本地时间)
+    toLocaleUpperCase()     保存成本地语言
+
+    toLowerCase()   小写
+        var str = "Hello World!";
+        var n = str.toLowerCase();
+        console.log(n);
+        输出结果: hello world!
+
+    toUpperCase()   大写
+        var str = "Hello World!";
+        var n = str.toLowerCase();
+        console.log(n);
+        输出结果: HELLO WORLD!
+
+    trim()      去除空格(存在兼容性 利用正则解决兼容)
+        var str = " ning ";
+        var n = str.trim();
+        console.log(str.length);
+        console.log(n);
+        console.log(n.length);
+        输出结果: 6 ning 4
+
+    trimLeft()  去除左空格
+    trimRight() 去除又空格
+
+    valueOf()   返回的值
+        var a = new Data();
+        console.log(a);
+        console.log(a.valueOf());
+        console.log(a.getTime());
+        console.log(a.getTime() === a.valueOf());
+        输出结果: Tue Jun 26 2018 15:43:19 GMT+0800 (中国标准时间)
+                 1529998999878
+                 1529998999878
+                 true
+
+
+    JS的盒模型属性
+        =>在JS中通过相关的属性可以获取(设置)元素的样式信息，
+        这些属性就是盒子模型属性(基本上都是有关于样式的)
+
+        client  (clientTop)
+            top
+            left
+            height
+            width
+
+        offset
+            top
+            left
+            height
+            width
+            parent
+
+        scroll
+            top
+            left
+            height
+            width
+
+        clientTop/Left/Width/Height
+        clientWidth & clientHeight: 获取当前元素可视区域的宽高(内容的宽高+左右/上下padding)
+        和内容是否有溢出无关 (和是否设置了overflow:hidden也无关),就是我们自己设定的内容的宽高+padding
+        clientWidth = 自身内容的宽 + 左右padding
+        clientHeight = 自身内容的高 + 上下padding
+
+        获取当前页面一屏幕(可视区域)的宽度和高度
+        document.documentElement.clientWidth||document.body.clientWidth;
+        document.documentElement.clientHeight||document.body.clientHeight;
+
+        clientTop & clientLeft: 获取(上/左)边框的宽度
+
+        offsetWidth & offsetHeight:
+        在client的基础上加上border(和内容是否溢出也没关系)
+        offsetWidth = 自身内容的宽 + 左右padding + 左右border
+        offsetHeight = 自身内容的高 + 上下padding + 上下border
+
+        scrollWidth & scrollHeight: 真实内容的宽高
+
+        在不同浏览器中，或者是否设置了overflow:hidden都会对最后的结果产生影响，所以这个值仅仅做参考，属于约等于的值
+
+        获取当前页面的真实宽高(包含溢出的部分)
+        document.documentElement.scrollWidth||document.body.clientWidth;
+        document.documentElement.scrollHeight||document.body.clientHeight;
+
+        通过JS盒模型属性获取值的特点
+        1.获取的都是数字不带单位
+        2.获取的都是整数，不会出现小数
+            (一般都会四舍五入，尤其是获取的 偏移量)
+
+        3.获取的结果都是复合样式值(好几个元素的样式组合在一起的值)
+
+
+        [获取元素具体的某个样式值]
+        1.[元素].style.xxx 操作获取
+        > 只能获取所有写在元素行内上的样式(不写在行内上，不管你写没写都获取不到，项目中我们很少会把样式写在行内上)
+        outer.style.width => ''(width是写在样式表中的)

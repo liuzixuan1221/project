@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="inp1" />
++
+<input type="text" id="inp2" />
+<input type="button" id="inp3"value="=" />
+<input type="text" id="inp4" />
+
+<script>
+//    var sum = parseFloat(inp1.value) + parseFloat(inp2.value);
+
+
+    inp3.onclick = function(){
+//        console.log(sum);
+        inp4.value = parseFloat(inp1.value) + parseFloat(inp2.value);
+    }
+</script>
+</body>
+</html>

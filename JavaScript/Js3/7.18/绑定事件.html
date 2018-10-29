@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>按钮</button>
+<script>
+    var btn = document.getElementsByTagName('button')[0];
+
+    //除了IE11
+    //attachEvent(事件名,函数)
+    btn.attachEvent('onclick',function(){
+        alert('a');
+    });
+    btn.attachEvent('onclick',function(){
+        alert('b');
+    });
+
+
+    //高版本浏览器    IE8以上
+    //addEventListener(事件名,函数,false)
+    btn.addEventListener('click',function(){
+        alert('a');
+    },false);
+    btn.addEventListener('click',function(){
+        alert('b');
+    },false)
+</script>
+</body>
+</html>

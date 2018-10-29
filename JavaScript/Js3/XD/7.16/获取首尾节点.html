@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <ul id="ul">
+       <li>1</li>
+       <li>2</li>
+       <li>3</li>
+       <li>4</li>
+       <li>5</li>
+       <li>6</li>
+       <li>7</li>
+       <li>8</li>
+       <li>9</li>
+       <li>10</li>
+   </ul>
+<script>
+   var oUl=document.getElementById('ul');
+      alert(oUl.firstChild.innerHTML)
+
+      window.onload=function(){
+          var oUl=document.getElementById('ul');
+          //获取第一个元素：
+          //1. firstChild   只兼容IE<8(低版本浏览器)
+          //2. firstChildElement    高级浏览器(高版本浏览器)
+          oUl.firstChild.style.color="red";
+          oUl.firstChildElement.style.color="red";
+    
+//获取第一个子节点的兼容写法
+if(oUl.firstElementChild){
+    oUl.firstElementChild.style.background="red";
+}else{
+    oUl.firstChild.style.background='red';
+}
+//获取最后一个子节点的兼容写法
+if(oUl.lastElementChild){
+    oUl.lastElementChild.style.background="red";
+}else{
+    oUl.lastChild.style.background='red';
+}
+
+
+
+      }
+</script>
+</body>
+</html>

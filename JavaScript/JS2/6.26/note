@@ -1,0 +1,170 @@
+    检测有效数字
+    分析规则：
+    1.可以出现+/-号：可以没有，也可以有一个
+    2.证书0 12 9：一位或多位
+    3.小数点 可有可无
+    let reg=/^[+-]?(\d|([1-9]\d+))(\.\d+)?$/;
+
+
+  //邮箱
+    let reg=/^\w+([-.]\w+)*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+    console.log(reg.test("109942343@qq.com"))
+
+  //中文姓名
+    1.中文汉字  [\u4E00-\u9FA5]
+    2.于斯日古楞·小愣
+    let reg=/^[\u4E00-\u9FA5]{2,}(\·[\u4E00-\u9FA5]{2,})?$/;
+    console.log(reg.test("于斯日古楞·小愣"))
+
+  //年龄：18~65之间
+    18-19  1[89]
+    20-59  [2-5]\d
+    60-65  6[0-5]
+    let reg=/^((1[89])|([2-5]\d)|(6[0-5]))$/;
+    console.log(reg.test("12"));
+
+  //编写一个规则，匹配“[object AAA]”
+    let reg=/^\[object .+\]$/;
+    console.log(reg.test('[object AAA]'));
+
+   match 字符串的捕获方式
+    exec 正则的捕获方式
+    正则捕获使用的是正则中的EXEC方法
+    1.如果可以匹配
+    let reg=/^(\d{6})(\d{4})(\d{2})(\d{2})(\d{2})(\d)(?:\d|x)$/;
+    console.log(reg.exec('152824199408115311'))
+
+
+
+   var str="hello world !";
+   for (var i = 0; i < str.length; i++) {
+       console.log(str.charAt(i));
+   }
+    var n=str.charAt(1)
+    alert(n)//查询字符索引
+
+    var str="HELLO WORLD";
+    var n=str.charCodeAt(0);
+    alert(n)
+    alert(str.charAt(0))//查询当前索引对应的字符串的code码
+
+    var str="hello ";
+    var str1="world";
+    var str2=" !";
+    var n=str.concat(str1,str2);
+    alert(n)//拼接
+
+    var str="Hello world, welcome to the universe.";
+    var n=str.indexOf("w");
+    alert(n);//检测某一个字符是否在字符串中 不存在返回-1 存在对应索引
+
+    var str="I am from runoob, welcome to runoob site.";
+    var n=str.lastIndexOf("runoob");
+    alert(n);//从后往前查索引 到r停
+
+    var str="The rain in SPAIN stays mainly in the plain";
+    var n=str.match(/ain/g);
+    alert(n)//正则捕获
+
+    var str="Visit Microsoft!";
+    var n=str.replace("Microsoft","Runoob");
+    alert(n);//前一个值属于被替换值，后一个替换他 Visit  Runoob
+
+    var str="Visit Runoob!";
+    var n=str.search("Runoob");
+    alert(n);//检索
+
+    var str="Hello world!";
+    var n=str.slice(1,5);
+    alert(n);//截取索引1-5之间的字符，含头不含尾
+
+    var str="How are you doing roday?";
+    var n=str.split("");
+    console.log(n)//把字符串分割为数组
+
+    var str="Hello world!";
+    var n=str.substr(2,3);
+    alert(n);//截取
+    substr()截取
+
+    substring()截取  含头不含尾
+
+    toLocaleLowerCase()保存成本地语言
+    toLocaleUpperCase()
+
+    toLowerCase()  小写
+    toUpperCase()  大写
+
+    trim()  去除空格   （存在兼容 利用正则解决兼容）
+    trimLeft()  去除左空格
+    trimRight()  去除右空格
+    valueOf()  返回的值
+
+
+
+常用的修饰符：[
+i:ignoreCase   忽略大小写匹配
+m:multiline   多行匹配
+g:blobal    全局匹配
+常用的元字符：
+【特殊元字符】
+\d:   0~9之间的一个数字
+\D:  非0~9之间的任意字符
+\w   "数字、字母、下划线"中的任意一个=>[0~9a-za-z_]/等价于\w
+\s   匹配任意一个空白字符（包括\t制表符[TAB键四个空格]）
+\b   匹配边界符 ‘zhu’（z左边和u右边就是边界）'zhu-feng'(z左边、u右边、f左边、g右边是边界)
+\n  匹配一个换行符
+\    转义字符（把一个普通字符转义为特殊的字符，例如：\d，把有特殊含义的转换为普通意思，例如：\. 此处的点就不是任意字符， 而是一个小数点.
+.  不仅仅是小数点，代表除了\n以外的任意字符）
+^  以某个元字符开头
+$  以某个元字符结尾
+x|y    x或者y或者z中的任意一个
+[^xyz]   除了x\y\z以外的任意字符
+[a-z]  获取a-z中的任意一个字符（[0-9]等价于\d。。。）
+[^a-z]  除了a-z的任意字符
+（）  正则分组
+（？：）  当前分组只匹配不捕获
+（？=）  正则预查
+（？|）   负向预查
+[量词元字符：让其左边的元字符出现多少次]
+*  出现零到多次
+？  出现零到一次
++  出现一到多次
+{n}   出现N次
+{n,}   出现n到多次
+{n,m}   出现n到m次
+
+
+
+js---post与get请求的区别
+request获取请求参数
+最为常见的客户端传递参数方式有两种：
+
+浏览器地址栏直接输入：一定是GET请求；
+
+超链接：一定是GET请求；
+
+表单：可以是GET，也可以是POST，这取决与<form>的method属性值；
+
+
+
+GET请求和POST请求的区别：
+
+1.效率
+GET的意思是『得』，从服务器获取数据（也可以上传数据，参数就是），效率较高
+POST的意思是『给』，但可以向服务器发送数据和下载数据，效率不如GET
+2.缓存
+GET 请求能够被缓存，默认的请求方式也是有缓存的
+POST请求默认不会缓存
+缓存是针对URL来进行缓存的，GET请求由于其参数是直接加在URL上-的，一种参数组合就有一种URL的缓存，可以根据参数来进行一一对应，重复请求是幂等的（不论请求多少次，结果都一样）;
+而POST请求的URL没有参数,每次请求的URL都相同，数据体（HTTPBody）可能不同，无法一一对应，所以缓存没有意义
+3.安全性
+GET的所有参数全部包装在URL中，明文显示，且服务器的访问日志会记录，非常不安全
+POST的URL中只有资源路径，不包含参数，参数封装在二进制的数据体中，服务器也不会记录参数，相对安全。所有涉及用户隐私的数据都要用POST传输
+POST的安全是相对的，对于普通用户来说他们看不到明文，数据封装对他们来说就是屏障。但是对于专业人士，它们会抓包会分析，没有加密的数据包对他们来说也是小case。所以POST仅仅是相对安全，唯有对数据进行加密才会更安全。当然加密也有被破解的可能性，理论上所有的加密方式都可以破解，只是时间长短的问题。而加密算法要做的就是使得破解需要的时间尽量长，越长越安全。由于我们也需要解密，加密算法太过复杂也并非好事，这就要结合使用情况进行折中或者足够实际使用即可。绕的有点远，具体的话，我将在后续的文章之中介提及，并介绍一些常用的加密算法。
+
+4.数据量
+HTTP协议中均没有对GET和POST请求的数据大小进行限制，但是实际应用中它们通常受限于软硬件平台的设计和性能。
+
+GET：不同的浏览器和服务器不同，一般限制在2~8K之间，更加常见的是1k以内
+POST方法提交的数据比较大，大小靠服务器的设定值限制，PHP默认是2M（具体的话大家以后看后端给的开发文档就行了）

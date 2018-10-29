@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <audio id="music" src="See%20You%20Again.mp3"></audio>
+
+    <button id="btn1">播放</button>
+    <button id="btn2">暂停</button>
+
+
+    <script>
+        var oMusic = document.getElementById('music');
+
+        var oBtn1 = document.getElementById('btn1');
+        var oBtn2 = document.getElementById('btn2');
+
+
+        btn1.onclick = function () {
+            oMusic.play();
+        };
+        btn2.onclick = function () {
+            oMusic.pause();
+        }
+    </script>
+</body>
+</html>

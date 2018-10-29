@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #title{
+            height: 60px;
+        }
+        h2{
+            float: left;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        h2.show{
+            color: blue;
+        }
+        #cont div{
+            height: 100px;
+            width: 200px;
+            border: 2px solid red;
+            display: none;
+        }
+        #cont div.show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div id="title">
+        <h2 class="show">111</h2>
+        <h2>222</h2>
+        <h2>333</h2>
+    </div>
+    <div id="cont">
+        <div class="show">111</div>
+        <div>222</div>
+        <div>333</div>
+    </div>
+
+
+
+<script>
+    let h2 = document.querySelectorAll('#title h2');
+    let div = document.querySelectorAll('#cont div');
+
+// for (let i = 0;i < h2.length;i++){
+    //     h2[i].onclick = function(){
+    //         for (let j = 0;j<div.length;j++){
+    //             h2[j].classList.remove('show');
+    //             div[j].classList.remove('show');
+    //         }
+    //         h2[i].classList.add('show');
+    //         div[i].classList.add('show');    
+    //     }
+    // }
+
+
+    // for (let i = 0;i < h2.length;i++){
+    //     (function(i){
+    //         h2[i].onclick = function(){
+    //             for (let j = 0;j < div.length;j++){
+    //                 h2[j].classList.remove('show');
+    //                 div[j].classList.remove('show');
+    //             }
+    //             h2[i].classList.add('show');
+    //             div[i].classList.add('show');  
+    //         }
+    //     })(i);
+    // }
+
+
+    for (var i = 0;i < h2.length;i++){
+        h2[i].onclick = (function(i){
+            return function (){
+                console.log(i);
+                for (var j = 0;j < div.length;j++){
+                    h2[j].classList.remove('show');
+                    div[j].classList.remove('show');
+                }
+                h2[i].classList.add('show');
+                div[i].classList.add('show');  
+            }
+        })(i);
+    }
+   
+
+// 第一种：Object构造函数创建
+var Person = new Object();
+Person.name = 'Nike';
+Person.age = 29;
+
+
+// 第二种：使用对象字面量表示法
+var Person = {};//相当于var Person = new Object();
+var Person = {
+ name:'Nike',
+ age:29
+}
+
+// 第三种：使用工厂模式创建对象
+function createPerson(name,age,job){
+ var o = new Object();
+ o.name = name;
+ o.age = age;
+ o.job = job;
+ o.sayName = function(){
+  alert(this.name); 
+ };
+ return o; 
+}
+var person1 = createPerson('Nike',29,'teacher');
+var person2 = createPerson('Arvin',20,'student');
+
+
+// 第四种:使用构造函数创建对象
+function Person(name,age,job){
+ this.name = name;
+ this.age = age;
+ this.job = job;
+ this.sayName = function(){
+ alert(this.name);
+ }; 
+}
+var person1 = new Person('Nike',29,'teacher');
+var person2 = new Person('Arvin',20,'student');
+
+alert(person1 instanceof Object);//ture
+alert(person1 instanceof Person);//ture
+alert(person2 instanceof Object);//ture
+alert(person2 instanceof Object);//ture
+
+
+// 第五种：原型创建对象模式
+function Person(){}
+Person.prototype.name = 'Nike';
+Person.prototype.age = 20;
+Person.prototype.jbo = 'teacher';
+Person.prototype.sayName = function(){
+ alert(this.name);
+};
+var person1 = new Person();
+person1.sayName();
+
+// 使用原型创建对象的方式，可以让所有对象实例共享它所包含的属性和方法。
+
+function Person(){}
+Person.prototype.name = 'Nike';
+Person.prototype.age = 20;
+Person.prototype.jbo = 'teacher';
+Person.prototype.sayName = function(){
+ alert(this.name);
+};
+var person1 = new Person();
+var person2 = new Person();
+person1.name ='Greg';
+alert(person1.name); //'Greg' --来自实例
+alert(person2.name); //'Nike' --来自原型
+
+
+// 第六种：组合使用构造函数模式和原型模式
+function Person(name,age,job){
+ this.name =name;
+ this.age = age;
+ this.job = job;
+}
+Person.prototype = {
+ constructor:Person,
+ sayName: function(){
+ alert(this.name);
+ }
+}
+var person1 = new Person('Nike',20,'teacher');
+
+
+</script>    
+</body>
+</html>

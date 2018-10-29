@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 3000px;
+            height: 2000px;
+            background: #33FFC5;
+            position: relative;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background: #86ce2f;
+            position: absolute;
+            top: 0;
+            left:0;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script>
+
+    var aBody= document.getElementsByTagName('body')[0];
+    var aDiv= document.getElementsByTagName('div')[0];
+
+
+
+    aBody.onmousemove=function(ev){
+        //event兼容写法
+        var oEvent = ev||event;
+         console.log(event.clientX,event.clientY);
+        //scrollTop
+        var sT=document.documentElement.scrollTop||document.body.scrollTop;
+        var sL=document.documentElement.scrollLeft||document.body.scrollLeft;
+
+        var x=event.clientX-aDiv.offsetWidth/2+sL;
+        var y=event.clientY-aDiv.offsetHeight/2+sT;
+        var bW=aBody.offsetWidth-aDiv.offsetWidth;
+        var bH=aBody.offsetHeight-aDiv.offsetHeight;
+
+        if(x<=0){
+            x=0;
+        }else if(y<=0){
+            y=0;
+        }else if(x>=bW){
+            x=bW;
+        }else if(y>=bH){
+            y=bH;
+        }
+
+        aDiv.style.top=y+'px';
+        aDiv.style.left=x+'px';
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>

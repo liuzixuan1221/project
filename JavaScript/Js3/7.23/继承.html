@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function A(){
+        this.abc = 12;
+    }
+
+    A.prototype.show = function(){
+        alert(this.abc);
+    };
+
+    //继承A
+
+    function B(){
+        //this->new B()
+        A.call(this);
+    }
+
+    // B.prototype = A.prototype;
+
+    for(i in A.prototype){
+        B.prototype[i] = A.prototype[i];
+    }
+    console.log(B.prototype);
+    B.prototype.fn = function(){
+        alert("abc");
+    };
+
+    var objB = new B();
+    var objA = new A();
+
+    objB.fn();      //abc
+    objA.fn();      //undefined
+
+
+</script>
+</body>
+</html>

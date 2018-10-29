@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul id="ul">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+    <script>
+        var ul = document.getElementById('ul');
+        var a = ul.childNodes;
+
+        console.log(ul.childNodes);
+
+        for(var i=0;i< a.length;i++){
+            if(a[i].nodeType == 1){
+                a[i].style.background = 'blue';
+            }
+        }
+    </script>
+</body>
+</html>

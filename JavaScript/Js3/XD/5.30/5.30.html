@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 200px;
+            margin: auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .box ul:first-of-type {
+            height: 42px;
+        }
+
+        .box .tit li {
+            float: left;
+            background: pink;
+            padding: 0 10px;
+            line-height: 40px;
+            border-top: 2px solid transparent;
+            margin-right: 3px;
+            cursor: pointer;
+        }
+
+        .box .tit li.now {
+            background: #c0dbff;
+            border-color: orange;
+        }
+
+        .box .cont li {
+            width: 200px;
+            height: 200px;
+            background: red;
+            display: none;
+        }
+
+        .box .cont li:nth-of-type(2) {
+            background: blue;
+        }
+
+        .box .cont li:nth-of-type(3) {
+            background: yellow;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <ul class="tit">
+            <li class="now">111</li>
+            <li>222</li>
+            <li>333</li>
+        </ul>
+        <ul class="cont">
+            <li style="display: block">111</li>
+            <li>222</li>
+            <li>333</li>
+        </ul>
+    </div>
+    <script>
+    //点击标题1 显示内容1
+    //点击标题2 显示内容2
+     //点击标题3 显示内容3
+     //核心原理隐藏所有 显示当前 let  定义变量和闭包原理相似
+    //  let arrTit=document.querySelectorAll('.tit li');
+    //  let arrCont= document.querySelectorAll('.cont li');
+    //  for (let i=0;i<arrTit.length;i++){
+    //     arrTit[i].onclick=function(){
+           //隐藏所有的内容盒子
+        //    for(let j=0;j<arrCont.length;j++){
+        //     arrCont[j].style.display='none';
+        //      arrTit[j].classList.remove('now');                                     
+        //    }
+
+            //显示当前的内容盒子
+    //        arrCont[i].style.display='block';
+    //        arrTit[i].classList.add('now');      
+    //     }
+
+    //  }
+//es5解决方案
+//1.找元素
+var arrTit= document.querySelectorAll('.top li');
+var arrCont=document.querySelectorAll('.bottom li');
+//2.绑定事件
+for (var i=0;i<arrTit.length;i++){
+ //   用过自定义属性的方式 绑定所需要的值
+ arrTit[i].index=i;
+ arrCont[i].onclick = function(){
+     for (var j=0;j<arrCont.length;j++){
+         arrCont[j].style.display='none';
+     }
+     console.log(this);
+     console.log(this.index);
+     //this 谁点击这个元素 this就指向谁
+   //  this  => l i[0]
+    // this  => l i[1]
+   //  this  => l i[2]
+   arrCont[this.index].style.display='block';
+
+ </script>
+</body>
+</html>

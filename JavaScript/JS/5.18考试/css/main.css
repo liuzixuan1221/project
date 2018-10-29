@@ -1,0 +1,740 @@
+body{
+    font-size: 14px;
+}
+.inner{
+    width: 1240px;
+    margin: auto;
+}
+
+i{
+    background: url("../images/spr-v2.png") no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+}
+
+.header{
+    height: 90px;
+    background: #0b0b0b;
+    position: relative;
+}
+i.logo{
+    position: absolute;
+    z-index: 10;
+    width: 190px;
+    height: 100px;
+    margin-top: 5px;
+    background-position: 0 -30px;
+}
+.header .topNav{
+    width: 600px;
+    height: 90px;
+    margin-left: 200px;
+    margin-top: -3px;
+}
+.header .topNav>li{
+    float: left;
+    width: 120px;
+    padding-top: 30px;
+    text-align: center;
+}
+.header .topNav>li a{
+    color: #fafafa;
+    font-size: 18px;
+
+}
+.header .topNav>li span{
+    font-size: 10px;
+    color: #838383;
+    display: block;
+    font-family: 'Tahoma';
+}
+.topNav .topNavBox{
+    position: absolute;
+    z-index: 20;
+    top: 88px;
+    left: 0;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: rgba(0,0,0,0.7);
+    display: none;
+}
+.header .topNav .show{
+    display: block;
+}
+.topNav .topNavBox>ul{
+    width: 1040px;
+    height: 190px;
+    padding-left: 200px;
+    margin: 0 auto;
+}
+.topNav .topNavBox>ul>li{
+    float: left;
+    width: 120px;
+}
+.topNav .topNavBox>ul>li>a{
+    display: block;
+    width: 120px;
+    height: 28px;
+    line-height: 28px;
+    color: #e1e1e1;
+    font-size: 14px;
+    text-align: center;
+}
+.topNav .topNavBox>ul>li>a:hover{
+    color: #e9c06c;
+}
+.icon1{
+    background-position: -107px 0;
+    width: 14px;
+    height: 14px;
+    margin-right: -2px;
+}
+.icon2{
+    background-position: -129px 0;
+    width: 14px;
+    height: 14px;
+    margin-right: -2px;
+}
+i#searchClick{
+    width: 27px;
+    height: 27px;
+    margin-top: 25px;
+    margin-left: 11px;
+    background-position: -8px 0;
+    cursor: pointer;
+}
+#searchBox{
+    position: absolute;
+    margin-left: 800px;
+    width: 440px;
+    height: 90px;
+    z-index: 4;
+    background: #0b0b0b;
+    display: none;
+}
+#searchBox form{
+    margin-top: 27px;
+    width: 100%;
+    height: 36px;
+    background: #fff;
+}
+#searchBox form input{
+    float: left;
+    width: 368px;
+    height: 22px;
+    line-height: 22px;
+    margin-top: 8px;
+    background: #fff;
+    border: 0 none;
+    font-size: 16px;
+    color: #545454;
+    box-sizing: border-box;
+    margin-left: 2px;
+}
+#searchBox form .inputBorder{
+    border: 2px solid #2fb9ef;
+    border-radius: 3px;
+}
+#searchBox form #searchSpan{
+    position: absolute;
+    top: 36px;
+    right: 65px;
+    color: #999;
+    font-size: 12px;
+}
+#searchBox .searchLink{
+    position: absolute;
+    width: 420px;
+    padding: 15px 10px;
+    top: 70px;
+    background: #fff;
+}
+#searchBox .searchLink p{
+    display: block;
+    padding-left: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #a4a4a4;
+}
+#searchBox .searchLink a{
+    display: block;
+    padding-left: 50px;
+    height: 30px;
+    line-height: 30px;
+    color: #696969;
+    font-size: 14px;
+}
+#searchBox .searchLink a:hover{
+    color: #e9c06c;
+    background: #f2f2f2;
+}
+i.search{
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin: 3px 4px 0;
+    background-position: -662px -136px;
+}
+i#searchClose{
+    float: right;
+    margin-right: 5px;
+    margin-top: -28px;
+    cursor: pointer;
+    width: 28px;
+    height: 36px;
+    background-position: -664px -175px;
+}
+i.topApp{
+    width: 21px;
+    height: 27px;
+    margin-top: 25px;
+    margin-left: 21px;
+    background-position: -45px 0;
+}
+.topLogin{
+    width: 350px;
+    margin-left: 10px;
+    position: relative;
+}
+.topLogin .left{
+    position: relative;
+    width: 100px;
+    height: 90px;
+}
+i.login{
+    position: absolute;
+    left: 13px;
+    top: 8px;
+    z-index: 2;
+    width: 74px;
+    height: 74px;
+    background-position: 0 -169px;
+}
+.topLogin .left>img{
+    width: 66px;
+    height: 66px;
+    margin-left: 17px;
+    margin-top: 12px;
+    border-radius: 33px;
+}
+.topLogin .right{
+    padding-top: 18px;
+    margin-left: 10px;
+    margin-top: -1px;
+}
+.topLogin .right p{
+    font-size: 16px;
+    color: #fff;
+    padding-top: 5px;
+}
+.topLogin .right p>a{
+    color: #dfb257;
+    text-decoration: underline;
+    margin-left: -2px;
+}
+.topLogin .right .pp{
+    color: #999;
+    font-size: 12px;
+}
+.topLogin #LoginYcBox{
+    position: absolute;
+    top: 90px;
+    width: 350px;
+    padding-top: 20px;
+    z-index: 3;
+    background: rgba(27,27,27,.9);
+}
+.topLogin #LoginYcBox .LYB1{
+    padding: 10px 30px 0 30px;
+    text-align: left;
+    color: #868686;
+    font-size: 14px;
+}
+.topLogin #LoginYcBox .LYB2{
+    padding: 5px 30px 10px 30px;
+    color: #999;
+    font-size: 12px;
+    text-indent: 1em;
+}
+.topLogin #LoginYcBox a{
+    display: block;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    background: #161413;
+    color: #e0e0e0;
+    font-size: 12px;
+    text-align: center;
+}
+.banner{
+    position: relative;
+    max-width: 1920px;
+    margin: auto;
+    width: 100%;
+    height: 350px;
+    background: url("../images/pic-back-v21.jpg") no-repeat center;
+    background-size: cover;
+}
+.banner .detail{
+    height: 250px;
+    padding-top: 100px;
+    text-align: left;
+}
+.banner .detail a{
+    margin-top: 130px;
+    margin-left: 20px;
+    display: block;
+    width: 155px;
+    height: 36px;
+    border: 2px solid #bd9440;
+    text-align: center;
+    line-height: 36px;
+    background: rgba(0,0,0,0.65);
+    font-size: 14px;
+    font-weight: bold;
+    color: #c89b3c;
+}
+.banner .detail a:hover{
+    background: rgba(0,0,0,0.9);
+}
+.banner .version{
+    position: absolute;
+    z-index: 2;
+    /*right: 0;*/
+    left: 1332px;
+    bottom: 30px;
+    font-size: 14px;
+    color: #888787;
+}
+.banner .version em{
+    color: #f5d185;
+    margin-right: 10px;
+    font-style: normal;
+}
+.banner .version a{
+    display: inline-block;
+    padding: 0 15px;
+    height: 22px;
+    border: 1px solid #f5d185;
+    text-align: center;
+    line-height: 22px;
+    background: rgba(0,0,0,0.65);
+    font-size: 12px;
+    color: #f5d185;
+}
+.banner .version a:hover{
+    background: rgba(0,0,0,0.9);
+}
+.menu{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 80px;
+    border-top: 2px solid #8c6c2d;
+    background: url("../images/spr-v2.png") repeat-x;
+    background-position: 0 -257px;
+}
+.menu #mMenu{
+    height: 60px;
+    margin: 0 auto;
+}
+.menu #mMenu .activity{
+    float: left;
+    width: 110px;
+    height: 58px;
+    line-height: 58px;
+    font-size: 20px;
+    color: #555555;
+    border-bottom: 2px solid transparent;
+    text-align: center;
+    cursor: pointer;
+} 
+.menu #mMenu .now{
+    color: #d1ab57;
+    border-bottom: 2px solid #d1ab57;
+}
+.menu #mMenu .dot{
+    float: left;
+    width: 13px;
+    height: 50px;
+    margin: 4px 18px;
+    background: url("../images/spr-v2.png") no-repeat;
+    background-position: -290px -30px;
+}
+.content{
+    padding-top: 40px;
+    margin-top: -20px;
+    background: #f7f7f7 url("../images/bg-content-top.jpg") no-repeat center top;
+}
+.content .contentBox{
+    position: relative;
+    width: 1240px;
+    margin: 0 auto;
+}
+.content .contentBox .contentNav .cBanner{
+    width: 820px;
+    height: 400px;
+    margin-right: 20px;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+.contentNav .cBanner #promoInner{
+    width: 4100px;
+    height: 350px;
+    transition: all .3s;
+}
+.contentNav .cBanner #promoInner li{
+    float: left;
+    width: 820px;
+    height: 350px;
+    background: #000;
+    overflow: hidden;
+}
+.contentNav .cBanner #promoInner li img{
+    width: 820px;
+    height: 350px;
+}
+.contentNav .cBanner #promoTrigger{
+    width: 100%;
+    height: 50px;
+    background: #121112;
+    overflow: hidden;
+}
+.contentNav .cBanner #promoTrigger span{
+    float: left;
+    width: 164px;
+    height: 50px;
+    line-height: 50px;
+    cursor: pointer;
+    text-align: center;
+    color: #c8c8c8;
+    font-size: 14px;
+}
+.contentNav .cBanner #promoTrigger .now{
+    color: #e9c06c;
+    background: #303030;
+}
+.sideNav{
+    width: 400px;
+    height: 400px;
+}
+.sideNav .sideDownload{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 10px;
+    background: url("../images/bg-download.jpg") no-repeat 0 0;
+}
+.sideNav .sideMenu{
+    margin-left: -5px;
+}
+.sideNav .sideMenu li{
+    position: relative;
+    float: left;
+    width: 130px;
+    height: 55px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.sideNav .sideMenu li a{
+    display: block;
+    width: 130px;
+    height: 55px;
+    line-height: 55px;
+    background: #fff;
+    text-align: center;
+    font-size: 14px;
+    color: #555555;
+}
+.sideNav .sideMenu li a:hover{
+    background: #f0f0f0;
+}
+i.cz{
+    background-position: -200px 0;
+    line-height: 30px;
+}
+i.yz{
+    background-position: -560px 0;
+    line-height: 30px;
+}
+i.zb{
+    background-position: -590px 0;
+    line-height: 30px;
+}
+i.khd{
+    background-position: -380px 0;
+    line-height: 30px;
+}
+i.zd{
+    background-position: -650px 0;
+    line-height: 30px;
+}
+i.czg{
+    background-position: -650px -30px;
+    line-height: 30px;
+}
+i.lh{
+    background-position: -620px 0;
+    line-height: 30px;
+}
+i.zl{
+    background-position: -260px 0;
+    line-height: 30px;
+}
+i.lq{
+    background-position: -470px 0;
+    line-height: 30px;
+}
+i.wb{
+    background-position: -500px 0;
+    line-height: 30px;
+}
+i.lt{
+    background-position: -410px 0;
+    line-height: 30px;
+}
+i.kf{
+    background-position: -440px 0;
+    line-height: 30px;
+}
+.sideMenu .iconH{
+    position: absolute;
+    background-position: -107px 0;
+    margin-top: 3px;
+    width: 14px;
+    height: 14px;
+    margin-right: 2px;
+    top: 1px;
+    right: 5px;
+}
+.sideMenu .iconN{
+    position: absolute;
+    background-position: -129px 0;
+    margin-top: 3px;
+    width: 14px;
+    height: 14px;
+    margin-right: 2px;
+    top: 1px;
+    right: 5px;
+}
+.news{
+    width: 820px;
+    margin-right: 20px;
+    margin-bottom: 60px;
+}
+.news .newsTop{
+    height: 50px;
+    border-bottom: 3px solid #ededee;
+}
+.news .newsTop h3{
+    font-size: 26px;
+    line-height: 50px;
+    color: #404040;
+    margin-right: 40px;
+    font-weight: normal;
+}
+.news .newsTop ul{
+    margin-top: 14px;
+    height: 36px;
+}
+.news .newsTop ul li{
+    float: left;
+    width: 168px;
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+    cursor: pointer;
+    color: #666666;
+    font-size: 16px;
+    text-align: center;
+}
+.news .newsTop ul li:hover{
+    color: #d1ab57;
+    font-weight: 900;
+    border-bottom: 3px solid #d1ab57;
+}
+.news .newsNavBox{
+    padding: 24px 0 0;
+}
+.news .newsNavBox .newsNav{
+    display: none;
+}
+
+.news .newsNavBox .NavFirst{
+    height: 124px;
+    margin-bottom: 24px;
+}
+.news .newsNavBox .NavFirst img{
+    float: left;
+    margin-right: 20px;
+}
+.news .newsNavBox .NavFirst p{
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    color: #3e3e3e;
+    line-height: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+.news .newsNavBox .NavFirst span{
+    display: block;
+    height: 60px;
+    overflow: hidden;
+    font-size: 14px;
+    color: #898989;
+    line-height: 21px;
+}
+.news .newsNavBox .show{
+    display: block;
+}
+.news .newsNavBox .title{
+    height: 35px;
+    line-height: 35px;
+    padding: 4px 0;
+}
+.news .newsNavBox .title a{
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    font-size: 16px;
+    color: #555555;
+}
+.news .newsNavBox .title .new-type{
+    font-size: 16px;
+    display: inline-block;
+    width: 68px;
+    height: 35px;
+    line-height: 35px;
+    background: #ebebeb;
+    text-align: center;
+    color: #7a7a7a;
+    margin-right: 15px
+}
+.news .newsNavBox .title .date{
+    font-size: 16px;
+    width: 50px;
+    height: 35px;
+    line-height: 35px;
+    text-align: right;
+    color: #bababa;
+}
+.news .newsNavBox .title:hover .new-type{
+    color: #fff;
+    background: #d1ab57;
+}
+.news .newsNavBox .title:hover a{
+    color: #d1ab57;
+}
+.news .newsNavBox .readMore{
+    display: block;
+    width: 100%;
+    height: 45px;
+    margin-top: 15px;
+    line-height: 45px;
+    background: #f0f0f0;
+    color: #515151;
+    font-size: 16px;
+    text-align: center;
+}
+.news .newsNavBox .readMore em{
+    color: #d1ab57;
+    font-style:normal;
+    margin-left: -4px;
+}
+.news .newsNavBox .readMore:hover{
+    background: #dad8d8;
+}
+.hero{
+    width: 400px;
+}
+.hero .heroTop{
+    height: 36px;
+    border-bottom: 3px solid #ededee;
+    margin-top: 14px;
+    margin-bottom: 15px;
+}
+.hero .heroTop li{
+    width: 133.333333px;
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+    cursor: pointer;
+    color: #666666;
+    font-size: 16px;
+    text-align: center;
+}
+.hero .heroTop li:hover{
+    color: #d1ab57;
+    font-weight: bold;
+    border-bottom: 3px solid #d1ab57;
+}
+.hero .heroNav{
+    min-height: 420px;
+    width: 410px;
+}
+.hero .heroNav li{
+    float: left;
+    display: block;
+    width: 195px;
+    height: 70px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.hero .heroNav .st{
+    width: 400px;
+    height: 145px;
+}
+.hero .heroNav .st img{
+    width: 100%;
+}
+.hero .heroBottom{
+    margin-top: 42px;
+    margin-bottom: 20px;
+    display: block;
+    width: 410px;
+}
+.hero .old18{
+    font-size: 12px;
+    color: #878787;
+    height: 70px;
+    padding-top: 5px;
+    width: 400px;
+}
+i.ts{
+    float: left;
+    width: 70px;
+    height: 70px;
+    background-position: -330px -89px;
+    margin-right: 10px;
+}
+.hero .old18 h5{
+    margin-top: 10px;
+    color: #404040;
+    font-size: 14px;
+    font-weight: normal;
+}
+.footer{
+    padding: 30px 0;
+    color: #A5A5A5;
+    background: #000;
+}
+.footer .left{
+    margin-top: 30px;
+}
+.footer .right li{
+    line-height: 20px;
+    font-size: 12px;
+}
+.footer .right li a{
+    color: #A5A5A5;
+}
+.footer .right li a:hover{
+    text-decoration: underline;   
+}

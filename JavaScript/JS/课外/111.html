@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .box{
+            width: 100px;
+            height: 50px;
+            background: yellow;
+            text-align: center;
+            line-height: 50px;
+            position: relative;
+        }
+        .box ul{
+            position: absolute;
+            list-style: none;
+            top: 50px;
+            width: 100px;
+        }
+        .box ul li{
+            width: 100px!important;
+            height: 0;
+            opacity: 0;
+            background: #2fb9ef;
+            transform: rotateY(90deg);
+            vertical-align: top;
+        }
+        .box:hover ul li:nth-last-child(1){
+            height: 50px;
+            transition: .4s ease .3s;
+            opacity: 1;
+                        transform: rotateY(0deg);
+
+        }
+        .box:hover ul li:nth-last-child(2){
+            height: 50px;
+            transition: .4s ease .25s;
+            opacity: 1;
+                        transform: rotateY(0deg);
+
+        }
+        .box:hover ul li:nth-last-child(3){
+            height: 50px;
+            transition: .4s ease .2s;
+            opacity: 1;
+                        transform: rotateY(0deg);
+
+        }
+        .box:hover ul li:nth-last-child(4){
+            height: 50px;
+            transition: .4s ease .15s;
+            opacity: 1;
+                        transform: rotateY(0deg);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        aaaaa
+        <ul>
+            <li>aaa</li>
+            <li>bbb</li>
+            <li>ccc</li>
+            <li>ddd</li>
+        </ul>
+    </div>
+
+</body>
+</html>

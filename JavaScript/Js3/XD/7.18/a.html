@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+  margin: 0;
+  padding: 0;
+}
+body,html{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#div{
+    width: 50px;
+    height: 50px;
+    background: red;
+}
+div{
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+</style>
+<body>
+    <div id="div">
+
+    </div>
+ 
+    <script>
+    var oDiv=document.getElementById('div');
+    var oBody=document.getElementsByTagName('body')[0];
+
+
+    oDiv.onmousedown=function(){
+      var aLi=document.createElement('div');
+      oBody.appendChild(aLi);
+      aLi.style.background='yellow';
+      aLi.style.width='50px';
+      aLi.style.height='50px';
+      document.onmousemove=function(ev){
+          var oEvent=event||ev;
+          var x=oEvent.clientX-oDiv.offsetWidth/2;
+          var y=oEvent.clientY-oDiv.offsetHeight/2;
+        aLi.style.left=x+'px'
+        aLi.style.top=y+'px'
+      }
+    //   document.onmouseup=function(){
+    //       document.onmousemove=null;
+    //       aLi.style.display='none';
+   
+
+    //   }
+    }
+    
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //onkeydown 当键盘按键被按下时触发的事件      onmousedown
+    //onkeyup   当键盘按键被抬起时触发的事件      onmouseup
+    //onkeypress当键盘按键被按下并释放时触发的事件onclick
+
+
+
+
+//    document.onkeydown = function(){
+//        console.log('别按我');
+//    };
+//    document.onkeyup = function(){
+//        console.log('快起开');
+//    };
+//    document.onkeypress = function(){
+//        console.log('111');
+//    }
+
+    document.onkeydown = function(ev){
+        var oEvent = ev||event;
+        console.log(oEvent.keyCode);
+    }
+</script>
+</body>
+</html>

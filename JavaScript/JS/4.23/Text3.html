@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1{
+            width: 50px;
+            height: 200px;
+            background: red;
+            position: fixed;
+            right: 0;
+            top: 50%;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            font-size: 30px;
+        }
+        #div2{
+            width: 300px;
+            height: 400px;
+            background: yellowgreen;
+            position: absolute;
+            top:-50px;
+            left: 50px;
+        }
+    </style>
+    <script>
+        function zuoyi(){
+            document.getElementById('div1').style.right = '300px';
+        }
+        function  youyi(){
+            document.getElementById('div1').style.right = '0';
+        }
+    </script>
+</head>
+<body>
+    <div id="div1" onmouseover="zuoyi()" onmouseout="youyi()">
+        分<br />享
+        <div id="div2"></div>
+    </div>
+</body>
+</html>

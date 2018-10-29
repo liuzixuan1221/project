@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+//    var json = {
+//        'name':'哈哈',
+//        'age' :'18',
+//        'eat' : function(){
+//            console.log('略略略');
+//        }
+//    };
+//    //json格式的对象 转换为 字符串
+//    document.write(JSON.stringify(json));
+//    document.write(typeof JSON.stringify(json));
+//
+//    //json格式的字符串 转换为 json格式的对象
+//    var str = '{"name":"哈哈哈","age":"18"}';
+//    console.log(JSON.parse(str));   //ie低版本浏览器不兼容
+////    eval把字符串 转换为真正的表达式
+//    console.log(eval("("+str+")")); //不存在兼容问题
+//
+
+//    var json = {//  键值对
+//        "name": "liming",
+//        "sex": "man",
+//        "age": 18,
+//        "friends":[
+//    {
+//        "name":"xiaoming",
+//        "sex":"man",
+//        "age":19,
+//        "friends":{
+//            "name":"xiaoli"
+//        }
+//    },
+//    {
+//        "name":"xiaohong",
+//        "sex":"woman",
+//        "age":18
+//    }
+//                  ]
+//
+//    }
+//
+//    /*
+//    *   var json1 = json;
+//    *   json1.name = 'liming1';
+//    *   json1.friends[0].friends.name = 'xiaoming1';
+//    *   console.log(json);
+//    *   console.log(json1);
+//    * */
+//
+//        var json2= {};
+//    for (var key in json){
+//        json2[key] = json[key];
+//    }
+//    console.log(json2);
+//
+//
+
+    var json = {
+        "ipone7":3,
+        "sumsung note7":1,
+        "mate 9":5,
+        "xiaomi":{
+            "xiaomi":{
+                "m1":2,
+                "m2":3,
+            },
+            "m1":2,
+            "m2":3,
+        }
+    };
+
+//    //  简单拷贝    操作的是同一个地址   同一片内存
+//    var json1 = json;
+//    json1.ipone7 = '20';
+//    json1.xiaomi.m1 = '20';
+//    document.write(JSON.stringify(json)+'<br>');
+//    document.write(JSON.stringify(json1));
+
+
+//      //浅拷贝:简单拷贝了原对象中的第一层对象
+//    var json2 = {};
+//    for (var key in json){
+//        json2[key] = json[key];
+//    }
+//    json2.ipone7 = '20';
+//    document.write(JSON.stringify(json)+'<br>');
+//    document.write(JSON.stringify(json2));
+
+
+//        深拷贝
+//        var json2={};
+
+      //递归
+    function deepCopy(json){
+        var json2={};
+        for (var key in json){
+            if(typeof json[key] == 'object'){
+                json2[key] = deepCopy(json[key]);
+            }else {
+                json2[key] = json[key];
+            }
+        }
+        return json2;
+    }
+var json2 = deepCopy(json);
+json2.ipone7 = '20';
+json2.xiaomi.xiaomi.m1 = 20;
+console.log(json);
+console.log(json2);
+//
+//    var i = 0;
+//    //在函数里面执行函数本身 称为“递归”
+//    function  say(){
+//        document.write(
+//            '从前有座山'
+//            +'山里有座庙'
+//            +'庙里有个老和尚在讲故事'
+//        );
+//        say();
+//    }
+
+</script>
+</body>
+</html>

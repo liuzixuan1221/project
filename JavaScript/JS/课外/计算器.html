@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            position: relative;
+            width: 500px;
+            height: 700px;
+            background: #ccc;
+            margin: auto;
+            border-radius: 20px;
+            border: 2px solid #00c1de;
+        }
+        #show{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top:50px;
+            width: 80%;
+            height: 100px;
+            border: 2px solid #00c1de;
+            border-radius: 20px;
+            background: #fff;
+            font-size: 40px;
+            line-height: 100px;
+            text-align: right;
+            padding: 0 10px;
+        }
+        ul{
+            position: absolute;
+            top: 150px;
+            width: 100%;
+            height: auto;
+            margin-top: 160px;
+            list-style: none;
+        }
+        li{
+            float: left;
+            height: 70px;
+            width: 23%;
+            margin: 10px 1%;
+            border: 2px solid #00c1de;
+            border-radius: 20px;
+            background: #fff;
+            box-sizing: border-box;
+            font-size: 30px;
+            text-align: center;
+            line-height: 70px;
+            cursor: pointer;
+        }
+        #box>#clear,#box>#back{
+            position: absolute;
+            height: 70px;
+            width: 23%;
+            top: 150px;
+            border: 2px solid #00c1de;
+            border-radius: 20px;
+            background: #fff;
+            box-sizing: border-box;
+            font-size: 30px;
+            text-align: center;
+            line-height: 70px;
+            cursor: pointer;
+        }
+        #clear{
+            left: 0;
+            margin: 70px 0 0 1%;
+        }
+        #back{
+            right: 0;
+            margin: 70px 1% 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="show"></div>
+        <button id="clear">C</button>
+        <button id="back">Back</button>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>+</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>-</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>x</li>
+            <li>.</li>
+            <li>0</li>
+            <li>=</li>
+            <li>/</li>
+        </ul>
+    </div>
+
+    <script>
+        var aLi = document.getElementsByTagName('li');
+        var oShow = document.getElementById('show');
+        var oBack = document.getElementById('back');
+        var oClear = document.getElementById('clear');
+
+        for (var i = 0; i < aLi.length; i++) {
+            aLi[i].onclick = function() {
+                if (this.innerHTML) {
+                    oShow.innerHTML += this.innerText;
+                }
+            }
+        }
+        oBack.onclick = function(){
+            var newArr = oShow.innerHTML.split("");
+            newArr.pop();
+            console.log(newArr);
+//            oShow.innerHTML = newArr.toString(",");
+            console.log(newArr.join());
+        };
+        oClear.onclick = function(){
+            oShow.innerHTML ='';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="startMove.js"></script>
+
+    <style>
+        #box{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            left: 0;
+            top:0;
+            background: #3be3ff;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+<script>
+    var oBox = document.getElementById('box');
+
+    startMove(oBox, {"width":"800","height":"800"},function (){
+        startMove(oBox, {"width":"300","height":"300","opacity":"50"},function(){
+            startMove(oBox, {"top":"300","left":"300"})
+        })
+    })
+
+</script>
+</body>
+</html>

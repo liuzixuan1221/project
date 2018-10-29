@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .inp{
+            margin-left: 18px;
+        }
+        input{
+            width: 50px;
+            height: 30px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        .box{
+            margin-top: 10px;
+            width: 200px;
+            height: 200px;
+            color: #fff;
+            line-height: 200px;
+            text-align: center;
+        }
+        .box div{
+            display: none;
+            width: 100%;
+            height: 100%;
+            background: pink;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="inp">
+        <input style="background-color: yellow" type="button"value="aaa">
+        <input type="button"value="bbb">
+        <input type="button"value="ccc">
+    </div>
+    <div class="box">
+        <div style="display: block">aaa</div>
+        <div>bbb</div>
+        <div>ccc</div>
+    </div>
+
+
+    <script>
+//        var aInput = document.getElementsByTagName('input');
+//        var oBox = document.getElementsByClassName('box')[0];
+//        var aBox = oBox.children;
+//
+//
+//        for (var i = 0; i < aInput.length; i++){
+//            aInput[i].index = i;
+//            aInput[i].onclick = function(){
+//                for (var j = 0 ; j < aBox.length; j++){
+//                    aInput[j].style.backgroundColor = "#fff";
+//                    aBox[j].style.display = "none";
+//                }
+//                this.style.backgroundColor = "yellow";
+//                aBox[this.index].style.display = "block";
+//            }
+//        }
+
+
+window.onload = function(){
+
+    //无函数嵌套
+
+    //对应关系
+
+    //1、window.onload               --->            构造函数
+    //2、初始化整个函数               --->            初始化整个对象
+
+    //      1)变量            --->            属性
+    //      2)函数            --->            方法
+
+    new tabQH();
+
+    function tabQH(){
+        this.aInput = document.getElementsByTagName('input');
+        this.oBox = document.getElementsByClassName('box')[0];
+        this.aBox = this.oBox.children;
+        var _this = this;
+
+        for (var i = 0; i < this.aInput.length; i++){
+            this.aInput[i].index = i;
+            this.aInput[i].onclick = function (){
+                _this.clickFn(this);
+            }
+        }
+
+        tabQH.prototype.clickFn = function(haha){
+            for (var j = 0 ; j < this.aBox.length; j++){
+                this.aInput[j].style.backgroundColor = "#fff";
+                this.aBox[j].style.display = "none";
+            }
+            haha.style.backgroundColor = "yellow";
+            this.aBox[haha.index].style.display = "block";
+        }
+    }
+}
+
+
+
+    </script>
+</body>
+</html>

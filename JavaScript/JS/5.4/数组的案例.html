@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //    1-100的数 存储在数组中
+
+    var arrNum = [];
+    var sum=0;
+    for(var i=0;i<100;i++){
+        arrNum[i] = i+1 ;
+        sum+=i;
+    }
+//    for(var i=0;i<100;i++){
+//        arrNum[arrNum.length] = i+1;
+//    }
+    var arg = sum/(i-1);
+    console.log(arrNum);
+    console.log(sum);
+    console.log(arg);
+
+
+    var arrJi=[] ,j=0;
+    for(var i=1;i<101;i+=2){
+        arrJi[j] = i;
+        j++;
+    }
+    console.log(arrJi);
+
+
+    var arrC3 = [];
+    for(var i=1;i<101;i++){
+        if(i%3 == 0){
+            arrC3[arrC3.length] = i;
+        }
+    }
+    console.log(arrC3);
+
+
+    var arrZd = [12,2,32,4,5];
+    var max = arrZd[0],maxIndex;
+
+    var min = arrZd[0],minIndex;
+    for(var i=1;i<arrZd.length;i++){
+        if(max < arrZd[i]){
+            max = arrZd[i];
+            maxIndex = i;
+        }
+        if(min >arrZd[i]){
+            min = arrZd[i];
+            minIndex = i;
+        }
+    }
+    console.log(max,maxIndex,min,minIndex);
+
+
+    var arrSg = ["刘备","关羽","张飞"];
+    var sep='|',sum =arrSg[0];
+    for(var i=1;i<arrSg.length;i++){
+        sum += sep + arrSg[i];
+    }
+    console.log(sum);
+
+    var arrSg1 = ["刘备",0,"关羽",0,0,"张飞",0,0];
+    var arrSg2 = [];
+    for(var i=0;i<arrSg1.length;i++){
+//        if(arrSg1[i]!=0){
+//            arrSg2[arrSg2.length] = arrSg1[i];
+//        }
+        if(isNaN(arrSg1[i])){
+                        arrSg2[arrSg2.length] = arrSg1[i];
+        }
+    }console.log(arrSg2);
+
+
+
+    var arrq = [100,200];
+    var arrw = arrq;
+    function fn(){
+        arrw[0] = 1;
+        arrw = [10,20];
+        arrw[1] = 10;
+    }
+    fn();
+    console.log(arrq,arrw);
+
+</script>
+</body>
+</html>

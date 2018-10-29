@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            background: linear-gradient(rgba(0,100,100,.6) 40%, rgba(255,255,255,.6) 80% ) no-repeat;
+        }
+        .wrap{
+            position: relative;
+            margin: 300px auto;
+            width: 200px;
+            height: 200px;
+        }
+        .cube{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            transform: rotateX(-30deg) rotateY(-40deg);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from{transform: rotateX(0deg) rotateY(0deg);}
+            to{transform: rotateX(360deg) rotateY(360deg);}
+        }
+
+        .cube div{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            color: #fff;
+            font-size: 60px;
+            line-height: 200px;
+            background:rgba(0,0,0,.6);
+            transition: .4s;
+        }
+        .outQian{
+            transform: translateZ(100px);
+        }
+        .outHou{
+            transform: translateZ(-100px);
+        }
+        .outZuo{
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .outYou{
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .outShang{
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .outXia{
+            transform: rotateX(90deg) translateZ(-100px);
+        }
+
+        .cube p{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            color: #fff;
+            font-size: 30px;
+            line-height: 100px;
+            background: rgba(0,0,0,.8);
+            left: 50px;
+            top:50px;
+        }
+
+        .inQian{
+            transform: translateZ(50px);
+        }
+        .inHou{
+            transform: translateZ(-50px);
+        }
+        .inZuo{
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+        .inYou{
+            transform: rotateY(90deg) translateZ(50px);
+        }
+        .inShang{
+            transform: rotateX(90deg) translateZ(50px);
+        }
+        .inXia{
+            transform: rotateX(90deg) translateZ(-50px);
+        }
+
+        .wrap:hover .outQian{
+            transform: translateZ(200px);
+        }
+        .wrap:hover .outHou{
+            transform: translateZ(-200px);
+        }
+        .wrap:hover .outZuo{
+            transform: rotateY(-90deg) translateZ(200px);
+        }
+        .wrap:hover .outYou{
+            transform: rotateY(90deg) translateZ(200px);
+        }
+        .wrap:hover .outShang{
+            transform: rotateX(90deg) translateZ(200px);
+        }
+        .wrap:hover .outXia{
+            transform: rotateX(90deg) translateZ(-200px);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="cube">
+            <div class="outQian">前面</div>
+            <div class="outHou">后面</div>
+            <div class="outZuo">左边</div>
+            <div class="outYou">右边</div>
+            <div class="outShang">上边</div>
+            <div class="outXia">下边</div>
+
+            <p class="inQian">前</p>
+            <p class="inHou">后</p>
+            <p class="inZuo">左</p>
+            <p class="inYou">右</p>
+            <p class="inShang">上</p>
+            <p class="inXia">下</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        button{
+            width: 100px;
+            height: 50px;
+            background: royalblue;
+            border: none;
+        }
+        #img{
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+        }
+        .ani{
+            animation:  d1 3s infinite  linear;
+        }
+        @keyframes d1 {
+            0%{
+                transform: rotate(0deg);
+                -webkit-transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+<button id="but1">播放</button>
+<button id="but2">暂停</button>
+<audio src="视频/See%20You%20Again.mp3" id="y"></audio>
+<img src="视频/_CXP7@_GOH8W0A%5D%5BE12VQ8K.png" alt="" id="img">
+
+<!--autoplay="autoplay" controls="controls" currentScr="currentScr"-->
+
+
+<script>
+    var aBut1=document.getElementById("but1");
+    var aBut2=document.getElementById("but2");
+    var oY=document.getElementById('y');
+    var oImg=document.getElementById('img');
+
+    aBut1.onclick=function(){
+        oY.play();
+    }
+    aBut2.onclick=function(){
+        oY.pause();
+    }
+    var a =0;
+    oImg.onclick=function(){
+        if(a==0){
+            oY.play();
+            oImg.className='ani';
+            a=1;
+        }else if (a==1){
+            oY.pause();
+            oImg.className='';
+            a=0;
+        }
+    }
+
+</script>
+</body>
+</html>

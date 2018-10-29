@@ -1,0 +1,216 @@
+body{
+    font-size: 14px;
+}
+.inner{
+    width: 1480px;
+    margin: auto;
+}
+header{
+    position: fixed;
+    background: #000;
+    height: 110px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999999;
+}
+header .top{
+    padding: 13px 0;
+    text-align: right;
+}
+header .top a{
+    color: #b2b2b2;
+}
+header .top a img{
+    padding: 0 10px;
+}
+header .top a .cx{
+    border-left: 1px solid #b2b2b2;
+    padding: 0 18px;
+}
+header .nav-con{
+    position: relative;
+}
+header .logo img{
+    display: block;
+    max-width: 100%;
+    border: none;
+    vertical-align: middle;
+    margin-top: -20px;
+}
+header .nav-box{
+    position: absolute;
+    top: 40px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+header .nav-box ul{
+    display: table;
+    margin: 0 auto;
+}
+header .nav-box ul li{
+    float: left;
+}
+header .nav-box ul li a{
+    display: inline-block;
+    font-size: 14px;
+    color: #fff;
+    margin: 0 18px;
+    padding-bottom: 23px;
+    border-bottom: 2px solid transparent;
+    transition: .4s;
+}
+header #hdBox{
+    position: absolute;
+    width: 100%;
+    height: 180px;
+    background: #fff;
+    box-shadow: 0 8px 20px #ccc;
+    top:110px;
+    display: none;
+}
+header #hdBox img{
+    width: 190px;
+    height: 100px;
+    display: block;
+}
+header #hdBox .hdBoxLeft{
+    line-height: 100px;
+    margin-left: 35%;
+}
+header #hdBox .hdBoxRight{
+    line-height: 100px;
+    margin-right: 35%;
+}
+header .nav-box ul li a:hover{
+    border-bottom: 2px solid orange;
+}
+header .nav-right{
+    position: relative;
+    margin-top: -8px;
+    margin-right: 20px;
+    margin-bottom: 12px;
+}
+header .nav-right .search{
+    display: inline-block;
+    position: relative;
+}
+header .nav-right .search a{
+    position: relative;
+    z-index: 2;
+}
+header .nav-right #searchInput{
+    position: absolute;
+    width: 224px;
+    height: 28px;
+    border:1px solid #fff;
+    border-radius: 20px;
+    top:-7px;
+    left: -200px;
+    display: none;
+}
+header .nav-right #searchInput input{
+    background: transparent;
+    color: #fff;
+    padding: 5px 0 5px 20px;
+    width: 170px;
+}
+header .nav-right .personal{
+    display: inline-block;
+    margin-left: 36px;
+    margin-right: 40px;
+}
+header .nav-right .gouwuche{
+    display: inline-block;
+    position: relative;
+}
+header .nav-right .gouwuche a{
+    display: block;
+}
+header .nav-right .gouwuche .quan0{
+    width: 18px;
+    height: 16px;
+    border-radius: 50%;
+    background: orange;
+    color: #fff;
+    text-align: center;
+    line-height: 16px;
+    position: absolute;
+    top:-6px;
+    left: 10px;
+}
+header .nav-right .gouwuche .gwcBox{
+    position: absolute;
+    width: 358px;
+    height: 184px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 8px 30px #ccc;
+    top:40px;
+    left: -320px;
+    line-height: 110px;
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+    display: none;
+}
+header .nav-right .gouwuche .gwcBox .qgg{
+    width: 310px;
+    height: 40px;
+    background: orange;
+    line-height: 40px;
+    color: #fff;
+    margin: auto;
+    border-radius: 5px;
+}
+header .nav-right .gouwuche a:hover+.gwcBox{
+    display: block;
+}
+.main{
+    width: 100%;
+    background: #000;
+}
+.main .banner{
+    margin-bottom: 10px;
+}
+.main .banner img{
+    margin-top: 110px;
+    width: 100%;
+}
+.main ul{
+    width: 100%;
+    padding: 0.5%;
+    box-sizing: border-box;
+}
+.main ul li{
+    float: left;
+    width: 31.3%;
+    margin: 1.1% 1%;
+}
+.main ul .one{
+    width: 47.8%;
+    position: relative;
+}
+.main ul .two{
+    width: 47.8%;
+}
+.main ul .one .oneBox{
+    background: rgba(0,0,0,.6);
+    position: absolute;
+    width: 100%;
+    height: 85px;
+    bottom: -85px;
+    left: 0;
+    text-align: center;
+    line-height: 85px;
+    color: #fff;
+    font-size: 26px;
+    display: none;
+    transition: 1s;
+}
+.main ul .one:hover .oneBox{
+    display: block;
+    bottom:0;
+}

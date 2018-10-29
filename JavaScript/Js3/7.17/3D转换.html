@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 500px;
+            background: #0f0;
+            border: 10px solid slateblue;
+            margin-left: 500px;
+
+            /*X轴*/
+            transform: translateX(200px);
+            /*Y轴*/
+            transform: translateY(200px);
+            /*Z轴*/
+            transform: translateZ(200px);
+
+
+            /*位移三合一*/
+            transform: translate3d(200px,200px,200px);
+
+            /*缩放*/
+            transform: scale3d(2,3,1);
+
+            /*旋转*/
+            transform: rotate3d(0,0,1,60deg);
+
+            /*改变基点*/
+            transform-origin: 50% 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

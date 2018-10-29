@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //  定时器
+//    间隔定时器
+    setInterval();      //开启
+    clearInterval();    //关闭
+//    延时定时器(炸弹定时器)
+    setTimeout()        //开启
+    clearTimeout()     //关闭
+
+//    setInterval(callback,interval)
+//    callback回调函数  interval执行时间 以毫秒为单位
+
+
+//    每隔100ms执行一次这个函数
+        var timer1 = setInterval(function () {
+            alert(1)
+        },1000);
+    clearInterval(timer1);
+
+        let timer2 = setTimeout(function(){
+            alert(2);
+        },1000);
+    clearInterval(timer2);
+
+    //延时定时器
+//    等1000ms后，执行这个函数 执行完就结束
+
+
+//    定时器使用的三步骤
+//    1、let time = null;
+//    2、每次进来首先 关闭定时器 clearInterval(timer);
+//    3、开启定时器 timer = setInterval();
+</script>
+</body>
+</html>

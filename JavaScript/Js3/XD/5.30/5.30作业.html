@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="5.30作业.css">
+</head>
+
+<body>
+    <div class="xd1">
+        <div class="xd2">
+            <ul class="xd2_left">
+                <li style="background:#0C8ED9 ">首页</li>
+                <li>榜单</li>
+                <li>下载客户端</li>
+                <li class="o">更多∨
+                    <div class="text">
+                        <p>电台</p>
+                        <p>MV</p>
+                        <p>歌单</p>
+                        <p>歌手</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="xd2_right">
+                <li>
+                    <span class="j1"></span>音乐直播</li>
+                <li>
+                    <span class="j2"></span>酷狗LIVE</li>
+                <li>
+                    <span class="j3"></span>音乐人</li>
+                <li>
+                    <span class="j4"></span>游戏</li>
+                <li>
+                    <span class="j5"></span>商城</li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="xd">
+
+        <img style="display: block;" src="img/20160713154957678313.jpg" alt="">
+        <img src="img/20170913175748750902.jpg" alt="">
+        <img src="img/20170929134028425664.jpg" alt="">
+        <img src="img/20180530003254199489.jpg" alt="">
+        <img src="img/20180529182218140197.jpg" alt="">
+        <ul>
+            <li class="now"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="dd">
+        <div class="dd1">
+            <div class="dd1_left">
+                <div class="dd1_left_top">
+                    <ul>
+                        <h3>新歌首发</h3>
+                        <li class="li1">华语
+                        </li>
+                        <li>欧美
+                        </li>
+                        <li>韩国
+                        </li>
+                        <li>日本
+                        </li>
+                    </ul>
+                </div>
+                <text class="v1" style="display: block">
+
+                </text>
+                <text class="v2">
+
+                </text>
+                <text class="v3">
+
+                </text>
+                <text class="v4">
+
+                </text>
+            </div>
+            <div class="dd1_right">
+                <div class="dd1_right_top"></div>
+                <div class="dd1_right_bottom"></div>
+            </div>
+        </div>
+    </div>
+    <div class="xx">
+        <div class="xx1">
+            <div>
+                <div class="xx1_left">
+                </div>
+                <div class="xx1_right">
+                    <div class="xx1_right_top">
+                        <ul>
+                            <h3>热门歌手</h3>
+                            <li>华语</li>
+                            <li>欧美</li>
+                            <li>日韩</li>
+                            <li>更多</li>
+                        </ul>
+
+                    </div>
+                    <div class="xx1_right_bottom">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    var a = document.querySelectorAll('.xd li');
+    var b = document.querySelectorAll('.xd img');
+    for (var i = 0; i < a.length; i++) {
+        a[i].index = i;
+        a[i].onmouseover = function () {
+            for (var j = 0; j < b.length; j++) {
+                b[j].style.display = 'none';
+                a[j].classList.remove('now')
+            }
+            b[this.index].style.display = 'block';
+            this.classList.add('now')
+        }
+    }
+    var c = document.querySelectorAll('.dd1_left_top li');
+    var d = document.querySelectorAll('.dd1_left text');
+
+    console.log(c)
+    function arr(arrone, arrtwo) {
+        for (var i = 0; i < arrone.length; i++) {
+            arrone[i].index = i;
+            arrone[i].onmouseover = function () {
+                //    console.log('c')
+                for (var j = 0; j < arrtwo.length; j++) {
+                    arrtwo[j].style.display = 'none';
+                    //   arrone[j].classList.remove('li1');
+                }
+                arrtwo[this.index].style.display = 'block';
+                //    this.classList.add('li1');
+
+            }
+        }
+    }
+
+
+    arr(c, d)
+</script>
+
+</html>

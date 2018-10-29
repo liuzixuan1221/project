@@ -1,0 +1,138 @@
+/*主体*/
+.main-box{
+    background: #f1f2f6;
+    height: auto;
+    width: 100%;
+}
+.main-box .main-top{
+    width:220px;
+    height:115px;
+    margin:0 auto;
+    text-align: center;
+    color:#311759;
+    padding-top: 125px;
+}
+.main-box .box >h1{
+    font-size: 54px;
+    height: 60px;
+    line-height: 60px;
+    font-weight: bold;
+    text-align: center;
+    color:#311759;
+    margin-top: 120px;
+    margin-bottom: 5px;
+}
+.main-box .box> p{
+    font-size: 18px;
+    letter-spacing: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color:#311759;
+}
+.main-box .box >img{
+    display: block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.main-box .list h2{
+    color: #311759;
+    font-size: 30px;
+    font-weight: bold;
+}
+.main-box .list{
+    height: 95px;
+    width:100%;
+    position: relative;
+}
+.main-box .list img:nth-child(2){
+    margin-top: 19px;
+}
+.main-box .list span{
+    width: 61px;
+    height: 58px;
+    background: url(../images/pen_list.png) no-repeat;
+    position: absolute;
+    right: 0px;
+    top: 2px;
+    cursor: pointer;
+}
+.main-box .list span:hover{
+    background-position: -61px 0;
+}
+.main-box ul{
+    height: auto;
+}
+.main-box ul li{
+    width:483px;
+    height: 166px;
+    float: left;
+    margin-bottom: 30px;
+    padding:36px 25px;
+    background:white;
+    position: relative;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.main-box ul li:hover{
+    border-color:#86759e;
+    transform: translateY(-6px);
+    transition: all 0.3s ease;
+}
+.main-box ul li:nth-child(even){
+    float: right;
+}
+.main-box ul li img{
+    float: left;
+    margin-right: 18px;
+}
+.main-box ul li h3{
+    font-size: 20px;
+    color: #454548;
+    line-height: 26px;
+    max-height: 53px;
+    overflow: hidden;
+    padding-top: 15px;
+}
+.main-box ul li p:nth-child(3){
+    color: #6b6a6f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding-top: 2px;
+}
+.main-box ul li p:nth-child(4){
+    padding-top: 8px;
+    color: #47464a;
+    line-height: 25px;
+    overflow: hidden;
+    font-family: KaiTi_GB2312;
+}
+.main-box ul li span{
+    display: inline-block;
+    position: absolute;
+    top:36px;
+    left: 0px;
+    height: 9px;
+    width: 14px;
+    background: url("../images/list_img_over_xiaojiantou.png");
+}
+.main-box ul li:hover span{
+    left:50px;
+    transition: all 0.3s ease;
+}
+.main-box .list-more{
+    height: 58px;
+    width: 58px;
+    background: url(../images/lis_more_btn_bg.png) no-repeat 0 -58px;
+    margin: 15px auto 130px;
+    cursor: pointer;
+}
+.main-box .list-more:hover{
+    background-position: 0 0;
+    transition: all 0.5s ease;
+}
+.main-box .footer-img{
+    background: url("../images/map_bottomimg.png") no-repeat top center;
+    width: 100%;
+    min-width: 1100px;
+    height: 33px;
+}

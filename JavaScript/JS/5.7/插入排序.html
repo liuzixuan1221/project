@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    //插入排序：每循环一轮    都插入一个数  和其他已经插入的数进行比较
+    var arr = [10,8,4,3,6,7,1]
+
+    for(var i=1;i<arr.length;i++){
+        for(var j= i; j>0;j--){
+            if(arr[j]<arr[j-1]){
+                var temp=arr[j];
+                arr[j]=arr[j-1];
+                arr[j-1]=temp;
+            }
+        }
+    }console.log(arr);
+
+</script>
+</body>
+</html>

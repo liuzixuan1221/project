@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    console.log(isNaN(111));        //false
+    console.log(isNaN("aaa"/111));  //true
+    console.log(isNaN("aaa"));      //true
+    console.log(isNaN("123"));      //false
+    console.log(isNaN(NaN));        //true
+    console.log(isNaN(undefined));  //true
+    console.log(isNaN(null));       //false
+
+    console.log('------------------------------------------------');
+
+    console.log(isNaN("aaa"/111));  //true
+    console.log(isNaN("aaa"));      //true
+    console.log(isNaN(NaN));        //true
+    console.log(isNaN(undefined));  //true
+    console.log(isNaN("123"+"abc"));//true
+    console.log(isNaN(111));        //false
+    console.log(isNaN("123"));      //false
+    console.log(isNaN("123"+111));  //false
+    console.log(isNaN(null+10));    //false
+
+
+    //null和数字做运算的时候转化为0
+    //NaN和任何数都不相等  NaN不等于自己本身   NaN==NaN false
+    //null和undefined 也不等于任何其他值
+    // == 进行强制转换
+
+
+    console.log(null == 0);
+    console.log(undefined == NaN);
+    console.log('123' == 123);
+    console.log(null == null);
+    console.log(undefined == undefined);
+
+    console.log('------------------------------------------------');
+
+    console.log(Number('1'));           //1
+    console.log(Number('aaa'));         //NaN
+    console.log(Number('12px'));        //NaN
+    console.log(Number('width:12px'));  //NaN
+    console.log(Number(true));          //1
+    console.log(Number(false));         //0
+    console.log(Number(null));          //0
+    console.log(Number(undefined));     //NaN
+    console.log(Number({}));            //NaN
+    console.log(Number({name:1}));      //NaN
+    console.log(Number([]));            //0
+    console.log(Number([123]));         //123
+    console.log(Number([1,2,3]));       //NaN
+    console.log(Number(/\d/));          //NaN
+    console.log(Number(new Date()));    //
+    console.log(Number(function(){}));  //NaN
+
+    //基本数据类型  只有null=>0 '引号中出现的只有数字'  =>具体的数字
+    //引用数据类型  只有数组 的某些情况 会转换为数字类型 其他引用数据类型大部分都为NaN
+    //[]=>0 [123]=123 ['123']=>123
+//    注意:引用数据类型转换为数字的时候 先通过toString转换为字符串
+//    然后在由字符串转换为数字
+    //parseInt()    强制转换为整数
+    //parseFloat()  强制转换为浮点数(小数)
+
+    console.log('------------------------------------------------');
+
+    console.log(Number("12px"));
+    console.log(Number("width:12px"));
+    console.log(parseInt("12px"));
+    console.log(parseInt("width:12px"));
+    console.log(parseFloat("12px"));
+    console.log(parseFloat("width:12px"));
+    console.log(parseInt("12.234"));
+    console.log(parseFloat("12.234"));
+    console.log(parseInt("12.234px"));
+    console.log(parseFloat("12.234px"));
+
+    console.log("123" + 111);   //123111
+    console.log("123" - 111);   //12
+    console.log("123" * 1);     //123
+    console.log("123" / 1);     //123
+    console.log("123" % 1);     //0
+
+    console.log({});                //{}
+    console.log(String({}));        //[object Object]
+    console.log([]);                //[]
+    console.log(String([123]));     //'123'
+    console.log([1,2,34]);          //[1,2,34]
+    console.log(String([1,2,34]));  //'1,2,34'
+    console.log(/\d/);              // /\d/
+    console.log(String(/\d/));      // /\d/
+
+
+    //【字符串】
+    //1、用一对引号(单引/双引)包含的内容 =>字符串
+
+    //其他数据类型转换的值？
+//    基本数据类型转换为字符串的时候都是直接数据类型外面加了一对儿引号
+//    引用数据类型：
+//    {}=>[object Object]
+//    []=>''
+//    [1,2,3]=>'1,2,3'
+
+//隐式转换  ：
+//    +
+//    在+两边  只要有一边为字符串 结果必然是字符串的拼接 也为字符串
+
+//      null和undefined没有toString()这个方法
+
+    console.log(undefined + 12 + '12' + 12);
+    console.log(12 + null + 12 + undefined + '12' + 12 + null + '12' + 12 + 12);
+
+
+//    【boolean - 布尔】
+//    1、true真   false假
+//    2、
+        //显示转换
+        // Boolean()
+
+        //隐式转换
+        //! !! if(){}
+//    3、其他类型转换为布尔类型的值是什么
+    console.log(Boolean(1));
+    console.log(Boolean(0));
+    console.log(Boolean(3));
+    console.log(Boolean(-3));
+    console.log(Boolean(0.5));
+    console.log(Boolean(NaN));
+
+    console.log(Boolean('1'));
+    console.log(Boolean('qqq'));
+    console.log(Boolean('12px'));
+    console.log(Boolean(''));
+    console.log(Boolean(' '));
+
+    console.log(Boolean(null));
+    console.log(Boolean(undefined));
+    console.log(Boolean({}));           //true
+    console.log(Boolean({name:1}));
+    console.log(Boolean([]));           //true
+    console.log(Boolean([1,2,3]));
+    console.log(Boolean(/\d/));
+
+    console.log('------------------------------------------------');
+
+    console.log([]==![]);
+    console.log(!1);
+    console.log(!!1);
+
+</script>
+</body>
+</html>
