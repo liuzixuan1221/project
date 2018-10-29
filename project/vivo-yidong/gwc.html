@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640, user-scalable=no"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/gwc.css">
+    <link rel="stylesheet" href="swiper/swiper-4.3.3.min.css">
+    <link rel="stylesheet" href="swiper/animate.min.css">
+    <script src="swiper/jquery-1.11.3.min.js"></script>
+    <script src="swiper/swiper-4.3.3.min.js"></script>
+    <script src="swiper/swiper.animate1.0.3.min.js"></script>
+    <script src="js/ajax.js"></script>
+</head>
+<body>
+
+<!--header的盒子-->
+<header>
+    <div class="left fl" >
+        <a href="">
+            <i class="left" onclick="javascript:window.location.href = 'index.html' ;return false"></i>
+        </a>
+    </div>
+    <div class="logo fl">
+        <p>购物车</p>
+    </div>
+    <form class="headerForm fl" action="">
+        <input type="text"placeholder="NEX">
+    </form>
+    <div class="right fr">
+        <a href="">
+            <i class="list" id="list"></i>
+        </a>
+    </div>
+</header>
+
+<!--main的盒子-->
+<div class="main">
+    <div id="BG"></div>
+    <div id="ycList">
+        <a href="">商城首页</a>
+        <a href="">个人中心</a>
+        <a href="">选购手机</a>
+        <a href="">全部分类</a>
+    </div>
+    <div id="del">
+        <p class="ts">提示信息</p>
+        <p class="sure">确定将该商品从购物车中删除吗？</p>
+        <div class="delBtn">
+            <button class="qx">取消</button>
+            <button class="qd">确定</button>
+        </div>
+    </div>
+    <div class="mainNav">
+        <div class="notBox">
+            <div class="pic">
+                <img src="images/icon-no-prod_abd60be.png" alt="">
+            </div>
+            <p>您的购物车里还没有任何商品</p>
+            <div class="btns">
+                <button onclick="javascript:window.location.href = 'fenlei.html'" id="goShopping">去逛逛</button>
+                <button id="myFavorite">我的收藏</button>
+            </div>
+        </div>
+        <div class="hasBox">
+            <ul>
+            </ul>
+            <div class="footer">
+                <div class="table">
+                    <div class="allCheck">
+                        <b class="aCheck now"></b>
+                        <p>全选</p>
+                    </div>
+                    <div class="heJi">
+                        <p class="labelPrice">
+                            合计：
+                        <span class="redSpan">
+                            ￥00.00
+                        </span>
+                        </p>
+                    </div>
+                    <div class="jieSuan">
+                        <button>去结算</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/gwc.js"></script>
+</body>
+</html>

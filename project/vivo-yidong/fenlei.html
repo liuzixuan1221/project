@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640, user-scalable=no"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fenlei.css">
+    <link rel="stylesheet" href="swiper/swiper-4.3.3.min.css">
+    <link rel="stylesheet" href="swiper/animate.min.css">
+    <script src="swiper/jquery-1.11.3.min.js"></script>
+    <script src="swiper/swiper-4.3.3.min.js"></script>
+    <script src="swiper/swiper.animate1.0.3.min.js"></script>
+    <script src="js/ajax.js"></script>
+</head>
+<body>
+<!--header的盒子-->
+<header>
+    <div class="left fl" >
+        <a href="">
+            <i class="left" onclick="javascript:window.location.href = 'index.html' ;return false"></i>
+        </a>
+    </div>
+    <div class="logo fl">
+        <p>全部分类</p>
+    </div>
+    <form class="headerForm fl" action="">
+        <input type="text"placeholder="NEX">
+    </form>
+    <div class="right fr">
+        <a href="">
+            <i class="list" id="list"></i>
+        </a>
+
+    </div>
+</header>
+
+<!--main的盒子-->
+<div class="main">
+    <div id="BG"></div>
+    <div id="ycList">
+        <a href="">商城首页</a>
+        <a href="">个人中心</a>
+        <a href="">选购手机</a>
+        <a href="">全部分类</a>
+    </div>
+    <div class="leftSwiper fl">
+        <div class="swiper-container" id="leftSwiper">
+            <div class="swiper-wrapper">
+                <ul class="swiper-slide">
+                    <li><a href="">NEX</a></li>
+                    <li><a href="">X系列</a></li>
+                    <li><a href="">Z系列</a></li>
+                    <li><a href="">Y系列</a></li>
+                    <li><a href="">充电</a></li>
+                    <li><a href="">配件</a></li>
+                    <li><a href="">音乐</a></li>
+                    <li><a href="">智能</a></li>
+                    <li><a href="">摄影</a></li>
+                    <li><a href="">生活</a></li>
+                    <div class="leftBorder"></div>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="rightSwiper fr">
+        <div class="swiper-container" id="rightSwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" id="Right-Swiper-Slide">
+                </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
+        </div>
+    </div>
+</div>
+
+
+<!--bottomBox的盒子-->
+<div id="bottomBox"></div>
+
+<script src="js/fenlei.js"></script>
+</body>
+</html>

@@ -1,0 +1,881 @@
+body{
+    font-size: 14px;
+}
+#BG{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.1);
+    display: none;
+}
+.inner{
+    width: 1200px;
+    margin: auto;
+}
+header{
+    width: 100%;
+    background-color: rgba(26,26,26,.9);
+}
+header .headerInner{
+    position: relative;
+    z-index: 5;
+}
+.headerBox{
+    position: relative;
+    width: 100%;
+    height: 44px;
+    z-index: 2;
+}
+.logo{
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 120px;
+    height: 44px;
+    overflow: hidden;
+}
+.logo a img{
+    position: absolute;
+    width: 100%;
+    height: 184px;
+    top: -128px;
+}
+.ulBox{
+    position: relative;
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+    z-index: 3;
+}
+
+/*headerNav 开始*/
+.headerNav{
+    position: relative;
+    left: 0;
+    transition: .4s;
+}
+.headerNav li{
+    float: left;
+}
+.headerNav li a{
+    display: block;
+    height: 100%;
+    line-height: 44px;
+    padding: 0 22px;
+    color: #fff;
+    transition: color .4s ease;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.headerNav li a:hover{
+    color: #b2b2b2;
+}
+/* headerNav 结束*/
+
+/*headerRight 开始*/
+.headerRight{
+    position: absolute;
+    width: 8%;
+    top: 10px;
+    margin-top: -10px;
+    right: 0;
+    z-index: 3;
+    height: 100%;
+    line-height: 44px;
+}
+.headerRight a{
+    font-size: 16px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    transition: color .4s;
+}
+.headerRight a:hover{
+    color: #ccc;
+}
+.headerRight .search{
+    margin-left: -30px;
+}
+.headerRight .search #searchBtn{
+}
+.headerRight .geren{
+    margin-right: 50px;
+}
+.headerRight #geRen{
+    display: inline-block;
+}
+.headerRight #geRen.now{
+    display: none;
+}
+/*headerRight 结束*/
+
+
+/*hNavBox 开始*/
+.hNavBox{
+    height: 0;
+    position: relative;
+}
+.hNavBox .bigBox{
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 0;
+    background-color: rgba(26,26,26,.9);
+    transition: height .3s ease;
+}
+.hNavBox .bigBox.now{
+    height: 190px;
+}
+#bigBox ul{
+    position: absolute;
+    transform: matrix(1, 0, 0, 1, 0, -25);
+    opacity: 0;
+    transition: .3s ease;
+    left: 614px;
+}
+#bigBox ul.now{
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    opacity: 1;
+}
+#bigBox ul li{
+    margin-top: 10px;
+    opacity: 0;
+    transform: matrix(1, 0, 0, 1, 0, -25);
+    font-weight: 400;
+    line-height: 19px;
+}
+#bigBox ul li.now{
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    opacity: 1;
+}
+#bigBox ul li a{
+    cursor: pointer;
+    color: rgba(255,255,255,.8);
+}
+#bigBox ul:nth-child(2){
+    left: 714px;
+}
+#bigBox ul:nth-child(3){
+    left: 795px;
+}
+/*hNavBox 结束*/
+
+
+
+/*searchBox 开始*/
+.searchBox{
+    opacity: 1;
+    position: absolute;
+    width: 81%;
+    height: 44px;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    /*display: none;*/
+}
+.searchBox .searchTop{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.searchTop form{
+    width: 750px;
+    height: 30px;
+    margin-top: 7px;
+    background: 0 0;
+    padding-left: 43px;
+    color: #fff;
+    overflow: hidden;
+}
+.searchTop input{
+    position: relative;
+    visibility: inherit;
+    opacity: 1;
+    width: 750px;
+    height: 30px;
+    background: 0 0;
+    color: #fff;
+    margin-left: 750px;
+    transition: .8s;
+}
+.searchTop input.now{
+    margin-left: 0;
+}
+.searchClose{
+    position: absolute;
+    top: 7px;
+    right: 113px;
+    color: #fff;
+    display: inline-block;
+    transition: 1s;
+    transform-origin:50% 50%;
+    opacity: 0;
+}
+.searchClose.now{
+    transform: rotate(-180deg);
+    opacity: 1;
+}
+.searchNav{
+    position: absolute;
+    width: 90%;
+    height: auto;
+    min-height: 280px;
+    background: #fff;
+    top: 44px;
+    display: none;
+    transition: .4s;
+}
+.searchNav .link{
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
+}
+.searchNav .link dt{
+    width: auto;
+    height: auto;
+    padding-left: 43px;
+    font-size: 12px;
+    color: #888;
+    padding-top: 28px;
+    margin-bottom: 11px;
+}
+.searchNav .link dd{
+    width: 100%;
+    height: 40px;
+    transition: .4s;
+}
+.searchNav .link dd a{
+    display: block;
+    width: auto;
+    height: 100%;
+    line-height: 40px;
+    padding-left: 67px;
+    color: #333;
+}
+.searchNav .link dd:hover{
+    background: rgba(30,0,200,.1);
+}
+.searchNav .link dd:hover a{
+    color: #0087cd;
+}
+/*searchBox 结束*/
+
+/*gerenBox 开始*/
+#gerenBox{
+    position: absolute;
+    z-index: 6;
+    height: auto;
+    padding: 25px 0;
+    top: 44px;
+    width: 180px;
+    right: 30px;
+    background-color: #fff;
+    display: none;
+}
+#gerenBox li{
+    transform: matrix(1, 0, 0, 1, 0, -25);
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    transition: 0s;
+}
+#gerenBox li a{
+    display: block;
+    color: #666;
+    line-height: 50px;
+    font-size: 14px;
+}
+#gerenBox li:hover a{
+    color: #0087cd;
+}
+#gerenBox li span{
+    position: relative;
+    text-align: left;
+    display: inline-block;
+    margin-left: 18px;
+    font-size: 14px;
+    line-height: 50px;
+}
+#gerenBox li a b{
+    margin: 0 auto;
+    vertical-align: baseline;
+    position: relative;
+    font-weight: 400;
+    font-style: normal;
+}
+#gerenBox li:nth-child(1) a b{
+    left: -8px;
+}
+#gerenBox li:nth-child(4) a b{
+    left: 3px;
+}
+/*gerenBox 结束*/
+
+
+
+.banner{
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 60px;
+    min-height: 540px;
+}
+.wrap{
+    width: 100%;
+    height: 850px;
+    position: relative;
+}
+.wrap .bgWrap{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.wrap .bgWrap li{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: .4s;
+}
+.wrap .bgWrap li.now{
+    opacity: 1;
+}
+.wrap .bgWrap li.bg-1{
+    background: url("../images/vivo-banner-x21ks-bg.jpg") no-repeat center;
+    background-size: auto 100%;
+}
+.wrap .bgWrap li.bg-2{
+    background: url("../images/vivo-banner-z1-bg.jpg") no-repeat center;
+    background-size: auto 100%;
+}
+.wrap .bgWrap li.bg-3{
+    background: url("../images/vivo-banner-z1i-bg.jpg") no-repeat center;
+    background-size: auto 100%;
+}
+.wrap .bgWrap li.bg-4{
+    background: url("../images/vivo-banner-nexys-bg.jpg") no-repeat center;
+    background-size: auto 100%;
+}
+.bgPic li a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.section{
+    position: relative;
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+}
+.section .title{
+    position: absolute;
+    top: 35%;
+    left: 5%;
+}
+.section .title p{
+    width: 380px;
+    height: 45.6px;
+}
+.bg-4 .section .title p{
+    width: 380px;
+    height: 68.4px
+}
+.bg-1 .section .title p:nth-child(1){
+    background: url("../images/vivo-banner-x21ks-title1-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.bg-1 .section .title p:nth-child(2) {
+    background: url("../images/vivo-banner-x21ks-title2-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.bg-1 .section .title p:nth-child(3) {
+    background: url("../images/vivo-banner-x21ks-title3-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.section .title .moreAnimate{
+    margin-top: 60px;
+    text-align: center;
+    width: 380px;
+    height: 45.6px;
+}
+.bg-2 .section .title p:nth-child(1){
+    background: url("../images/vivo-banner-z1-title1-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.bg-2 .section .title p:nth-child(2){
+    background: url("../images/vivo-banner-z1-title2-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.bg-2 .section .title p:nth-child(3){
+    background: url("../images/vivo-banner-z1-title3-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.bg-3 .section .title p:nth-child(1){
+    background: url("../images/vivo-banner-y75s-title1-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.bg-3 .section .title p:nth-child(2){
+    background: url("../images/vivo-banner-y75s-title2-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.bg-3 .section .title p:nth-child(3){
+    background: url("../images/vivo-banner-y75s-title3-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.bg-4 .section .title p:nth-child(1){
+    background: url("../images/vivo-banner-nexys-title1-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.bg-4 .section .title p:nth-child(2){
+    background: url("../images/vivo-banner-nexys-title2-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.bg-4 .section .title p:nth-child(3){
+    background: url("../images/vivo-banner-nexys-title3-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.title .moreAnimate span{
+    color: #333;
+    display: block;
+    transition: all .4s ease;
+    position: relative;
+}
+
+.title .moreAnimate span:hover{
+    color: #0087cd;
+}
+.title .moreAnimate span:after{
+    position: absolute;
+    content: '';
+    display: block;
+    width: 16px;
+    height: 1px;
+    background-color: #333;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -8px;
+    transition: all .4s ease;
+}
+.title .moreAnimate span:hover:after{
+    background-color: #0087cd;
+    transform: scaleX(3.5);
+}
+.bg-2 .moreAnimate span{
+    color: #fff;
+}
+.bg-2 .moreAnimate span:after{
+    background-color: #fff;
+}
+.figure{
+    position: absolute;
+    left: 50%;
+    bottom: 18%;
+    width: 429px;
+    height: 546px;
+}
+.bg-1 .figure .f1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("../images/vivo-banner-x21ks-figure1-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.bg-1 .figure .f2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("../images/vivo-banner-x21ks-figure2-big.png") no-repeat center;
+    background-size: auto 100%;
+
+}
+.bg-3 .figure .f1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("../images/vivo-banner-y75s-figure1-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.bg-3 .figure .f2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("../images/vivo-banner-y75s-figure2-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.bg-3 .figure .f3{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("../images/vivo-banner-y75s-figure3-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.bg-4 .figure .f1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("../images/vivo-banner-nexys-figure1-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.bg-4 .figure .f2{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("../images/vivo-banner-nexys-figure2-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+.bg-4 .figure .f3{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: url("../images/vivo-banner-nexys-figure3-big.png") no-repeat center;
+    background-size: auto 100%;
+}
+
+
+
+.wrap .switch{
+    position: absolute;
+    z-index: 5;
+    display: block;
+    width: 100%;
+    height: auto;
+    bottom: 40px;
+    text-align: center;
+}
+.wrap .switch li{
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    margin: 0 4px;
+    text-align: center;
+}
+.wrap .switch li a{
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    left: 50%;
+    margin-left: -20px;
+    bottom: 0;
+    background-color: rgba(128,128,128,.2);
+    transition: .4s;
+}
+.wrap .switch li a.now{
+    height: 5px;
+    background-color: rgba(50,50,50,.8);
+}
+.wrap .switch li:nth-child(2) a.now{
+    height: 5px;
+    background-color: rgba(250,250,250,.8);
+}
+.wrap .switch li:hover a{
+    height: 5px;
+}
+.switch li a b{
+    position: absolute;
+    top: -3px;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: rgba(50,50,50,.8);
+    /*transition: 3s;*/
+}
+
+.switch li:nth-child(2) a b{
+    background-color: rgba(250,250,250,.8);
+}
+.switch li a b.now{
+    animation: width 3s 1;
+}
+@keyframes width {
+    0%{
+        width: 0;
+    }
+    99.9%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
+    }
+}
+
+.promos{
+    margin: auto;
+}
+.promos ul{
+    width: 100%;
+    height: 300px;
+}
+.promos ul li{
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+.promos ul li a{
+    position: relative;
+    display: block;
+    height: 100%;
+    text-align: center;
+    margin-top: 4px;
+    margin-left: 2px;
+    overflow: hidden;
+}
+.promos ul li a i{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    display: block;
+    transition: all .4s;
+}
+.promos ul li:nth-child(1) a i{
+    background: url("../images/vivo-promos-fifajc0622.jpg") no-repeat center;
+}
+.promos ul li:nth-child(2) a i{
+    background: url("../images/vivo-promos-nextvc.jpg") no-repeat center;
+}
+.promos ul li:nth-child(3) a i{
+    background: url("../images/vivo-promos-y85.jpg") no-repeat center;
+}
+.promos ul li:nth-child(4) a i{
+    background: url("../images/vivo-promos-nexpc.jpg") no-repeat center;
+}
+
+.promos ul li:hover a i{
+    transform: scale(1.1);
+}
+.promos .pTitle{
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    left: 0;
+    text-align: center;
+    z-index: 2;
+}
+
+.promos .pTitle h2{
+    color: #fff;
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+}
+.promos .pTitle p{
+    color: #fff;
+    position: relative;
+    font-size: 14px;
+    padding-top: 10px;
+}
+.promos ul li:nth-child(3) .pTitle h2{
+    color: #333;
+}
+.promos ul li:nth-child(3) .pTitle p{
+    color: #333;
+}
+
+
+.footerBox{
+    position: relative;
+    width: 100%;
+    height: 360px;
+    z-index: 10;
+}
+.footerBox .footerInner{
+    position: relative;
+    width: 1200px;
+    margin: auto;
+}
+.footerBox .footDirectory{
+    width: 100%;
+    height: 260px;
+    display: table;
+    margin: auto;
+    font-size: 12px;
+}
+.footerBox .footDirectory .list{
+    position: relative;
+    width: 80%;
+}
+.footerBox .footDirectory .list li{
+    position: relative;
+    height: 100%;
+    display: table-cell;
+    width: 188px;
+}
+.footDirectory .list li p{
+    font-weight: 600;
+    padding-bottom: 15px;
+}
+.footDirectory .list li a{
+    display: block;
+    color: #333;
+    height: 100%;
+    line-height: 23px;
+}
+.footDirectory .list li a:hover{
+    color: #0087cd;
+}
+.footDirectory .phone{
+    position: absolute;
+    width: 20%;
+    top: 0;
+    right: 0;
+    text-align: right;
+}
+.footDirectory .phone a{
+    display: block;
+    color: #008cd6!important;
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+.footDirectory .phone a:before{
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    margin: -5px 18px 0 0;
+    width: 35px;
+    height: 30px;
+    background: url("../images/online-service-pc_8319a93.png") no-repeat center;
+    background-size: 100%;
+}
+.footDirectory .phone .phoneNum{
+    font-size: 24px;
+    padding-bottom: 6px;
+    color: #000;
+}
+.footDirectory .phone span{
+    color: #999;
+}
+.footerBottom{
+    padding-top: 35px;
+    margin-top: 0;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #f2f2f2;
+    font-size: 12px;
+}
+.footerBottom a{
+    color: #333;
+}
+.footerBottom span{
+    float: left;
+}
+.footerBottom span a.redshield{
+    margin: 0 0 -3px 3px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url("../images/gssw-icon-x2_db0a7f6.png") no-repeat center;
+    background-size: contain;
+}
+.footerOther li{
+    width: 90px;
+    height: 40px;
+    top: -25px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+.footerOther li a{
+    color: #333;
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+}
+.footerOther a:hover{
+    color: #0087cd;
+}
+.footerOther li:last-child{
+    text-align: right;
+}
+.footerOther li:last-child a{
+    color: #666;
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    line-height: 16px;
+}
+.footerOther li:last-child a:hover{
+    color: #0087cd;
+}
+.footerOther li .zhiFu{
+    position: absolute;
+    width: 150px;
+    height: 145px;
+    box-shadow: 0 5px 30px -2px rgba(0,0,0,.1);
+    padding-top: 30px;
+    left: 50%;
+    margin-left: -75px;
+    bottom: 41px;
+    background-color: #fff;
+}
+.footerOther li .zhiFu li{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    text-align: left;
+    float: left;
+}
+.footerOther li .zhiFu li:first-child{
+    margin-top: 24px;
+}
+.zhiFu{
+    display: none;
+}
+.zhiFu li a{
+    color: #666;
+    line-height: 30px;
+    padding-top: 9px;
+    position: absolute;
+    width: 100%;
+    height: 31px;
+}
+.zhiFu li:hover a span{
+    color: #0087cd;
+}
+.zhiFu li a b{
+    float: left;
+    margin-left: 30px;
+    font-size: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 400;
+    font-style: normal;
+}
+.zhiFu li a span{
+    position: relative;
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-left: 20px;
+    line-height: 26px;
+}
+.zhiFu:after{
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 10px solid #fff;
+    border-left: 10px dashed transparent;
+    border-right: 10px dashed transparent;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    margin-left: -5px;
+}

@@ -1,0 +1,365 @@
+.content{
+    background: #f7f7f5;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    min-width: 1200px;
+}
+.content .table{
+    position: relative;
+    height: 66px;
+    background: #fff;
+    overflow: hidden;
+    width: 100%;
+    color: #666;
+    vertical-align: middle;
+    white-space: nowrap;
+    margin-bottom: 19px;
+}
+.content .table .mid{
+    display: inline-block;
+    height: 66px;
+    line-height: 66px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #333;
+    font-size: 20px;
+    font-weight: 400;
+}
+.content .table .right{
+    cursor: pointer;
+    display: inline-block;
+    height: 66px;
+    line-height: 66px;
+    margin: 0 35px 0 0;
+    color: #333;
+}
+.content .table .right span{
+    line-height: 66px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.content .table .right:hover{
+    color: red;
+}
+.content .cartHead{
+    background: #fff;
+    padding: 0 26px;
+}
+.content .cartHead .chBox{
+    width: 100%;
+}
+.chBox .left{
+    width: 175px;
+    height: 64px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333;
+}
+.chBox .left label{
+    height: 64px;
+    line-height: 64px;
+}
+i.checkbox{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    vertical-align: middle;
+    background: url("../images/prod-detail-icon_41ff7d3.png") no-repeat -10px -237px;
+    margin: 0 10px 2px 0;
+}
+i.checkbox.now{
+    background: url("../images/prod-detail-icon_41ff7d3.png") no-repeat -10px -205px;
+}
+.chBox .left label a{
+    cursor: pointer;
+    color: #333;
+}
+.chBox .right{
+    height: 64px;
+    line-height: 64px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #333
+}
+.chBox .right li{
+    float: left;
+    margin-right: 60px;
+}
+.chBox .right li:nth-child(1){
+    margin-right: 160px;
+}
+.chBox .right li:nth-child(2){
+    margin-right: 100px;
+}
+.chBox .right li:nth-child(3){
+    margin-right: 80px;
+}
+.chBox .right li:nth-child(7){
+    margin-right: 40px;
+}
+.navList{
+    border-top: 2px solid #f7f7f5;
+    background: #fff;
+    padding: 0 25px;
+}
+.navList.now{
+    height: 200px;
+    overflow: hidden;
+    text-align: center;
+    line-height: 200px;
+    font-size: 30px;
+    color: #aaa;
+}
+.navList .listBox{
+    width: 100%;
+    text-align: center;
+}
+.navList .listBox .label{
+    margin-top: 66px;
+    width: 33px;
+}
+.navList .listBox .pic{
+    position: relative;
+    width: 142px;
+    vertical-align: top;
+    text-align: left;
+}
+.navList .listBox .pic a{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    position: relative;
+    margin: 25px 20px;
+    border: 1px solid #ececec;
+}
+.listBox .pic a img{
+    width: 100%;
+}
+.listBox .name{
+    text-align: left;
+    width: 250px;
+    color: #686868;
+    font-size: 14px;
+    margin-top: 44px;
+}
+.listBox .name a{
+    display: inline-block;
+    width: 100%;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.listBox .name .choose{
+    position: relative;
+    top: 10px;
+}
+.listBox .name .choose .text{
+    display: inline-block;
+    overflow: visible;
+    color: #333;
+    padding: 5px 0 0;
+    cursor: pointer;
+}
+.listBox .name .choose .text:hover{
+    color: red;
+}
+.listBox .price{
+    width: 128px;
+    padding: 0 20px;
+    text-align: center;
+    color: #666;
+    line-height: 152px;
+    margin-left: -10px;
+}
+.listBox .quantity{
+    margin-left: 10px;
+}
+.listBox .quantity .numBox{
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top;
+    margin-bottom: 2px;
+    text-align: center;
+    line-height: 152px;
+}
+.quantity .numBox a{
+    border-radius: 2px 0 0 2px;
+    display: inline-block;
+    height: 18px;
+    width: 30px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 6px 0;
+    color: #666;
+    vertical-align: middle;
+    border: 1px solid #bbb;
+}
+.quantity .numBox input{
+    width: 32px;
+    height: 18px;
+    line-height: 18px;
+    padding: 6px 2px;
+    font-size: 12px;
+    text-align: center;
+    border: 0;
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    border-radius: 0;
+    vertical-align: middle;
+}
+.favorable{
+    margin-left: 58px;
+    line-height: 152px;
+    text-align: center;
+}
+.integral{
+    margin-left: 60px;
+    line-height: 152px;
+    text-align: center;
+}
+.totalPrice{
+    color: #f51200;
+    margin-left: 66px;
+    line-height: 152px;
+    text-align: center;
+}
+.operating{
+    margin-top: 56px;
+    margin-left: 50px;
+}
+.operating a{
+    color: #333;
+    line-height: 26px;
+}
+.operating a:hover{
+    color: #f51200;
+}
+.zengPin{
+    position: relative;
+    padding: 0 30px 28px 79px;
+    background: #fff;
+}
+.zengPin:after{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 119px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f7f7f5 transparent;
+}
+.zengPin .zpInner{
+    background: #f7f7f5;
+    padding: 5px 25px;
+}
+.zengPin .zpInner .left{
+    width: 347px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+    height: 46px;
+    text-align: left;
+    color: #686868;
+    font-size: 14px;
+    line-height: 46px;
+}
+.zengPin .zpInner .left strong{
+    height: 25px;
+    line-height: 25px;
+    display: inline-block;
+    width: 70px;
+    vertical-align: middle;
+    color: #777;
+    text-align: right;
+    white-space: nowrap;
+}
+.zengPin .zpInner .left a{
+    color: #333;
+}
+.zengPin .zpInner .left a .figure{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    overflow: hidden;
+    vertical-align: middle;
+    display: inline-block;
+    border: 1px solid #ececec;
+}
+.zengPin .zpInner .left a .figure img {
+    width: 100%;
+    height: auto;
+}
+.zengPin .zpInner .left a p{
+    margin-top: 3px;
+    color: #666;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: middle;
+    width: 230px;
+}
+.zengPin .zpInner .right{
+    margin-left: 56px;
+    color: #333;
+    line-height: 46px;
+}
+.please{
+    background: #fff;
+    margin: 19px 0 73px;
+    width: 100%;
+    z-index: 1;
+    zoom: 1;
+    height: 98px;
+}
+.please .pleaseBox{
+    padding: 0 26px;
+}
+.please .pleaseBox .left{
+    line-height: 98px;
+}
+.please .pleaseBox .left ul li{
+    float: left;
+    margin-right: 30px;
+    height: 98px;
+    line-height: 98px;
+}
+.please .pleaseBox .left ul li a{
+    color: #333;
+}
+.please .pleaseBox .left ul li:hover a{
+    color: #f51200;
+}
+.please .pleaseBox .left ul li:first-child{
+    margin-right: 0px;
+}
+.pleaseBox .right .text{
+    text-align: right;
+    padding: 20px 0 0;
+}
+.pleaseBox .right .text span{
+    color: #f51200;
+}
+.pleaseBox .right .text b{
+    color: #f51200;
+    font-size: 33px;
+    font-weight: 400;
+}
+.pleaseBtn{
+    margin-top: 10px;
+    padding: 20px 0 0 20px;
+}
+.pleaseBtn button{
+    width: 160px;
+    height: 46px;
+    background-color: #f51200;
+    color: #fff;
+    letter-spacing: 1px;
+    text-indent: 2px;
+    font-size: 18px;
+    border-radius: 46px;
+}

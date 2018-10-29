@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640, user-scalable=no"/>
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        ul li{
+            list-style: none;
+        }
+        .bottomBox{
+            position: fixed;
+            background: #fff;
+            z-index:999;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            box-sizing: border-box;
+            box-shadow: 0 -5px 5px #ccc;
+        }
+        .bottomBox ul{
+            width:100%;
+            height:auto;
+        }
+        .bottomBox ul li{
+            float: left;
+            width:25%;
+        }
+    </style>
+    <script src="swiper/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <div class="bottomBox">
+        <ul>
+            <li>
+                <a href="" class="aHref">
+                    <img class="aHrefImg" src="images/5aa10cd2N46f18ce6.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="" class="aHref" id="href2">
+                    <img class="aHrefImg" src="images/5aa10cdbNa9cd0320.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="" class="aHref">
+                    <img onclick="javascript:window.location.href = 'gwc.html'" class="aHrefImg" src="images/5aa10ceaN649eec12.png" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="" class="aHref">
+                    <img onclick="javascript:window.location.href = 'login.html'" class="aHrefImg" src="images/5af43af1N04ef5a16.png" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    <script>
+        var page = window.localStorage.getItem('page');
+        console.log(page);
+
+        if (page == 0){
+            $(".aHrefImg").eq(0).attr("src","images/5aa10cd2N46f18ce6.png");
+            $(".aHrefImg").eq(1).attr("src","images/5aa10cdbNa9cd0320.png");
+        }
+        if (page == 1){
+            $(".aHrefImg").eq(0).attr("src","images/5aa10cd2N1318ac50.png");
+            $(".aHrefImg").eq(1).attr("src","images/5aa10cdbNf3977e9f.png");
+        }
+        var num = 0;
+    $(".aHrefImg").on("click",function(){
+        var setIndex = $(".aHrefImg").index(this);
+        window.localStorage.setItem("page",setIndex);
+
+        var aHrefSrc = $(this).attr("src");
+        window.localStorage.setItem("setIndex",setIndex);
+        window.localStorage.setItem("aHrefSrc",aHrefSrc);
+        var getIndex = window.localStorage.getItem("setIndex");
+        if (getIndex == 0){
+            window.location.href = "index.html";
+        }
+        if (getIndex == 1){
+            window.location.href = "fenlei.html";
+        }
+        return false;
+    })
+    </script>
+</body>
+</html>

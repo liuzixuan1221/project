@@ -1,0 +1,400 @@
+.content{
+    background: #fff;
+    padding-bottom: 30px;
+}
+.wrapper{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+}
+.wrapper .crumbs{
+    color: #999;
+    font-size: 13px;
+    padding: 24px 0;
+}
+b{
+    background: url("../images/prod-service-icon_dd62e31.png") no-repeat -8px -62px;
+    width: 8px;
+    height: 24px;
+    margin: 0 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.wrapper .crumbs a{
+    color: #333;
+    font-size: 13px;
+    display: inline-block;
+    cursor: pointer;
+}
+.wrapper .crumbs span{
+    color: #999;
+    font-size: 13px;
+}
+.nav{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    min-height: 780px;
+    position: relative;
+    z-index: 2;
+}
+.nav .navLeft{
+    height: auto;
+    margin-top: 5px;
+    margin-bottom: 48px;
+    width: 515px;
+    position: relative;
+    z-index: 0;
+}
+.navLeft .leftBox{
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.navLeft .leftBox .pic{
+    width: 515px;
+    height: 515px;
+    position: relative;
+    z-index: 0;
+}
+#img li{
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    opacity: 0;
+    transition: .4s;
+}
+#img li.now{
+    opacity: 1;
+}
+#img li img{
+    width: 515px;
+    height: 515px;
+    position: relative;
+    z-index: 0;
+}
+.leftBox .item .smallImgUl{
+    height: 102px;
+    width: 366px;
+    overflow: hidden;
+    margin-left: 77px;
+    padding-top: 50px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+.item .smallImgUl #cl{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    z-index: 0;
+    left: 0;
+}
+#cl li{
+    float: left;
+    width: 87px;
+    height: 87px;
+    margin: 0 2px;
+}
+#cl li a{
+    width: 85px;
+    height: 85px;
+    display: block;
+    background: #f0f0f0;
+}
+#cl li a img{
+    width: 85px;
+    height: 85px;
+}
+#cl li:after{
+    content: "";
+    display: inline-block;
+    border-bottom: 2px solid #4D4D4D;
+    width: 0;
+    transform: scale(0);
+    transition: all .4s;
+
+}
+#cl li:hover:after{
+    width: 28px;
+    transform: scale(1);
+}
+.favor{
+    margin-bottom: 20px;
+}
+.favor ul{
+    margin-top: 35px;
+    text-align: center;
+}
+.favor ul .collect{
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    padding-right: 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.favor ul .share{
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    padding-right: 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.favor ul li a{
+    color: #666;
+}
+.navRight{
+    width: 508px;
+}
+.navRight h1{
+    font-size: 34px;
+    line-height: 1;
+    height: 39px;
+    color: #000;
+    margin-top: 11px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.navRight p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 22px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+.navRight p span{
+    color: #FF4B3D;
+    line-height: 22px;
+    font-size: 14px;
+}
+.navRight .price{
+    margin-top: 36px;
+    margin-bottom: 15px;
+    padding: 40px 0 37px;
+    border-top: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+.navRight .price .pLeft{
+    width: 178px;
+    white-space: nowrap;
+    padding-right: 30px;
+    overflow: visible;
+    vertical-align: middle;
+    display: table-cell;
+}
+.navRight .price .pRight{
+    vertical-align: middle;
+    width: 298px;
+    padding-left: 35px;
+    border-left: 1px solid #e0e0e0;
+}
+.navRight .price .pLeft .now{
+    display: block;
+    font-size: 40px;
+    color: #f51200;
+    line-height: 38px;
+    position: relative;
+}
+.navRight .price .pLeft .old{
+    display: block;
+    font-size: 20px;
+    color: #d7d7d7;
+    text-decoration: line-through;
+}
+dfn{
+    font-style: normal;
+    font-size: 27px;
+}
+.navRight .price .pRight{
+    display: table-cell;
+}
+.navRight .price .pRight li{
+    padding: 3px 0;
+    position: relative;
+    overflow: hidden;
+    color: #999;
+}
+.pRight li .table{
+    vertical-align: middle;
+    font-size: 16px;
+    color: #333;
+}
+.pRight li .table span{
+    float: left;
+    display: inline-block;
+    margin-right: 18px;
+    font-size: 12px;
+    width: 38px;
+    height: 23px;
+    line-height: 21px;
+    text-align: center;
+    color: #fff;
+    vertical-align: middle;
+    background: url("../images/prod-detail-icon_41ff7d3.png") 0 0 no-repeat;
+}
+.pRight li .table div{
+    vertical-align: middle;
+    font-size: 16px;
+    color: #333;
+    display: table-cell;
+}
+.serverBox .server{
+    margin-bottom: 9px;
+    padding: 10px 0 36px;
+    font-size: 16px;
+}
+.server dd{
+    float: left;
+    padding-left: 22px;
+    cursor: pointer;
+}
+.params dt{
+    padding: 20px 0 0;
+    font-size: 19px;
+    line-height: 1;
+    margin-bottom: 20px;
+    color: #333;
+    height: 22px;
+    overflow: hidden;
+}
+.params dd{
+    margin-left: -17px;
+    margin-bottom: 10px;
+}
+.params dd li{
+    color: #000;
+    height: 57px;
+    line-height: 55px;
+    width: 243px;
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid #DDD;
+    border-radius: 3px;
+}
+.params dd li:hover{
+    border: 1px solid #000;
+}
+.params dd li.now{
+    border: 1px solid #000;
+}
+.choiceTotal{
+    border-top: 1px solid #e5e5e5;
+    margin-top: 50px;
+    padding: 58px 0;
+}
+.choiceTotal .table{
+    vertical-align: top;
+    color: #666;
+    font-size: 16px;
+    word-break: break-all;
+    word-wrap: break-word;
+    line-height: 32px;
+    display: table-cell;
+}
+.choiceTotal .table .totalPrice{
+    height: 20px;
+    max-width: 119px;
+    border-right: 1px solid #e0e0e0;
+    margin-right: 18px;
+    padding-right: 18px;
+    font-size: 25px;
+    color: #f51200;
+    white-space: nowrap;
+    margin-top: 6px;
+    line-height: 20px;
+}
+.btns{
+    position: relative;
+    margin-bottom: 86px;
+    overflow: hidden;
+}
+.btns .btn1{
+    margin-right: 27px;
+    border-radius: 20px / 50%;
+    text-align: center;
+    cursor: pointer;
+}
+.btns .btn1 i{
+    padding: 0;
+    min-width: 170px;
+    background-color: #ff9536;
+    color: #fff;
+    height: 46px;
+    font-size: 18px;
+    border-radius: 46px;
+    display: table-cell;
+    vertical-align: middle;
+    font-style: normal;
+}
+.btns .btn2 i{
+    padding: 0;
+    min-width: 170px;
+    background-color: #f51200;
+    color: #fff;
+    height: 46px;
+    font-size: 18px;
+    border-radius: 46px;
+    display: table-cell;
+    vertical-align: middle;
+    font-style: normal;
+}
+.picBox{
+    padding-top: 0px;
+    width: 100%;
+    background: #FFF;
+}
+.picBox .title{
+    width: 100%;
+    height: 80px;
+    z-index: 98;
+    background: #fff;
+    border-top: 1px solid #e0e0e0;
+    position: relative;
+}
+.picBox .title ul li{
+    margin-left: 0;
+    float: left;
+    position: relative;
+}
+.picBox .title ul li a{
+    color: #999;
+    height: 80px;
+    line-height: 80px;
+    display: inline-block;
+    text-align: center;
+    font-size: 17px;
+    position: relative;
+    margin-right: 65px;
+}
+.picBox .title ul li:hover a{
+    color: #3a3a3a;
+}
+.picBox .pic{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    padding-bottom: 80px;
+}
+.picBox .pic .section{
+    text-align: center;
+    width: 100%;
+    margin-left: 50%;
+    left: -960px;
+    position: relative;
+    overflow: hidden;
+}
+

@@ -1,0 +1,189 @@
+.content{
+    background-color: #f7f7f5;
+    padding-bottom: 30px;
+    min-width: 1200px;
+}
+.content .wrapper{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+.content .wrapper .crumbs{
+    color: #999;
+    font-size: 13px;
+    padding: 24px 0;
+}
+.content .wrapper .crumbs a{
+    color: #333;
+    font-size: 13px;
+    display: inline-block;
+}
+.content .wrapper .crumbs b{
+    width: 8px;
+    height: 24px;
+    margin: 0 10px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 15px;
+    color: #ccc;
+}
+.content .wrapper .crumbs span{
+    color: #999;
+    font-size: 13px;
+}
+.choose{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+.choose .chooseWrap{
+    padding: 0 36px;
+    font-size: 14px;
+    color: #666;
+    background-color: #fff;
+    overflow: hidden;
+    margin-bottom: 38px;
+}
+.choose .chooseWrap .top{
+    position: relative;
+    margin: 0 -18px;
+    padding: 7px 0 1px;
+    font-size: 1px;
+    text-align: justify;
+}
+.topList{
+    margin: 0 18px;
+    display: inline-block;
+}
+.topList a{
+    position: relative;
+    display: block;
+    color: #777;
+    font-size: 16px;
+    text-align: center;
+    line-height: 63px;
+}
+.topList:first-child a:after{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: -1px;
+    left: 50%;
+    margin-left: -20px;
+    width: 40px;
+    height: 1px;
+    background: #000;
+}
+.choose .chooseWrap .bottom{
+    padding: 2px 0;
+}
+.bottomList{
+    float: left;
+    overflow: hidden;
+    padding: 11px 0;
+    margin-right: 44px;
+}
+.bottomList a{
+    white-space: nowrap;
+    line-height: 30px;
+    color: #777;
+}
+.choose a.now{
+    color: #000;
+}
+.container{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+.container ul{
+    overflow: hidden;
+    width: 101%;
+}
+.container ul li{
+    cursor: pointer;
+    float: left;
+    margin-right: 11px;
+    width: 292px;
+    height: 340px;
+    padding-top: 40px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+    font-size: 0;
+    text-align: center;
+    background-color: #fff;
+    transition: all .2s linear;
+}
+.container ul li:hover{
+    transform: translate3d(0,-2px,0);
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+}
+.container ul li a{
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+.crner-good{
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    background-position: right top;
+    background-repeat: no-repeat;
+    right: 60px;
+    top: -7px;
+    z-index: 1;
+}
+.crner-good img{
+    width: 100%;
+    height: auto;
+}
+.figure{
+    display: block;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    position: relative;
+}
+.figure img{
+    display: block;
+    width: 180px;
+    height: 180px;
+}
+.spu-info{
+    width: 180px;
+    margin: 20px auto 0;
+}
+.spu-info p{
+    text-align: center;
+    overflow: hidden;
+}
+.spu-info .name{
+    margin: 0 0 10px;
+    color: #000;
+    font-size: 16px;
+    height: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.spu-info .feature{
+    margin: 0 0 23px;
+    height: 35px;
+    color: #333;
+    font-size: 12px;
+    line-height: 18px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+.price{
+    color: #f51919;
+    font-size: 16px;
+    line-height: 1;
+}
+.price span{
+    color: #f51919;
+    font-size: 16px;
+}

@@ -1,0 +1,150 @@
+body{
+    font-family: "华文楷体", "宋体", Arial, Helvetica sans-serif;
+    background-color: #f1f2f6;
+}
+.content{
+    width: 1100px;
+    margin: auto;
+    padding-top:120px;
+}
+.content h1{
+    font-size: 54px;
+    color: #311759;
+    line-height: 50px;
+    text-align: center;
+}
+.content h2{
+    font-weight: normal;
+    font-size: 18px;
+    letter-spacing: 6px;
+    margin-top: 10px;
+    text-align: center;
+}
+.content>img{
+    margin: 20px auto 0;
+    display: block;
+}
+.content h3{
+    text-align: left;
+    color: #311759;
+    font-size: 30px;
+    background: url("../images/pen_line_long.png") no-repeat 0 58px;
+    height: 60px;
+    position: relative;
+}
+.content h3.now{
+    animation: bi 1s 1;
+}
+@keyframes bi {
+    0%{
+        width:100px;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.content h3 span{
+    background: url("../images/pen_list.png") no-repeat;
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    right: 0;
+    top:7px;
+    cursor: pointer;
+}
+.content h3 span:hover{
+    background-position: -61px 0;
+}
+.content .nav{
+    padding-top: 40px;
+    width: 1130px;
+    overflow: hidden;
+}
+.content .nav .navBox:hover{
+    border-color: #86759e;
+    transform: translateY(-6px);
+    transition: all 0.3s ease 0s;
+}
+.content .nav .navBox{
+    width: 513px;
+    height: 202px;
+    float: left;
+    background: #fff;
+    padding: 36px 0 0 20px;
+    margin: 0 20px 30px 0;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.navBox .left{
+    position: relative;
+    height: 168px;
+    width: 260px;
+    overflow: hidden;
+    float: left;
+    margin-right: 17px;
+}
+.navBox .left:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -12px;
+    background: url("../images/list_img_over_xiaojiantou.png");
+    width: 14px;
+    height: 9px;
+    transition: .4s;
+}
+.navBox:hover .left:after{
+    left: 32px;
+}
+.navBox .left img{
+    height: 168px;
+    width: 260px;
+}
+.navBox .right{
+    width: 221px;
+    float: left;
+}
+.navBox .right .title{
+    font-size: 20px;
+    color: #454548;
+    line-height: 26px;
+    max-height: 53px;
+    overflow: hidden;
+    padding-top: 15px;
+}
+.navBox .right .date{
+    color: #6b6a6f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding-top: 2px;
+}
+.navBox .right p{
+    padding-top: 8px;
+    color: #47464a;
+    line-height: 25px;
+    max-height: 75px;
+    overflow: hidden;
+    font-family: KaiTi_GB2312;
+    letter-spacing: 0;
+}
+.content .more{
+    margin: 30px auto 0;
+    text-align: center;
+}
+.content .more .moreBtn{
+    height: 58px;
+    width: 58px;
+    background: url("../images/lis_more_btn_bg.png") no-repeat 0 -58px;
+    margin: 15px auto 130px;
+    cursor: pointer;
+}
+.content .more .moreBtn:hover{
+    background-position: 0 0;
+    transition: all 0.3s ease 0s;
+}
+.footerImg{
+    background: url("../images/map_bottomimg.png") top center no-repeat;
+    height: 33px;
+    width: 100%;
+    min-width: 1100px;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640,user-scalable=no"/>
+
+
+    <title> 定宽 布局 </title>
+
+    <style>
+
+       *{
+           margin: 0;
+           padding: 0;
+       }
+       input{
+           border: none;
+           outline: none;
+       }
+       html,body{
+           width: 100%;
+           height: 100%;
+           max-width: 640px;
+           margin: 0 auto;
+       }
+
+       #box{
+           width: 100%;
+           height: 100%;
+           font-size: 20px;
+       }
+       .nav{
+           width: 100%;
+           height: 90px;
+           position: fixed;
+           top: 0px;
+           left: 50%;
+           margin-left: -320px;
+           z-index: 10;
+           background: repeating-linear-gradient(rgba(0,0,0,0.7), rgba(255,255,255,0.7));
+
+           max-width: 640px;
+       }
+       .nav>div{
+           float: left;
+       }
+        .nav_left{
+            width: 80px;
+            height: 90px;
+        }
+        .nav_left>img{
+            width: 50px;
+            height: 50px;
+            margin: 20px auto;
+            display: block;
+
+        }
+        .nav_right{
+            width: 80px;
+            height: 90px;
+        }
+        .nav_right>img{
+            width: 40px;
+            height: 40px;
+            margin: 10px auto;
+            display: block;
+
+        }
+        .nav_right>p{
+            width: 80px;
+            height: 20px;
+            display: block;
+            text-align: center;
+            line-height: 20px;
+            color: #fff;
+
+        }
+
+
+       .nav_center{
+           width: 480px;
+           height: 50px;
+           background: #fff;
+           border-radius: 50px;
+           margin: 20px 0;
+           overflow: hidden;
+       }
+       .nav_center>img{
+           width: 30px;
+           height: auto;
+           float: left;
+           margin: 10px 25px;
+       }
+       .nav_center>div{
+           width: 399px;
+           height: 35px;
+           float: left;
+           margin: 7.5px 0;
+           border-left: 1px solid #eee;
+       }
+       .nav_center>div>img{
+           width: 30px;
+           height: auto;
+           float: left;
+           margin: 2.5px 25px;
+       }
+
+
+
+        /* swiper  */
+
+        .swiperBox{
+            width: 100%;
+            height: 260px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .swiperBox>img{
+            width: 100%;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <div id="box">
+        <!-- nav -->
+        <div class="nav">
+            <div class="nav_left">
+                <img src="img/liebiao.png" alt="">
+            </div>
+            <div class="nav_center">
+                <img src="img/jd.png" alt="">
+                <div>
+                    <img src="img/sousuo.png" alt="">
+                    <input type="text" placeholder="七夕好礼助攻">
+                </div>
+            </div>
+            <div class="nav_right">
+                <img src="img/xiaoxi.png" alt="">
+                <p>消息</p>
+            </div>
+
+        </div>
+
+
+        <!-- swiper -->
+        <div class="swiperBox">
+            <img src="img/swiper.jpg" alt="">
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+</body>
+</html>

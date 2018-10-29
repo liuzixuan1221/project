@@ -1,0 +1,735 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+}
+.container{
+    padding: 28px;
+    box-sizing: border-box;
+}
+.bg-mark{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+}
+.bg-mark-box{
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 520px;
+    position: fixed;
+    z-index: 1001;
+    min-height: 160px;
+    background: #fff;
+}
+.poupTitle{
+    position: relative;
+    height: 56px;
+    padding-left: 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 56px;
+    background: #329fea;
+}
+.poupTitle .text{
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 56px
+}
+.poupTitle .closeBtn{
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    width: 24px;
+    height: 24px;
+    background: url("../images/iconAll.png") no-repeat -650px -694px;
+}
+.poupContent{
+    padding: 10px 20px 20px;
+    line-height: 22px;
+    background: #fff;
+    min-height: 160px;
+    box-sizing: border-box;
+}
+.poupContent .infoBox{
+    padding: 10px 0 20px;
+    max-height: 440px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 10;
+}
+.infoBox .editLine{
+    padding: 10px 20px;
+    position: relative;
+}
+
+.editLine .title{
+    width: 104px;
+    display: inline-block;
+    line-height: 24px;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+.editLine .title .icon{
+    padding-right: 5px;
+    vertical-align: top;
+    background: url("../images/iconAll.png") no-repeat -332px -694px;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+.editLine .content{
+    display: inline-block;
+    vertical-align: middle;
+}
+.editLine .content .imgBox{
+    width: 80px;
+    height: 80px;
+    border: 1px dashed #d7d7d7;
+    margin: 0 28px 0 20px;
+    overflow: hidden;
+    text-align: center;
+    background: #e8e8e8;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+#uploadImg{
+    display: block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.editLine .content .btnBox{
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+#uploadBtn{
+    width: 0;
+    height: 0;
+    cursor: pointer;
+}
+#select_btn{
+    width: 0;
+    height: 0;
+    position: absolute;
+    cursor: pointer;
+    z-index: -1;
+}
+#file_upload_button{
+    width: 90px;
+    height: 30px;
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    cursor: pointer;
+    background: #1c96e3;
+    padding-bottom: 0;
+    position: static;
+}
+.containerTitle{
+    position: relative;
+    height: 48px;
+    padding-left: 16px;
+    line-height: 48px;
+    font-size: 16px;
+}
+i.jianTou{
+    background: url("../images/iconAll.png")no-repeat;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-top: solid 1px #585858;
+    border-left: solid 1px #585858;
+    transform: rotate(-45deg);
+    margin-top: -3px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+#cancelButton{
+    text-decoration: underline;
+    color: #585858;
+    display: inline-block;
+    margin-right: 8px;
+}
+.containerTitle span{
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 16px;
+    line-height: 16px;
+    color: #949494;
+}
+.titleBtnBox{
+    position: absolute;
+    height: 36px;
+    bottom: 10px;
+    right: 0;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+}
+.titleBtnBox .yuLan{
+    float: left;
+    padding: 0 12px;
+    margin-left: 8px;
+    cursor: pointer;
+    background: #329fea;
+    color: #fff;
+    text-align: center;
+    line-height: 36px;
+    font-size: 14px;
+}
+i.iYuLan{
+    background: url("../images/iconAll.png") no-repeat -164px -616px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+.titleBtnBox .baoCun{
+    float: left;
+    padding: 0 12px;
+    margin-left: 8px;
+    cursor: pointer;
+    background: #b1b1b1;
+    color: #fff;
+    text-align: center;
+    line-height: 36px;
+}
+i.iBaoCun{
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../images/iconAll.png") no-repeat -212px -617px;
+}
+.containerBox{
+    background: #fff;
+    border: solid 1px #e7e7e7;
+    padding-bottom: 40px;
+}
+.containerBox .topNav{
+    width: 100%;
+    height: 56px;
+    border-bottom: 1px solid #e7e7e7;
+    margin-bottom: 10px;
+}
+.containerBox .topNav .topBarSrollBox{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.topBarSrollBox .topBar{
+    width: 1090px;
+    position: relative;
+    left: 0;
+    transition: left .1s;
+}
+.topBar .column{
+    float: left;
+    width: 88px;
+    height: 100%;
+    line-height: 56px;
+    display: inline-block;
+    cursor: pointer;
+    padding-right: 2px;
+    text-align: center;
+}
+.topBar .column{
+    font-size: 14px;
+    color: #585858;
+}
+.topBar .column.now{
+    color: #19a6ff;
+}
+.slideBar{
+    width: 100%;
+    height: 7px;
+    position: relative;
+    top: 56px;
+}
+#topBardSlide{
+    position: absolute;
+    width: 88px;
+    height: 4px;
+    top: -4px;
+    background: #19a6ff;
+    left:0;
+}
+.containerBox .contentBox{
+    margin-left: 35px;
+}
+.contentBox .editDetailBox{
+    margin-top: 15px;
+    position: relative;
+}
+.editDetailBox .phone{
+    background: url("../images/phone.png") no-repeat;
+    width: 348px;
+    height: 650px;
+    vertical-align: top;
+    display: inline-block;
+    border-radius: 5px;
+    background-size: 100%;
+    position: relative;
+}
+.phone .wxTitle{
+    margin: 30px auto 0;
+    width: 320px;
+    height: 64px;
+    background: url("../images/wxTitle.png");
+    background-size: 100%;
+    position: relative;
+}
+#actName{
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    width: 210px;
+    position: absolute;
+    left: 65px;
+    bottom: 9px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 3px 0;
+    font-family: '微软雅黑';
+}
+.phone .changeLeft{
+    left: -13px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    width: 27px;
+    height: 48px;
+    cursor: pointer;
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.phone .changeLeft .leftImg{
+    width: 17px;
+    height: 37px;
+    margin: 0 auto;
+    text-align: center;
+    background: url("../images/jiantou.png") no-repeat 0 -58px;
+    background-size: 100%;
+}
+.phone .changeRight{
+    right: -13px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    width: 27px;
+    height: 48px;
+    cursor: pointer;
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.phone .changeRight .rightImg{
+    width: 17px;
+    height: 37px;
+    margin: 0 auto;
+    text-align: center;
+    background: url("../images/jiantou.png") no-repeat 0 11px;
+    background-size: 100%;
+}
+.gameContent{
+    width: 320px;
+    height: 504px;
+    margin: 0 auto;
+}
+.install{
+    display: inline-block;
+    margin-left: 30px;
+    width: 603px;
+    padding: 0 5px;
+    position: relative;
+}
+.install .installTab{
+    background-color: #f5f5f5;
+}
+.installTab .tabSetting{
+    float: left;
+    width: 25%;
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.installTab .tabSetting.now{
+    background: #3896dc;
+    color: #fff;
+}
+.tabSetting span{
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.installBox1{
+    display: block;
+    margin-top: 20px;
+}
+.installBox1 .underLineWay{
+    padding-bottom: 10px;
+    border-bottom: 1px #dcdcdc dashed;
+    margin-left: 30px;
+    margin-right: 11px;
+    margin-bottom: 10px;
+}
+.installBox1 .underLineWay span{
+    font-weight: bold;
+}
+.leftTitle{
+    display: inline-block;
+    width: 136px;
+    text-align: right;
+    padding-right: 16px;
+}
+.leftTitle .flag{
+    display: inline-block;
+    width: 14px;
+    color: #fe896a;
+    font-size: 16px;
+    vertical-align: middle;
+}
+.actNameSetting .activeName{
+    width: 436px;
+    height: 44px;
+    box-sizing: border-box;
+    border: 1px solid #e7e7e7;
+    outline: 0;
+    padding-left: 8px;
+    display: inline-block;
+}
+.setGameTimeBox{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.setGameTimeBox .beginTime{
+    cursor: pointer;
+    width: 207px;
+    height: 44px;
+    box-sizing: border-box;
+    border: 1px solid #e7e7e7;
+    outline: 0;
+    padding-left: 8px;
+    display: inline-block;
+}
+.setGameTimeBox .endTime{
+    cursor: pointer;
+    width: 207px;
+    height: 44px;
+    box-sizing: border-box;
+    border: 1px solid #e7e7e7;
+    outline: 0;
+    padding-left: 8px;
+    display: inline-block;
+}
+.setLimitJoinNumBox{
+    margin-bottom: 10px;
+    display: block;
+}
+.setLimitJoinNumBox .joinNumBox{
+    margin: 16px 0 0;
+    min-height: 35px;
+    position: relative;
+}
+.hideJoinNum{
+    display: inline-block;
+    margin-right: 7px;
+    padding-left: 16px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: nowrap;
+    float: none;
+    font-size: 14px;
+}
+.hideJoinNumBtn{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: solid 1px #ccc;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.showJoinNum{
+    display: inline-block;
+    margin-right: 7px;
+    padding-left: 16px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: nowrap;
+    float: none;
+    font-size: 14px;
+}
+.showJoinNumBtn{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: solid 1px #ccc;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.JoinNumBtnNow{
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 3px;
+    margin: auto;
+    border-radius: 100%;
+    background-color: #329fea;
+}
+.commMg{
+    display: block;
+    margin-left: 156px;
+}
+.virtualJoinNum{
+    margin: 0 5px;
+    height: 44px;
+    box-sizing: border-box;
+    border: 1px solid #e7e7e7;
+    outline: 0;
+    padding-left: 8px;
+    display: inline-block;
+    width: 52px;
+}
+.explain{
+    color: #808080;
+    display: inline-block;
+    margin-top: 5px;
+}
+.baseLine1{
+    margin: 16px 0 20px;
+    min-height: 35px;
+    line-height: 46px!important;
+    position: relative;
+}
+.powerIcon{
+    width: 21px;
+    margin-top: -5px;
+    display: inline-block;
+    color: #fe896a;
+    font-size: 16px;
+    vertical-align: middle;
+    text-align: center;
+    height: 20px;
+    background: url("../images/iconAll.png") -262px -617px no-repeat!important;
+}
+.baseSettingTitle{
+    color: #585858;
+}
+.noLimitNum{
+    display: inline-block;
+    margin-right: 7px;
+    padding-left: 16px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: nowrap;
+    float: none;
+    font-size: 14px;
+}
+.noLimitNumBtn{
+    background-color: #e7e7e7;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: solid 1px #ccc;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.LimitNum{
+    display: inline-block;
+    padding-left: 16px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: nowrap;
+    float: none;
+    font-size: 14px;
+}
+.LimitNumBtn{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: solid 1px #ccc;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.LimitNumBtnNow{
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 3px;
+    margin: auto;
+    border-radius: 100%;
+    background-color: #329fea;
+}
+.limitNumBox{
+    line-height: 46px!important;
+}
+.theLimitNum{
+    margin: 0 5px;
+    height: 44px;
+    box-sizing: border-box;
+    border: 1px solid #e7e7e7;
+    outline: 0;
+    padding-left: 8px;
+    display: inline-block;
+    width: 52px;
+}
+.verTipsBox{
+    margin: 16px 0 0;
+    min-height: 35px;
+    position: relative;
+}
+.openFansOnly{
+    display: inline-block;
+    margin-right: 7px;
+    padding-left: 16px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: nowrap;
+    float: none;
+    font-size: 14px;
+}
+.openFansOnlyBtn{
+    background-color: #e7e7e7;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: solid 1px #ccc;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.closeFansOnly{
+    display: inline-block;
+    margin-right: 7px;
+    padding-left: 16px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    white-space: nowrap;
+    float: none;
+    font-size: 14px;
+}
+.closeFansOnlyBtn{
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    border: solid 1px #ccc;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+.closeFansOnlyBtnNow{
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 3px;
+    margin: auto;
+    border-radius: 100%;
+    background-color: #329fea;
+}
+.aTips{
+    vertical-align: middle;
+    margin-left: 10px;
+    text-decoration: underline;
+    color: #74b7e6;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+.theInnerTxt{
+    color: #949494;
+}
+.commMg a{
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: underline;
+    color: #74b7e6;
+    font-size: 14px;
+    cursor: pointer;
+}
+.seniorSetBoxOption{
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px #dcdcdc dashed;
+    margin-left: 30px;
+    margin-right: 11px;
+    margin-bottom: 10px;
+}
+.baseSeniorSet{
+    color: #74b7e6;
+    position: absolute;
+    right: 11px;
+    top: 5px;
+    cursor: pointer;
+}
+.ng-binding{
+    color: #74b7e6;
+    display: inline-block;
+    vertical-align: middle;
+}
+.roteteArrow{
+    width: 11px;
+    height: 7px;
+    background: url("../images/iconAll4.png") -665px -784px no-repeat;
+    color: #74b7e6;
+    display: inline-block;
+    vertical-align: middle;
+    transform: rotate(180deg);
+}
+#gamePreviewPage{
+    width: 100%;
+    height: 100%;
+}

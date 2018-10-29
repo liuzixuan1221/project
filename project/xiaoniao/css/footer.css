@@ -1,0 +1,52 @@
+footer .footerWrap{
+    height: 348px;
+    min-width: 1100px;
+    background: url("../images/yinyue_bg.jpg");
+}
+.footerWrap .footer{
+    width: 1100px;
+    margin: 0 auto;
+}
+.footer .music{
+    padding: 116px 0 0 276px;
+    height: 67px;
+}
+.footer .music li{
+    float: left;
+    cursor: pointer;
+    width: 57px;
+    height: 57px;
+    background: url("../images/yinyue_duo.png") no-repeat;
+    margin-right: 26px;
+}
+.footer .music li:hover{
+    background-position: 0 -57px;
+    animation: now .15s 1 linear;
+}
+@keyframes now {
+    0% {
+        transform: scaleX(1) scaleY(1);
+    }
+    25%{
+        transform: scaleX(1.1) scaleY(0.9);
+    }
+    50%{
+        transform: scaleX(1.2) scaleY(.8);
+    }
+    75%{
+        transform: scaleX(1.1) scaleY(.9);
+    }
+    100%{
+        transform: scaleX(1) scaleY(1);
+    }
+}
+.shengming{
+    border-top: 2px #9890a2 dashed;
+    text-align: center;
+    line-height: 65px;
+    margin-top: 79px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+
+}

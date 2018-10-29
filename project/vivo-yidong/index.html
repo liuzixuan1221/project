@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=640, user-scalable=no"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="swiper/swiper-4.3.3.min.css">
+    <link rel="stylesheet" href="swiper/animate.min.css">
+    <script src="swiper/jquery-1.11.3.min.js"></script>
+    <script src="swiper/swiper-4.3.3.min.js"></script>
+    <script src="swiper/swiper.animate1.0.3.min.js"></script>
+    <script src="js/ajax.js"></script>
+</head>
+<body>
+
+<!--header的盒子-->
+<header>
+    <div class="left fl">
+        <ul class="list" id="headerList">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="logo fl">
+        <img src="images/vivo-fifa_730a062.gif" alt="">
+    </div>
+    <form class="headerForm fl" action="">
+        <input type="text"placeholder="NEX">
+    </form>
+    <div class="right fr">
+        <div class="search fl">
+        </div>
+        <div class="person fr">
+        </div>
+    </div>
+    <div class="headerYcBox1">
+        <ul>
+            <li>NEX系列</li>
+            <li>X系列</li>
+            <li>Z系列</li>
+            <li>Y系列</li>
+            <li>商城</li>
+            <li>专卖店</li>
+            <li>Funtouch OS</li>
+            <li>服务</li>
+            <li>社区</li>
+            <li>
+                <img src="images/icon-search2_d5999d3.png" alt="">
+                搜索
+            </li>
+        </ul>
+    </div>
+    <div class="headerYcBox2">
+        <ul>
+            <li>全局搜索</li>
+            <li>NEX</li>
+            <li>Y85</li>
+            <li>X21</li>
+            <li>手机配件</li>
+            <li>服务网点查询</li>
+        </ul>
+    </div>
+    <div class="ycBox">
+        <ul>
+            <li><a href="">购物车</a></li>
+            <li><a href="">我的订单</a></li>
+            <li><a href="">我的商城</a></li>
+            <li onclick="javascript:window.location.href = 'login.html';return false;"><a href="">登录/注册</a></li>
+        </ul>
+    </div>
+    <div class="BG"></div>
+</header>
+
+<!--banner的盒子-->
+<div class="banner">
+    <div class="zp"></div>
+
+    <div class="swiper-container" id="bannerSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/20180820093337413946_original.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/20180814172721626737_original.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/20180813114400675731_original.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/20180809225046933397_original.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/20180816104127304406_original.jpg" alt=""></div>
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<!--fenLei的盒子-->
+<ul class="fenLei clearfix">
+    <li>
+        <a href="">
+            <img src="images/20180702200727214479_original.png" alt="">
+        </a>
+    </li>
+    <li>
+        <a href="">
+            <img src="images/201807022008414677_original.png" alt="">
+        </a>
+    </li>
+    <li>
+        <a href="">
+            <img src="images/20180702200936862132_original.png" alt="">
+        </a>
+    </li>
+    <li>
+    <a href="">
+        <img src="images/20180702201232196764_original.png" alt="">
+    </a>
+    </li>
+    <li>
+        <a href="">
+            <img src="images/20180702201253660719_original.png" alt="">
+        </a>
+    </li>
+    <li>
+        <a href="">
+            <img src="images/20180702201317652288_original.png" alt="">
+        </a>
+    </li>
+    <li>
+        <a href="">
+            <img src="images/20180702201352559447_original.png" alt="">
+        </a>
+    </li>
+    <li>
+        <a href="">
+            <img src="images/2018070220141024770_original.png" alt="">
+        </a>
+    </li>
+</ul>
+
+<!--nav的盒子-->
+<div class="nav"></div>
+
+<!--hot的盒子-->
+<div class="hot">
+    <h2 class="title">
+        热点推荐
+    </h2>
+    <div class="hotBox">
+        <ul>
+            <li>
+                <a href="">
+                    NEX旗舰版
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    Z1全面屏
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    X21全面屏
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    Y75s全面屏
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    NEX闪充充电
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    闪充充电器
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    HiFi耳机
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    碎屏宝
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<!--footer的盒子-->
+<footer>
+    <ul class="clearfix">
+        <li>特色服务</li>
+        <li>小V客服</li>
+        <li>登录/注册</li>
+        <li>选购手机</li>
+    </ul>
+    <div class="copyright">
+        <p>©2017shop.vivo.com.cn<a href=""><img src="images/gssw-icon_db0a7f6.png" alt=""></a></p>
+    </div>
+</footer>
+
+<!--bottomBox的盒子-->
+<div id="bottomBox"></div>
+
+<script src="js/index.js"></script>
+</body>
+</html>

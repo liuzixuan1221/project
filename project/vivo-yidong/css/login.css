@@ -1,0 +1,298 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#bgWrap{
+    display: none;
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.wrapper{
+    width: 100%;
+}
+.logo{
+    margin-top: 20px;
+}
+.logo a{
+    border: none;
+    outline: none;
+    width: 150px;
+    height: 50px;
+    margin: 0 auto;
+    display: block;
+    cursor: default;
+    background-image: url("../images/vivo-logo.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50%;
+}
+.layout{
+    position: relative;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+.container h4{
+    color: #4d4d4d;
+    font-size: 23px;
+    font-weight: normal;
+}
+.container .navBox{
+    padding-top: 30px;
+    width: 100%;
+}
+.navBox .innerBox{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.navBox .labelbox{
+    position: relative;
+    line-height: 80px;
+    height: 80px;
+    display: block;
+    border: 1px solid #e1e1e1;
+    outline: 0 none;
+    padding: 0;
+    margin-bottom: 25px;
+    overflow: hidden;
+    font-size: 0;
+    box-sizing: border-box;
+}
+.navBox .labelbox input{
+    width: 100%;
+    height: 100%;
+    font-size: 26px;
+    line-height: 50px;
+    vertical-align: middle;
+    display: inline-block;
+    border: none;
+    border-radius: 0;
+    padding-left: 16px;
+    box-sizing: border-box;
+    float: left;
+    color: #666666;
+}
+.navBox .auto-box{
+    padding-top: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.navBox .auto-box .checked{
+    display: inline-block;
+    vertical-align: -4px;
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+    margin-top: -1px;
+    background: url("../images/uncheck.png");
+    background-size: cover;
+}
+.navBox .auto-box .checked.now{
+    background: url("../images/checked.png");
+    background-size: cover;
+}
+.navBox .auto-box span{
+    display: inline-block;
+    color: #666666;
+    font-size: 22px;
+    margin: 0;
+    vertical-align: middle;
+}
+.navBox .auto-box .link a{
+    display: block;
+    color: #666666;
+    font-size: 22px;
+}
+.navBox .submitBtn{
+    margin-top: 35px;
+}
+.navBox .submitBtn input{
+    width: 100%;
+    color: white;
+    line-height: 80px;
+    font-size: 29px;
+    text-align: center;
+    display: block;
+    background-color: #2899f7;
+    cursor: pointer;
+}
+.navBox .submitBtn input:hover{
+    background-color: #40a9ff;
+}
+.navBox .linkBtn{
+    margin-top: 35px;
+}
+.navBox .linkBtn a{
+    color: #666666;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    width: 100%;
+    line-height: 80px;
+    font-size: 29px;
+    text-align: center;
+    display: block;
+}
+.navBox .linkBtn a:hover{
+    border: 1px solid #2899f7;
+    color: #2899f7;
+}
+.navBox .other{
+    margin-top: 30px;
+}
+.navBox .other .otherText{
+    font-size: 22px;
+    color: #999999;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+#mark{
+    display: none;
+    position: fixed;
+    z-index: 20;
+    top: 240px;
+    width: 100%;
+    height: auto;
+}
+.layout .container{
+    background: #fff;
+    min-height: 400px;
+    padding: 80px 50px 0;
+}
+.layout .container .logo{
+    padding-bottom: 30px;
+    display: block;
+}
+
+.layout .container .title{
+    text-align: center;
+}
+#jgBox{
+    position: absolute;
+    top: 222px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    color: red;
+}
+.layout .container .outerBox{
+    margin-top: 40px;
+}
+.outerBox .innerBox{
+    width: 400px;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+.outerBox .innerBox .inputBox{
+    line-height: 80px;
+    height: 80px;
+    display: block;
+    border: 1px solid #e1e1e1;
+    outline: 0 none;
+    padding: 0;
+    margin-bottom: 25px;
+    overflow: hidden;
+    font-size: 0;
+    box-sizing: border-box;
+}
+.outerBox .innerBox input{
+    width: 100%;
+    height: 100%;
+    font-size: 26px;
+    line-height: 50px;
+    vertical-align: middle;
+    display: inline-block;
+    border: none;
+    border-radius: 0;
+    padding-left: 16px;
+    box-sizing: border-box;
+    float: left;
+    color: #666666;
+}
+.outerBox .innerBox .checkBox{
+    margin-top: 12px;
+    font-size: 0;
+    display: inline-block;
+}
+.innerBox .checkBox .checked{
+    float: left;
+    width: 24px;
+    height: 24px;
+    margin-top: -1px;
+    background: url("../images/checked.png");
+    background-size: cover;
+}
+.innerBox .checkBox .checked.now{
+    background: url("../images/uncheck.png");
+    background-size: cover;
+}
+.innerBox .checkBox p{
+    float: left;
+    display: inline-block;
+    font-size: 23px;
+    color: #666666;
+    vertical-align: middle;
+    margin-left: 14px;
+}
+.innerBox .linkBtn a input{
+    color: #ffffff;
+    background-color: #2899f7;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    line-height: 50px;
+    font-size: 25px;
+    text-align: center;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+}
+.innerBox .linkBtn a input.now{
+    background-color: #e1e1e1;
+}
+.innerBox .linkBtn a input:hover{
+    color: #fff;
+    background-color: #40a9ff;
+}
+#mClose{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #aaa;
+    top: 12px;
+    right: 12px;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 600;
+    color: #ccc;
+    cursor: pointer;
+}
+.cg{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 200px;
+    background: #fff;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    line-height: 200px;
+    font-size: 23px;
+    border: 2px solid #ccc;
+    color: #aaa;
+    z-index: 20;
+}
+#dlyc{
+    position: absolute;
+    color: red;
+    font-size: 20px;
+}

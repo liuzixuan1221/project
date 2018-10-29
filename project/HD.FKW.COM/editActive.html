@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/editActive.css">
+    <link rel="stylesheet" href="swiper/swiper-4.3.3.min.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="bg-mark" id="bg-mark"></div>
+        <div class="bg-mark-box">
+            <div class="poupTitle">
+                <span class="text">编辑图片</span>
+                <div class="closeBtn"></div>
+            </div>
+            <div class="poupContent">
+                <div class="infoBox">
+                    <div class="editLine">
+                        <div class="title">
+                            <span class="icon"></span>
+                            背景图片：
+                        </div>
+                        <div class="content">
+                            <div class="imgBox">
+                                <img id="uploadImg" src="" alt="">
+                            </div>
+                            <div class="btnBox">
+                                <span id="uploadBtn">
+                                    <input type="text" id="select_btn">
+                                    <a href="" id="file_upload_button">上传替换</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="containerTitle">
+            <div class="activityListTitle">
+                <i class="jianTou"></i>
+                <a id="cancelButton" href="">创建活动</a>
+                /
+                <span>参与活动赢大奖</span>
+            </div>
+            <div class="titleBtnBox">
+                <div class="yuLan">
+                    <i class="iYuLan"></i>
+                    预览
+                </div>
+                <div class="baoCun">
+                    <i class="iBaoCun"></i>
+                    保存
+                </div>
+            </div>
+        </div>
+        <div class="containerBox">
+            <div class="topNav">
+                <div class="topBarSrollBox">
+                    <ul class="topBar">
+                        <li class="column now">
+                            <span>首页</span>
+                        </li>
+                        <li class="column">
+                            <span>游戏过程</span>
+                        </li>
+                        <li class="column">
+                            <span>活动奖品</span>
+                        </li>
+                        <li class="column">
+                            <span>我的奖品</span>
+                        </li>
+                        <li class="column">
+                            <span>奖品详情</span>
+                        </li>
+                        <li class="column">
+                            <span>挑战成功</span>
+                        </li>
+                        <li class="column">
+                            <span>挑战失败</span>
+                        </li>
+                        <li class="column">
+                            <span>摇奖页面</span>
+                        </li>
+                        <li class="column">
+                            <span>中奖页面</span>
+                        </li>
+                        <li class="column">
+                            <span>没中奖页</span>
+                        </li>
+                        <li class="column">
+                            <span>排行榜</span>
+                        </li>
+                        <li class="column">
+                            <span>分享效果</span>
+                        </li>
+                        <div class="slideBar">
+                            <div id="topBardSlide"></div>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="contentBox">
+                <div class="editDetailBox">
+                    <div class="phone">
+                        <div class="wxTitle">
+                            <div id="actName">参与活动赢大奖</div>
+                        </div>
+                        <div class="changeLeft">
+                            <div class="leftImg"></div>
+                        </div>
+                        <div class="changeRight">
+                            <div class="rightImg"></div>
+                        </div>
+                        <div class="gameContent">
+                            <iframe src="game.html" frameborder="0" id="gamePreviewPage"></iframe>
+                        </div>
+                    </div>
+                    <div class="install">
+                        <div class="installTab clearfix">
+                            <div class="tabSetting now">
+                                <span>基础设置</span>
+                            </div>
+                            <div class="tabSetting">
+                                <span>派奖方式</span>
+                            </div>
+                            <div class="tabSetting">
+                                <span>奖项设置</span>
+                            </div>
+                            <div class="tabSetting">
+                                <span>高级设置</span>
+                            </div>
+                        </div>
+                        <div class="installBox1">
+                            <p class="underLineWay">
+                                <span>基本选项</span>
+                            </p>
+                            <div class="actNameSetting">
+                                <div class="leftTitle">
+                                    <span class="flag">*</span>
+                                    <span class="baseSettingTitle">活动标题：</span>
+                                </div>
+                                <input type="text" class="activeName" id="activeName" value="参与活动赢大奖">
+                            </div>
+                            <div class="setGameTimeBox">
+                                <div class="leftTitle">
+                                    <span class="flag">*</span>
+                                    <span class="baseSettingTitle">活动时间：</span>
+                                </div>
+                                <input type="text" class="beginTime" value="2018-09-23 13:47">
+                                至
+                                <input type="text" class="endTime" value="2018-09-30 13:47">
+                            </div>
+                            <div class="setLimitJoinNumBox">
+                                <div class="joinNumBox">
+                                    <div class="leftTitle">
+                                        <span class="flag">&nbsp;</span>
+                                        <span class="baseSettingTitle">活动时间：</span>
+                                    </div>
+                                    <label class="hideJoinNum">
+                                        <div class="hideJoinNumBtn"></div>
+                                        隐藏
+                                    </label>
+                                    <label class="showJoinNum">
+                                        <div class="showJoinNumBtn now"></div>
+                                        展示
+                                        <p class="JoinNumBtnNow"></p>
+                                    </label>
+                                    <div class="commMg">
+                                        <span>增加虚拟参与人数
+                                            <input type="text" class="virtualJoinNum" id="virtualJoinNum" value="100">
+                                             人
+                                        </span>
+                                        <span class="explain">（只展示不计入统计）</span>
+                                    </div>
+                                    <div class="baseLine1">
+                                        <span class="leftTitle">
+                                            <span class="powerIcon"></span>
+                                            <span class="baseSettingTitle">参与人数限制：</span>
+                                        </span>
+                                        <label class="noLimitNum">
+                                            <span class="noLimitNumBtn"></span>
+                                            不限
+                                        </label>
+                                        <label class="LimitNum">
+                                            <span class="LimitNumBtn"></span>
+                                            限制
+                                            <p class="LimitNumBtnNow"></p>
+                                        </label>
+                                        <span class="limitNumBox">
+                                            <input type="text" class="theLimitNum" value="100">
+                                            人参与
+                                        </span>
+                                        <div class="attentionBefore">
+                                            <div class="verTipsBox">
+                                                <div class="leftTitle">
+                                                    <span class="powerIcon"></span>
+                                                    <span class="baseSettingTitle">强制关注：</span>
+                                                </div>
+                                                <label class="openFansOnly">
+                                                    <span class="openFansOnlyBtn"></span>
+                                                    开启
+                                                </label>
+                                                <label class="closeFansOnly">
+                                                    <span class="closeFansOnlyBtn"></span>
+                                                    关闭
+                                                    <p class="closeFansOnlyBtnNow"></p>
+                                                </label>
+                                                <a href="" class="aTips">查看示例</a>
+                                                <div class="commMg">
+                                                    <span class="theInnerTxt">请先到个人中心开通强制关注功能</span>
+                                                    <a href="">详细教程</a>
+                                                </div>
+                                                <div class="seniorSetBox">
+                                                    <div class="seniorSetBoxOption">
+                                                        <span class="fontWeight" style="font-weight: bold;color: #585858;">高级选项</span>
+                                                        <div class="baseSeniorSet">
+                                                            <span class="ng-binding">更多设置</span>
+                                                            <span class="roteteArrow"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="js/editActive.js"></script>
+</body>
+</html>

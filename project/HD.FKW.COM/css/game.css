@@ -1,0 +1,195 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    width: 100%;
+    height: 100%;
+}
+.body{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-size: 100% auto;
+    min-height: 100%;
+    position: relative;
+}
+.body .home{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+.body .home .homeBgBox{
+    width: 100%;
+    height: 504px;
+    overflow: hidden;
+}
+.homeBgBox img{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.body .home .gameInfoBox{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.imgContainer{
+    position: absolute;
+    width: 300px;
+    height: 175px;
+    top: 25px;
+    left: 10px;
+    margin: 0;
+    float: none;
+    z-index: 70;
+    padding: 0;
+    cursor: move;
+    opacity: 1;
+}
+#imgContainer:hover{
+    border: 1px #e7e7e7 dashed;
+}
+#imgContainer{
+    border: 1px transparent dashed;
+    width: 300px;
+    height: 175px;
+    top: 1rem;
+    left: 0.7rem;
+    margin: 0;
+    resize: none;
+    position: static;
+    zoom: 1;
+    display: block;
+}
+.joinNumLine{
+    top: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(255, 157, 11);
+    font-size: 0.7rem;
+    text-shadow: rgb(255, 255, 255) -1px -1px 0px, rgb(255, 255, 255) 0px -1px 0px, rgb(255, 255, 255) 1px -1px 0px, rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 1px 1px 0px, rgb(255, 255, 255) 0px 1px 0px, rgb(255, 255, 255) -1px 1px 0px, rgb(255, 255, 255) -1px 0px 0px;
+    cursor: move;
+    position: absolute;
+    z-index: 76;
+    width: 9rem;
+    margin: 0;
+    padding: .15rem 0;
+    border: 1px transparent dashed;
+}
+#joinNumLine:hover{
+    border: 1px #e7e7e7 dashed;
+}
+.joinNum{
+    color: rgb(255, 157, 11);
+    font-size: 0.7rem;
+    text-shadow: rgb(255, 255, 255) -1px -1px 0px, rgb(255, 255, 255) 0px -1px 0px, rgb(255, 255, 255) 1px -1px 0px, rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 1px 1px 0px, rgb(255, 255, 255) 0px 1px 0px, rgb(255, 255, 255) -1px 1px 0px, rgb(255, 255, 255) -1px 0px 0px;
+}
+.startBtn{
+    top: 0;
+    position: absolute;
+}
+.StartBtnBox{
+    position: absolute;
+    width: 130px;
+    height: 55px;
+    top: 407px;
+    left: 93px;
+    margin: 0px;
+    float: none;
+    z-index: 100;
+    padding: 0px;
+    cursor: move;
+}
+#StartBtnBox{
+    width: 130px;
+    height: 55px;
+    top: 20.35rem;
+    left: 4.65rem;
+    margin: 0px;
+    resize: none;
+    position: static;
+    zoom: 1;
+    display: block;
+    border: 1px transparent dashed;
+}
+#StartBtnBox:hover{
+    border: 1px #e7e7e7 dashed;
+}
+.bottomSkill{
+    position: absolute;
+    background-color: rgba(0,0,0,0.4);
+    padding: .3rem 0;
+    bottom: 0;
+    color: #fff;
+    font-size: .6rem;
+    width: 100%;
+    line-height: .6rem;
+    height: .6rem;
+    word-wrap: break-word;
+    text-align: center;
+    z-index: 200;
+}
+.ruleImg{
+    top: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#ruleImg{
+    width: 60px;
+    height: 60px;
+    top: 24px;
+    left: 250px;
+    position: absolute;
+    float: none;
+    z-index: 600;
+    padding: 0;
+    cursor: move;
+    background-size: 100% 100%;
+    background-image: url("../images/ACgIABAEGAAgzNqUyQUoyPeVXDByOHo.png");
+    display: block;
+    border: 1px transparent dashed;
+}
+#ruleImg:hover{
+    border: 1px #e7e7e7 dashed;
+}
+.edit{
+    margin: 0;
+    right: 0;
+    top: 0;
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-family: 宋体, 新宋体;
+    height: 24px;
+    z-index: 9030;
+    zoom: 1;
+    background-color: rgb(86, 161, 227);
+    min-width: 34px;
+    font-size: 12px;
+    padding: 0;
+    border-bottom: 1px dashed rgb(55, 133, 202);
+    display: none;
+}
+.edit.now{
+    display: block;
+}
+.edit a{
+    position: relative;
+    float: left;
+    margin: 2px 2px;
+    padding: 0 3px;
+    height: 20px;
+    line-height: 22px;
+    display: inline;
+    text-decoration: none;
+    color: #FFF;
+    text-shadow: none;
+    white-space: nowrap;
+}

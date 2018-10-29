@@ -1,0 +1,352 @@
+#bgWrap{
+    display: none;
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.wrap{
+    width: 100%;
+    display: block;
+    position: relative;
+    text-align: center;
+    background: #270546;
+}
+
+.banner{
+    position: relative;
+    width: 1200px;
+    margin: auto;
+}
+.banner img{
+    display: block;
+    width: 100%;
+}
+.banner .logo{
+    position: absolute;
+    display: block;
+    width: 97px;
+    height: 97px;
+    background: url("../images/logo.png") no-repeat;
+}
+.banner .layout{
+    margin-top: 0;
+    top: 130px;
+    position: absolute;
+    right: 0;
+    width: 420px;
+    min-height: 480px;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 30px 30px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.container h4{
+    color: #4d4d4d;
+    font-size: 23px;
+    font-weight: normal;
+}
+.container .navBox{
+    padding-top: 30px;
+    width: 100%;
+}
+.navBox .innerBox{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.navBox .labelbox{
+    position: relative;
+    line-height: 50px;
+    height: 50px;
+    display: block;
+    border: 1px solid #e1e1e1;
+    outline: 0 none;
+    padding: 0;
+    margin-bottom: 15px;
+    overflow: hidden;
+    font-size: 0;
+    box-sizing: border-box;
+}
+.navBox .labelbox input{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 50px;
+    vertical-align: middle;
+    display: inline-block;
+    border: none;
+    border-radius: 0;
+    padding-left: 16px;
+    box-sizing: border-box;
+    float: left;
+    color: #666666;
+}
+.navBox .auto-box{
+    padding-top: 15px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.navBox .auto-box .checked{
+    display: inline-block;
+    vertical-align: -4px;
+    margin-right: 10px;
+    width: 14px;
+    height: 14px;
+    margin-top: -1px;
+    background: url("../images/uncheck.png");
+}
+.navBox .auto-box .checked.now{
+    background: url("../images/checked.png");
+}
+.navBox .auto-box span{
+    display: inline-block;
+    color: #666666;
+    font-size: 12px;
+    margin: 0;
+    vertical-align: middle;
+}
+.navBox .auto-box .link a{
+    display: block;
+    color: #666666;
+    font-size: 12px;
+}
+.navBox .submitBtn{
+    margin-top: 15px;
+}
+.navBox .submitBtn input{
+    width: 100%;
+    color: white;
+    line-height: 50px;
+    font-size: 19px;
+    text-align: center;
+    display: block;
+    background-color: #2899f7;
+    cursor: pointer;
+}
+.navBox .submitBtn input:hover{
+    background-color: #40a9ff;
+}
+.navBox .linkBtn{
+    margin-top: 15px;
+}
+.navBox .linkBtn a{
+    color: #666666;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    width: 100%;
+    line-height: 50px;
+    font-size: 19px;
+    text-align: center;
+    display: block;
+}
+.navBox .linkBtn a:hover{
+    border: 1px solid #2899f7;
+    color: #2899f7;
+}
+.navBox .other{
+    margin-top: 30px;
+}
+.navBox .other .otherText{
+    font-size: 12px;
+    color: #999999;
+    text-align: center;
+    line-height: 1;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.footer{
+    width: 100%;
+    color: #9d9d9d;
+    text-align: center;
+    height: 80px;
+    padding: 40px 0;
+}
+.footer .text1{
+    overflow: hidden;
+    text-align: center;
+}
+.footer .text1 ul{
+    overflow: hidden;
+    width: 300px;
+    margin: auto;
+}
+.footer .text1 ul li{
+    font-size: 8px;
+    display: inline-block;
+    margin-right: 26px;
+    float: left;
+}
+.footer .text1 ul li a{
+    color: #333;
+}
+.footer .text2{
+    font-size: 8px;
+    padding: 10px 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+#mark{
+    display: none;
+    position: fixed;
+    z-index: 20;
+    top: 80px;
+    width: 100%;
+    height: auto;
+}
+.layout{
+    position: relative;
+    width: 840px;
+    margin: 0 auto;
+    padding: 50px 30px 60px;
+    background-color: #fff;
+}
+.layout .container{
+    background: #fff;
+    min-height: 400px;
+    padding: 34px 34px 0;
+}
+.layout .container .logo{
+    padding-bottom: 30px;
+    display: block;
+}
+.layout .container .logo a{
+    border: none;
+    outline: none;
+    width: 126px;
+    height: 38px;
+    margin: 0 auto;
+    display: block;
+    cursor: default;
+    background: url("../images/vivo-logo.jpg") no-repeat 50%;
+    background-size: contain;
+}
+.layout .container .title{
+    text-align: center;
+}
+#jgBox{
+    position: absolute;
+    top: 222px;
+    left: 370px;
+    color: red;
+}
+.layout .container .outerBox{
+    margin-top: 40px;
+}
+.outerBox .innerBox{
+    width: 332px;
+    padding: 30px 0;
+    margin: 0 auto;
+}
+.outerBox .innerBox .inputBox{
+    line-height: 50px;
+    height: 50px;
+    display: block;
+    border: 1px solid #e1e1e1;
+    outline: 0 none;
+    padding: 0;
+    margin-bottom: 15px;
+    overflow: hidden;
+    font-size: 0;
+    box-sizing: border-box;
+}
+.outerBox .innerBox input{
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 50px;
+    vertical-align: middle;
+    display: inline-block;
+    border: none;
+    border-radius: 0;
+    padding-left: 16px;
+    box-sizing: border-box;
+    float: left;
+    color: #666666;
+}
+.outerBox .innerBox .checkBox{
+    margin-top: 12px;
+    font-size: 0;
+    display: inline-block;
+}
+.innerBox .checkBox .checked{
+    float: left;
+    width: 14px;
+    height: 14px;
+    margin-top: -1px;
+    background: url("../images/checked.png");
+}
+.innerBox .checkBox .checked.now{
+    background: url("../images/uncheck.png");
+}
+.innerBox .checkBox p{
+    float: left;
+    display: inline-block;
+    font-size: 13px;
+    color: #666666;
+    vertical-align: middle;
+    margin-left: 14px;
+}
+.innerBox .linkBtn{
+    padding: 0;
+    margin-top: 15px;
+}
+.innerBox .linkBtn a input{
+    color: #ffffff;
+    background-color: #2899f7;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #e1e1e1;
+    line-height: 50px;
+    font-size: 19px;
+    text-align: center;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+}
+.innerBox .linkBtn a input.now{
+    background-color: #e1e1e1;
+}
+.innerBox .linkBtn a input:hover{
+    color: #fff;
+    background-color: #40a9ff;
+}
+#mClose{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #aaa;
+    top: 12px;
+    right: 12px;
+    text-align: center;
+    line-height: 20px;
+    font-weight: 600;
+    color: #ccc;
+    cursor: pointer;
+}
+.cg{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 200px;
+    background: #fff;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    line-height: 200px;
+    font-size: 23px;
+    border: 2px solid #ccc;
+    color: #aaa;
+    z-index: 20;
+}
+#dlyc{
+    position: absolute;
+    color: red;
+    left: 115px;
+    top: 100px;
+}

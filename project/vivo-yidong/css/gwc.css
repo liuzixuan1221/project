@@ -1,0 +1,375 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+i{
+    background: url("../images/icons-header_e72bfe3.png") no-repeat;
+    display: inline-block;
+    width: 60px;
+    height: 100px;
+}
+i.list{
+    background-position: -60px 30px;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background: #212121;
+    position: fixed;
+    top:0;
+    left:0;
+    transition: .6s;
+    z-index: 999;
+}
+header.now{
+    background: #111;
+}
+header .left{
+    width: 15%;
+    height: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+}
+header .left a{
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    color: #fff;
+}
+header .logo{
+    position: relative;
+    left: 20%;
+    width: 294px;
+    height: 100%;
+    transform: scale(1);
+    transition: .6s;
+}
+header .logo.now{
+    transform: scale(0);
+    transition: .6s;
+}
+header .logo p{
+    margin-left: 40px;
+    width: 80%;
+    height: 100%;
+    line-height: 100px;
+    font-size: 30px;
+    color: #fff;
+}
+header .headerForm{
+    position: relative;
+    height:100%;
+    width: 390px;
+    display: none;
+}
+header .headerForm.now{
+    display: block;
+}
+header .headerForm input{
+    display: block;
+    width: 100%;
+    font-size: 20px;
+    line-height: 40px;
+    padding: 30px 0;
+}
+header .right{
+    height:100%;
+}
+header .right .search{
+    transition: .6s;
+    position: relative;
+    width: 70px;
+    height: 100%;
+    background: url("../images/icon-search2_d5999d3.png") no-repeat center;
+    background-size: 30px;
+}
+#BG{
+    position: fixed;
+    z-index: 11111;
+    top:100px;
+    width: 100%;
+    height: calc(100% - 100px);
+    background: rgba(0,0,0,.4);
+    display: none;
+}
+#ycList{
+    position: fixed;
+    z-index: 11112!important;
+    top:101px;
+    left: 58%;
+    width: 230px;
+    height: 280px;
+    background-color: #fff;
+    padding: 30px 0;
+    display: none;
+}
+#ycList a{
+    display:none;
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 22px;
+    color: #999;
+}
+#del{
+    position: fixed;
+    top: 400px;
+    left: 5%;
+    z-index: 111112!important;
+    width: 90%;
+    height: 300px;
+    background: #fff;
+    display: none;
+}
+#del .ts{
+    font-size: 30px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 60px;
+    color: #5f5f5f;
+}
+#del .sure{
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+    margin-top: 30px;
+    color: #959595;
+}
+#del .delBtn{
+    width: 480px;
+    height: 80px;
+    margin: 30px auto;
+}
+#del .delBtn button{
+    width: 200px;
+    height: 60px;
+    font-size: 30px;
+    border: 1px solid #aaa;
+    text-align: center;
+    line-height: 60px;
+    float: left;
+    border-radius: 12px;
+}
+#del .delBtn button:last-child{
+    float: right;
+    background: #0C8ED9;
+    color: #fff;
+}
+.main{
+    width: 100%;
+    height:100%;
+}
+.mainNav{
+    position: relative;
+    top:100px;
+    width: 100%;
+    height: calc(100% - 100px);
+    background: #fff;
+}
+.notBox{
+    display: none;
+    margin-top: 300px;
+}
+.notBox .pic{
+    width: 260px;
+    height: 200px;
+    margin: 0 auto 30px;
+}
+.notBox .pic img{
+    width: 100%;
+}
+.notBox p{
+    margin-bottom: 60px;
+    font-size: 22px;
+    color: #888;
+    text-align: center;
+}
+.notBox .btns{
+    width: 100%;
+    height:auto;
+}
+.notBox .btns button{
+    float: left;
+    width: 220px;
+    height: 66px;
+    font-size: 23px;
+    line-height: 66px;
+    color: #00acff;
+    border: 2px solid #00acff;
+    border-radius: 33px;
+    background-color: transparent;
+}
+#goShopping{
+    margin:0 30px 0 80px;
+}
+.hasBox{
+    width: 100%;
+    height: 100%;
+}
+.hasBox ul{
+    width:100%;
+    height: auto;
+}
+.hasBox ul .listItem{
+    background-color: #fff;
+    padding: 40px 0;
+    position: relative;
+    border-bottom: 1px solid #e8e8e8;
+}
+.hasBox ul .listItem .wrapper{
+    overflow: hidden;
+    margin: 0 30px;
+}
+.hasBox ul .listItem .wrapper .checkBox{
+    margin-top: 36px;
+    float: left;
+    width: 40px;
+}
+.hasBox ul .listItem .wrapper .picBox{
+    float: left;
+    width: 200px;
+    text-align: center;
+    position: relative;
+    font-size: 0;
+}
+.hasBox ul .listItem .wrapper .picBox img{
+    width: 130px;
+    height: 130px;
+}
+.hasBox ul .listItem .wrapper .infoBox{
+    float: left;
+    width: 300px;
+}
+.hasBox ul .listItem .wrapper .infoBox h2{
+    width: 100%;
+    margin: 14px 0 0;
+    padding-bottom: 16px;
+    font-size: 26px;
+    line-height: 1;
+    color: #333;
+    white-space: nowrap;
+    font-weight: 400;
+    overflow: hidden;
+}
+.hasBox ul .listItem .wrapper .infoBox p{
+    font-size: 22px;
+    color: #888;
+    margin: 0;
+    line-height: 1;
+    padding-bottom: 30px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.hasBox ul .listItem .wrapper .infoBox .price{
+    color: #f81200!important;
+}
+.hasBox ul .listItem .wrapper .infoBox .number{
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+}
+.hasBox ul .listItem .wrapper .infoBox .number .jia,.hasBox ul .listItem .wrapper .infoBox .number .jian{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 56px;
+    height: 40px;
+    font-size: 23px;
+    color: #333;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 40px;
+    border: 1px solid #dedede;
+}
+.hasBox ul .listItem .wrapper .infoBox .number input{
+    display: inline-block;
+    box-sizing: border-box;
+    width: 60px;
+    height: 38px;
+    font-size: 23px;
+    color: #333;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 38px;
+    border: 1px solid #dedede;
+}
+.hasBox ul .listItem .wrapper .infoBox .del{
+    position: absolute;
+    top: 70px;
+    right: 15px;
+    font-size: 0;
+    text-align: center;
+}
+.hasBox .footer{
+    height: 100px;
+    position: fixed;
+    z-index: 1111;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    border-top: 1px solid #eaeaea;
+    width: 100%;
+    background-color: #fff;
+    padding-left: 30px;
+}
+.hasBox .footer .table{
+    width:100%;
+    height: 100%;
+    overflow: hidden;
+}
+.table .allCheck{
+    float: left;
+    margin-top: 35px;
+    width: 130px;
+    height: 30px;
+}
+b{
+    background: url("../images/new-checkbox_62f3ce4.png") no-repeat 0 bottom;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-size: 100%;
+}
+b.now{
+    background: url("../images/new-checkbox_62f3ce4.png") no-repeat 0 top;
+    background-size: 100%;
+}
+.table .allCheck p{
+    display: inline-block;
+    margin-left: 20px;
+    line-height: 30px;
+    height: 30px;
+    font-size: 26px;
+    vertical-align: top;
+}
+.table .heJi{
+    float: left;
+    margin-top: 35px;
+    width: 280px;
+    height: 30px;
+}
+.table .heJi .labelPrice{
+    color: #888;
+    font-size: 26px;
+}
+.table .heJi .redSpan{
+    display: inline-block;
+    color: #f81200!important;
+    font-size: 26px;
+}
+.table .jieSuan{
+    float: right;
+    text-align: center;
+}
+.table .jieSuan button{
+    width: 200px;
+    height: 60px;
+    background-color: #f81200;
+    font-size: 22px;
+    text-align: center;
+    color: #fff;
+    border: 0;
+    border-radius: 30px;
+    margin-top: 25px;
+}

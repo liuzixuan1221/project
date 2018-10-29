@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <footer>
+        <div class="footerWrap">
+            <div class="footer">
+                <ul class="music" id="music">
+                    <li></li>
+                    <li style="background-image: url(images/yinyue_lai.png)"></li>
+                    <li style="background-image: url(images/yinyue_mi.png)"></li>
+                    <li style="background-image: url(images/yinyue_fa.png)"></li>
+                    <li style="background-image: url(images/yinyue_suo.png)"></li>
+                    <li style="background-image: url(images/yinyue_la.png)"></li>
+                    <li style="background-image: url(images/yinyue_xi.png)"></li>
+                </ul>
+                <audio src="music/sound00.mp3"></audio>
+                <audio src="music/sound01.mp3"></audio>
+                <audio src="music/sound02.mp3"></audio>
+                <audio src="music/sound03.mp3"></audio>
+                <audio src="music/sound04.mp3"></audio>
+                <audio src="music/sound05.mp3"></audio>
+                <audio src="music/sound06.mp3"></audio>
+
+                <div class="shengming">蜀ICP备16002451号</div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        var aAudio = document.getElementsByTagName('audio');
+        var oMusic = document.getElementById('music');
+        var aLi = oMusic.getElementsByTagName('li');
+        for (let i = 0; i < aLi.length; i++) {
+            aLi[i].onclick = function () {
+                console.log(aAudio[i].ended);
+                if (aAudio[i].ended == false) {
+                    aAudio[i].load();
+                    aAudio[i].play();
+                } else {
+                    aAudio[i].play();
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+
+</head>
+<body>
+    <header>
+        <div class="headerWrap">
+            <div class="header">
+                <div class="logo fl">
+                    <img src="images/logo.png" alt="">
+                </div>
+                <ul class="navWrap">
+                    <li>
+                        <h1 class="headerH1 now">首页</h1>
+                    </li>
+                    <li>
+                        <h1 class="headerH1">小鸟掌学</h1>
+                        <span class="xiaojiantou"></span>
+                        <ul id="xialaBox" class="xialaBox xiala1" style="height: 240px">
+                            <li onclick="javascript:window.open('xiaoniao.html?num=1');">小鸟掌学主页</li>
+                            <li onclick="javascript:window.open('xiaoniao.html?num=2');">小鸟掌学概述</li>
+                            <li onclick="javascript:window.open('xiaoniao.html?num=3');">对企业的价值</li>
+                            <li onclick="javascript:window.open('xiaoniao.html?num=4');">小鸟掌云</li>
+                            <li>微课联盟</li>
+                            <li onclick="javascript:window.open('xiaoniao.html?num=5');">App下载</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h1 class="headerH1">小鸟动态</h1>
+                    </li>
+                    <li>
+                        <h1 class="headerH1">企业文化</h1>
+                        <span class="xiaojiantou"></span>
+                        <ul class="xialaBox xiala2" style="height: 120px">
+                            <li onclick="javascript:window.open('xiangqing.html?type=companyIdea')">公司理念</li>
+                            <li onclick="javascript:window.open('xiangqing.html?type=companyCulture')">公司文化</li>
+                            <li onclick="javascript:window.open('xiangqing.html?type=companyEnvironment')">公司氛围</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h1 class="headerH1">人力资源</h1>
+                        <span class="xiaojiantou"></span>
+                        <ul class="xialaBox xiala2" style="height: 120px">
+                            <li onclick="javascript:window.open('xiangqing.html?type=talents')">人才理念</li>
+                            <li onclick="javascript:window.open('xiangqing.html?type=team')">团队介绍</li>
+                            <li onclick="javascript:window.open('xiangqing.html?type=joinUs')">招聘信息</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h1 class=headerH1>联系我们</h1>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        var aHeaderH1 = document.getElementsByClassName('headerH1');
+        for (var i = 0; i < aHeaderH1.length; i++) {
+            aHeaderH1[i].index = i;
+            aHeaderH1[i].onclick = function(){
+                for (var j = 0; j < aHeaderH1.length; j++) {
+                    aHeaderH1[j].classList.remove('now');
+                }
+                this.classList.add('now');
+                if ( this.index == 2){
+                window.open('dongtai.html');
+                }
+                if ( this.index == 5){
+                    window.open('xiangqing.html?type=telUs');
+                }
+            }
+        }
+    </script>
+</body>
+</html>

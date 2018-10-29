@@ -1,0 +1,336 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.topNav.fixed{
+    position: fixed;
+    top: 0;
+}
+.vivoContainer{
+    font-size: 14px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.vivoContainer .allBox{
+    top: 0;
+    position: absolute;
+    transition: top 0.5s;
+}
+.allBox .n1{
+    background-color: #fff;
+    overflow: hidden;
+}
+.section{
+    position: relative;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.title{
+    padding-top: 180px;
+    text-align: center;
+}
+.title h2{
+    color: rgb(0, 0, 0);
+    font-size: 45px;
+    padding-bottom: 19px;
+    line-height: 69px;
+}
+.title p{
+    display: inline-block;
+    color: #000;
+    line-height: 2;
+    font-size: 18px;
+    width: 820px;
+}
+.goLink{
+    text-align: center;
+    padding-top: 38px;
+}
+.goLink a{
+    text-align: center;
+    margin: 0 10px;
+    width: 152px;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative;
+    color: #0087cd;
+    border: 1px #0087cd solid;
+    border-radius: 70px;
+    overflow: hidden;
+    font-weight: 600;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    transition: .4s;
+}
+.goLink a:hover{
+    color: #fff;
+    background: #0087cd;
+}
+.n1 .pic{
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    left: 50%;
+    width: 592.72px;
+    height: 682px;
+    margin-left: -296.36px;
+    margin-top: 61px;
+}
+.allBox .n2{
+    background-color: #3d3d3d;
+    overflow: hidden;
+}
+.n2 .pic{
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    width: 76px;
+    height: 888px;
+    left: 50%;
+    margin-left: -38px;
+}
+.n2 .pic img{
+    position: absolute;
+    width: 1920px;
+    height: 888px;
+    left: 50%;
+    margin-left: -972px;
+}
+.allBox{
+    width: 100%;
+}
+.allBox .n3{
+    background-color: #f1ebe7;
+    overflow: hidden;
+}
+.n3 .pic{
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    width: 684px;
+    height: 896px;
+    left: 50%;
+    margin-left: -342px;
+    margin-top: 61px;
+}
+.n3 .pic img{
+    position: absolute;
+    width: 684px;
+    left: 50%;
+    margin-left: -342px;
+}
+.n4{
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+.n4 .pic{
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    width: 76px;
+    height: 635px;
+    left: 50%;
+    margin-left: -38px;
+    margin-top: 61px;
+    padding-bottom: 76px;
+}
+.n4 .pic img{
+    position: absolute;
+    width: 1304px;
+    height: 635px;
+    left: 50%;
+    margin-left: -652px;
+}
+.n5{
+    background: #fff;
+    overflow: hidden;
+}
+.n5 .pic{
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    width: 513px;
+    left: 50%;
+    margin-left: -256px;
+    margin-top: 61px;
+    padding-bottom: 76px;
+}
+.n5 .pic img{
+    width: 513px;
+    height: 1041px;
+    left: 50%;
+    margin-left: -256px;
+    position: absolute;
+}
+.n6{
+    background-color: #f1ebe7;
+    overflow: hidden;
+}
+.n6 .section .title{
+    position: relative;
+    padding-top: 380px;
+    width: 266px;
+    left: 800px;
+}
+.n6 .section .title p{
+    width: auto;
+    text-align: justify;
+}
+.n6 .pic{
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    width: 537px;
+    height: 851px;
+    left: 50%;
+    margin-left: -268px;
+}
+.n6 .pic .f1{
+    top: -500px;
+    left: -410px;
+    background-size: 537px 1003px;
+    width: 537px;
+    position: absolute;
+}
+.n6 .pic .f2{
+    top: -500px;
+    right: 180px;
+    width: 459px;
+    position: absolute;
+}
+.n7{
+    background: #fff;
+    overflow: hidden;
+}
+.n7 .pic{
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    width: 76px;
+    height: 763px;
+    left: 50%;
+    margin-left: -38px;
+    margin-top: 61px;
+}
+.n7 .pic img{
+    width: 1124px;
+    height: 763px;
+    left: 50%;
+    margin-left: -562px;
+    position: absolute;
+}
+.n8{
+    background-color: #f4f4f4;
+    overflow: hidden;
+}
+.n8 .pic{
+    position: relative;
+    width: 1140px;
+    height: 760px;
+    left: 50%;
+    margin-left: -570px;
+    margin-top: 92px;
+}
+.n8 .pic img{
+    width: 1140px;
+    height: 760px;
+    position: absolute;
+}
+.n9{
+    overflow: hidden;
+}
+.n9 .pic{
+    position: relative;
+    z-index: 1;
+    width: 1368px;
+    height: 684px;
+    left: 50%;
+    margin-left: -684px;
+    margin-top: 92px;
+    margin-bottom: 61px;
+}
+.n9 .pic img{
+    width: 1368px;
+    height: 684px;
+    left: 50%;
+    margin-left: -684px;
+    position: absolute;
+}
+.n10{
+    background-color: #242424;
+    overflow: hidden;
+}
+.n10 .pic{
+    position: relative;
+    z-index: 1;
+    width: 653px;
+    height: 912px;
+    left: 50%;
+    margin-left: -326px;
+    margin-top: 92px;
+}
+.n10 .pic img{
+    left: 5%;
+    width: 653px;
+    height: 988px;
+    position: absolute;
+}
+.n10 .title i{
+    color: #fff;
+    opacity: .8;
+    width: 100%;
+    display: block;
+    margin-top: 23px;
+}
+.n11{
+    overflow: hidden;
+}
+.n11 .pic{
+    position: relative;
+    z-index: 1;
+    width: 1368px;
+    height: 684px;
+    left: 50%;
+    margin-left: -684px;
+    margin-top: 92px;
+    margin-bottom: 61px;
+}
+.n11 .pic img{
+    width: 1368px;
+    height: 684px;
+    position: absolute;
+}
+.n12{
+    background-color: #f6f6f6;
+    overflow: hidden;
+}
+.n12 .pic{
+    position: relative;
+    width: 585px;
+    height: 950px;
+    left: 50%;
+    margin-left: -292px;
+    margin-top: 92px;
+}
+.n12 .pic .f1{
+    left: -72%;
+    width: 532px;
+    height: 950px;
+    position: absolute;
+}
+.n12 .pic .f2{
+    left: 81%;
+    width: 532px;
+    height: 950px;
+    position: absolute;
+}
+.n12 .pic .f3{
+    width: 585px;
+    height: 950px;
+    position: absolute;
+}

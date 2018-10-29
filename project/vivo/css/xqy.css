@@ -1,0 +1,210 @@
+
+
+.productColor{
+    width: 1200px;
+    margin: 0 auto;
+    height: auto;
+    padding: 40px 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: #e5e5e5;
+}
+
+.productColor .leftBox{
+    float: left;
+    width: 285px;
+    height: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+.productColor .leftBox div{
+    width: auto;
+    height: auto;
+    border: 0;
+    padding-top: 0;
+    font-size: 28px;
+    line-height: 70px;
+    color: #333;
+    text-align: left;
+}
+.productColor .rightBox{
+    position: relative;
+    float: left;
+    height: auto;
+    width: auto;
+    max-width: calc(74% - 285px);
+    padding: 0;
+    margin-top: 3px;
+}
+.rightBox .phoneImages{
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    margin-top: 20px;
+}
+.p1{
+    left: -240px;
+    z-index: -1;
+    opacity: .6;
+}
+.p2{
+    z-index: 1;
+    top:80px;
+}
+.p3{
+    z-index: -1;
+    left: 240px;
+    opacity: .6;
+}
+.rightBox .phoneImages img{
+    display: block;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+.rightBox .colorSelectBox{
+    position: absolute;
+    margin: 40px auto 0;
+    width: 200px;
+    font-size: 0;
+    text-align: center;
+    top:450px;
+    left: 75px;
+}
+.rightBox .colorSelectBox .colorBox{
+    display: inline-block;
+    text-align: left;
+}
+.colorSelectBox .colorBox .color{
+    display: inline-block;
+    vertical-align: top;
+    width: 40px;
+    height: 40px;
+}
+.colorBox .color div.colorShadow{
+    box-shadow: 2px 5px 15px rgba(0,0,0,.3);
+    border-radius: 14px;
+    position: relative;
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+}
+.color div{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 14px;
+    position: relative;
+    width: 10px;
+    height: 10px;
+}
+.color div div{
+    background-color: #ccc;
+    position: absolute;
+    border-radius: 12px;
+    left: 50%;
+    top: 50%;
+    margin-left: -5px;
+    margin-top: -6px;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+.colorDes{
+    padding: 0;
+    height: 38px;
+    margin-left: 0;
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 38px;
+    color: #333;
+    text-align: center;
+}
+.productColor .middleBox{
+    float: left;
+    width: 25%;
+    min-width: 200px;
+    height: auto;
+    padding: 0;
+    margin-top: 3px;
+}
+.dataLine{
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    line-height: 25px;
+    color: #666;
+    text-align: left;
+}
+.dataLine div{
+    max-width: 100%;
+    word-wrap: break-word;
+    font-size: 16px;
+    line-height: 50px;
+    color: #666;
+    text-align: left;
+}
+.dataLine div span{
+    font-size: 16px;
+    line-height: 50px;
+    color: #666;
+    text-align: left;
+}
+
+.productColor .rightBox .sizeImages{
+    width: 400px;
+    height: 250px;
+    margin-top: 5px;
+}
+
+.rightBox .sizeImages img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.productColor .stRightBox{
+    position: relative;
+    margin-left: 200px;
+    height: 500px;
+}
+.mask {
+    width: 175px;
+    height: 175px;
+    background: rgba(255, 255, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: move;
+    display: none;
+}
+.big{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: -74px;
+    left: 450px;
+}
+.lcty{
+    position: fixed;
+    left: 8%;
+    top: 50%;
+    width: 100px;
+    height: 480px;
+    border: 2px solid #ccc;
+    transform: translateY(-50%);
+}
+.lcty li{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.lcty li.now{
+    background: #0087cd;
+    color: #fff;
+}
