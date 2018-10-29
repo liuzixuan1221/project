@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #veri{
+            width: 100px;
+            height: 40px;
+            border: 2px solid #000;
+            text-align: center;
+            line-height: 40px;
+            margin-left: 150px;
+            cursor: pointer;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://127.0.0.1:3000/Handler/AdminLogin?action=login" method="POST">
+        用户名: <input type="text" name="username">    <br />
+        密码: <input type="password" name="password">    <br />
+        <input type="text" name="action" value="checkveri" style="display:none">
+        <div id="veri">获取验证码</div>
+        <input type="text" name="veri">
+        <input type="submit" value="提交">
+    </form>
+    <div id="register"><a href="http://127.0.0.1:3000/register.html">前往注册</a></div>
+
+    <!-- <script>
+        var oRegister = document.getElementById("register");
+        oRegister.onclick = function(){
+
+        }
+    </script> -->
+</body>
+</html>

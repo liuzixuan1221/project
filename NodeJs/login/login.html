@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            background: rgba(97, 35, 212);
+        }
+        .loginBox{
+            width: 800px;
+            position: relative;
+            left: 50%;
+            top: 30%;
+            transform: translateX(-50%);
+            overflow: hidden;
+            padding: 10px 20px;
+        }
+        .loginBox .top{
+            margin-left: 20%;
+            overflow: hidden;
+        }
+        .loginBox .logo{
+            float: left;
+            font-size: 40px;
+        }
+        .loginBox .title{
+            margin-left: 10px;
+            float: left;
+            font-size: 30px;
+            color: #fff;
+            letter-spacing:5px;
+        }
+        .loginBox .title p{
+            font-size: 16px;
+        }
+        .content{
+            padding: 0 50px;
+            margin-top: 30px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .container form div{
+            width: 600px;
+            height: 40px;
+            border: 3px solid #F2602E;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        .container form .yzm{
+            width: 300px;
+        }
+        .container form div input{
+            float: right;
+            background: transparent;
+            width: 560px;
+            height: 100%;
+            border: 3px solid transparent;
+            border-left: 3px solid #F2602E;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .container form .yzm input{
+            width: 260px;
+        }
+        input::placeholder{
+            color: #fff;
+        }
+        button{
+            float: right;
+            border: none;
+            width: 150px;
+            height: 50px;
+            background: #0f0;
+            font-size: 16px;
+            color: #fff;
+        }
+        .zhuCe{
+            float: left;
+            margin-left: -30px;
+            background: #00f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="loginBox">
+            <div class="top">
+                <div class="logo">logo</div>
+                <div class="title">
+                    翡翠学院后台
+                    <p>the sysmaster of feicuischool</p>
+                </div>
+            </div>
+            <div class="content">
+                <form action="http://127.0.0.1:3000/doget" method="GET">
+                    <div><input type="text" name="username" placeholder="用户名"></div>
+                    <div><input type="text" name="password" placeholder="密码"></div>
+                    <!-- <div class="yzm"><input type="text" name="username" placeholder="验证码"></div> -->
+                    <button type="submit">登录</button>
+                </form>
+            </div>
+            <button class="zhuCe">忘记密码</button>
+        </div>
+    </div>
+</body>
+</html>

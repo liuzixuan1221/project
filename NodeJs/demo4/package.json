@@ -1,0 +1,16 @@
+{
+  "name": "demo4",
+  "version": "1.0.0",
+  "main": "01.js",
+  "dependencies": {
+    "date-now": "^1.0.1",
+    "silly-datetime": "^0.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
