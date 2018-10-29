@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #list{
+            width: 100%;
+            height:auto;
+        }
+        li{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-bottom: 2px solid #00aebb;
+            border-radius: 50px;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+<ul id="list">
+    <li>0</li>
+    <li class="li1">1</li>
+    <li>2</li>
+    <li>3</li>
+    <li id="li4">4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+</ul>
+
+<script>
+    //删除        empty();        remove();       detach();
+    $("li").on("click",function(){
+//        $(this).empty();            //删除内容 innerHTML
+//        $(this).remove();           //标签也删除,并且绑定的事件和数据也一起删除
+        $(this).detach();           //标签也删除,但绑定的事件和数据不会删除
+        $("#list").append($(this));
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #list{
+            width: 100%;
+            height:auto;
+        }
+        li{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-bottom: 2px solid #00aebb;
+            border-radius: 50px;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <ul id="list">
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+
+    <script>
+//        $("li").eq(1).css("background","#f0f");
+//        $("li").first().css("background","#00f");
+//        $("li").last().css("background","#0ff");
+//        $("li").not($("li").eq(2)).css("background","#0ff");
+        $("li").slice(2,4).css("background","#0ff");
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+<input type="text">
+<input type="file">
+<input type="hidden">
+<input type="password">
+<input type="radio">
+<input type="reset">
+<input type="submit">
+
+<form action="">
+    <input type="checkbox" checked="checked" value="hehe" />
+    <input type="checkbox" value="haha" />
+</form>
+
+<select name="" id="select">
+    <option value="1">aaa</option>
+    <option value="2" selected="selected">bbb</option>
+    <option value="3">ccc</option>
+</select>
+
+
+<script>
+    $("input:text").css("background","#ccc");
+    $("input:file").css("color","#f00");
+    $("input:password").css("background","#0f0");
+    $("input:reset").css("background","#00f");
+    $("input:submit").css("background","#f0f");
+
+
+    alert( $("input:checked").val() );
+    alert( $("select option:selected").html() );
+</script>
+</body>
+</html>

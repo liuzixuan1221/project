@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 100%;
+        }
+        li{
+            border: 2px solid blue;
+            height: auto;
+            text-align: center;
+            line-height: 50px;
+            width: 100%;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+
+<ul>
+    <li class="li1" id="li1">0</li>
+    <li>1</li>
+    <li id="li3">2</li>
+    <li class="hehe"></li>
+    <li class="li5">4</li>
+    <li class="cccc">
+    </li>
+    <li class="haha">6</li>
+    <li class="jojo">7</li>
+</ul>
+<script>
+    $("li[class!=li1]").css("background","#ccc");           //属性名不等于
+    $("li[class]").css("background","red");                 //含有属性名的
+    $("li[class=li5]").css("background","green");           //属性名=啥的
+    $("li[class^=h]").css("background","yellow");           //属性名以啥开头的
+    $("li[class$=o]").css("background","pink");             //属性名以啥结尾的
+    $("li[class*=c]").css("background","#f0f");             //属性名含有啥的
+</script>
+</body>
+</html>

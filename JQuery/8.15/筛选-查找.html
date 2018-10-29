@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #list{
+            width: 100%;
+            height:auto;
+        }
+        li{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-bottom: 2px solid #00aebb;
+            border-radius: 50px;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+<ul id="list">
+    <li>0</li>
+    <li>
+        <div>
+            <div>
+                <div>
+                    <p class="start">从这里开始</p>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>2</li>
+    <li>3</li>
+    <li>
+        <div>
+            <div>
+                <div>
+                    <div>
+                        <p></p>
+                        <p></p>
+                        <p>这里结束</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+</ul>
+<script>
+    //2.查找
+    //children()    find()      next()      nextAll()
+    //parent()      prev()      prevAll()   siblings()
+    $(".start").parent().parent().parent().parent().next().next().next().children().children().children().children().children(2).css("background","#0ff")
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        button{
+            margin: 50px auto;
+            display: block;
+            width: 80px;
+            height: 30px;
+            border: 2px solid #0ff;
+            border-radius: 25px;
+            background: #ccc;
+            box-shadow: 0 0 10px #ddd;
+        }
+        #box{
+            margin: auto;
+            background: #0ff;
+            width: 800px;
+            min-height: 100px;
+        }
+        span{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            display: block;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <button>按钮</button>
+    <div id="box">
+
+    </div>
+    <script>
+        //1、$.ajax()
+        //2、$.get()
+        //3、$.post()
+
+        //格式:get/post
+        //$.get(demo2,[data],[callback],[type];       $.post(demo2,[data],[callback],[type];
+        //demo2:待载入页面的url地址
+        //data:待发送 key/value参数
+        //callback:载入成功时回调函数
+        //type:返回内容格式,xml,html,script,json,text,_default。
+
+//        $("button").on("click",function(){
+//            $.get("text.txt",{"id":1},function(data){
+//                $("#box").append($("<span>"+data+"</span>"))
+//            },"text")
+//        })
+
+        $("button").on("click",function(){
+            $.get("listData.json",function(data){
+                var _data = eval(data);
+                $.each(_data,function(i){
+                    var oList = _data[i].data.list;
+
+                    $.each(oList,function(j){
+                        var oImg = $("<img src='"+oList[j].coverImg+"' />");
+                        $("#box").append(oImg);
+                    })
+                })
+            },"json")
+        })
+    </script>
+</body>
+</html>

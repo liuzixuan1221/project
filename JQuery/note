@@ -1,0 +1,21 @@
+jquery对象就是一个最普通的js对象 new Object
+js对象和jquery对象的方法是不能共用的
+js对象和jquery对象的相互转换
+    jq => js
+         1、 加中括号给下标              $(".haha")[0]
+         2、 .get(0)                    $(".haha").get(0)
+    js => jq
+        var oHaha = document.getElementById(haha);
+        加上 $()                        $(oHaha)
+
+jquery核心方法:(jquery有些方法自带遍历)
+    size()     长度、大小                                   $("div").size()
+    length     长度                                         $("div").length
+    get()      获取                                         $(".haha").get(0)
+    index()    获取下标                                     $("div").index()          //innerHTML =>  html()
+    data()     添加获取属性，但是不显示出来 隐式的attr()      $("div").attr("id","haha")
+    each()     遍历                                         $("div").each(function(){})
+
+
+
+jquery选择器

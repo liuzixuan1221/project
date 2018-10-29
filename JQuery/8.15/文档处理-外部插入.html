@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #list{
+            width: 100%;
+            height:auto;
+        }
+        li{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-bottom: 2px solid #00aebb;
+            border-radius: 50px;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+<ul id="list">
+    <li>0</li>
+    <li class="li1">1</li>
+    <li>2</li>
+    <li>3</li>
+    <li id="li4">4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+</ul>
+
+<script>
+    //外部插入      after()     before()    insertAfter()       insertBefore()
+
+    $(".li1").after("<span>我是span1</span>");
+    $(".li1").before("<span>我是span2</span>");
+
+    $("<span>我是span3</span>").insertAfter($("#li4"));
+    $("<span>我是span4</span>").insertBefore($("#li4"));
+</script>
+</body>
+</html>

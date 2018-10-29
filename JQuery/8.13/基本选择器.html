@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 100%;
+        }
+        li{
+            border: 2px solid blue;
+            height: auto;
+            text-align: center;
+            line-height: 50px;
+            width: 100%;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+
+<ul>
+    <li class="li1">0</li>
+    <li>1</li>
+    <li id="li3">2</li>
+    <li>3</li>
+    <li class="li5">4</li>
+    <li>5</li>
+    <li id="li7">6</li>
+    <li>7</li>
+
+</ul>
+
+
+<script>
+    $("li:not(li:eq(5))").css("background","blue");         //除了之外的
+
+
+    $("li:even").css("background","#000");                  //偶数
+    $("li:odd").css("background","#ccc");                   //奇数
+    $("li:first").css("background","#f00");                 //第一个
+    $("li:last").css("background","#0f0");                  //最后一个
+    $("li:eq(2)").css("background","#f0f");                 //第(n)个
+    $("li:gt(2)").css("background","yellow");               //第(n)个下面所有，不含n
+    $("li:lt(2)").css("background","green");                //第(n)个上面所有，不含n
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        select{
+            float: left;
+            width: 300px;
+            height: 500px;
+            box-sizing: border-box;
+            border: 2px solid #000;
+        }
+        option{
+            height: 30px;
+            line-height: 30px;
+            font-size: 20px;
+        }
+        option:hover{
+            background: #00ffc0;
+            color: #fff;
+        }
+        button{
+            float: left;
+            margin: 480px 10px;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <select id="box1" size="2">
+        <option value="">苹果</option>
+        <option value="">香蕉</option>
+        <option value="">西瓜</option>
+        <option value="">芒果</option>
+        <option value="">橘子</option>
+    </select>
+    <button id="btn">>></button>
+    <select id="box2" size="2"></select>
+
+
+    <script>
+        $("#btn").on("click",function(){
+            $("#box1 option:selected").clone().appendTo("#box2");
+        })
+
+//        var oBtn = document.getElementById('btn');
+//        var aOption = document.getElementsByTagName('option');
+//        var oBox2 = document.getElementById('box2');
+//        oBtn.onclick = function(){
+//            for (var i = 0; i < aOption.length; i++) {
+//                if (aOption[i].selected == true){
+////                    var newOp = clone(aOption[i]);
+//                    oBox2.appendChild(aOption[i]);
+//                }
+//            }
+//        }
+    </script>
+</body>
+</html>

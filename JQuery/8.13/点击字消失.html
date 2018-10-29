@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #box{
+            width: 100%;
+            height: auto;
+        }
+        h2{
+            font-size: 40px;
+        }
+        .text{
+            display: block;
+            overflow: hidden;
+            width: 1200px;
+            font-size: 30px;
+            /*transition: 1s;*/
+        }
+        p{
+            width: 1200px;
+            display: block;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <div id="box">
+        <div class="title">
+            <h2>标题一</h2>
+            <div class="text">
+                <p>内容阿斯顿法定让我撒地方啊十大过人而阿道夫爱上如果阿斯蒂芬燃烧范德萨富饶的萨芬</p>
+            </div>
+        </div>
+        <div class="title">
+            <h2>标题一</h2>
+
+            <div class="text">
+                <p>内容阿斯顿法定让我撒地方啊十大过人而阿道夫爱上如果阿斯蒂芬燃烧范德萨富饶的萨芬</p>
+            </div>
+        </div>
+        <div class="title">
+            <h2>标题一</h2>
+
+            <div class="text">
+                <p>内容阿斯顿法定让我撒地方啊十大过人而阿道夫爱上如果阿斯蒂芬燃烧范德萨富饶的萨芬</p>
+            </div>
+        </div>
+        <div class="title">
+            <h2>标题一</h2>
+
+            <div class="text">
+                <p>内容阿斯顿法定让我撒地方啊十大过人而阿道夫爱上如果阿斯蒂芬燃烧范德萨富饶的萨芬</p>
+            </div>
+        </div>
+        <div class="title">
+            <h2>标题一</h2>
+
+            <div class="text">
+                <p>内容阿斯顿法定让我撒地方啊十大过人而阿道夫爱上如果阿斯蒂芬燃烧范德萨富饶的萨芬</p>
+            </div>
+        </div>
+        <div class="title">
+            <h2>标题一</h2>
+
+            <div class="text">
+                <p>内容阿斯顿法定让我撒地方啊十大过人而阿道夫爱上如果阿斯蒂芬燃烧范德萨富饶的萨芬</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var aTitle = document.getElementsByTagName('title');
+        var oh2 = document.getElementsByTagName('h2');
+        var oText = document.getElementsByClassName('text');
+
+//        for (var i = 0; i < oh2.length; i++) {
+//            oh2[i].index = i;
+//            oh2[i].onclick = function(){
+//                oText[this.index].style.width = '0px';
+//            }
+//        }
+
+        $("h2").on("click",function(){
+            $(this).next().toggle(500);
+        })
+
+    </script>
+</body>
+</html>

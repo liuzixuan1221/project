@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #box{
+            width: 100%;
+            height: auto;
+            list-style: none;
+        }
+        li{
+            float: left;
+            width: 20%;
+            height: auto;
+            overflow: hidden;
+        }
+        li img{
+            width: 100%;
+            /*transition: 1s;*/
+        }
+        /*li img:hover{*/
+            /*margin-left: -100px;*/
+        /*}*/
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <ul id="box">
+        <li><img src="images/8faedc83-c89b-470e-bfd6-d0c1437a781f.jpg" alt=""></li>
+        <li><img src="images/8faedc83-c89b-470e-bfd6-d0c1437a781f.jpg" alt=""></li>
+        <li><img src="images/8faedc83-c89b-470e-bfd6-d0c1437a781f.jpg" alt=""></li>
+        <li><img src="images/8faedc83-c89b-470e-bfd6-d0c1437a781f.jpg" alt=""></li>
+        <li><img src="images/8faedc83-c89b-470e-bfd6-d0c1437a781f.jpg" alt=""></li>
+        <li><img src="images/8faedc83-c89b-470e-bfd6-d0c1437a781f.jpg" alt=""></li>
+        <li><img src="images/8faedc83-c89b-470e-bfd6-d0c1437a781f.jpg" alt=""></li>
+        <li><img src="images/8faedc83-c89b-470e-bfd6-d0c1437a781f.jpg" alt=""></li>
+        <li><img src="images/8faedc83-c89b-470e-bfd6-d0c1437a781f.jpg" alt=""></li>
+        <li><img src="images/8faedc83-c89b-470e-bfd6-d0c1437a781f.jpg" alt=""></li>
+    </ul>
+
+    <script>
+        $("img").hover(
+            function(){
+//                $("img").css({"margin-left":"-100px"});
+                $(this).animate({"margin-left":"-100px"},1000);
+            },
+            function (){
+                $(this).animate({"margin-left":"0px"},1000);
+            }
+        )
+    </script>
+</body>
+</html>

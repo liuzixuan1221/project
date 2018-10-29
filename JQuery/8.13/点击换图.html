@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #box{
+            width: 100px;
+            height: auto;
+        }
+        #pic{
+            width: 650px;
+            height: 360px;
+            overflow: hidden;
+        }
+        #pic img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <div id="box">
+        <div id="pic">
+            <img class="one" src="images/4ff1be3a-7b49-418d-9d28-d3e66303ad16.jpg" alt="">
+            <img src="images/8faedc83-c89b-470e-bfd6-d0c1437a781f.jpg" alt="">
+        </div>
+    </div>
+
+
+    <script>
+        var oPic = document.getElementById('pic');
+        var oImg1 = oPic.getElementsByTagName('img')[0];
+        var oImg2 = oPic.getElementsByTagName('img')[1];
+
+//        var flag = true;
+//        oPic.onclick = function(){
+//            if(flag){
+//                oImg1.style.display = 'none';
+//                oImg2.style.display = 'block';
+//                flag = false;
+//            }else{
+//                oImg1.style.display = 'block';
+//                oImg2.style.display = 'none';
+//                flag = true;
+//            }
+//        }
+
+        $("#pic").toggle(
+                function(){
+                    $(".one").attr({"style":"display:none"});
+//                    oImg1.style.display = 'none';
+                }
+                ,function(){
+                    $(".one").attr({"style":"display:block"});
+//                    oImg1.style.display = 'block';
+                })
+
+    </script>
+</body>
+</html>

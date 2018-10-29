@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 100%;
+        }
+        li{
+            border: 2px solid blue;
+            height: auto;
+            text-align: center;
+            line-height: 50px;
+            width: 100%;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+
+<ul>
+    <li class="li1">0</li>
+    <li>1</li>
+    <li id="li3">2</li>
+    <li></li>
+    <li class="li5">4</li>
+    <li>
+        <p></p>
+    </li>
+    <li id="li7">6</li>
+    <li>7</li>
+</ul>
+
+
+<script>
+    $("li:parent").css({"background":"#ccc"});       //:parent   匹配含有选择器所匹配的元素的元素     (匹配非空的)
+    $("li:empty").css({"background":"red"});         //:empty    匹配所有不包含子元素或者文本的空元素 (匹配空的)
+    $("li:has(p)").css({"background":"green"});      //:has      匹配含有选择器所匹配的元素的元素     (匹配含有某个元素的)
+</script>
+</body>
+</html>

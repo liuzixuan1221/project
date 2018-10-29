@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            border: 2px solid blue;
+            height: 50px;
+            width: 100%;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+
+
+    <div class="div1">1</div>
+    <div>2</div>
+    <div id="div3">3</div>
+    <div>4</div>
+    <div class="div5">5</div>
+    <div>6</div>
+    <div id="div7">7</div>
+    <div>8</div>
+
+    <h1>h1</h1>
+    <p>pp</p>
+    <h2>h2</h2>
+<script>
+
+    $("div").css({"background":"#eee"});
+    $(".div1").css({"border":"2px solid red"});
+    $("#div3").css({"background":"green"});
+
+    $("*").css({"text-align":"center","font-size":"30px","line-height":"50px"});
+    $("h1,h2,p,#div7").css({"border":"2px solid #f0f","height":"50px"});
+    $("h1,h2,.div5").css({"background":"yellow"});
+</script>
+</body>
+</html>

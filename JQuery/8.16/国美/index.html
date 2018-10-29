@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <title>Title</title>
+    <link rel="stylesheet" href="swiper/swiper-4.3.3.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            width: 100%;
+            height: 100%;
+            font-size: 100px;
+        }
+        ul,ol,li{
+            list-style: none;
+        }
+        input{
+            border: none;
+            outline-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .box{
+            width: 100%;
+            height: 100%;
+            border: 0.01rem solid #e8e8e9;
+            box-sizing: border-box;
+            background: #f3f5f7;
+        }
+        .top{
+            height: 0.90rem;
+            width: 100%;
+            background: #fff;
+        }
+        .top .logo{
+            float: left;
+            width: 0.99rem;
+            height: 0.88rem;
+            position: relative;
+        }
+        .top .logo>img{
+            margin: 0.19rem 0.22rem;
+            width: 0.5rem;
+            height: 0.5rem;
+            position: absolute;
+        }
+        .top .login{
+            float: right;
+            width: 1.72rem;
+            height: 0.88rem;
+        }
+        .top .login>img{
+            width: 0.44rem;
+            height: 0.4rem;
+            margin: 0.28rem 0.32rem 0.36rem;
+            float: left;
+        }
+        .top .login>span{
+            font-size: 0.22rem;
+            float: right;
+            line-height: 0.88rem;
+            margin-right: 0.20rem;
+            color: #828385;
+        }
+        .top .search{
+            float: left;
+            width: 3.66rem;
+            height: 0.63rem;
+            background: #f6f6f6;
+            margin: 0.13rem 0;
+            border-radius: 0.63rem;
+        }
+        .top .search .fdj{
+            float: left;
+            width: 0.27rem;
+            height: 0.27rem;
+            margin: 0.18rem 0.10rem 0.18rem 0.20rem;
+        }
+        .top .search .fdj>img{
+            float: left;
+            height: 100%;
+            width: 100%;
+        }
+        .top .search>form{
+            float: left;
+            width: 2.90rem;
+            height: 0.28rem;
+            margin: 0.18rem 0 0.12rem;
+        }
+        .top .search>form>input{
+            float: left;
+            width: 100%;
+            height: 100%;
+            background: #f6f6f6;
+        }
+        .banner{
+            width: 100%;
+            height: 2.24rem;
+        }
+        .banner .swiper-container{
+            width: 100%;
+            height: 100%;
+        }
+        .banner .swiper-slide{
+            width: 100%;
+            height: 100%;
+        }
+        .banner img{
+            width: 100%;
+            height: 100%;
+        }
+        .banner .swiper-pagination-bullet{
+            background: #fff!important;
+        }
+        .zhuHuiChang{
+            width: 100%;
+            height: 1.80rem;
+        }
+        .zhuHuiChang>img{
+            width: 100%;
+            height: 100%;
+        }
+        .nav{
+            position: relative;
+            width: 100%;
+            height: 3.60rem;
+        }
+        .nav .navBackground{
+            position: absolute;
+            top:0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+        .nav .navBox{
+            position: absolute;
+            top:0;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+        }
+        .nav .navBox .swiper-container{
+            width: 100%;
+            height: 100%;
+        }
+        .nav .navBox ul{
+            padding: 0.22rem 0;
+            width: 100%;
+            overflow: hidden;
+        }
+        .nav .navBox ul li{
+            float: left;
+            width: 20%;
+            height: 50%;
+            text-align: center;
+            display: block;
+            box-sizing: border-box;
+        }
+        .nav .navBox ul li a{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .nav .navBox ul li a div{
+            width: 100%;
+            text-align: center;
+        }
+        .nav .navBox ul li a div img{
+            display: block;
+            height: 0.78rem;
+        }
+        .nav .navBox ul li a div p{
+            color: #fff;
+            text-align: center;
+            margin-top: 0.1rem;
+            font-size: 0.24rem;
+        }
+        .touTiao{
+            height: 0.66rem;
+            width: 100%;
+            background: #fff;
+        }
+        .touTiao .left{
+            float: left;
+            width: 1.23rem;
+            height: 100%;
+            padding: 0.05rem 0.30rem;
+        }
+        .touTiao .left img{
+            display: block;
+            width: 100%;
+        }
+        .touTiao .right{
+            position: relative;
+            margin-top: 0.20rem;
+            float: right;
+            width: 4.50rem;
+            height: 0.30rem;
+        }
+        .touTiao .right .border{
+            position: absolute;
+            top:0;
+            left:0;
+            border: 0.01rem solid #f43273;
+            color: #f43273;
+            font-size: 0.20rem;
+            display: inline;
+            padding: 0.005rem;
+            box-sizing: border-box;
+            border-radius: 0.05rem;
+        }
+        .touTiao .right .text{
+            position: absolute;
+            top:0;
+            margin-left: 1.0rem;
+            font-size: 0.22rem;
+        }
+        .touTiao .right .swiper-container{
+            width: 100%;
+            height: 100%;
+        }
+        .touTiao .right .swiper-wrapper{
+            width: 100%;
+            height: 100%;
+        }
+        .miaoSha{
+            margin-top: 0.20rem;
+            width: 100%;
+            height: 0.95rem;
+            background: #fff;
+        }
+        .miaoSha .left{
+            float: left;
+            height: 100%;
+            width: 4.5rem;
+        }
+        .miaoSha .left>p{
+            float: left;
+            font-size: 0.30rem;
+            font-weight: 600;
+            margin: 0.30rem 0.10rem 0.30rem 0.20rem;
+        }
+        .miaoSha .left>span{
+            float: left;
+            font-size: 0.26rem;
+            margin: 0.32rem 0;
+        }
+        .miaoSha .left>.djs{
+            float: left;
+            font-size: 0.20rem;
+            margin: 0.30rem 0.10rem;
+        }
+        .miaoSha .left>.djs>div{
+            display: inline-block;
+            background: #000;
+            padding: 0.02rem 0.06rem;
+            color: #fff;
+            border-radius: 0.08rem;
+        }
+        .miaoSha .right{
+            float: right;
+            height: 100%;
+            width: 1.6rem;
+            padding: 0.30rem 0.02rem 0.30rem 0.30rem;
+            box-sizing: border-box;
+            font-size: 0.20rem;
+        }
+        .miaoSha .right span{
+            color: #f43273;
+        }
+        .footer{
+            width: 100%;
+            height: 0.99rem;
+            background: #fff;
+            position: fixed;
+            bottom: 0;
+        }
+        .footer ul{
+            width: 100%;
+            height: 100%;
+        }
+        .footer ul li{
+            float: left;
+            width: 20%;
+            height: 100%;
+        }
+        .footer ul li img{
+            display: block;
+            margin: 0.10rem auto 0.05rem;
+            width: 0.48rem;
+            height: 0.48rem;
+        }
+        .footer ul li span{
+            font-size: 0.20rem;
+            text-align: center;
+            display: block;
+            color: #aaa;
+        }
+        .footer ul li:first-child span{
+            color: #f43273;
+        }
+    </style>
+
+
+    <script src="swiper/swiper-4.3.3.min.js"></script>
+    <script src="swiper/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+    <div class="box">
+        <!--top盒子-->
+        <div class="top">
+            <div class="logo">
+                <img src="images/grass_logo.png" alt="">
+            </div>
+            <div class="search">
+                <div class="fdj">
+                    <img src="images/search_icon.png" alt="">
+                </div>
+                <form action="">
+                    <input type="text" placeholder="空调清凉趴 最高省1000">
+                </form>
+            </div>
+            <div class="login">
+                <img src="images/grass_cart.png" alt="">
+                <span>登录</span>
+            </div>
+        </div>
+
+        <!--banner盒子-->
+        <div class="banner">
+            <div class="swiper-container" id="swiper-container0">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/T1osVQBgZv1RCvBVdK.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/T1DHVbBvJT1RCvBVdK.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/T1pTK_BjKv1RCvBVdK.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/T1ckx_B_VT1RCvBVdK.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/T1uVZgBQZv1RCvBVdK.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/T1m0ZQB4Kv1RCvBVdK.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/T110E_B7Kv1RCvBVdK.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/T1Ky_gB_Ev1RCvBVdK.jpg" alt=""></div>
+                </div>
+                <div class="swiper-pagination" style="top: 0.3rem"></div>
+            </div>
+        </div>
+
+        <!--zhuhuichang盒子-->
+        <div class="zhuHuiChang">
+            <img src="images/T1HmV_B7hv1RCvBVdK.jpg" alt="">
+        </div>
+
+        <!--nav盒子-->
+        <div class="nav">
+            <img class="navBackground" src="images/T1oeCQBmVT1RCvBVdK.jpg" alt="">
+            <div class="navBox">
+                <div class="swiper-container" id="swiper-container1">
+                    <div class="swiper-wrapper">
+                        <ul class="swiper-slide">
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T1E3xgBmVT1RCvBVdK.png" alt="">
+                                        <p>分类</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T1HEL_BC_v1RCvBVdK.png" alt="">
+                                        <p>手机电脑</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T1tWAgBCEv1RCvBVdK.png" alt="">
+                                        <p>国美电器</p>
+                                    </div>
+                                </a>
+                            </li><li>
+                            <a href="">
+                                <div>
+                                    <img src="images/T1QyJsBgLv1RCvBVdK.png" alt="">
+                                    <p>国美超市</p>
+                                </div>
+                            </a>
+                        </li>
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T1tWAgBCEv1RCvBVdK.png" alt="">
+                                        <p>国美百货</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T1tOEQBbWT1RCvBVdK.png" alt="">
+                                        <p>国美金融</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T1qIJjBK_v1RCvBVdK.png" alt="">
+                                        <p>充值服务</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T14iKQB_ZT1RCvBVdK.png" alt="">
+                                        <p>国美家装</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T1g2DQB4xv1RCvBVdK.png" alt="">
+                                        <p>领券中心</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T1EBZgByVv1RCvBVdK.png" alt="">
+                                        <p>我的</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="swiper-slide">
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T1E3xgBmVT1RCvBVdK.png" alt="">
+                                        <p>分类</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T1HEL_BC_v1RCvBVdK.png" alt="">
+                                        <p>手机电脑</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T1tWAgBCEv1RCvBVdK.png" alt="">
+                                        <p>国美电器</p>
+                                    </div>
+                                </a>
+                            </li><li>
+                            <a href="">
+                                <div>
+                                    <img src="images/T1QyJsBgLv1RCvBVdK.png" alt="">
+                                    <p>国美超市</p>
+                                </div>
+                            </a>
+                        </li>
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T1tWAgBCEv1RCvBVdK.png" alt="">
+                                        <p>国美百货</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T1tOEQBbWT1RCvBVdK.png" alt="">
+                                        <p>国美金融</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T1qIJjBK_v1RCvBVdK.png" alt="">
+                                        <p>充值服务</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T14iKQB_ZT1RCvBVdK.png" alt="">
+                                        <p>国美家装</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T1g2DQB4xv1RCvBVdK.png" alt="">
+                                        <p>领券中心</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <div>
+                                        <img src="images/T1EBZgByVv1RCvBVdK.png" alt="">
+                                        <p>我的</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="swiper-pagination" style="top: 1.6rem"></div>
+                </div>
+            </div>
+        </div>
+
+        <!--touTiao盒子-->
+        <div class="touTiao">
+            <div class="left">
+                <img src="images/T1Bix_BsxT1RCvBVdK.png" alt="">
+            </div>
+            <div class="right">
+                <div class="swiper-container" id="swiper-container2">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="border">
+                                 支付宝
+                            </div>
+                            <div class="text">支付支付支付宝</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="border">
+                                好物榜单
+                            </div>
+                            <div class="text">好物好物好好物</div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="border">
+                                活期理财
+                            </div>
+                            <div class="text">理财理财理理财</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--miaoSha盒子-->
+        <div class="miaoSha">
+            <div class="left">
+                <p>国美秒杀</p>
+                <span>0点场</span>
+                <div class="djs">
+                    <div>07</div>
+                    :
+                    <div>07</div>
+                    :
+                    <div>07</div>
+                </div>
+            </div>
+            <div class="right">
+                秒抢好货
+                <span>></span>
+            </div>
+        </div>
+
+        <!--footer盒子-->
+        <div class="footer">
+            <ul>
+                <li>
+                    <img src="images/T1YldvB__v1RCvBVdK.png" alt="">
+                    <span>首页</span>
+                </li>
+                <li>
+                    <img src="images/T1AMVgB__T1RCvBVdK.png" alt="">
+                    <span>分类</span>
+                </li>
+                <li>
+                    <img src="images/T13yEgB4Jv1RCvBVdK.png" alt="">
+                    <span>优选</span>
+                </li>
+                <li>
+                    <img src="images/T1CBhvB__T1RCvBVdK.png" alt="">
+                    <span>购物车</span>
+                </li>
+                <li>
+                    <img src="images/T1vThgB_YT1RCvBVdK.png" alt="">
+                    <span>我的</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+<script>
+    //根据终端宽度改变  根元素 下面的   font-size的大小
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=640){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+
+
+    var mySwiper = new Swiper ('#swiper-container0', {
+//        direction: 'vertical',
+        loop: true,
+        autoplay:{
+            disableOnInteraction: false,
+        },
+
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        }
+
+    })
+    var mySwiper1 = new Swiper ('#swiper-container1', {
+//        direction: 'vertical',
+        loop: true,
+        // 如果需要分页器
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    })
+    var mySwiper2 = new Swiper ('#swiper-container2', {
+        direction: 'vertical',
+        loop: true,
+        autoplay:{
+            disableOnInteraction: false,
+        },
+    })
+
+</script>
+
+
+</body>
+</html>

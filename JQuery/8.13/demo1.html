@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+
+    <script>
+//        alert( $("div").size() );
+//        alert( $("div").length );
+//
+//        $("div").on("click",function(){
+//            $(this).attr("id","haha"+$(this).index());
+//            $(this).data("id","haha"+$(this).index());
+//            alert($(this).data("id"));
+//        })
+
+
+        $("div").each(function(){
+            alert($(this).index());
+        });
+
+        for(var i = 0; i < $("div").length; i++){
+            alert($("div").index());
+        }
+
+        var arr = [1,2,3,4,5,6,7];
+$.each(arr,function (i){
+    alert(arr[i])
+})
+    </script>
+</body>
+</html>

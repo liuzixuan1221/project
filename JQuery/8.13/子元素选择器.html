@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 100%;
+        }
+        li{
+            box-sizing: border-box;
+            border: 2px solid blue;
+            height: auto;
+            text-align: center;
+            line-height: 50px;
+            width: 100%;
+        }
+    </style>
+    <script src="../jquery.js"></script>
+</head>
+<body>
+
+<ul>
+    <li class="li1" id="li1">0</li>
+    <li>1</li>
+    <li id="li3">2</li>
+    <li class="hehe"></li>
+    <li class="li5">4</li>
+    <li class="cccc">
+    </li>
+    <li class="haha">6</li>
+    <li class="jojo">7</li>
+</ul>
+
+<ul class="ul2">
+    <li>ul2-li</li>
+</ul>
+
+<script>
+    $("li:first-child").css("background","#f00");
+    $("li:last-child").css("background","#00f");
+    $("li:nth-child(5)").css("background","#0f0");
+
+    $("li:only-child").css("background","#f0f");
+
+</script>
+</body>
+</html>
